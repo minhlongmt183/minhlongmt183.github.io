@@ -6,9 +6,9 @@
   xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
-    <title>Posts on Edisc Blog</title>
-    <link>https://minhlongmt183.github.io/posts/</link>
-    <description>Recent content in Posts on Edisc Blog</description>
+    <title>pwn on Edisc Blog</title>
+    <link>https://minhlongmt183.github.io/categories/pwn/</link>
+    <description>Recent content in pwn on Edisc Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>vi</language>
     <managingEditor>edisc.ctf@gmail.com (Edisc)</managingEditor>
@@ -16,7 +16,7 @@
     <copyright>©2021, All Rights Reserved</copyright>
     <lastBuildDate>Thu, 04 Jun 2020 00:00:00 +0000</lastBuildDate>
     
-        <atom:link href="https://minhlongmt183.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://minhlongmt183.github.io/categories/pwn/index.xml" rel="self" type="application/rss+xml" />
     
 
       
@@ -48,44 +48,6 @@ Capabilities Since kernel 2.2, Linux divides the privileges associated with supe
           
             
               <category>pwn</category>
-            
-          
-        
-        
-          
-            
-              <category>docker</category>
-            
-          
-        
-      </item>
-      
-      <item>
-        <title>Một số thiết lập sau khi cài đặt docker</title>
-        <link>https://minhlongmt183.github.io/posts/get-started/</link>
-        <pubDate>Tue, 02 Jun 2020 00:00:00 +0000</pubDate>
-        <author>edisc.ctf@gmail.com (Edisc)</author>
-        <atom:modified>Tue, 02 Jun 2020 00:00:00 +0000</atom:modified>
-        <guid>https://minhlongmt183.github.io/posts/get-started/</guid>
-        <description>Start the tutorial $ docker run -d -p 80:80 docker/getting-started Trong đó:
- -d: chạy container ở chế độ detached mode (ở background) -p 80:80: ánh xạ cổng 80 của host vào cổng 80 của container. docker/getting-started: image sử dụng  Docker version Usage
-$ docker version [OPTIONS] Get the server version $ docker version --format &#39;{{.Server.Version}}&#39; Dump raw JSON data $ docker version --format &#39;{{json .}}&#39; Print the current context $ docker version --format=&#39;{{.</description>
-        
-        <dc:creator>Edisc</dc:creator>
-        <media:content url="https://minhlongmt183.github.io/images/contents/docker.png" medium="image"><media:title type="html">featured image</media:title></media:content>
-        
-        
-        
-          
-            
-              <category>Docker</category>
-            
-          
-        
-        
-          
-            
-              <category>resources</category>
             
           
         
