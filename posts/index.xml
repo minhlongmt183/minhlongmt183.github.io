@@ -7,7 +7,7 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>Posts on Edisc Blog</title>
-    <link>http://example.org/posts/</link>
+    <link>https://minhlongmt183.github.io/posts/</link>
     <description>Recent content in Posts on Edisc Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>vi</language>
@@ -16,21 +16,21 @@
     <copyright>©2021, All Rights Reserved</copyright>
     <lastBuildDate>Mon, 16 Dec 2019 12:00:06 +0900</lastBuildDate>
     
-        <atom:link href="http://example.org/posts/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://minhlongmt183.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
 
       
       <item>
         <title>Tìm hiểu về docker</title>
-        <link>http://example.org/posts/overview/</link>
+        <link>https://minhlongmt183.github.io/posts/overview/</link>
         <pubDate>Mon, 16 Dec 2019 12:00:06 +0900</pubDate>
         <author>edisc.ctf@gmail.com (Edisc)</author>
         <atom:modified>Mon, 16 Dec 2019 12:00:06 +0900</atom:modified>
-        <guid>http://example.org/posts/overview/</guid>
+        <guid>https://minhlongmt183.github.io/posts/overview/</guid>
         <description>Tổng quan về Docker Docker là gì?  Docker là một container platform để phát triển, triển khai và quản lí ứng dụng nhanh chóng. Docker là nền tảng mở (open platform) để phát triển (developing), vận chuyển (shipping) hoặc chạy (running) các ứng dụng. Docker cho phép ứng dụng của chúng ta độc lập với cơ sở hạ tầng (infrastructure) của máy, do đó, chúng ta có thể dễ dàng chia sẻ ứng dụng một cách dễ dàng giữa các thiết bị.</description>
         
         <dc:creator>Edisc</dc:creator>
-        <media:content url="http://example.orgimages/contents/docker.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="https://minhlongmt183.github.io/images/contents/docker.png" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
@@ -58,11 +58,11 @@
       
       <item>
         <title></title>
-        <link>http://example.org/posts/container-escapes/</link>
+        <link>https://minhlongmt183.github.io/posts/container-escapes/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         <author>edisc.ctf@gmail.com (Edisc)</author>
         
-        <guid>http://example.org/posts/container-escapes/</guid>
+        <guid>https://minhlongmt183.github.io/posts/container-escapes/</guid>
         <description>Container Escapes Container Basics  /proc is a special filesystem mount (procfs) for accessing system and process information directly
 from the kernel by reading &amp;ldquo;file&amp;rdquo; entries.  Credentials Credentials describe the user identity of a task, which determine its permission for shared resources
 such as files, semaphores, and shared memory.
@@ -80,11 +80,11 @@ Capabilities Since kernel 2.2, Linux divides the privileges associated with supe
       
       <item>
         <title></title>
-        <link>http://example.org/posts/docker-install/</link>
+        <link>https://minhlongmt183.github.io/posts/docker-install/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         <author>edisc.ctf@gmail.com (Edisc)</author>
         
-        <guid>http://example.org/posts/docker-install/</guid>
+        <guid>https://minhlongmt183.github.io/posts/docker-install/</guid>
         <description>Cài docker Post-installation steps for Linux Quản lý docker với tư cách là non-root user  Docker daemon kết nối với Unix socket thay vì cổng TCP. Mặc định, Unix socket được sở hữu bởi root
 và những user khác chỉ có thể truy cập thông qua lệnh sudo. Do đó, Docker daemon luôn luôn chạy
 với tư cách là root user. Chúng ta có thể thiết lập lại để chạy mà không cần lệnh sudo bằng cách tạo ra một Unix group là docker</description>
@@ -100,11 +100,11 @@ với tư cách là root user. Chúng ta có thể thiết lập lại để ch�
       
       <item>
         <title></title>
-        <link>http://example.org/posts/get-started/</link>
+        <link>https://minhlongmt183.github.io/posts/get-started/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         <author>edisc.ctf@gmail.com (Edisc)</author>
         
-        <guid>http://example.org/posts/get-started/</guid>
+        <guid>https://minhlongmt183.github.io/posts/get-started/</guid>
         <description>Get started Docker Start the tutorial $ docker run -d -p 80:80 docker/getting-started Trong đó:
  -d: chạy container ở chế độ detached mode (ở background) -p 80:80: ánh xạ cổng 80 của host vào cổng 80 của container. docker/getting-started: image sử dụng  Docker version Usage
 $ docker version [OPTIONS] Get the server version $ docker version --format &#39;{{.Server.Version}}&#39; Dump raw JSON data $ docker version --format &#39;{{json .}}&#39; Print the current context $ docker version --format=&#39;{{.</description>
@@ -120,11 +120,11 @@ $ docker version [OPTIONS] Get the server version $ docker version --format &#39
       
       <item>
         <title></title>
-        <link>http://example.org/posts/readme/</link>
+        <link>https://minhlongmt183.github.io/posts/readme/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         <author>edisc.ctf@gmail.com (Edisc)</author>
         
-        <guid>http://example.org/posts/readme/</guid>
+        <guid>https://minhlongmt183.github.io/posts/readme/</guid>
         <description>Tìm hiểu về Docker (Container basic)  Tổng quan về Docker Cài docker Get-started  Tìm hiểu về Container Escapes  Container Escapes  </description>
         
         <dc:creator>Edisc</dc:creator>

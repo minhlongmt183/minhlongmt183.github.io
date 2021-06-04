@@ -7,7 +7,7 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>Tags on Edisc Blog</title>
-    <link>http://example.org/tags/</link>
+    <link>https://minhlongmt183.github.io/tags/</link>
     <description>Recent content in Tags on Edisc Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>vi</language>
@@ -16,17 +16,17 @@
     <copyright>©2021, All Rights Reserved</copyright>
     <lastBuildDate>Mon, 16 Dec 2019 12:00:06 +0900</lastBuildDate>
     
-        <atom:link href="http://example.org/tags/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://minhlongmt183.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
 
       
       <item>
         <title>Docker</title>
-        <link>http://example.org/tags/docker/</link>
+        <link>https://minhlongmt183.github.io/tags/docker/</link>
         <pubDate>Mon, 16 Dec 2019 12:00:06 +0900</pubDate>
         <author>edisc.ctf@gmail.com (Edisc)</author>
         
-        <guid>http://example.org/tags/docker/</guid>
+        <guid>https://minhlongmt183.github.io/tags/docker/</guid>
         <description></description>
         
         <dc:creator>Edisc</dc:creator>

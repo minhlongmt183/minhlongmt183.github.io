@@ -7,7 +7,7 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>Docker on Edisc Blog</title>
-    <link>http://example.org/tags/docker/</link>
+    <link>https://minhlongmt183.github.io/tags/docker/</link>
     <description>Recent content in Docker on Edisc Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>vi</language>
@@ -16,21 +16,21 @@
     <copyright>©2021, All Rights Reserved</copyright>
     <lastBuildDate>Mon, 16 Dec 2019 12:00:06 +0900</lastBuildDate>
     
-        <atom:link href="http://example.org/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://minhlongmt183.github.io/tags/docker/index.xml" rel="self" type="application/rss+xml" />
     
 
       
       <item>
         <title>Tìm hiểu về docker</title>
-        <link>http://example.org/posts/overview/</link>
+        <link>https://minhlongmt183.github.io/posts/overview/</link>
         <pubDate>Mon, 16 Dec 2019 12:00:06 +0900</pubDate>
         <author>edisc.ctf@gmail.com (Edisc)</author>
         <atom:modified>Mon, 16 Dec 2019 12:00:06 +0900</atom:modified>
-        <guid>http://example.org/posts/overview/</guid>
+        <guid>https://minhlongmt183.github.io/posts/overview/</guid>
         <description>Tổng quan về Docker Docker là gì?  Docker là một container platform để phát triển, triển khai và quản lí ứng dụng nhanh chóng. Docker là nền tảng mở (open platform) để phát triển (developing), vận chuyển (shipping) hoặc chạy (running) các ứng dụng. Docker cho phép ứng dụng của chúng ta độc lập với cơ sở hạ tầng (infrastructure) của máy, do đó, chúng ta có thể dễ dàng chia sẻ ứng dụng một cách dễ dàng giữa các thiết bị.</description>
         
         <dc:creator>Edisc</dc:creator>
-        <media:content url="http://example.orgimages/contents/docker.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="https://minhlongmt183.github.io/images/contents/docker.png" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
