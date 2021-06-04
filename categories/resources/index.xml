@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>resources on Edisc Blog</title>
+    <link>http://example.org/categories/resources/</link>
+    <description>Recent content in resources on Edisc Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>vi</language>
+    <managingEditor>edisc.ctf@gmail.com (Edisc)</managingEditor>
+    <webMaster>edisc.ctf@gmail.com (Edisc)</webMaster>
+    <copyright>©2021, All Rights Reserved</copyright>
+    <lastBuildDate>Mon, 16 Dec 2019 12:00:06 +0900</lastBuildDate>
+    
+        <atom:link href="http://example.org/categories/resources/index.xml" rel="self" type="application/rss+xml" />
+    
+
+      
+      <item>
+        <title>Tìm hiểu về docker</title>
+        <link>http://example.org/posts/overview/</link>
+        <pubDate>Mon, 16 Dec 2019 12:00:06 +0900</pubDate>
+        <author>edisc.ctf@gmail.com (Edisc)</author>
+        <atom:modified>Mon, 16 Dec 2019 12:00:06 +0900</atom:modified>
+        <guid>http://example.org/posts/overview/</guid>
+        <description>Tổng quan về Docker Docker là gì?  Docker là một container platform để phát triển, triển khai và quản lí ứng dụng nhanh chóng. Docker là nền tảng mở (open platform) để phát triển (developing), vận chuyển (shipping) hoặc chạy (running) các ứng dụng. Docker cho phép ứng dụng của chúng ta độc lập với cơ sở hạ tầng (infrastructure) của máy, do đó, chúng ta có thể dễ dàng chia sẻ ứng dụng một cách dễ dàng giữa các thiết bị.</description>
+        
+        <dc:creator>Edisc</dc:creator>
+        <media:content url="http://example.orgimages/contents/docker.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>Docker</category>
+            
+          
+        
+        
+          
+            
+              <category>resources</category>
+            
+          
+        
+        
+          
+            
+              <category>docker</category>
+            
+          
+        
+      </item>
+      
+
+    
+  </channel>
+</rss>
