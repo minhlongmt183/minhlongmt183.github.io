@@ -1714,9 +1714,9 @@
 <div class="single__infos">
   <time class="single__info" title="Written At">📅&nbsp;Jun 4, 2020 </time>
   
-  &nbsp;&middot;&nbsp; <span class="single__info" title="Reading Time"> ☕&nbsp;15&nbsp;min read </span>
+  &nbsp;&middot;&nbsp; <span class="single__info" title="Reading Time"> ☕&nbsp;20&nbsp;min read </span>
   
-  &nbsp;&middot;&nbsp; <span class="single__info" title="WRITTEN BY">😄&nbsp;Edisc</span>
+  &nbsp;&middot;&nbsp; <span class="single__info" title="WRITTEN BY">🐉&nbsp;Edisc</span>
   
   <span class="single__info">
     
@@ -1738,13 +1738,9 @@
       
       <h1 id="container-basics">Container Basics</h1>
 <hr />
-<ul>
-<li><code>/proc</code> is a special filesystem mount (procfs) for accessing system and process information directly<br />
-from the kernel by reading &ldquo;file&rdquo; entries.</li>
-</ul>
+<p>Chúng ta sẽ đi qua một số khái niệm cơ bản và cần thiết trong docker:</p>
 <h2 id="credentials">Credentials</h2>
-<p><strong>Credentials</strong> describe the user identity of a task, which determine its permission for shared resources<br />
-such as files, semaphores, and shared memory.</p>
+<p><strong>Credentials</strong> describe the user identity of a task, which determine its permission for shared resources such as files, semaphores, and shared memory.</p>
 <h2 id="capabilities">Capabilities</h2>
 <p>Since kernel 2.2, Linux divides the privileges associated with superuser into distinct unit known as <strong>capabilities</strong></p>
 <pre><code class="language-console" data-lang="console">/proc/$PID/status | man capabilities
@@ -1767,8 +1763,7 @@ such as files, semaphores, and shared memory.</p>
 <p><strong>CGroups</strong>: cung cấp giao diện phân cấp để quản lí cũng như đo lường tài nguyên và quyền truy cập của thiết bị. Cgroups có thể được sử dụng bởi các process có quyền hạn cao (higher privileged) để đặt giới hạn về sử dụng bộ nhớ, CPU, chặn các thiết bị IO khác. Chúng còn có thể được sử dụng chung với iptables để cung cấp định hình lưu lượng. Quan trong nhất, chúng được sử dụng trong hệ thống container đẻ kiểm soát quyền truy cập của các thiết bị.</p>
 <h2 id="linux-security-modules---lsms">Linux Security Modules - LSMs</h2>
 <ul>
-<li><strong>AppArmor</strong> and <strong>SELinux</strong> are Linux security modules providing Mandatory Access Control (MAC),<br />
-where access rules for a program are described by a profile.</li>
+<li><strong>AppArmor</strong> and <strong>SELinux</strong> are Linux security modules providing Mandatory Access Control (MAC), where access rules for a program are described by a profile.</li>
 <li>AppArmor là LSM phổ biến nhất trong hệ thống container, nó có thể giới hạn các hành động mà một chương trình nhất định có thể thực hiện, cũng như thực hiện các hành động phức tạp khi bắt đầu process. Cả LXC và Docker đều thiết lập ở chế độ mặc định để xây dựng những rào cản an ninh, chống lại những mối đe dọa theo chiều sâu. Cho đến nay, AppArmor được ghi nhận là hỗ trợ và ghi nhận tốt nhất.<br />
 Do sự đơn giản của cú pháp AppArmor, nó cũng dễ sử dụng hơn rất nhiều để cấu hình tùy chỉnh cho mỗi vùng chứa.</li>
 <li>Docker and LXC enable a default LSM profile in enforcement mode, wh mostly serves to restrict a container&rsquo;s<br />
@@ -1788,10 +1783,10 @@ access to sensitive <code>/proc</code> and <code>/sys</code> entries.</li>
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-py" data-lang="py"><span class="c1"># the container may never be allowed to mount devpts. If it does, it</span>
-<span class="c1"># will remount the host&#39;s devpts. We could allow it to do it with</span>
-<span class="c1"># the newinstance option (but, right now, we don&#39;t).</span>
-<span class="n">deny</span> <span class="n">mount</span> <span class="n">fstype</span><span class="o">=</span><span class="n">devpts</span>
+<pre class="chroma"><code class="language-go" data-lang="go"><span class="err">#</span> <span class="nx">the</span> <span class="nx">container</span> <span class="nx">may</span> <span class="nx">never</span> <span class="nx">be</span> <span class="nx">allowed</span> <span class="nx">to</span> <span class="nx">mount</span> <span class="nx">devpts</span><span class="p">.</span> <span class="nx">If</span> <span class="nx">it</span> <span class="nx">does</span><span class="p">,</span> <span class="nx">it</span>
+<span class="err">#</span> <span class="nx">will</span> <span class="nx">remount</span> <span class="nx">the</span> <span class="nx">host</span><span class="err">&#39;</span><span class="nx">s</span> <span class="nx">devpts</span><span class="p">.</span> <span class="nx">We</span> <span class="nx">could</span> <span class="nx">allow</span> <span class="nx">it</span> <span class="nx">to</span> <span class="nx">do</span> <span class="nx">it</span> <span class="nx">with</span>
+<span class="err">#</span> <span class="nx">the</span> <span class="nx">newinstance</span> <span class="nf">option</span> <span class="p">(</span><span class="nx">but</span><span class="p">,</span> <span class="nx">right</span> <span class="nx">now</span><span class="p">,</span> <span class="nx">we</span> <span class="nx">don</span><span class="err">&#39;</span><span class="nx">t</span><span class="p">).</span>
+<span class="nx">deny</span> <span class="nx">mount</span> <span class="nx">fstype</span><span class="p">=</span><span class="nx">devpts</span>
 </code></pre></td></tr></table>
 </div>
 </div><ul>
@@ -1804,9 +1799,9 @@ access to sensitive <code>/proc</code> and <code>/sys</code> entries.</li>
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-py" data-lang="py"> <span class="c1"># ignore DENIED message on / remount</span>
-    <span class="n">deny</span> <span class="n">mount</span> <span class="n">options</span><span class="o">=</span><span class="p">(</span><span class="n">ro</span><span class="p">,</span> <span class="n">remount</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="o">/</span><span class="p">,</span>
-    <span class="n">deny</span> <span class="n">mount</span> <span class="n">options</span><span class="o">=</span><span class="p">(</span><span class="n">ro</span><span class="p">,</span> <span class="n">remount</span><span class="p">,</span> <span class="n">silent</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="o">/</span><span class="p">,</span>
+<pre class="chroma"><code class="language-go" data-lang="go"> <span class="err">#</span> <span class="nx">ignore</span> <span class="nx">DENIED</span> <span class="nx">message</span> <span class="nx">on</span> <span class="o">/</span> <span class="nx">remount</span>
+    <span class="nx">deny</span> <span class="nx">mount</span> <span class="nx">options</span><span class="p">=(</span><span class="nx">ro</span><span class="p">,</span> <span class="nx">remount</span><span class="p">)</span> <span class="o">-</span><span class="p">&gt;</span> <span class="o">/</span><span class="p">,</span>
+    <span class="nx">deny</span> <span class="nx">mount</span> <span class="nx">options</span><span class="p">=(</span><span class="nx">ro</span><span class="p">,</span> <span class="nx">remount</span><span class="p">,</span> <span class="nx">silent</span><span class="p">)</span> <span class="o">-</span><span class="p">&gt;</span> <span class="o">/</span><span class="p">,</span>
 </code></pre></td></tr></table>
 </div>
 </div><h4 id="utility-changes">Utility Changes</h4>
@@ -1838,20 +1833,20 @@ Bằng cách thay đổi điều này để trỏ đến một chương trình b
 </span><span class="lnt">14
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-py" data-lang="py"><span class="c1"># Run lxc-generate-aa-rules.py on this file after any modification, to generate</span>
-<span class="c1"># the container-rules file which is appended to container-base.in to create the</span>
-<span class="c1"># final abstractions/container-base.</span>
-<span class="n">block</span> <span class="o">/</span><span class="n">sys</span>
-<span class="n">allow</span> <span class="o">/</span><span class="n">sys</span><span class="o">/</span><span class="n">fs</span><span class="o">/</span><span class="n">cgroup</span><span class="o">/**</span>
-<span class="n">allow</span> <span class="o">/</span><span class="n">sys</span><span class="o">/</span><span class="n">devices</span><span class="o">/</span><span class="n">virtual</span><span class="o">/</span><span class="n">net</span><span class="o">/**</span>
-<span class="n">allow</span> <span class="o">/</span><span class="n">sys</span><span class="o">/</span><span class="n">class</span><span class="o">/</span><span class="n">net</span><span class="o">/**</span>
-<span class="n">block</span> <span class="o">/</span><span class="n">proc</span><span class="o">/</span><span class="n">sys</span>
-<span class="n">allow</span> <span class="o">/</span><span class="n">proc</span><span class="o">/</span><span class="n">sys</span><span class="o">/</span><span class="n">kernel</span><span class="o">/</span><span class="n">shm</span><span class="o">*</span>
-<span class="n">allow</span> <span class="o">/</span><span class="n">proc</span><span class="o">/</span><span class="n">sys</span><span class="o">/</span><span class="n">kernel</span><span class="o">/</span><span class="n">sem</span><span class="o">*</span>
-<span class="n">allow</span> <span class="o">/</span><span class="n">proc</span><span class="o">/</span><span class="n">sys</span><span class="o">/</span><span class="n">kernel</span><span class="o">/</span><span class="n">msg</span><span class="o">*</span>
-<span class="n">allow</span> <span class="o">/</span><span class="n">proc</span><span class="o">/</span><span class="n">sys</span><span class="o">/</span><span class="n">kernel</span><span class="o">/</span><span class="n">hostname</span>
-<span class="n">allow</span> <span class="o">/</span><span class="n">proc</span><span class="o">/</span><span class="n">sys</span><span class="o">/</span><span class="n">kernel</span><span class="o">/</span><span class="n">domainname</span>
-<span class="n">allow</span> <span class="o">/</span><span class="n">proc</span><span class="o">/</span><span class="n">sys</span><span class="o">/</span><span class="n">net</span><span class="o">/**</span>
+<pre class="chroma"><code class="language-go" data-lang="go"><span class="err">#</span> <span class="nx">Run</span> <span class="nx">lxc</span><span class="o">-</span><span class="nx">generate</span><span class="o">-</span><span class="nx">aa</span><span class="o">-</span><span class="nx">rules</span><span class="p">.</span><span class="nx">py</span> <span class="nx">on</span> <span class="nx">this</span> <span class="nx">file</span> <span class="nx">after</span> <span class="nx">any</span> <span class="nx">modification</span><span class="p">,</span> <span class="nx">to</span> <span class="nx">generate</span>
+<span class="err">#</span> <span class="nx">the</span> <span class="nx">container</span><span class="o">-</span><span class="nx">rules</span> <span class="nx">file</span> <span class="nx">which</span> <span class="nx">is</span> <span class="nx">appended</span> <span class="nx">to</span> <span class="nx">container</span><span class="o">-</span><span class="nx">base</span><span class="p">.</span><span class="nx">in</span> <span class="nx">to</span> <span class="nx">create</span> <span class="nx">the</span>
+<span class="err">#</span> <span class="nx">final</span> <span class="nx">abstractions</span><span class="o">/</span><span class="nx">container</span><span class="o">-</span><span class="nx">base</span><span class="p">.</span>
+<span class="nx">block</span> <span class="o">/</span><span class="nx">sys</span>
+<span class="nx">allow</span> <span class="o">/</span><span class="nx">sys</span><span class="o">/</span><span class="nx">fs</span><span class="o">/</span><span class="nx">cgroup</span><span class="o">/**</span>
+<span class="nx">allow</span> <span class="o">/</span><span class="nx">sys</span><span class="o">/</span><span class="nx">devices</span><span class="o">/</span><span class="nx">virtual</span><span class="o">/</span><span class="nx">net</span><span class="o">/**</span>
+<span class="nx">allow</span> <span class="o">/</span><span class="nx">sys</span><span class="o">/</span><span class="nx">class</span><span class="o">/</span><span class="nx">net</span><span class="o">/**</span>
+<span class="nx">block</span> <span class="o">/</span><span class="nx">proc</span><span class="o">/</span><span class="nx">sys</span>
+<span class="nx">allow</span> <span class="o">/</span><span class="nx">proc</span><span class="o">/</span><span class="nx">sys</span><span class="o">/</span><span class="nx">kernel</span><span class="o">/</span><span class="nx">shm</span><span class="o">*</span>
+<span class="nx">allow</span> <span class="o">/</span><span class="nx">proc</span><span class="o">/</span><span class="nx">sys</span><span class="o">/</span><span class="nx">kernel</span><span class="o">/</span><span class="nx">sem</span><span class="o">*</span>
+<span class="nx">allow</span> <span class="o">/</span><span class="nx">proc</span><span class="o">/</span><span class="nx">sys</span><span class="o">/</span><span class="nx">kernel</span><span class="o">/</span><span class="nx">msg</span><span class="o">*</span>
+<span class="nx">allow</span> <span class="o">/</span><span class="nx">proc</span><span class="o">/</span><span class="nx">sys</span><span class="o">/</span><span class="nx">kernel</span><span class="o">/</span><span class="nx">hostname</span>
+<span class="nx">allow</span> <span class="o">/</span><span class="nx">proc</span><span class="o">/</span><span class="nx">sys</span><span class="o">/</span><span class="nx">kernel</span><span class="o">/</span><span class="nx">domainname</span>
+<span class="nx">allow</span> <span class="o">/</span><span class="nx">proc</span><span class="o">/</span><span class="nx">sys</span><span class="o">/</span><span class="nx">net</span><span class="o">/**</span>
 </code></pre></td></tr></table>
 </div>
 </div><p><strong>Những vector quan trọng nào đang bị chặn?</strong></p>
@@ -1884,11 +1879,11 @@ Sử dụng tính năng trên, <strong>core_pattern</strong> có thể được 
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-py" data-lang="py">  <span class="c1"># block some other dangerous paths</span>
-  <span class="n">deny</span> <span class="err">@</span><span class="p">{</span><span class="n">PROC</span><span class="p">}</span><span class="o">/</span><span class="n">kcore</span> <span class="n">rwklx</span><span class="p">,</span>
-  <span class="n">deny</span> <span class="err">@</span><span class="p">{</span><span class="n">PROC</span><span class="p">}</span><span class="o">/</span><span class="n">kmem</span> <span class="n">rwklx</span><span class="p">,</span>
-  <span class="n">deny</span> <span class="err">@</span><span class="p">{</span><span class="n">PROC</span><span class="p">}</span><span class="o">/</span><span class="n">mem</span> <span class="n">rwklx</span><span class="p">,</span>
-  <span class="n">deny</span> <span class="err">@</span><span class="p">{</span><span class="n">PROC</span><span class="p">}</span><span class="o">/</span><span class="n">sysrq</span><span class="o">-</span><span class="n">trigger</span> <span class="n">rwklx</span><span class="p">,</span>
+<pre class="chroma"><code class="language-go" data-lang="go">  <span class="err">#</span> <span class="nx">block</span> <span class="nx">some</span> <span class="nx">other</span> <span class="nx">dangerous</span> <span class="nx">paths</span>
+  <span class="nx">deny</span> <span class="err">@</span><span class="p">{</span><span class="nx">PROC</span><span class="p">}</span><span class="o">/</span><span class="nx">kcore</span> <span class="nx">rwklx</span><span class="p">,</span>
+  <span class="nx">deny</span> <span class="err">@</span><span class="p">{</span><span class="nx">PROC</span><span class="p">}</span><span class="o">/</span><span class="nx">kmem</span> <span class="nx">rwklx</span><span class="p">,</span>
+  <span class="nx">deny</span> <span class="err">@</span><span class="p">{</span><span class="nx">PROC</span><span class="p">}</span><span class="o">/</span><span class="nx">mem</span> <span class="nx">rwklx</span><span class="p">,</span>
+  <span class="nx">deny</span> <span class="err">@</span><span class="p">{</span><span class="nx">PROC</span><span class="p">}</span><span class="o">/</span><span class="nx">sysrq</span><span class="o">-</span><span class="nx">trigger</span> <span class="nx">rwklx</span><span class="p">,</span>
 </code></pre></td></tr></table>
 </div>
 </div><ul>
@@ -1916,12 +1911,12 @@ chẳng hạn như hủy các quy trình, liệt kê tất cả các quy trình 
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-py" data-lang="py"><span class="c1"># deny writes in /sys except for /sys/fs/cgroup, also allow</span>
-<span class="c1"># fusectl, securityfs and debugfs to be mounted there (read-only)</span>
-<span class="n">deny</span> <span class="n">mount</span> <span class="n">fstype</span><span class="o">=</span><span class="n">debugfs</span> <span class="o">-&gt;</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">ureadahead</span><span class="o">/</span><span class="n">debugfs</span><span class="o">/</span><span class="p">,</span>
-<span class="n">deny</span> <span class="o">/</span><span class="n">sys</span><span class="o">/</span><span class="n">firmware</span><span class="o">/</span><span class="n">efi</span><span class="o">/</span><span class="n">efivars</span><span class="o">/**</span> <span class="n">rwklx</span><span class="p">,</span>
-<span class="n">deny</span> <span class="o">/</span><span class="n">sys</span><span class="o">/</span><span class="n">kernel</span><span class="o">/</span><span class="n">security</span><span class="o">/**</span> <span class="n">rwklx</span><span class="p">,</span>
-<span class="n">deny</span> <span class="err">@</span><span class="p">{</span><span class="n">PROC</span><span class="p">}</span><span class="o">/</span><span class="n">sys</span><span class="o">/</span><span class="n">fs</span><span class="o">/**</span> <span class="n">wklx</span><span class="p">,</span>
+<pre class="chroma"><code class="language-go" data-lang="go"><span class="err">#</span> <span class="nx">deny</span> <span class="nx">writes</span> <span class="nx">in</span> <span class="o">/</span><span class="nx">sys</span> <span class="nx">except</span> <span class="k">for</span> <span class="o">/</span><span class="nx">sys</span><span class="o">/</span><span class="nx">fs</span><span class="o">/</span><span class="nx">cgroup</span><span class="p">,</span> <span class="nx">also</span> <span class="nx">allow</span>
+<span class="err">#</span> <span class="nx">fusectl</span><span class="p">,</span> <span class="nx">securityfs</span> <span class="nx">and</span> <span class="nx">debugfs</span> <span class="nx">to</span> <span class="nx">be</span> <span class="nx">mounted</span> <span class="nf">there</span> <span class="p">(</span><span class="nx">read</span><span class="o">-</span><span class="nx">only</span><span class="p">)</span>
+<span class="nx">deny</span> <span class="nx">mount</span> <span class="nx">fstype</span><span class="p">=</span><span class="nx">debugfs</span> <span class="o">-</span><span class="p">&gt;</span> <span class="o">/</span><span class="kd">var</span><span class="o">/</span><span class="nx">lib</span><span class="o">/</span><span class="nx">ureadahead</span><span class="o">/</span><span class="nx">debugfs</span><span class="o">/</span><span class="p">,</span>
+<span class="nx">deny</span> <span class="o">/</span><span class="nx">sys</span><span class="o">/</span><span class="nx">firmware</span><span class="o">/</span><span class="nx">efi</span><span class="o">/</span><span class="nx">efivars</span><span class="o">/**</span> <span class="nx">rwklx</span><span class="p">,</span>
+<span class="nx">deny</span> <span class="o">/</span><span class="nx">sys</span><span class="o">/</span><span class="nx">kernel</span><span class="o">/</span><span class="nx">security</span><span class="o">/**</span> <span class="nx">rwklx</span><span class="p">,</span>
+<span class="nx">deny</span> <span class="err">@</span><span class="p">{</span><span class="nx">PROC</span><span class="p">}</span><span class="o">/</span><span class="nx">sys</span><span class="o">/</span><span class="nx">fs</span><span class="o">/**</span> <span class="nx">wklx</span><span class="p">,</span>
 </code></pre></td></tr></table>
 </div>
 </div><ul>
@@ -1972,15 +1967,15 @@ với minh họa ở dưới. Với bản Docker 1.10, Docker đã thêm nhiều
 </span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="mi">2</span>
-<span class="n">blacklist</span>
-<span class="n">reject_force_umount</span> <span class="c1"># comment this to allow umount -f; not recommended</span>
-<span class="p">[</span><span class="nb">all</span><span class="p">]</span>
-<span class="n">kexec_load</span> <span class="n">errno</span> <span class="mi">1</span>
-<span class="n">open_by_handle_at</span> <span class="n">errno</span> <span class="mi">1</span>
-<span class="n">init_module</span> <span class="n">errno</span> <span class="mi">1</span>
-<span class="n">finit_module</span> <span class="n">errno</span> <span class="mi">1</span>
-<span class="n">delete_module</span> <span class="n">errno</span> <span class="mi">1</span>
+<pre class="chroma"><code class="language-go" data-lang="go"><span class="mi">2</span>
+<span class="nx">blacklist</span>
+<span class="nx">reject_force_umount</span> <span class="err">#</span> <span class="nx">comment</span> <span class="nx">this</span> <span class="nx">to</span> <span class="nx">allow</span> <span class="nx">umount</span> <span class="o">-</span><span class="nx">f</span><span class="p">;</span> <span class="nx">not</span> <span class="nx">recommended</span>
+<span class="p">[</span><span class="nx">all</span><span class="p">]</span>
+<span class="nx">kexec_load</span> <span class="nx">errno</span> <span class="mi">1</span>
+<span class="nx">open_by_handle_at</span> <span class="nx">errno</span> <span class="mi">1</span>
+<span class="nx">init_module</span> <span class="nx">errno</span> <span class="mi">1</span>
+<span class="nx">finit_module</span> <span class="nx">errno</span> <span class="mi">1</span>
+<span class="nx">delete_module</span> <span class="nx">errno</span> <span class="mi">1</span>
 </code></pre></td></tr></table>
 </div>
 </div><p>Phần đầu của chính sách LXC được sử dụng như một biện pháp bảo vệ chuyên sâu để ngăn chạn các vùng chứa buộc phải ummounting các phần của filesystem.</p>
@@ -1990,9 +1985,7 @@ một kernel images mới. Lưu ý, có một số biện pháp bảo vệ chuy�
 <ul>
 <li><strong>init_module, finit_module, delete_module:</strong> tất cả yêu cầu SYS_MODULE capability - đã bị loại bỏ bởi Docker và LXC trong privileged containers.</li>
 <li><strong>kexec_load</strong> không yêu cầu SYS_MODULE, thay vào đó nó yêu cầu SYS_BOOT - privileged LXC container giữ. Trong hầu hết các trường hợp, điều này không thể khai thác (mà không bypass seccomp),<br />
-tuy nhiên, điều đáng chú ý là Linux 3.17 đã gới hiệu 1 biến thể mới của kexec: <strong>kexec_file_load</strong>. Lệnh gọi này (tải signed kernels) không nằm trong danh sách đen của privileged LXC container,<br />
-và chỉ yêu cầu SYS_BOOT. Tuy nhiên, vùng chứa LXC đặc quyền có một số vấn đề khác cho phép thoát khỏi container mà không cần boot vào kernel mới<br />
-(vì trên thực tế, chúng ta có thể bypass seccomp).</li>
+tuy nhiên, điều đáng chú ý là Linux 3.17 đã gới hiệu 1 biến thể mới của kexec: <strong>kexec_file_load</strong>. Lệnh gọi này (tải signed kernels) không nằm trong danh sách đen của privileged LXC container, và chỉ yêu cầu SYS_BOOT. Tuy nhiên, vùng chứa LXC đặc quyền có một số vấn đề khác cho phép thoát khỏi container mà không cần boot vào kernel mới (vì trên thực tế, chúng ta có thể bypass seccomp).</li>
 </ul>
 <h3 id="the-issue-with-open_by_handle_at">The Issue With open_by_handle_at()</h3>
 <p><strong>open_by_handle_at</strong> là một lợi gọi hệ thống khá thú vị, ban đầu nó được đưa vào kernel để hỗ trợ userspace file servers để các process dễ dàng chuyển các mã định danh tệp duy nhất (unique file identifiers) cho nhau.<br />
@@ -2028,18 +2021,32 @@ do sự tập trung gần đây của họ vào seccomp).</p>
 </li>
 </ul>
 <h2 id="abusing-unprivileged-containers">Abusing Unprivileged Containers</h2>
-<p>&ldquo;The following section covers some known weaknesses in unprivileged containers, along with<br />
-demonstrations on how they can be exploited. The following tests were performed on a default<br />
-Docker 1.10 setup [57] (which, on trusty, does not use user namespaces or seccomp by default),<br />
-as well as on a default LXC 1.08 setup [58] (which does use both user namespaces and seccomp<br />
-by default) on a default Vagrant Ubuntu Trusty64 VM. While Docker containers started this way<br />
-are not unprivileged, all the following attacks were found on an unprivileged LXC container, and<br />
-then verified to work in (default, privileged) Docker as well. &quot;</p>
 <hr />
+<p>Tiếp theo, chúng ta sẽ tìm hiểu những điểm yếu của unprivileged containers.</p>
 <h3 id="pid-namespacing-info-leak">PID Namespacing Info-Leak</h3>
+<p>Chúng ta sẽ nói đến tệp <code>/proc/sched_debug</code>. pseudo-file này cho phép unprivileged user có thể xem thông tin debug cho Linux scheduler và không biết PID-namespace. Dễ thấy, nó tiết lộ tên và PID của tất cả các tiến trình đang chạy trên hệ thống (và thậm chí biết cả nhóm tác vụ của chúng (cgroup) là gì, giúp xác định được các vùng chứa khác trên hệ thống và hệ thống container nào đang được thực thi). Lỗi này đã được reported cho cả Docker và LXC và nó đã được vá ở Docker.</p>
 <h3 id="net_raw-abuse">NET_RAW abuse</h3>
+<p>Cấu hình phổ biến nhất cho các công ty cung cấp giải pháp <a href="https://oncloud.vn/paas-la-gi/">PaaS</a> được xây dựng trên container là có nhiều container của khách hàng chạy trên cũng một máy chủ vật lý. Theo mặc định, cả LXC và Docker đều thiết lập container network để tất cả các vùng chứa chia sẻ cùng một Linux virtual bridge. Do đó, những container này sẽ có thể giao tiếp với nhau. Ngay cả khi quyền truy cập mạng trực tiếp này bị vô hiệu hóa (set flag -icc = false cho Docker hoặc sử dụng iptables rules cho LXC), các container vẫn không bị hạn chế đối với việc truy cập link-layer traffic. Đặc biệt, có thể tiến hành một cuộc tấn công giả mạo ARP vào một container khác trong cùng một hệ thống máy chủ, cho phép tấn công full middle-person đối với lưu lượng của container mục tiêu. Chúng ta sẽ có một bài viết nói rõ hơn về cách tần công này.<br />
+Sau khi nhận được báo cáo này, LXC team đã đề xuất một số giải pháp, chúng bao gồm:</p>
+<ul>
+<li>Sử dụng LXD với OpenStack để quản lí container networking</li>
+<li>Sử dụng libvirt để quản lí MAC tables của bridges/containers.</li>
+<li>Sử dụng một virtual bridge riêng trên mỗi trust zone hoặc trên mỗi container.</li>
+</ul>
 <h3 id="denial-of-service-attacks">Denial of Service Attacks</h3>
+<p>User namespaces hoạt động bằng cách &ldquo;sliding&rdquo; UIDs giữa user namspace (container) và root namespace (host). Ví dụ, mặc định cài đặt của LXC thì UID 0 bên trong contaner sẽ trở thành UID 100000 trên host. Tuy nhiên, mặc định trên cả LXC và Docker là sử dụng cùng một trang trình bày UID cho tất cả các unprivileged container.<br />
+Nói cách khác, các UID giống hệt nhau của các process trong container khác nhau sẽ có giá trị giống nhau trên máy chủ, chỉ được chuyên lên bằng một slide không đổi (tức là tất cả các process đang chạy dưới root bên trong bất kì container nào sẽ đang chạy với UID 100000 trên host). Điều nay làm tăng khả năng ulimit của người dùng khi bị tấn công, vì các khu vực này của kernel không xác định được user namespace. Lưu ý rằng các điều kiện của từ chối dịch vụ (Dos) xảy ra mà không cần user namespace (cũng như điều kiện tương tự của UID máy chủ được chia sẻ đẻ áp dụng). Chúng ta sẽ có một bài viết riêng để thảo luận về cách tấn công này, tuy nhiên chúng ta có một số khái niệm cần lưu ý:</p>
+<ul>
+<li><strong>pending Signals:</strong> Đây là giới hạn cho mỗi người dùng về số lượng tín hiệu đang chờ xử lý tối đa có thể được xếp hàng đợi trong tất cả các process của người dùng. process chạy trong một container có thể xếp hàng đợi số lượng tin hiệu đang chờ xử lý tối đa, ngăn các quá trình trong các process khác nhận được tín hiệu đang chờ xử lý. Thực nghiệm cho thấy, điều này làm ảnh hưởng đến cả LXC và Docker.</li>
+<li><strong>Posix Message Queues:</strong> giới hạn số lượng tài nuyên tối đa có thể được sử dụng trên hàng đợi thông điệp POSIX. Quá trình chạy trên một container có thể làm cạn kiệt tất cả bộ nhớ hàng đợi thông điệp POSIX có sẵn, ngăn các process trong container khác tạo hoặc gửi thông điệp đến hàng đợi thông điệp POSIX, Thử nghiệm cho thấy việc này vẫn đang hoạt động trên LXC và Docker.</li>
+<li><strong>Max User Processes:</strong> giới hạn cho mỗi người dùng về số lượng process tối đa. Điều này có thể dễ dàng được khai thác để tạo ra một Dos đơn giản chống lại các container khác, cũng như máy chủ. Thử nghiệm cho thấy cuộc tấn công này rất thành công trên LXC (và có thể làm hỏng toàn bộ máy chủ) trong khi trên Docker chỉ có thể hạ tất cả vùng chứa Docker (máy chủ vẫn ổn định). Lưu ý, Linux 4.3 đã thêm khả năng giới hạn tài nguyên PID, điều này giúp các hệ thống container giảm thiếu vấn đề này.</li>
+<li><strong>Max Files:</strong> Đây là giới hạn cho mỗi người dùng về số lượng bộ mô tả tệp tối đa có thể mở. Tren cả LXC và Docker, đây là một cách dễ dàng để Dos tất cả các container khác đang chạy trên cùng 1 máy chủ.<br />
+Bỏ qua ulimit, hai điều kiện Dos khác có thể được khai thác trong container như sau:</li>
+<li><strong>Disk Space:</strong> có lẽ, Dos đơn giản nhất để tấn công hệ thống container là làm cho ổ đĩa bị full. Thử nghiệm, cho thấy điều này đã hoạt động trên LXC và Docker. Không giống như một sô cuộc tấn công Dos ở trên, thường có thể làm hỏng máy chú hoạc gây ra bất ổn đủ để chúng khó dọn dẹp, cách này cung cấp khả năng đơn giản nhất để tạo ra một Dos và sau đó dọn dẹp nó một cách nhanh chóng. Kết hợp với PID Namespacing Info-Leak, điều này có thể cho phép container của kẻ tấn công nhằm mục tiêu đến những người thuê khác trên cùng một máy chủ được chia sẻ, chỉ tạo điều kiện Dos có chọn lọc khi một số container hoặc process khác đang chạy.</li>
+<li><strong>Global File Descriptor Limits:</strong> Hệ thống duy trì giới hạn về số lượng bộ mô tả tệp tối đa có sẵn tổn thể (có sẵn tại <code>/proc/sys.fs.filemax</code>, như thảo luận trước đó, container không thể ghi vào). Nếu container không chia sẻ UID và có bộ ulimit về số bộ mô tả tệp mà chúng ta có thể mở, container vẫn có thể cố gắng DoS máy chủ và các contaienr khác bằng cách mở sô lương FD tối đa cho phép khi mỗi người dùng trong user namespace của họ, cung cấp khả năng tiêu thụ FD được khuếch đại rất nhiều. Đây thường là Dos &ldquo;last line&rdquo; và chỉ được được thiện nếu các biên pháp giảm nhẹ cho các vector khác (đơn gian hơn) được đưa ra.</li>
+</ul>
 <h1 id="container-engine-vulnerabilities">Container Engine Vulnerabilities</h1>
+<p>Một số lỗ hổng và cách khai thác.</p>
 <h2 id="docker-vulnerabilities">Docker Vulnerabilities</h2>
 <table>
 <thead>
@@ -2067,13 +2074,15 @@ then verified to work in (default, privileged) Docker as well. &quot;</p>
 </tr>
 </tbody>
 </table>
-<h1 id="escape-via-insecure-configuration">Escape via Insecure Configuration</h1>
+<h2 id="escape-via-insecure-configuration">Escape via Insecure Configuration</h2>
 <hr />
-<h2 id="bad-idea-1-exposed-docker-socket">Bad idea #1: Exposed Docker Socket</h2>
-<h2 id="bad-idea-2---privileged-container">Bad idea #2: &ndash;privileged container</h2>
-<h2 id="bad-idea-3-excessive-capabilities">Bad idea #3: Excessive Capabilities</h2>
-<h2 id="bad-idea-4-sensitive-mounts">Bad idea #4: Sensitive mounts</h2>
-<h1 id="kernel-exploitation">Kernel Exploitation</h1>
+<ul>
+<li>Bad idea #1: Exposed Docker Socket</li>
+<li>Bad idea #2: &ndash;privileged container</li>
+<li>Bad idea #3: Excessive Capabilities</li>
+<li>Bad idea #4: Sensitive mounts</li>
+</ul>
+<h2 id="kernel-exploitation">Kernel Exploitation</h2>
 <hr />
 <p>The security model of containers is predicated on kernel integrity</p>
 <h2 id="dirty-cow-cve-2016-5195">Dirty CoW (CVE-2016-5195)</h2>
@@ -3619,16 +3628,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
   <ul>
     <li><a href="#docker-vulnerabilities">Docker Vulnerabilities</a></li>
-  </ul>
-
-  <ul>
-    <li><a href="#bad-idea-1-exposed-docker-socket">Bad idea #1: Exposed Docker Socket</a></li>
-    <li><a href="#bad-idea-2---privileged-container">Bad idea #2: &ndash;privileged container</a></li>
-    <li><a href="#bad-idea-3-excessive-capabilities">Bad idea #3: Excessive Capabilities</a></li>
-    <li><a href="#bad-idea-4-sensitive-mounts">Bad idea #4: Sensitive mounts</a></li>
-  </ul>
-
-  <ul>
+    <li><a href="#escape-via-insecure-configuration">Escape via Insecure Configuration</a></li>
+    <li><a href="#kernel-exploitation">Kernel Exploitation</a></li>
     <li><a href="#dirty-cow-cve-2016-5195">Dirty CoW (CVE-2016-5195)</a></li>
   </ul>
 </nav>

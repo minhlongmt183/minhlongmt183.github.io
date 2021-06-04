@@ -27,9 +27,8 @@
         <author>edisc.ctf@gmail.com (Edisc)</author>
         <atom:modified>Thu, 04 Jun 2020 00:00:00 +0000</atom:modified>
         <guid>https://minhlongmt183.github.io/posts/container-escapes/</guid>
-        <description>Container Basics  /proc is a special filesystem mount (procfs) for accessing system and process information directly
-from the kernel by reading &amp;ldquo;file&amp;rdquo; entries.  Credentials Credentials describe the user identity of a task, which determine its permission for shared resources
-such as files, semaphores, and shared memory.
+        <description>Container Basics Chúng ta sẽ đi qua một số khái niệm cơ bản và cần thiết trong docker:
+Credentials Credentials describe the user identity of a task, which determine its permission for shared resources such as files, semaphores, and shared memory.
 Capabilities Since kernel 2.2, Linux divides the privileges associated with superuser into distinct unit known as capabilities
 /proc/$PID/status | man capabilities Filesystem The container&amp;rsquo;s root mount is often planted in a container-specialized filesystem, such as OverlayFS</description>
         
@@ -85,7 +84,7 @@ $ docker version [OPTIONS] Get the server version $ docker version --format &#39
         
           
             
-              <category>resources</category>
+              <category>pwn</category>
             
           
         
