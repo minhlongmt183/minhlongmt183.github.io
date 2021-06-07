@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>Reverse on Edisc Blog</title>
+    <link>https://minhlongmt183.github.io/categories/reverse/</link>
+    <description>Recent content in Reverse on Edisc Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>vi</language>
+    <managingEditor>edisc.ctf@gmail.com (Edisc)</managingEditor>
+    <webMaster>edisc.ctf@gmail.com (Edisc)</webMaster>
+    <copyright>©2021, All Rights Reserved</copyright>
+    <lastBuildDate>Sat, 06 Jun 2020 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="https://minhlongmt183.github.io/categories/reverse/index.xml" rel="self" type="application/rss+xml" />
+    
+
+      
+      <item>
+        <title>Manually Unpacking UPX Executables (vẫn đang update...)</title>
+        <link>https://minhlongmt183.github.io/posts/packet/</link>
+        <pubDate>Sat, 06 Jun 2020 00:00:00 +0000</pubDate>
+        <author>edisc.ctf@gmail.com (Edisc)</author>
+        <atom:modified>Sat, 06 Jun 2020 00:00:00 +0000</atom:modified>
+        <guid>https://minhlongmt183.github.io/posts/packet/</guid>
+        <description>Nguồn tham khảo
+Packing là gì? Packing có nghĩa là nén (compressed), hoặc xáo trộn (obfuscated) file thực thi để làm cho file thực thi khó phát hiện, khó phân tích tĩnh, khó dịch ngược. Trong ngữ cảnh của malware, vì mã độc chủ yếu được compressed, obfuscated trong các mẫu đóng gói, các công cụ dùng để phân tích tĩnh sẽ gặp vấn đề khi xác định liệu tệp nhị phân này có phải là mã độc hay không.</description>
+        
+        <dc:creator>Edisc</dc:creator>
+        <media:content url="https://minhlongmt183.github.io/images/posts/packed.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>Malware, flareon</category>
+            
+          
+        
+        
+          
+            
+              <category>Reverse</category>
+            
+          
+        
+        
+      </item>
+      
+
+    
+  </channel>
+</rss>

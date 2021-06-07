@@ -14,26 +14,24 @@
     <managingEditor>edisc.ctf@gmail.com (Edisc)</managingEditor>
     <webMaster>edisc.ctf@gmail.com (Edisc)</webMaster>
     <copyright>©2021, All Rights Reserved</copyright>
-    <lastBuildDate>Thu, 04 Jun 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 07 Jun 2020 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://minhlongmt183.github.io/tags/docker/index.xml" rel="self" type="application/rss+xml" />
     
 
       
       <item>
-        <title>Tìm hiểu về Container Escapes</title>
-        <link>https://minhlongmt183.github.io/posts/container-escapes/</link>
-        <pubDate>Thu, 04 Jun 2020 00:00:00 +0000</pubDate>
+        <title>Tìm hiểu về docker CLI (P1)</title>
+        <link>https://minhlongmt183.github.io/posts/docker_cli/</link>
+        <pubDate>Sun, 07 Jun 2020 00:00:00 +0000</pubDate>
         <author>edisc.ctf@gmail.com (Edisc)</author>
-        <atom:modified>Thu, 04 Jun 2020 00:00:00 +0000</atom:modified>
-        <guid>https://minhlongmt183.github.io/posts/container-escapes/</guid>
-        <description>Container Basics Chúng ta sẽ đi qua một số khái niệm cơ bản và cần thiết trong docker:
-Credentials Credentials describe the user identity of a task, which determine its permission for shared resources such as files, semaphores, and shared memory.
-Capabilities Since kernel 2.2, Linux divides the privileges associated with superuser into distinct unit known as capabilities
-/proc/$PID/status | man capabilities Filesystem The container&amp;rsquo;s root mount is often planted in a container-specialized filesystem, such as OverlayFS</description>
+        <atom:modified>Sun, 07 Jun 2020 00:00:00 +0000</atom:modified>
+        <guid>https://minhlongmt183.github.io/posts/docker_cli/</guid>
+        <description>Toàn bộ series này được tham khảo từ hai nguồn chính: XuanThuLabChanel và DockerDoc. Em xin chân thành cảm ơn sự cống kiến của các tác giả của những kênh nói trên.❤️❤️❤️
+Làm quen với docker command line Khi làm việc với docker, lệnh chúng ta hay dùng đó chính là docker. Sau lệnh docker sẽ có nhiều lệnh nhỏ, để xem danh sách các lệnh nhỏ này, ta gõ</description>
         
         <dc:creator>Edisc</dc:creator>
-        <media:content url="https://minhlongmt183.github.io/images/contents/docker.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="https://minhlongmt183.github.io/images/posts/docker.png" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
@@ -60,18 +58,19 @@ Capabilities Since kernel 2.2, Linux divides the privileges associated with supe
       </item>
       
       <item>
-        <title>Một số thiết lập sau khi cài đặt docker</title>
-        <link>https://minhlongmt183.github.io/posts/get-started/</link>
-        <pubDate>Tue, 02 Jun 2020 00:00:00 +0000</pubDate>
+        <title>Tìm hiểu về Container Escapes</title>
+        <link>https://minhlongmt183.github.io/posts/container-escapes/</link>
+        <pubDate>Thu, 04 Jun 2020 00:00:00 +0000</pubDate>
         <author>edisc.ctf@gmail.com (Edisc)</author>
-        <atom:modified>Tue, 02 Jun 2020 00:00:00 +0000</atom:modified>
-        <guid>https://minhlongmt183.github.io/posts/get-started/</guid>
-        <description>Start the tutorial $ docker run -d -p 80:80 docker/getting-started Trong đó:
- -d: chạy container ở chế độ detached mode (ở background) -p 80:80: ánh xạ cổng 80 của host vào cổng 80 của container. docker/getting-started: image sử dụng  Docker version Usage
-$ docker version [OPTIONS] Get the server version $ docker version --format &#39;{{.Server.Version}}&#39; Dump raw JSON data $ docker version --format &#39;{{json .}}&#39; Print the current context $ docker version --format=&#39;{{.</description>
+        <atom:modified>Thu, 04 Jun 2020 00:00:00 +0000</atom:modified>
+        <guid>https://minhlongmt183.github.io/posts/container-escapes/</guid>
+        <description>Container Basics Chúng ta sẽ đi qua một số khái niệm cơ bản và cần thiết trong docker:
+Credentials Credentials describe the user identity of a task, which determine its permission for shared resources such as files, semaphores, and shared memory.
+Capabilities Since kernel 2.2, Linux divides the privileges associated with superuser into distinct unit known as capabilities
+/proc/$PID/status | man capabilities Filesystem The container&amp;rsquo;s root mount is often planted in a container-specialized filesystem, such as OverlayFS</description>
         
         <dc:creator>Edisc</dc:creator>
-        <media:content url="https://minhlongmt183.github.io/images/contents/docker.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="https://minhlongmt183.github.io/images/posts/docker.png" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
@@ -104,10 +103,11 @@ $ docker version [OPTIONS] Get the server version $ docker version --format &#39
         <author>edisc.ctf@gmail.com (Edisc)</author>
         <atom:modified>Mon, 01 Jun 2020 00:00:00 +0000</atom:modified>
         <guid>https://minhlongmt183.github.io/posts/docker_overview/</guid>
-        <description>Tổng quan về Docker Docker là gì?  Docker là một container platform để phát triển, triển khai và quản lí ứng dụng nhanh chóng. Docker là nền tảng mở (open platform) để phát triển (developing), vận chuyển (shipping) hoặc chạy (running) các ứng dụng. Docker cho phép ứng dụng của chúng ta độc lập với cơ sở hạ tầng (infrastructure) của máy, do đó, chúng ta có thể dễ dàng chia sẻ ứng dụng một cách dễ dàng giữa các thiết bị.</description>
+        <description>Toàn bộ series này được tham khảo từ hai nguồn chính: XuanThuLabChanel và DockerDoc. Em xin chân thành cảm ơn sự cống kiến của các tác giả của những kênh nói trên.❤️❤️❤️
+Tổng quan về Docker Docker là gì?  Docker là một container platform để phát triển, triển khai và quản lí ứng dụng nhanh chóng. Docker là nền tảng mở (open platform) để phát triển (developing), vận chuyển (shipping) hoặc chạy (running) các ứng dụng.</description>
         
         <dc:creator>Edisc</dc:creator>
-        <media:content url="https://minhlongmt183.github.io/images/contents/docker.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="https://minhlongmt183.github.io/images/posts/docker.png" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
