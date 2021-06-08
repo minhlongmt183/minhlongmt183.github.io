@@ -28,7 +28,7 @@
         <atom:modified>Sat, 06 Jun 2020 00:00:00 +0000</atom:modified>
         <guid>https://minhlongmt183.github.io/posts/packet/</guid>
         <description>Nguồn tham khảo
-Packing là gì? Packing có nghĩa là nén (compressed), hoặc xáo trộn (obfuscated) file thực thi để làm cho file thực thi khó phát hiện, khó phân tích tĩnh, khó dịch ngược. Trong ngữ cảnh của malware, vì mã độc chủ yếu được compressed, obfuscated trong các mẫu đóng gói, các công cụ dùng để phân tích tĩnh sẽ gặp vấn đề khi xác định liệu tệp nhị phân này có phải là mã độc hay không.</description>
+What is Packing? Packing có nghĩa là nén (compressed), hoặc xáo trộn (obfuscated) file thực thi để làm cho file thực thi khó phát hiện, khó phân tích tĩnh, khó dịch ngược. Trong ngữ cảnh của malware, vì mã độc chủ yếu được compressed, obfuscated trong các mẫu đóng gói, các công cụ dùng để phân tích tĩnh sẽ gặp vấn đề khi xác định liệu tệp nhị phân này có phải là mã độc hay không.</description>
         
         <dc:creator>Edisc</dc:creator>
         <media:content url="https://minhlongmt183.github.io/images/posts/packed.png" medium="image"><media:title type="html">featured image</media:title></media:content>

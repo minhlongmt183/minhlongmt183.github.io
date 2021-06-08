@@ -5,7 +5,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Tìm hiểu về docker – Edisc Blog</title>
+    <title>Tìm hiểu và sử dụng docker (P2) – Edisc Blog</title>
     
 
 
@@ -653,7 +653,7 @@
     
     var baseurl = JSON.parse("\"https://minhlongmt183.github.io/\"");
     
-    var permalink = JSON.parse("\"https://minhlongmt183.github.io/posts/docker_overview/\"");
+    var permalink = JSON.parse("\"https://minhlongmt183.github.io/posts/docker_p2/\"");
     
     var langprefix = JSON.parse("\"\"");
     var searchResults = null;
@@ -1336,17 +1336,17 @@
 
 <meta name="keywords" content="Docker">
 
-<meta name="created" content="2020-06-01T00:00:00&#43;0000">
-<meta name="modified" content="2020-06-01T00:00:00&#43;0000">
-<meta property="article:published_time" content="2020-06-01T00:00:00&#43;0000">
+<meta name="created" content="2020-06-08T00:00:00&#43;0000">
+<meta name="modified" content="2020-06-08T00:00:00&#43;0000">
+<meta property="article:published_time" content="2020-06-08T00:00:00&#43;0000">
 
 <meta name="author" content="Edisc">
-<meta property="article:author" content="https://minhlongmt183.github.io/posts/docker_overview/@Edisc">
+<meta property="article:author" content="https://minhlongmt183.github.io/posts/docker_p2/@Edisc">
 
 
 <meta property="og:site_name" content="Edisc Blog">
-<meta property="og:title" content="Tìm hiểu về docker">
-<meta property="og:url" content="https://minhlongmt183.github.io/posts/docker_overview/">
+<meta property="og:title" content="Tìm hiểu và sử dụng docker (P2)">
+<meta property="og:url" content="https://minhlongmt183.github.io/posts/docker_p2/">
 <meta property="og:type" content="article">
 <meta property="og:description" content="Docker là nền tảng mở (open platform) để phát triển (developing), vận chuyển (shipping) hoặc chạy (running) các ứng dụng.">
 
@@ -1355,7 +1355,7 @@
     <meta property="og:image:url" content="https://minhlongmt183.github.io/images/posts/docker.png">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:app:name:iphone" content="Edisc Blog">
-    <meta property="twitter:title" content="Tìm hiểu về docker">
+    <meta property="twitter:title" content="Tìm hiểu và sử dụng docker (P2)">
     <meta property="twitter:description" content="Docker là nền tảng mở (open platform) để phát triển (developing), vận chuyển (shipping) hoặc chạy (running) các ứng dụng.">
   
 
@@ -1368,7 +1368,7 @@
 
 <meta name="apple-mobile-web-app-status-bar-style" content="#fff">
 
-<link rel="canonical" href="https://minhlongmt183.github.io/posts/docker_overview/">
+<link rel="canonical" href="https://minhlongmt183.github.io/posts/docker_p2/">
 
 <link rel="manifest" href="/manifest.json">
 
@@ -1394,10 +1394,10 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "headline": "Tìm hiểu về docker",
-    "datePublished": "2020-06-01T00:00:00Z",
-    "dateModified": "2020-06-01T00:00:00Z",
-    "url" : "https://minhlongmt183.github.io/posts/docker_overview/",
+    "headline": "Tìm hiểu và sử dụng docker (P2)",
+    "datePublished": "2020-06-08T00:00:00Z",
+    "dateModified": "2020-06-08T00:00:00Z",
+    "url" : "https://minhlongmt183.github.io/posts/docker_p2/",
     "description": "Docker là nền tảng mở (open platform) để phát triển (developing), vận chuyển (shipping) hoặc chạy (running) các ứng dụng.",
     "keywords": ["Docker"],
     "image" : "https://minhlongmt183.github.io/images/posts/docker.png",
@@ -1695,7 +1695,7 @@
   
   <li  class="is-active" >
     
-      <span>Tìm hiểu về docker</span>
+      <span>Tìm hiểu và sử dụng docker (P2)</span>
     
   </li>
   
@@ -1707,12 +1707,12 @@
   <div class="single ">
     <div class="single__nojs">This page looks best with JavaScript enabled</div>
     <script>document.querySelector('.single').classList.remove('hide'); document.querySelector('.single__nojs').classList.add('hide');</script>
-    <h2 class="single__title" data-ani="true">Tìm hiểu về docker</h2>
+    <h2 class="single__title" data-ani="true">Tìm hiểu và sử dụng docker (P2)</h2>
     <h3 class="single__subtitle"></h3>
     <div class="single__meta">
       
 <div class="single__infos">
-  <time class="single__info" title="Written At">📅&nbsp;Jun 1, 2020 </time>
+  <time class="single__info" title="Written At">📅&nbsp;Jun 8, 2020 </time>
   
   &nbsp;&middot;&nbsp; <span class="single__info" title="Reading Time"> ☕&nbsp;10&nbsp;min read </span>
   
@@ -1739,164 +1739,595 @@
       <div class="notices info" data-title="Info">
   <em>Toàn bộ series này được tham khảo từ hai nguồn chính: <a href="https://www.youtube.com/watch?v=9Gf4vRYSkK8&amp;list=PLwJr0JSP7i8At14UIC-JR4r73G4hQ1CXO&amp;index=3&amp;ab_channel=XuanThuLab">XuanThuLabChanel</a> và <a href="https://docs.docker.com/reference/">DockerDoc</a>. Em xin chân thành cảm ơn sự cống kiến của các tác giả của những kênh nói trên.❤️❤️❤️</em>
 </div>
-<h1 id="tổng-quan-về-docker">Tổng quan về Docker</h1>
-<hr />
-<h2 id="docker-là-gì">Docker là gì?</h2>
-<ul>
-<li>Docker là một container platform để phát triển, triển khai và quản lí ứng dụng nhanh chóng.</li>
-<li>Docker là nền tảng mở (open platform) để phát triển (developing), vận chuyển (shipping) hoặc chạy (running) các ứng dụng.</li>
-<li>Docker cho phép ứng dụng của chúng ta độc lập với cơ sở hạ tầng (infrastructure) của máy, do đó, chúng ta có thể dễ dàng chia sẻ ứng dụng một cách dễ dàng giữa các thiết bị. Chúng ta có thể quản lí cở sở hạ tầng (infrastructure) giống như cách quản lí những ứng dụng trên máy.</li>
-<li>Sử dụng LibContainer để quản lý những function của Linux kernel và sử dụng những nhóm công nghệ độc lập như: Namespaces, Control Groups, AppArmor, security profiles, network interface, rule for the firewall necessary for the operation of containers.</li>
-</ul>
-<h2 id="the-docker-platform">The Docker platform</h2>
-<ul>
-<li>Docker cung cấp một khả năng đóng gói và chạy ứng dụng trên một môi trường cô lập, khả năng này gọi là <strong>container</strong>.</li>
-<li>Container nhẹ và chứa tất cả những thức cần thiết để chạy ứng dụng, do đó, chúng ta chỉ cần tải về và chạy trên máy cá nhân (host). Ngoài ra, môi trường được chạy là môi trường độc lập và bảo mật (security) cho phép chúng ta chạy nhiều container đồng thời và dễ dàng chia sẻ container trong khi chúng ta làm việc, và đảm bảo tất cả mọi người đều được chúng ta chia sẻ một container sẽ có chung 1 môi trường thực thi ứng dụng, và cho kết quả thực thi giống nhau.</li>
-<li>Docker cung cấp công cụ và nền tảng để  quản lí vòng đời (lifecycle) containers của chúng ta:
-<ul>
-<li>Phát triển ứng dụng của chúng ta và hỗ trợ những thành phần để ứng dụng có thể sử dụng container.</li>
-<li>Container trở thành một đơn vị (unit) để phân phối và kiểm tra ứng dụng của chúng ta.</li>
-</ul>
-</li>
-</ul>
-<h2 id="dùng-docker-để-làm-gì">Dùng docker để làm gì?</h2>
-<h4 id="nhanh-phân-phối-nhất-quán-ứng-dụng-của-chúng-ta">Nhanh, phân phối nhất quán ứng dụng của chúng ta</h4>
-<p>Docker sắp xếp hợp lí vòng đời phát triển bằng cách cho phép các developers làm việc trong môi trường chuẩn, sử dụng local container - nơi cung cấp những ứng dụng và dịch vụ (services). Conatiner là một giải pháp cho quy trình làm việc CI/CD (continuous integration and continuous delivery).</p>
-<h4 id="khả-năng-triển-khai-và-mở-rộng">Khả năng triển khai và mở rộng</h4>
-<ul>
-<li>Nền tảng dựa của container docker đáp ứng cho khối công việc có khả năng linh động cao. Docker container có thể chạy trên laptop của lập trình viên, có thể chạy trên máy thật hoặc máy ảo trong các data center, trên clouder provider, hoặc trong hỗn hợp các môi trường (mixture of environments)</li>
-<li>Tính linh động và nhẹ của docker làm cho nó dễ dàng trong việc quản lý động các công việc, mở rộng hoặc chia nhỏ các ứng dụng, dịch vụ theo nhu cầu kinh doanh, trong thời gian thực.</li>
-</ul>
-<h4 id="chạy-được-nhiêu-công-việc-hơn-trong-cùng-một-phần-cứng-hardware">Chạy được nhiêu công việc hơn trong cùng một phần cứng (hardware).</h4>
-<p>Vì docker nhẹ và nhanh, nó có khả năng thay thế những máy ảo được xây dựng dựa trên hypervisor, chúng ta có thể sử dụng nhiều khả năng tính toán hơn để thực hiện mục tiêu của mình. Docker hoạt động hiệu quả cho cả môi trường triển khai có mật độ cao, vừa hoặc nhỏ, nơi mà chúng ta cần làm việc với ít tài nguyên hơn.</p>
-<h2 id="kiến-trúc-của-docker">Kiến trúc của Docker.</h2>
-<ul>
-<li>Docker sử dụng kiến trúc client-server.</li>
-<li>Docker client sẽ nói chuyện với docker daemon - trình thực hiện xây dựng, chạy, phân phối docker container của chúng ta.
-<ul>
-<li>Docker client và daemon có thể chạy trên cùng 1 hệ thống, hoặc có thể kết nối docker client tới một trình điều khiển docker daemon (remote docker daemon)</li>
-<li>Chúng giao tiếp với nhau thông qua sử dụng REST API, qua UNIX sockets hoặc network interface.</li>
-</ul>
-</li>
-</ul>
-<!-- ![Docker Image](./images_post/docker.png)   -->
-<h3 id="the-docker-daemon-dockerd">The Docker Daemon( dockerd)</h3>
-<p>Lắng nghe những yêu cầu từ Docker API và quản lí đối tượng của docker như: images, container, networks, volumes. Một daemon can thể giao tiếp với những daemons khác để quản lí docker services.</p>
-<h3 id="the-docker-client-docker">The Docker client (docker)</h3>
-<p>Là cách mà người dùng tương tác với docker. khi chúng ta thực hiện những câu lệnh như <em>docker run</em>, client sẽ gửi câu lệnh này với <em>dockered</em> để đem chúng ra ngoài. Lệnh <em>docker</em> sử dụng Docker API. Docker client có thể giao tiếp với một hoặc nhiều daemon.</p>
-<h3 id="docker-registries">Docker registries</h3>
-<p>Môt docker registry lưu trữ Docker images. <strong>Docker Hub</strong> là một public registry mà mọi người đều có thể sử dụng, và docker được cấu hình mặc định để tìm kiếm những images trên Docker Hub. chúng ta còn có thể chạy những registry của riêng chúng ta.<br />
-Khi chúng ta thực hiện lệnh <strong>docker pull</strong> hoặc <strong>docker run</strong>, những images yêu cầu sẽ được kéo từ registry của chúng ta về máy, và khi thực hiện lệnh <strong>docker push</strong>, images của chúng ta sẽ được đẩy lên trên registry.</p>
-<h3 id="docker-object">Docker Object</h3>
-<h4 id="images">Images</h4>
-<p>Một <em>image</em> là một mẫu chỉ đọc với tập lệnh để tạo ra một docker container. Thông thường, một image dựa trên những image khác với một số tùy chỉnh bổ sung. Ví dụ, chúng ta muốn xây dựng một image dựa trên ubuntu image, nhưng có cài thêm Apache web server, ứng dụng riêng của chúng ta cũng như những cấu hình cần thiết để có ứng dụng chạy.<br />
-chúng ta có thể tạo images riêng hoặc sử dụng những images đã có sẵn trên các registry.<br />
-Để xây dựng riêng images, chúng ta tạo <em>Dockfile</em> với những cú pháp đơn giản định nghĩa các bước cần thiết để tạo image và chạy nó. Mỗi câu lệnh trong Dockerfile tạo một layer trong image. Khi bạn thay đổi Dockerfile và rebuild image, chỉ những layer bị thay đổi mới buil lại. Đây chính là lí do làm cho image trở nên nhẹ, nhỏ, nhanh khi đem so sánh với những công nghệ ảo hóa khác.</p>
-<h4 id="containers">Containers</h4>
-<ul>
-<li>Docker đóng gói phần mềm thành một đơn vị chuẩn, gọi là <strong>container</strong>, nơi lưu tất cả những thứ cần thiết để chạy phần mềm, bao gồm: libraries, systemtools, and code</li>
-<li>Một container có thể chạy một images. Chúng ta có thể <strong>create, start, stop, move, delete</strong> một container bằng sử dụng Docker API hoặc CLI. Chúng ta có thể kết nối từ một container tới một hoặc nhiều networks, đính kèm bộ nhớ vào trong nó, hoặc thâm chí có thể tạo ra một image mới dựa trên trạng thái hiện tại của nó.</li>
-<li>Theo mặc định, một container độc lập với những container khác và với host machine. Chúng ta có thể kiểm soát mức độ độc lập của network, bộ nhớ hoặc những hệ thống con cơ bản từ môt container tới những container khác hoặc từ host machine tới những container.</li>
-<li>Một container được định nghĩa bởi images của nó, cũng như bất kỳ tùy chọn cấu hình nào bạn cung cấp cho nó khi tạo hoặc khởi động nó. Khi một container bị xóa, những thay đổi về trạng thái của nó không được lưu mà sẽ bị xóa.</li>
-</ul>
-<h4 id="ví-dụ-về--docker-run-command">Ví dụ về  <em>docker run</em> command</h4>
-<p>Những câu lệnh sau run một ubuntu container:</p>
+<h2 id="lệnh-docker-exec-lưu-container-thành-image-với-commit-xuất-image-ra-file">Lệnh Docker exec, lưu container thành image với commit, xuất image ra file</h2>
+<h3 id="docker-exec">Docker exec</h3>
+<p>Thông thường, để thực thi một lệnh trong container, ta sẽ vào container bằng lệnh <code>docker attach &lt;container name or id&gt;</code>. Tuy nhiên, nếu ta đang ở host và vẫn muốn thực thi một lệnh bên trong container đang chạy, ta sẽ dùng lệnh <code>docker exec &lt;container id / name&gt; [COMMAND]</code>.<br />
+Ví dụ, từ host, ta chạy lệnh <code>ls</code> để liệt kê tất cả các file trong container.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">❯ docker ps
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+6d1aa3dda644        ubuntu:latest       <span class="s2">&#34;/bin/bash&#34;</span>         <span class="m">3</span> minutes ago       Up <span class="m">3</span> minutes                            <span class="nb">test</span>
+❯ docker <span class="nb">exec</span> <span class="nb">test</span> ls
+bin
+boot
+dev
+etc
+home
+lib
+lib32
+lib64
+libx32
+media
+mnt
+opt
+proc
+root
+run
+sbin
+srv
+sys
+tmp
+usr
+var
+</code></pre></td></tr></table>
+</div>
+</div><p>Ngoài ra cũng vẫn có thể thêm các option, ví dụ:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">$ docker run -i -t ubuntu /bin/bash
+<pre class="chroma"><code class="language-bash" data-lang="bash">❯ docker <span class="nb">exec</span> -it <span class="nb">test</span> bash
+root@ubuntu1:/# 
 </code></pre></td></tr></table>
 </div>
-</div><p>Khi chúng ta chạy lệnh này, quá trình thực hiện sẽ nhưu sau (xét trường hợp cấu hình là default):<br />
-1. Nếu chúng ta không có <strong>ubuntu image</strong> ở local, Docker pulls nó từ configured registry của chúng ta, chúng ta có thể kéo nó xuống bằng câu lệnh: <code>docker pull ubuntu</code><br />
-2. Docker tạo ra một container mới, chúng ta có thể tự thực hiện bằng lệnh: <code>docker container create</code>.<br />
-3. Docker phân bổ read-write filesystem vào container, như là lớp cuối cùng của nó (final layer). Nó cho phép chạy để tạo hoặc chỉnh sửa file hoặc thư mục ở local filesystem.<br />
-4. Docker tạo ra network interface để để nối contain tới default network, vì chúng ta không chỉ định bất kì tùy chọn mạng nào - gán IP adress vào container. Theo định nghĩa, container có thể kết nối với mạng bên ngoài thông qua sử dụng kết nối mạng của máy host.<br />
-5. Docker chạy container rồi thực thì <code>/bin/bash</code>. Vì container đang chạy ở chế độ tương tác và gán vào terminal (<code>-i</code>, <code>-t</code> flags), chúng ta có thể input từ keyboard và output được ghi vào terminal của bạn.<br />
-6. Khi chúng ta gõ <code>exit</code> để dừng <code>/bin/bash</code>, container sẽ dừng nhưng không bị xóa, do đó, ta có thể chạy lại hoặc xóa nó.</p>
-<h4 id="the-underlying-technology">The underlying technology</h4>
-<p>Docker được viết bằng ngôn ngữ GO và tận dụng một số tính năng từ Linux kernel để trở thành chức năng của nó.<br />
-Docker sử dụng một công nghệ được gọi là <code>namespaces</code> để cung cấp không gian độc lập được gọi là <em>container</em>. Khi bạn chạy một container, Docker tạo ra một tập <code>namespaces</code> cho container đó.<br />
-Những <em>namespaces</em> cung cấp một lớp độc lập, mỗi khía cạnh của một vùng chứa chạy trong một không gian tên riêng biệt và quyền truy cập của nó bị giới hạn trong không gian tên đó.</p>
-<h1 id="cài-dockerhttpsdocsdockercomengineinstall"><a href="https://docs.docker.com/engine/install/">Cài docker</a></h1>
-<hr />
-<h1 id="post-installation-steps-for-linux">Post-installation steps for Linux</h1>
-<hr />
-<h2 id="quản-lý-docker-với-tư-cách-là-non-root-user">Quản lý docker với tư cách là non-root user</h2>
+</div><p>Lệnh trên yêu cầu thực thi lệnh bash và thêm option <code>-it</code> để có thể tương tác trực tiếp với terminal, dễ dàng thấy, nó khá giống với lệnh <code>docker attach</code>, tuy nhiên, khi mở các process trong container bằng htop, chúng ta sẽ thấy như sau:<br />
+<img src="/images/posts/docker_cli/docker_exec_htop.png" alt="docker_exec_htop" /><br />
+Rõ ràng, ở đây có ngoài process <code>/bin/bash</code> có khi tạo, container còn chạy thêm một process <code>bash</code>, process này chính là lệnh mà chúng ta yêu cầu thực thi từ máy host. Sau khi thực hiện lệnh <code>docker exec -it test bash</code>, ta gõ lệnh <code>exit</code> để thoát khỏi container, tuy nhiên, vì container vẫn còn process <code>/bin/bash</code> nên nó vẫn còn hoạt động chứ không bị tắt đi.</p>
+<h3 id="docker-commit">Docker commit</h3>
+<p>Sau khi cài docker và sử dụng, chúng ta có thể phải cài thêm nhiều phần mềm, môi trường khác nhau. Khi đó, để chia sẻ container này đi, ta cần lưu container này thành image. Để làm việc đó, ta sử dụng lệnh <code>container commit</code>.<br />
+Trước khi lưu container trở thành image, ta kiểm tra xem trong hệ thống có những image nào:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">❯ docker images
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+ubuntu              latest              7e0aa2d69a15        <span class="m">6</span> weeks ago         72.7MB
+centos              latest              300e315adb2f        <span class="m">6</span> months ago        209MB
+</code></pre></td></tr></table>
+</div>
+</div><p>Một điều lưu ý, muốn lưu container thành image, thì container đó phải ở trạng thái dừng (Exited).</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">❯ docker ps -a
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS                     PORTS               NAMES
+6d1aa3dda644        ubuntu:latest       <span class="s2">&#34;/bin/bash&#34;</span>         <span class="m">23</span> minutes ago      Exited <span class="o">(</span>0<span class="o">)</span> <span class="m">4</span> minutes ago                       <span class="nb">test</span>
+ddf68933af54        centos:latest       <span class="s2">&#34;/bin/bash&#34;</span>         <span class="m">16</span> hours ago        Exited <span class="o">(</span>0<span class="o">)</span> <span class="m">16</span> hours ago                        centos_docker
+</code></pre></td></tr></table>
+</div>
+</div><p>Tiến hành lưu container thành images, ta dùng cú pháp: <code>docker commit CONTAINER image:tag</code>. <em>CONTAINER</em> ở đây là tên hoặc id của container.<br />
+Ví dụ, container ubuntu vừa rồi tôi đã cài thêm <code>ping</code> với <code>vim</code>, bây giờ lưu lại thành image, ta thực hiện:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">❯ docker commit <span class="nb">test</span> ubuntu-pv:version1
+sha256:a8e04dcf8737519e456dcedd646983a5d69d97ea85f5e3517b537b2b1a86ef0a
+❯ docker images
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+ubuntu-pv           version1            a8e04dcf8737        <span class="m">5</span> seconds ago       170MB
+ubuntu              latest              7e0aa2d69a15        <span class="m">6</span> weeks ago         72.7MB
+centos              latest              300e315adb2f        <span class="m">6</span> months ago        209MB
+</code></pre></td></tr></table>
+</div>
+</div><p>Rõ ràng, sau khi thực hiện lệnh trên, chúng ta sẽ thấy trong danh sách các images có thểm một image có thên là ubuntu-py với TAG là version1 cùng ID và các thông tin khác.</p>
+<h3 id="docker-save">Docker save</h3>
+<p>Sau khi ta lưu container thành một image, để có thể chia sẻ image này với người khác, ta lưu image thành một file trên máy host. Việc này sẽ được thực hiện thông qua lệnh <code>docker save --output filename.tar &lt;image_id/name&gt;</code>.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">❯ ls
+<span class="s1">&#39;IDA Freeware.desktop&#39;</span>   PinImage   tmp
+❯ docker images
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+ubuntu-pv           version1            a8e04dcf8737        <span class="m">6</span> minutes ago       170MB
+ubuntu              latest              7e0aa2d69a15        <span class="m">6</span> weeks ago         72.7MB
+centos              latest              300e315adb2f        <span class="m">6</span> months ago        209MB
+❯ docker save --output ubuntu-pv.tar a8
+❯ ls
+<span class="s1">&#39;IDA Freeware.desktop&#39;</span>   PinImage   tmp   ubuntu-pv.tar
+</code></pre></td></tr></table>
+</div>
+</div><p>Ví dụ trên tôi đã lưu ubuntu-pv image thành ra file ubuntu-pv.tar.</p>
+<h3 id="docker-load">Docker load</h3>
+<p>Sau khi nhận được file image.tar, để phục hồi hoặc sử dụng lại, ta sử dụng lệnh <code>docker load -i image.tar</code><br />
+Ví dụ, tôi tiến hành xóa đi ubuntu-pv image hiện có trên hệ thống. Lệnh thao tác với image bạn có thể xem ở <a href="./docker_p1.md">P1</a>.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">❯ docker images
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+ubuntu-pv           version1            a8e04dcf8737        <span class="m">11</span> minutes ago      170MB
+ubuntu              latest              7e0aa2d69a15        <span class="m">6</span> weeks ago         72.7MB
+centos              latest              300e315adb2f        <span class="m">6</span> months ago        209MB
+❯ docker image rm -f ubuntu-pv:version1
+Untagged: ubuntu-pv:version1
+Deleted: sha256:a8e04dcf8737519e456dcedd646983a5d69d97ea85f5e3517b537b2b1a86ef0a
+❯ docker image rm ubuntu:latest
+Untagged: ubuntu:latest
+Untagged: ubuntu@sha256:adf73ca014822ad8237623d388cedf4d5346aa72c270c5acc01431cc93e18e2d
+Deleted: sha256:7e0aa2d69a153215c790488ed1fcec162015e973e49962d438e18249d16fa9bd
+❯ docker images
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+centos              latest              300e315adb2f        <span class="m">6</span> months ago        209MB
+</code></pre></td></tr></table>
+</div>
+</div><p>Bây giờ, ta tiến hành phục hồi ubuntu-pv image từ file <code>ubuntu-pv.tar</code> đã có ở trước đó.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">❯ ls
+<span class="s1">&#39;IDA Freeware.desktop&#39;</span>   PinImage   tmp   ubuntu-pv.tar
+❯ docker load -i ubuntu-pv.tar
+Loaded image ID: sha256:a8e04dcf8737519e456dcedd646983a5d69d97ea85f5e3517b537b2b1a86ef0a
+❯ docker images
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+&lt;none&gt;              &lt;none&gt;              a8e04dcf8737        <span class="m">14</span> minutes ago      170MB
+centos              latest              300e315adb2f        <span class="m">6</span> months ago        209MB
+</code></pre></td></tr></table>
+</div>
+</div><p>Khi phục hồi, tên của image và tag của nó sẽ là <code>&lt;none&gt;</code>. Để đặt tên và tag, ta dùng lệnh:<br />
+<code>docker tag image_id name:tag</code>.</p>
+<pre><code>❯ docker tag a8 newimage:version2
+❯ docker images
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+newimage            version2            a8e04dcf8737        16 minutes ago      170MB
+centos              latest              300e315adb2f        6 months ago        209MB
+</code></pre><h2 id="chia-sẻ-dữ-liệu-trong-docker-tạo-và-quản-lý-ổ-đĩa-docker-volume">Chia sẻ dữ liệu trong Docker, tạo và quản lý ổ đĩa docker volume</h2>
+<h3 id="chia-sẻ-dữ-liệu-giữa-máy-host-và-container">Chia sẻ dữ liệu giữa máy host và container</h3>
+<p>Trên máy host, tôi tổ chức cây thực mục như sau:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">.
+├── docker
+│   └── data
+│       └── d.txt
+
+</code></pre></td></tr></table>
+</div>
+</div><p>Mục tiêu của chúng ta là để container có thể truy cập và thao tác với dữ liệu ở trong <code>data</code>, và khi container bị xóa đi, dữ liệu không bị mất.<br />
+Chúng ta tạo mới một container và trong lúc tạo sẽ chỉ rõ thực mục ánh xạ trên host và thực mục được ánh xạ ở đâu trên container.<br />
+<code>docker run -it -v &lt;thu/muc/tren/host&gt;:&lt;thu/muc/anh/xa/tren/container&gt; &lt;image id&gt;</code></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">❯ docker images
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+newimage            version2            a8e04dcf8737        <span class="m">28</span> minutes ago      170MB
+centos              latest              300e315adb2f        <span class="m">6</span> months ago        209MB
+❯ docker run -it -v /home/edisc/Desktop/docker/data:/home/shared_data a8
+root@d4d24f24bbe6:/#
+</code></pre></td></tr></table>
+</div>
+</div><p>Chúng ta tiến hành kiểm tra:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">root@d4d24f24bbe6:/# <span class="nb">cd</span> /home/shared_data/
+root@d4d24f24bbe6:/home/shared_data# ls
+d.txt
+root@d4d24f24bbe6:/home/shared_data# 
+</code></pre></td></tr></table>
+</div>
+</div><p>Như vậy, dữ liệu đã được ánh xạ và mọi thao tác trên dữ liệu ở thư mục này sẽ được lưu vào host.</p>
+<h3 id="chia-sẻ-dữ-liệu-giữa-các-container-với-nhau">Chia sẻ dữ liệu giữa các container với nhau</h3>
+<p>Chúng ta tạo lại một container có tên là <code>container1</code> ánh xạ tới dữ liệu <code>Desktop/docker/data</code>, và tạo một container2 muốn ánh xạ tới dự liệu này, thay vì dùng lệnh tạo như container1, ta có thể dùng <code>--volumes-from &lt;container_name/id&gt;</code></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">❯ docker images
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+newimage            version2            a8e04dcf8737        <span class="m">36</span> minutes ago      170MB
+centos              latest              300e315adb2f        <span class="m">6</span> months ago        209MB
+❯ docker run -it -v /home/edisc/Desktop/docker/data:/home/shared_data --name <span class="s2">&#34;container1&#34;</span> a8
+root@b62e5d395369:/# %                                                          
+❯ docker run -it --name container2 --volumes-from container1 centos
+<span class="o">[</span>root@e1103acb0525 /<span class="o">]</span><span class="c1">#</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="chia-sẻ-qua-volume">Chia sẻ qua volume</h3>
+<p>Bên cạnh việc chia sẻ dữ liệu bằng cách tạo các file dữ liệu, docker còn cho phép chúng ta tạo ra những ổ đĩa, gán vào container và để chia sẻ dữ liệu giữa chúng. Cũng như file, khi container xóa thì những ổ đĩa này vẫn còn tồn tại cho đến khi chúng ta cố tình xóa nó.</p>
+<h4 id="kiểm-tra-các-ổ-đĩa-hiện-có">Kiểm tra các ổ đĩa hiện có</h4>
+<p>Để kiểm tra các ổ đĩa hiện có, ta dùng lệnh:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">❯ docker volume ls
+DRIVER              VOLUME NAME
+</code></pre></td></tr></table>
+</div>
+</div><p>Hiện tại trên hệ thống không có ổ đĩa nào.</p>
+<h4 id="tạo-ổ-đĩa">Tạo ổ đĩa</h4>
+<p>Để tạo một ổ đĩa mới, ta dùng lệnh: <code>docker volume create NAMEDISK</code>.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">❯ docker volume create D1
+D1
+❯ docker volume ls
+DRIVER              VOLUME NAME
+<span class="nb">local</span>               D1
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="kiểm-tra-thông-tin-ổ-đĩa">Kiểm tra thông tin ổ đĩa</h4>
+<p>Để kiểm tra thông tin ổ đĩa ta dùng lệnh <code>docker volume inspect NAMEDISK</code>.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">❯ docker volume inspect D1
+<span class="o">[</span>
+    <span class="o">{</span>
+        <span class="s2">&#34;CreatedAt&#34;</span>: <span class="s2">&#34;2021-06-08T10:06:13+07:00&#34;</span>,
+        <span class="s2">&#34;Driver&#34;</span>: <span class="s2">&#34;local&#34;</span>,
+        <span class="s2">&#34;Labels&#34;</span>: <span class="o">{}</span>,
+        <span class="s2">&#34;Mountpoint&#34;</span>: <span class="s2">&#34;/var/lib/docker/volumes/D1/_data&#34;</span>,
+        <span class="s2">&#34;Name&#34;</span>: <span class="s2">&#34;D1&#34;</span>,
+        <span class="s2">&#34;Options&#34;</span>: <span class="o">{}</span>,
+        <span class="s2">&#34;Scope&#34;</span>: <span class="s2">&#34;local&#34;</span>
+    <span class="o">}</span>
+<span class="o">]</span>
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="xóa-ổ-đĩa">Xóa ổ đĩa</h4>
+<p>Khi không có nhu cầu sử dụng, ta sử dụng lệnh <code>docker volume rm NAMEDISK</code>.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">❯ docker volume ls
+DRIVER              VOLUME NAME
+<span class="nb">local</span>               D1
+<span class="nb">local</span>               D2
+❯ docker volume rm D1
+D1
+❯ docker volume ls
+DRIVER              VOLUME NAME
+<span class="nb">local</span>               D2
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="gán-ổ-đĩa-volume-vào-container">Gán ổ đĩa volume vào container</h4>
+<p>Ta sử dụng cú pháp:<br />
+<code>docker run -it --mount source=DISK,target=pathContainer imageID</code></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">❯ docker images
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+newimage            version2            a8e04dcf8737        About an hour ago   170MB
+ubuntu              latest              7e0aa2d69a15        <span class="m">6</span> weeks ago         72.7MB
+centos              latest              300e315adb2f        <span class="m">6</span> months ago        209MB
+❯ docker run -it --mount <span class="nv">source</span><span class="o">=</span>D2,target<span class="o">=</span>/home/disk2 ubuntu:latest
+root@524a1182f690:/# <span class="nb">cd</span> /home/disk2/
+root@524a1182f690:/home/disk2#
+</code></pre></td></tr></table>
+</div>
+</div><p>Ta tiến hành thêm dữ liệu trong thư mục trên, sau đó xóa container đi, và thấy, ổ đĩa vẫn còn.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">❯ docker images
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+newimage            version2            a8e04dcf8737        About an hour ago   170MB
+ubuntu              latest              7e0aa2d69a15        <span class="m">6</span> weeks ago         72.7MB
+centos              latest              300e315adb2f        <span class="m">6</span> months ago        209MB
+❯ docker run -it --mount <span class="nv">source</span><span class="o">=</span>D2,target<span class="o">=</span>/home/disk2 ubuntu:latest
+root@524a1182f690:/# <span class="nb">cd</span> /home/disk2/
+root@524a1182f690:/home/disk2#
+❯ docker ps -a
+CONTAINER ID        IMAGE               COMMAND             CREATED              STATUS                        PORTS               NAMES
+524a1182f690        ubuntu:latest       <span class="s2">&#34;/bin/bash&#34;</span>         About a minute ago   Exited <span class="o">(</span>0<span class="o">)</span> <span class="m">23</span> seconds ago                         cocky_mclaren
+e1103acb0525        centos              <span class="s2">&#34;/bin/bash&#34;</span>         <span class="m">19</span> minutes ago       Exited <span class="o">(</span>127<span class="o">)</span> <span class="m">11</span> minutes ago                       container2
+b62e5d395369        a8                  <span class="s2">&#34;/bin/bash&#34;</span>         <span class="m">21</span> minutes ago       Exited <span class="o">(</span>0<span class="o">)</span> <span class="m">11</span> minutes ago                         container1
+❯ docker rm <span class="m">52</span>
+<span class="m">52</span>
+❯ docker volume ls
+DRIVER              VOLUME NAME
+<span class="nb">local</span>               D2
+</code></pre></td></tr></table>
+</div>
+</div><p>Vậy làm sao để truy xuất dữ liệu hiện có trên D2 hoặc kiểm tra xem có dữ liệu trên đó hay không? Để làm được điều đó, chúng ta tạo một container khác, mount tới D2 và kiểm tra.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">❯ docker run -it --mount <span class="nv">source</span><span class="o">=</span>D2,target<span class="o">=</span>/home/disk3 ubuntu:latest
+root@ca47e1855144:/# <span class="nb">cd</span> /home/disk3/
+root@ca47e1855144:/home/disk3# ls
+data.txt
+root@ca47e1855144:/home/disk3# 
+</code></pre></td></tr></table>
+</div>
+</div><p>Dữ liệu do container trước đã tạo và lưu vào, dữ liệu này vẫn còn mặc dù container đã xóa đi.</p>
+<h4 id="tạo-ổ-đĩa-ánh-xạ-tới-thư-mục-trên-máy-host">Tạo ổ đĩa ánh xạ tới thư mục trên máy host.</h4>
+<p><a href="https://docs.docker.com/engine/reference/commandline/volume_create/">Cú pháp:</a><br />
+<code>docker create --opt device =pathHOST --opt type=noe --opt o=bind DISKNAME</code></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">❯ docker volume create --opt <span class="nv">device</span><span class="o">=</span>/home/edisc/Desktop/docker/data --opt <span class="nv">type</span><span class="o">=</span>none --opt <span class="nv">o</span><span class="o">=</span><span class="nb">bind</span> DISK1
+DISK1
+❯ docker volume ls
+DRIVER              VOLUME NAME
+<span class="nb">local</span>               D2
+<span class="nb">local</span>               DISK1
+</code></pre></td></tr></table>
+</div>
+</div><p>Thông tin ổ đĩa có được như sau:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">❯ docker volume inspect DISK1
+<span class="o">[</span>
+    <span class="o">{</span>
+        <span class="s2">&#34;CreatedAt&#34;</span>: <span class="s2">&#34;2021-06-08T10:27:56+07:00&#34;</span>,
+        <span class="s2">&#34;Driver&#34;</span>: <span class="s2">&#34;local&#34;</span>,
+        <span class="s2">&#34;Labels&#34;</span>: <span class="o">{}</span>,
+        <span class="s2">&#34;Mountpoint&#34;</span>: <span class="s2">&#34;/var/lib/docker/volumes/DISK1/_data&#34;</span>,
+        <span class="s2">&#34;Name&#34;</span>: <span class="s2">&#34;DISK1&#34;</span>,
+        <span class="s2">&#34;Options&#34;</span>: <span class="o">{</span>
+            <span class="s2">&#34;device&#34;</span>: <span class="s2">&#34;/home/edisc/Desktop/docker/data&#34;</span>,
+            <span class="s2">&#34;o&#34;</span>: <span class="s2">&#34;bind&#34;</span>,
+            <span class="s2">&#34;type&#34;</span>: <span class="s2">&#34;none&#34;</span>
+        <span class="o">}</span>,
+        <span class="s2">&#34;Scope&#34;</span>: <span class="s2">&#34;local&#34;</span>
+    <span class="o">}</span>
+<span class="o">]</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>Để chạy container với tham số này ta không sử dụng tùy chọn <code>--mount</code> mà ta sẽ sủ dụng tùy chọn <code>-v</code>.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">❯ docker images
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+newimage            version2            a8e04dcf8737        About an hour ago   170MB
+ubuntu              latest              7e0aa2d69a15        <span class="m">6</span> weeks ago         72.7MB
+centos              latest              300e315adb2f        <span class="m">6</span> months ago        209MB
+❯ docker run -it -v DISK1:/home/disk4 ubuntu:latest
+root@e94027a36d5b:/# <span class="nb">cd</span> /home/disk4/
+root@e94027a36d5b:/home/disk4# ls
+c1.txt  d.txt  data_container2.txt
+root@e94027a36d5b:/home/disk4# 
+</code></pre></td></tr></table>
+</div>
+</div><p>Vào thư mục và kiểm tra, ta vẫn thấy nó có các dữ liệu ở trên máy host. Và khi thao tác dữ liệu trên này, dữ liệu trên máy host cũng sẽ được cập nhât.</p>
+<h2 id="kết-luận">Kết luận</h2>
+<p>Trong bài viết này, chúng ta đã thảo luận qua một số kiến thức về container, bao gồm:<br />
+Các lệnh Docker exec, lưu container thành image với commit, xuất image ra file:</p>
 <ul>
-<li>Docker daemon kết nối với Unix socket thay vì cổng TCP. Mặc định, Unix socket được sở hữu bởi <code>root</code><br />
-và những user khác chỉ có thể truy cập thông qua lệnh <code>sudo</code>. Do đó, Docker daemon luôn luôn chạy<br />
-với tư cách là <code>root</code> user.</li>
-<li>Chúng ta có thể thiết lập lại để chạy mà không cần lệnh <code>sudo</code> bằng cách tạo ra một Unix group là <code>docker</code><br />
-và thêm user vào nó. Khi docker daemon chạy, nó tạo một Unix socket mà tất cả các thành phần của docker group<br />
-có thể truy cập vào.</li>
-</ul>
-<ol>
-<li>Tạo <code>docker group</code>:</li>
-</ol>
-<pre><code class="language-console" data-lang="console">    $ sudo groupadd docker
-</code></pre><ol start="2">
-<li>Thêm user vào <code>docker</code> group</li>
-</ol>
-<pre><code class="language-console" data-lang="console">    $ sudo usermod -aG docker $USER
-</code></pre><ol start="3">
-<li>Kích hoạt sự thay đổi</li>
-</ol>
-<pre><code class="language-console" data-lang="console">    $ newgrp docker
-</code></pre><h2 id="configure-docker-to-start-on-boot">Configure Docker to start on boot</h2>
+<li><code>docker exec</code>: thực thi một lệnh bên trong container đang chạy từ host.</li>
+<li><code>docker commit</code>: lưu container thành image</li>
+<li><code>docker save</code>: lưu image thành file.</li>
+<li><code>docker load</code>: chuyển file thành image.<br />
+Chia sẻ dữ liệu trong Docker, tạo và quản lý ổ đĩa docker volume:</li>
+<li>Chia sẻ dữ liệu qua tệp:
 <ul>
-<li>Trên Debian và Ubuntu, Docker service mặc định được cấu hình để khởi động khí boot.<br />
-Với những distros khác, ta có thể sử dụng lệnh sau đây để tự động chạy:</li>
+<li>Container với host</li>
+<li>Giữa container với nhau.</li>
 </ul>
-<pre><code class="language-console" data-lang="console">    $ sudo systemctl enable docker.service
-    $ sudo systemctl enable containerd.service
-</code></pre><ul>
-<li>Và để tắt chế độ trên:</li>
+</li>
+<li>Chia sẻ dữ liệu qua ổ đĩa disk: các thao tác với volume thông qua lệnh <code>docker volume</code> kèm các option tương ứng.</li>
 </ul>
-<pre><code class="language-console" data-lang="console">    $ sudo systemctl disable docker.service
-    $ sudo systemctl disable containerd.service
-</code></pre><h3 id="cấu-hình-nơi-docker-daemon-lắng-nghe-để-kết-nối">Cấu hình nơi Docker daemon lắng nghe để kết nối</h3>
-<ul>
-<li>Mặc định, Docker daemon sẽ nghe kết nối ở UNIX socket để chấp nhận các yêu cầu từ local client.<br />
-Ngoài ra, chúng ta có thể cho phép Docker chấp nhận những yêu cầu từ remote host bằng việc cấu hình để nó lắng nghe<br />
-trên một địa chỉ IP và một cổng, giống như UNIX socket.</li>
-</ul>
-<h4 id="configuring-remote-access-with-systemd-unit-file">Configuring remote access with systemd unit file</h4>
-<ol>
-<li><code>sudo systemctl edit docker.service</code> để ghi đè file <code>docker.service</code>.</li>
-<li>Thêm / sửa những lệnh sau:</li>
-</ol>
-<pre><code class="language-console" data-lang="console">[Service]
-ExecStart=
-ExecStart=/usr/bin/dockerd -H fd:// -H tcp://127.0.0.1:2375
-</code></pre><ol start="3">
-<li>Lưu file</li>
-<li>Reload lại cấu hình systemctl</li>
-</ol>
-<pre><code class="language-console" data-lang="console">$ sudo systemctl daemon-reload
-</code></pre><ol start="5">
-<li>Chạy lại Docker</li>
-</ol>
-<pre><code class="language-console" data-lang="console">$ sudo systemctl restart docker.service
-</code></pre><ol start="6">
-<li>Kiểm tra đảm bảo sự thay đổi</li>
-</ol>
-<pre><code class="language-console" data-lang="console">$ sudo netstat -lntp | grep dockerd
-</code></pre><h4 id="configuring-remote-access-with-daemonjson">Configuring remote access with daemon.json</h4>
-<ol>
-<li>Thêm dòng lệnh vào <code>/etc/docker/daemon.json</code> để kết nối với UNIX socket và địa chỉ IP:</li>
-</ol>
-<pre><code class="language-console" data-lang="console">{
-  &quot;hosts&quot;: [&quot;unix:///var/run/docker.sock&quot;, &quot;tcp://127.0.0.1:2375&quot;]
-}
-</code></pre><ol start="2">
-<li>Khởi động lại Docker</li>
-<li>Kiểm tra đảm bảo sự thay đổi</li>
-</ol>
-<pre><code class="language-console" data-lang="console">$ sudo netstat -lntp | grep dockerd
-</code></pre><p><a href="https://docs.docker.com/engine/install/linux-postinstall/">Thêm nhiều cấu hình khác</a></p>
 
     </article>
     
@@ -2096,13 +2527,13 @@ ExecStart=/usr/bin/dockerd -H fd:// -H tcp://127.0.0.1:2375
     
     
       
-        <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fminhlongmt183.github.io%2fposts%2fdocker_overview%2f" title="Facebook" aria-label="Facebook Share Button" class="donation__item" target="_blank" rel="noreferrer" data-type="share">
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fminhlongmt183.github.io%2fposts%2fdocker_p2%2f" title="Facebook" aria-label="Facebook Share Button" class="donation__item" target="_blank" rel="noreferrer" data-type="share">
           <svg data-name="facebook" enable-background="new 0 0 24 24" viewBox="0 0 24 24" width="35" height="35" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="m15.997 3.985h2.191v-3.816c-.378-.052-1.678-.169-3.192-.169-3.159 0-5.323 1.987-5.323 5.639v3.361h-3.486v4.266h3.486v10.734h4.274v-10.733h3.345l.531-4.266h-3.877v-2.939c.001-1.233.333-2.077 2.051-2.077z"/></svg>
         </a>
       
     
       
-        <a href="https://twitter.com/intent/tweet?text=T%c3%acm%20hi%e1%bb%83u%20v%e1%bb%81%20docker&url=https%3a%2f%2fminhlongmt183.github.io%2fposts%2fdocker_overview%2f&hashtags=Docker&via=Edisc" title="Twitter" aria-label="Twitter Share Button" class="donation__item" target="_blank" rel="noreferrer" data-type="share">
+        <a href="https://twitter.com/intent/tweet?text=T%c3%acm%20hi%e1%bb%83u%20v%c3%a0%20s%e1%bb%ad%20d%e1%bb%a5ng%20docker%20%28P2%29&url=https%3a%2f%2fminhlongmt183.github.io%2fposts%2fdocker_p2%2f&hashtags=Docker&via=Edisc" title="Twitter" aria-label="Twitter Share Button" class="donation__item" target="_blank" rel="noreferrer" data-type="share">
           <svg data-name="twitter" enable-background="new 0 0 24 24" viewBox="0 0 24 24" width="35" height="35" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="m21.534 7.113c.976-.693 1.797-1.558 2.466-2.554v-.001c-.893.391-1.843.651-2.835.777 1.02-.609 1.799-1.566 2.165-2.719-.951.567-2.001.967-3.12 1.191-.903-.962-2.19-1.557-3.594-1.557-2.724 0-4.917 2.211-4.917 4.921 0 .39.033.765.114 1.122-4.09-.2-7.71-2.16-10.142-5.147-.424.737-.674 1.58-.674 2.487 0 1.704.877 3.214 2.186 4.089-.791-.015-1.566-.245-2.223-.606v.054c0 2.391 1.705 4.377 3.942 4.835-.401.11-.837.162-1.29.162-.315 0-.633-.018-.931-.084.637 1.948 2.447 3.381 4.597 3.428-1.674 1.309-3.8 2.098-6.101 2.098-.403 0-.79-.018-1.177-.067 2.18 1.405 4.762 2.208 7.548 2.208 8.683 0 14.342-7.244 13.986-14.637z"/></svg>
         </a>
       
@@ -2231,19 +2662,42 @@ ExecStart=/usr/bin/dockerd -H fd:// -H tcp://127.0.0.1:2375
     <section class="related">
     
     
+    <h1 class="related__title">
+      <hr class="hr-dots"/>
+      <div>
+        See Also
+      </div>
+      <hr class="hr-dots"/>
+    </h1>
+    <ul class="related-ul">
+        
+        <li>
+          <a href="/posts/docker_p1/" class="related__link">Tìm hiểu và sử dụng docker (P1)</a>
+        </li>
+        
+        <li>
+          <a href="/posts/container-escapes/" class="related__link">Tìm hiểu về Container Escapes</a>
+        </li>
+        
+        <li>
+          <a href="/posts/docker_overview/" class="related__link">Tìm hiểu về docker</a>
+        </li>
+        
+    </ul>
+    
   </section>
     <div class="grow"></div>
 <nav class="pagination-single">
   
     
-    <div class="grow"></div>
-    
-      <a href="https://minhlongmt183.github.io/posts/container-escapes/" class="pagination-single__right">      
-        <div class="pagination-single__right-title">Tìm hiểu về Container Escapes</div>
+      <a href="https://minhlongmt183.github.io/posts/docker_p1/" class="pagination-single__left">
         <div class="pagination-single__icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M5 13h11.17l-4.88 4.88c-.39.39-.39 1.03 0 1.42.39.39 1.02.39 1.41 0l6.59-6.59c.39-.39.39-1.02 0-1.41l-6.58-6.6c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41L16.17 11H5c-.55 0-1 .45-1 1s.45 1 1 1z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M19 11H7.83l4.88-4.88c.39-.39.39-1.03 0-1.42-.39-.39-1.02-.39-1.41 0l-6.59 6.59c-.39.39-.39 1.02 0 1.41l6.59 6.59c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L7.83 13H19c.55 0 1-.45 1-1s-.45-1-1-1z"/></svg>
         </div>
+        <div class="pagination-single__left-title">Tìm hiểu và sử dụng docker (P1)</div>      
       </a>
+    
+    <div class="grow"></div>
     
   
 </nav>
@@ -3377,48 +3831,31 @@ document.addEventListener('DOMContentLoaded', function () {
         <div class="toc toc__outer " data-dir="ltr" data-folding="true" data-ani="true">
           <nav id="TableOfContents">
   <ul>
-    <li><a href="#docker-là-gì">Docker là gì?</a></li>
-    <li><a href="#the-docker-platform">The Docker platform</a></li>
-    <li><a href="#dùng-docker-để-làm-gì">Dùng docker để làm gì?</a>
+    <li><a href="#lệnh-docker-exec-lưu-container-thành-image-với-commit-xuất-image-ra-file">Lệnh Docker exec, lưu container thành image với commit, xuất image ra file</a>
       <ul>
-        <li>
+        <li><a href="#docker-exec">Docker exec</a></li>
+        <li><a href="#docker-commit">Docker commit</a></li>
+        <li><a href="#docker-save">Docker save</a></li>
+        <li><a href="#docker-load">Docker load</a></li>
+      </ul>
+    </li>
+    <li><a href="#chia-sẻ-dữ-liệu-trong-docker-tạo-và-quản-lý-ổ-đĩa-docker-volume">Chia sẻ dữ liệu trong Docker, tạo và quản lý ổ đĩa docker volume</a>
+      <ul>
+        <li><a href="#chia-sẻ-dữ-liệu-giữa-máy-host-và-container">Chia sẻ dữ liệu giữa máy host và container</a></li>
+        <li><a href="#chia-sẻ-dữ-liệu-giữa-các-container-với-nhau">Chia sẻ dữ liệu giữa các container với nhau</a></li>
+        <li><a href="#chia-sẻ-qua-volume">Chia sẻ qua volume</a>
           <ul>
-            <li><a href="#nhanh-phân-phối-nhất-quán-ứng-dụng-của-chúng-ta">Nhanh, phân phối nhất quán ứng dụng của chúng ta</a></li>
-            <li><a href="#khả-năng-triển-khai-và-mở-rộng">Khả năng triển khai và mở rộng</a></li>
-            <li><a href="#chạy-được-nhiêu-công-việc-hơn-trong-cùng-một-phần-cứng-hardware">Chạy được nhiêu công việc hơn trong cùng một phần cứng (hardware).</a></li>
+            <li><a href="#kiểm-tra-các-ổ-đĩa-hiện-có">Kiểm tra các ổ đĩa hiện có</a></li>
+            <li><a href="#tạo-ổ-đĩa">Tạo ổ đĩa</a></li>
+            <li><a href="#kiểm-tra-thông-tin-ổ-đĩa">Kiểm tra thông tin ổ đĩa</a></li>
+            <li><a href="#xóa-ổ-đĩa">Xóa ổ đĩa</a></li>
+            <li><a href="#gán-ổ-đĩa-volume-vào-container">Gán ổ đĩa volume vào container</a></li>
+            <li><a href="#tạo-ổ-đĩa-ánh-xạ-tới-thư-mục-trên-máy-host">Tạo ổ đĩa ánh xạ tới thư mục trên máy host.</a></li>
           </ul>
         </li>
       </ul>
     </li>
-    <li><a href="#kiến-trúc-của-docker">Kiến trúc của Docker.</a>
-      <ul>
-        <li><a href="#the-docker-daemon-dockerd">The Docker Daemon( dockerd)</a></li>
-        <li><a href="#the-docker-client-docker">The Docker client (docker)</a></li>
-        <li><a href="#docker-registries">Docker registries</a></li>
-        <li><a href="#docker-object">Docker Object</a>
-          <ul>
-            <li><a href="#images">Images</a></li>
-            <li><a href="#containers">Containers</a></li>
-            <li><a href="#ví-dụ-về--docker-run-command">Ví dụ về  <em>docker run</em> command</a></li>
-            <li><a href="#the-underlying-technology">The underlying technology</a></li>
-          </ul>
-        </li>
-      </ul>
-    </li>
-  </ul>
-
-  <ul>
-    <li><a href="#quản-lý-docker-với-tư-cách-là-non-root-user">Quản lý docker với tư cách là non-root user</a></li>
-    <li><a href="#configure-docker-to-start-on-boot">Configure Docker to start on boot</a>
-      <ul>
-        <li><a href="#cấu-hình-nơi-docker-daemon-lắng-nghe-để-kết-nối">Cấu hình nơi Docker daemon lắng nghe để kết nối</a>
-          <ul>
-            <li><a href="#configuring-remote-access-with-systemd-unit-file">Configuring remote access with systemd unit file</a></li>
-            <li><a href="#configuring-remote-access-with-daemonjson">Configuring remote access with daemon.json</a></li>
-          </ul>
-        </li>
-      </ul>
-    </li>
+    <li><a href="#kết-luận">Kết luận</a></li>
   </ul>
 </nav>
         </div>

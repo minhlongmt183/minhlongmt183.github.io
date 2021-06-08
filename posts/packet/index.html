@@ -1737,31 +1737,31 @@
     <article class="single__contents" data-dir="ltr" data-ani="true">
       
       <p><a href="https://malware.news/t/the-basics-of-packed-malware-manually-unpacking-upx-executables/35961">Nguồn tham khảo</a></p>
-<h1 id="packing-là-gì">Packing là gì?</h1>
+<h2 id="what-is-packing">What is Packing?</h2>
 <p>Packing có nghĩa là nén (compressed), hoặc xáo trộn (<a href="https://www.vadesecure.com/en/blog/malware-analysis-understanding-code-obfuscation-techniques">obfuscated</a>) file thực thi để làm cho file thực thi khó phát hiện, khó phân tích tĩnh, khó dịch ngược. Trong ngữ cảnh của malware, vì mã độc chủ yếu được compressed, obfuscated trong các mẫu đóng gói, các công cụ dùng để phân tích tĩnh sẽ gặp vấn đề khi xác định liệu tệp nhị phân này có phải là mã độc hay không. Bên cạnh nó, một thuật toán packing tốt sẽ làm khó khăn qúa trình phân tích của các nhà phân tích mã độc, từ đó giúp cho vòng đời của mã độc được kéo dài lâu hơn.<br />
 Một cách nôm na, chúng ta có thể  hiểu packer gồm: <strong>compressing packers</strong> và <strong>encrypting packers</strong>. Trong đó compressing packers mục đích là đưa file thực thi về dạng nén, làm giảm kích thước của file, còn encrypting packers có mục đích mã hóa hoặc xáo trộn file đã được nén, nhằm ngăn chặn người dùng dịch ngược. Như đã nói, cách hiểu trên chỉ là hiểu một cách nôm na, bởi vì có nhiều packer kết hợp cả hai tính chất trên, còn có nhưng packer (như UPX), nó chỉ compressing mà không có encrypting.</p>
-<h1 id="how-does-packing-work">How does packing work?</h1>
+<h2 id="how-does-packing-work">How does packing work?</h2>
 <p>Chúng ta sẽ nói về  kiến trúc &ldquo;stub-payload&rdquo;, một trong những cơ chế được sử dụng nhiều bởi packer, kể cả UPX.<br />
 Trong kiến trúc &ldquo;stub-payload&rdquo;, một file thực thi sẽ gồn hai thành phần chính: nội dung đã được nén / mã hóa từ file gốc và một đoạn mã dùng để giải nén / giải mã file này về file gốc và thực thi nó. Đoạn mã này được gọi là <strong>stub</strong>. Về bản chất, file ban đầu được nến / mã hóa, sau đó được bọc trong tệp thực thi mới có chứa mã để đưa nó về trạng thái ban đầu</p>
-<h1 id="indication-of-packing">Indication of Packing</h1>
-<h2 id="lacking-of-import-in-import-address-table-iat">Lacking of Import in Import Address Table (IAT)</h2>
+<h2 id="indication-of-packing">Indication of Packing</h2>
+<h3 id="lacking-of-import-in-import-address-table-iat">Lacking of Import in Import Address Table (IAT)</h3>
 <p>Để một file thực thi có thể tương tác với hệ điều hành thì file thực thi cần phải có các hàm được tích hợp vào thư viện hệ thống như <em>kernel32.dll</em> và <em>user32.dll</em>. Khi phân tích một tệp tin đã được giải nén hoàn toàn, ta sẽ thấy một số lượng lớn các import vì mã độc rõ ràng muốn tương tác khá nhiều với hệ điều hành. Tuy nhiên, một stub của một chương trình bị packed không có nhiều chức năng ngoài việc giải nén và thực thi file gốc, do đó, nó sẽ có số lượng import ít hơn rất nhiều so với file chuẩn.</p>
-<h2 id="non-standard-section-names">Non-standard Section Names:</h2>
+<h3 id="non-standard-section-names">Non-standard Section Names:</h3>
 <p>Trong những file thực thi bình thường, chúng thường có các sections giống nhau mọi lúc (.text, .data, .rsrc,..). Tuy nhiên, những paker sẽ tự định nghĩa section cho riêng nó, điều này cũng cho thấy những file có section như vậy sẽ không phải là tiêu chuẩn và có thể được đóng gói. Ví dụ như UPX packer sẽ thực thi với các file có tên section là UPX0 và UPX1.</p>
-<h2 id="sections-with-a-small-raw-size-but-a-large-virtual-size">Sections with a small raw size but a large virtual size</h2>
+<h3 id="sections-with-a-small-raw-size-but-a-large-virtual-size">Sections with a small raw size but a large virtual size</h3>
 <p>Khi chúng ta gặp một file mà có raw size rất nhỏ (đôi khi bằng 0), điều này muốn nói file thực thi không có bất kì dữ liệu nào trong section. Tuy nhiên, khi file thực thi được load vào bộ nhớ, raw size không còn liên quan, và nó được thay bởi virtual size của từng phần cụ thể được cấp phát trong memory. Nếu một file có section được cấp phát với virtual space lớn và raw data rất nhỏ, nó có khả năng cao là những đoạn code dùng để unpacked.</p>
-<h2 id="sections-with-very-high-entropy">Sections with very high entropy:</h2>
+<h3 id="sections-with-very-high-entropy">Sections with very high entropy:</h3>
 <p>Từ entroy đề cập đến phương sai và tính ngẫu nhiên của một phần dữ liệu. Những thứ như ngôn ngữ Tiếng Anh, assembly code, các cấu trúc giao tiếp được xác định rõ ràng khác thường có entropy thấp vì ngôn ngữ có xu hướng tuần theo các mẫu có thể đoán trước được. Tuy nhiên, encrypted data và compressed data không có khả năng dự đoán trước, do đó có entropy cao hơn nhiều. Do đó, khi kiểm tra nếu thấy có entropy cao thì khả năng dữ liệu này đã được nén hoặc mã hóa.</p>
-<h2 id="low-number-of-discernible-strings">Low number of discernible strings:</h2>
+<h3 id="low-number-of-discernible-strings">Low number of discernible strings:</h3>
 <p>Trong file không bị nén, chúng ta sẽ nhận thấy có một lượng nhất định các chuỗi có thể đọc được vì hầu hết các ứng dụng (kể cả malware) sử dụng những protocol được hiện thực bởi ngôn ngữ con người. Do đó, trong một file bình thường, những chuỗi này nên xuất hiện, và khi thấy những chuỗi có thể đọc được ở một file quá ít hoặc không có, khả năng cao file này đã bị nén hoặc bị mã hóa.</p>
-<h2 id="sections-with-rwx-privileges">Sections with RWX privileges:</h2>
+<h3 id="sections-with-rwx-privileges">Sections with RWX privileges:</h3>
 <p>Trong các file bình thường, một section sẽ rất ít khi được cho phép cả đọc và ghi, vì chúng ta hiếm khi muốn viết đè file thực thi trong ứng dụng của mình. Ngoài ra, hiếm khi viết trực tiếp vào file thực thi trong lúc nó đang chạy. Do đó, không có lý do nào để section được cấp quyền vừa ghi và vừa đọc ngoại trừ packer. Với packer, dữ liệu sau khi giải nén sẽ được ghi vào section rồi thực thi.</p>
-<h2 id="jmp-or-call-instructions-to-registersstrange-memory-addresses">jmp or call Instructions to registers/strange memory addresses:</h2>
+<h3 id="jmp-or-call-instructions-to-registersstrange-memory-addresses">jmp or call Instructions to registers/strange memory addresses:</h3>
 <p>Trên nhiều packers, địa chỉ tới nơi dữ liệu đã được giải nén thường được lưu trên các thanh ghi và địa chỉ đó thường nằm trong một section khác, do dó chúng ta sẽ thấy bước này nhảy rất xa. Các bước nhảy xa như thế thường không phổ biến, vì tất cả các mã thực thi trong hệ nhị phân thường được chứa trong một section duy nhất. Nếu chúng ta thấy một lệnh jump / call đến một địa chỉ mà:<br />
 1. Không có trong section hiện tại<br />
 2. Không có trong không gian địa chỉ của một thư viện đã tải.<br />
 thì khả năng cao bước nhảy này là bước giải nén.</p>
-<h1 id="nhận-diện-với-file-được-mã-hóa-bằng-upx">Nhận diện với file được mã hóa bằng UPX</h1>
+<h2 id="nhận-diện-với-file-được-mã-hóa-bằng-upx">Nhận diện với file được mã hóa bằng UPX</h2>
 <p>Các bước giúp chúng ta nhận diện và giải nén file bị mã hóa bằng UPX:</p>
 <ol>
 <li>Kiểm tra PE header và xác định xem chúng có thực sự bị đóng gói không. Tuy nhiên bước xác định này chúng ta có thể dùng peid.</li>
@@ -1770,6 +1770,8 @@ thì khả năng cao bước nhảy này là bước giải nén.</p>
 <li>Đặt breakpoint ở những lệnh này.</li>
 <li>Dump data chứa trong không gian bộ nhớ đó, sửa import resolutions và xuất nó dưới dạng tệp thực thi mới.</li>
 </ol>
+<h2 id="áp-dụng">Áp dụng.</h2>
+<p>Ta áp dụng với bài garbage của flareon-2020.</p>
 
     </article>
     
@@ -2118,8 +2120,8 @@ thì khả năng cao bước nhảy này là bước giải nén.</p>
     
     <div class="grow"></div>
     
-      <a href="https://minhlongmt183.github.io/posts/docker_cli/" class="pagination-single__right">      
-        <div class="pagination-single__right-title">Tìm hiểu về docker CLI (P1)</div>
+      <a href="https://minhlongmt183.github.io/posts/docker_p1/" class="pagination-single__right">      
+        <div class="pagination-single__right-title">Tìm hiểu và sử dụng docker (P1)</div>
         <div class="pagination-single__icon">
           <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M5 13h11.17l-4.88 4.88c-.39.39-.39 1.03 0 1.42.39.39 1.02.39 1.41 0l6.59-6.59c.39-.39.39-1.02 0-1.41l-6.58-6.6c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41L16.17 11H5c-.55 0-1 .45-1 1s.45 1 1 1z"/></svg>
         </div>
@@ -3257,13 +3259,21 @@ document.addEventListener('DOMContentLoaded', function () {
         <div class="toc toc__outer " data-dir="ltr" data-folding="true" data-ani="true">
           <nav id="TableOfContents">
   <ul>
-    <li><a href="#lacking-of-import-in-import-address-table-iat">Lacking of Import in Import Address Table (IAT)</a></li>
-    <li><a href="#non-standard-section-names">Non-standard Section Names:</a></li>
-    <li><a href="#sections-with-a-small-raw-size-but-a-large-virtual-size">Sections with a small raw size but a large virtual size</a></li>
-    <li><a href="#sections-with-very-high-entropy">Sections with very high entropy:</a></li>
-    <li><a href="#low-number-of-discernible-strings">Low number of discernible strings:</a></li>
-    <li><a href="#sections-with-rwx-privileges">Sections with RWX privileges:</a></li>
-    <li><a href="#jmp-or-call-instructions-to-registersstrange-memory-addresses">jmp or call Instructions to registers/strange memory addresses:</a></li>
+    <li><a href="#what-is-packing">What is Packing?</a></li>
+    <li><a href="#how-does-packing-work">How does packing work?</a></li>
+    <li><a href="#indication-of-packing">Indication of Packing</a>
+      <ul>
+        <li><a href="#lacking-of-import-in-import-address-table-iat">Lacking of Import in Import Address Table (IAT)</a></li>
+        <li><a href="#non-standard-section-names">Non-standard Section Names:</a></li>
+        <li><a href="#sections-with-a-small-raw-size-but-a-large-virtual-size">Sections with a small raw size but a large virtual size</a></li>
+        <li><a href="#sections-with-very-high-entropy">Sections with very high entropy:</a></li>
+        <li><a href="#low-number-of-discernible-strings">Low number of discernible strings:</a></li>
+        <li><a href="#sections-with-rwx-privileges">Sections with RWX privileges:</a></li>
+        <li><a href="#jmp-or-call-instructions-to-registersstrange-memory-addresses">jmp or call Instructions to registers/strange memory addresses:</a></li>
+      </ul>
+    </li>
+    <li><a href="#nhận-diện-với-file-được-mã-hóa-bằng-upx">Nhận diện với file được mã hóa bằng UPX</a></li>
+    <li><a href="#áp-dụng">Áp dụng.</a></li>
   </ul>
 </nav>
         </div>
