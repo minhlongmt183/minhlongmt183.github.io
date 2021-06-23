@@ -14,11 +14,83 @@
     <managingEditor>edisc.ctf@gmail.com (Edisc)</managingEditor>
     <webMaster>edisc.ctf@gmail.com (Edisc)</webMaster>
     <copyright>©2021, All Rights Reserved</copyright>
-    <lastBuildDate>Wed, 10 Jun 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 15 Jun 2020 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://minhlongmt183.github.io/series/docker/index.xml" rel="self" type="application/rss+xml" />
     
 
+      
+      <item>
+        <title>Tìm hiểu và sử dụng docker (P6)</title>
+        <link>https://minhlongmt183.github.io/posts/docker_p6/</link>
+        <pubDate>Mon, 15 Jun 2020 00:00:00 +0000</pubDate>
+        <author>edisc.ctf@gmail.com (Edisc)</author>
+        <atom:modified>Mon, 15 Jun 2020 00:00:00 +0000</atom:modified>
+        <guid>https://minhlongmt183.github.io/posts/docker_p6/</guid>
+        <description>Kể từ chương này, mình bắt đầu chuyển qua học nội dụng docker trên katacoda.com. Và cách học mình cũng sẽ khác, tóm tắt bằng sơ đồ tư duy và trình bày lại những gì mình hiểu sau khi học được trên blog theo flow của sơ đồ tư duy. Mục đích của blog này giúp mình ôn lại, hiểu rõ hơn những kiến thức đã học.  Tổng quan về khóa học Trong khóa học này, mình sẽ đi qua một số chủ đề chính như hình bên dưới.</description>
+        
+        <dc:creator>Edisc</dc:creator>
+        <media:content url="https://minhlongmt183.github.io/images/posts/docker_p6/docker_p6.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>Docker</category>
+            
+          
+        
+        
+          
+            
+              <category>pwn</category>
+            
+          
+        
+        
+          
+            
+              <category>docker</category>
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>Tìm hiểu và sử dụng docker (P5)</title>
+        <link>https://minhlongmt183.github.io/posts/docker_p5/</link>
+        <pubDate>Sun, 14 Jun 2020 00:00:00 +0000</pubDate>
+        <author>edisc.ctf@gmail.com (Edisc)</author>
+        <atom:modified>Sun, 14 Jun 2020 00:00:00 +0000</atom:modified>
+        <guid>https://minhlongmt183.github.io/posts/docker_p5/</guid>
+        <description>Toàn bộ series này được tham khảo từ hai nguồn chính: XuanThuLabChanel và DockerDoc. Em xin chân thành cảm ơn sự cống hiến của các tác giả của những kênh nói trên.❤️❤️❤️  Tra cứu thông tin Image, Container và giám sát hoạt động container Docker Các thành phần tạo nên Container Chúng ta đã thảo luận về các khái niệm căn bản của docker ở bải trước, sau đây là những khái niệm trên dưới góc nhìn của tác giả.</description>
+        
+        <dc:creator>Edisc</dc:creator>
+        <media:content url="https://minhlongmt183.github.io/images/posts/docker.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>Docker</category>
+            
+          
+        
+        
+          
+            
+              <category>pwn</category>
+            
+          
+        
+        
+          
+            
+              <category>docker</category>
+            
+          
+        
+      </item>
       
       <item>
         <title>Tìm hiểu và sử dụng docker (P4)</title>
@@ -137,7 +209,7 @@ Tải image busybox:
         <author>edisc.ctf@gmail.com (Edisc)</author>
         <atom:modified>Sun, 07 Jun 2020 00:00:00 +0000</atom:modified>
         <guid>https://minhlongmt183.github.io/posts/docker_p1/</guid>
-        <description>Toàn bộ series này được tham khảo từ hai nguồn chính: XuanThuLabChanel và DockerDoc. Em xin chân thành cảm ơn sự cống kiến của các tác giả của những kênh nói trên.❤️❤️❤️  Làm quen với docker command line Khi làm việc với docker, lệnh chúng ta hay dùng đó chính là docker. Sau lệnh docker sẽ có nhiều lệnh nhỏ, để xem danh sách các lệnh nhỏ này, ta gõ</description>
+        <description>Toàn bộ series này được tham khảo từ hai nguồn chính: XuanThuLabChanel và DockerDoc. Em xin chân thành cảm ơn sự cống hiến của các tác giả của những kênh nói trên.❤️❤️❤️  Làm quen với docker command line Khi làm việc với docker, lệnh chúng ta hay dùng đó chính là docker. Sau lệnh docker sẽ có nhiều lệnh nhỏ, để xem danh sách các lệnh nhỏ này, ta gõ</description>
         
         <dc:creator>Edisc</dc:creator>
         <media:content url="https://minhlongmt183.github.io/images/posts/docker.png" medium="image"><media:title type="html">featured image</media:title></media:content>
