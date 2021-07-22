@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>cve on Edisc Blog</title>
+    <link>https://minhlongmt183.github.io/series/cve/</link>
+    <description>Recent content in cve on Edisc Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>vi</language>
+    <managingEditor>edisc.ctf@gmail.com (Edisc)</managingEditor>
+    <webMaster>edisc.ctf@gmail.com (Edisc)</webMaster>
+    <copyright>©2021, All Rights Reserved</copyright>
+    <lastBuildDate>Sun, 19 Jul 2020 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="https://minhlongmt183.github.io/series/cve/index.xml" rel="self" type="application/rss+xml" />
+    
+
+      
+      <item>
+        <title>Tìm hiểu về CVE-2019-18683</title>
+        <link>https://minhlongmt183.github.io/posts/cve-2019-18683/</link>
+        <pubDate>Sun, 19 Jul 2020 00:00:00 +0000</pubDate>
+        <author>edisc.ctf@gmail.com (Edisc)</author>
+        <atom:modified>Sun, 19 Jul 2020 00:00:00 +0000</atom:modified>
+        <guid>https://minhlongmt183.github.io/posts/cve-2019-18683/</guid>
+        <description>Bài viết này nhằm mục đích ghi lại những kiến thức đã học để nhớ và hiểu rõ hơn. Bài viết tham khảo chủ yếu từ CVE-2019-18683: Exploiting a Linux kernel vulnerability in the V4L2 subsystem  Vulnerabilities chúng ta tải source code kernel về và xem tại: linux-x/drivers/media/platform/vivid/   Lỗ hổng bắt nguồn từ sai sót trong hiện thực, sử dụng mutex lock của driver vivid trong subsystem V4L2 - (drivers/media/platform/vivid).</description>
+        
+        <dc:creator>Edisc</dc:creator>
+        <media:content url="https://minhlongmt183.github.io/images/posts/CVE-2019-18683/v4l2_objects.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>cve, linux kernel, V4l2</category>
+            
+          
+        
+        
+          
+            
+              <category>pwn</category>
+            
+          
+        
+        
+          
+            
+              <category>cve</category>
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>Tìm hiểu về CVE-2021-20226</title>
+        <link>https://minhlongmt183.github.io/posts/cve-2021-20226/</link>
+        <pubDate>Wed, 24 Jun 2020 00:00:00 +0000</pubDate>
+        <author>edisc.ctf@gmail.com (Edisc)</author>
+        <atom:modified>Wed, 24 Jun 2020 00:00:00 +0000</atom:modified>
+        <guid>https://minhlongmt183.github.io/posts/cve-2021-20226/</guid>
+        <description>Bài viết này nhằm mục đích ghi lại những kiến thức đã học để nhớ và hiểu rõ hơn. Bài viết tham khảo chủ yếu từ CVE-2021–20226 a reference counting bug which leads to local privilege escalation in io_uring.  Đôi nét về io_uring io_uring Asynchronous I/O (AIO) framework là một giao diện I/O mới cho Linux, được giới thiệu trên linux kernel version 5.1 (tháng 3 - 2019).
+Communication channel From: https://flattsecurity.</description>
+        
+        <dc:creator>Edisc</dc:creator>
+        <media:content url="https://minhlongmt183.github.io/images/posts/CVE_2021_20226/io_uring.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>cve, io_uring</category>
+            
+          
+        
+        
+          
+            
+              <category>pwn</category>
+            
+          
+        
+        
+          
+            
+              <category>cve</category>
+            
+          
+        
+      </item>
+      
+
+    
+  </channel>
+</rss>

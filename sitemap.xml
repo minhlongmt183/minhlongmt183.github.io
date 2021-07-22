@@ -3,31 +3,49 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://minhlongmt183.github.io/categories/</loc>
-    <lastmod>2020-06-15T00:00:00+00:00</lastmod>
+    <lastmod>2020-07-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://minhlongmt183.github.io/tags/docker/</loc>
-    <lastmod>2020-06-15T00:00:00+00:00</lastmod>
+    <loc>https://minhlongmt183.github.io/series/cve/</loc>
+    <lastmod>2020-07-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://minhlongmt183.github.io/series/docker/</loc>
-    <lastmod>2020-06-15T00:00:00+00:00</lastmod>
+    <loc>https://minhlongmt183.github.io/tags/cve-linux-kernel-v4l2/</loc>
+    <lastmod>2020-07-19T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://minhlongmt183.github.io/</loc>
-    <lastmod>2020-06-15T00:00:00+00:00</lastmod>
+    <lastmod>2020-07-19T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://minhlongmt183.github.io/posts/</loc>
-    <lastmod>2020-06-15T00:00:00+00:00</lastmod>
+    <lastmod>2020-07-19T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://minhlongmt183.github.io/categories/pwn/</loc>
-    <lastmod>2020-06-15T00:00:00+00:00</lastmod>
+    <lastmod>2020-07-19T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://minhlongmt183.github.io/series/</loc>
-    <lastmod>2020-06-15T00:00:00+00:00</lastmod>
+    <lastmod>2020-07-19T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://minhlongmt183.github.io/tags/</loc>
-    <lastmod>2020-06-15T00:00:00+00:00</lastmod>
+    <lastmod>2020-07-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://minhlongmt183.github.io/posts/cve-2019-18683/</loc>
+    <lastmod>2020-07-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://minhlongmt183.github.io/tags/cve-io_uring/</loc>
+    <lastmod>2020-06-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://minhlongmt183.github.io/posts/cve-2021-20226/</loc>
+    <lastmod>2020-06-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://minhlongmt183.github.io/tags/docker/</loc>
+    <lastmod>2020-06-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://minhlongmt183.github.io/series/docker/</loc>
+    <lastmod>2020-06-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://minhlongmt183.github.io/posts/docker_p7/</loc>
+    <lastmod>2020-06-23T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://minhlongmt183.github.io/posts/docker_p6/</loc>
-    <lastmod>2020-06-15T00:00:00+00:00</lastmod>
+    <lastmod>2020-06-21T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://minhlongmt183.github.io/posts/docker_p5/</loc>
     <lastmod>2020-06-14T00:00:00+00:00</lastmod>
