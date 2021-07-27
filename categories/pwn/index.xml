@@ -14,7 +14,7 @@
     <managingEditor>edisc.ctf@gmail.com (Edisc)</managingEditor>
     <webMaster>edisc.ctf@gmail.com (Edisc)</webMaster>
     <copyright>©2021, All Rights Reserved</copyright>
-    <lastBuildDate>Sun, 19 Jul 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 27 Jul 2020 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://minhlongmt183.github.io/categories/pwn/index.xml" rel="self" type="application/rss+xml" />
     
@@ -23,9 +23,9 @@
       <item>
         <title>Tìm hiểu về CVE-2019-18683</title>
         <link>https://minhlongmt183.github.io/posts/cve-2019-18683/</link>
-        <pubDate>Sun, 19 Jul 2020 00:00:00 +0000</pubDate>
+        <pubDate>Mon, 27 Jul 2020 00:00:00 +0000</pubDate>
         <author>edisc.ctf@gmail.com (Edisc)</author>
-        <atom:modified>Sun, 19 Jul 2020 00:00:00 +0000</atom:modified>
+        <atom:modified>Mon, 27 Jul 2020 00:00:00 +0000</atom:modified>
         <guid>https://minhlongmt183.github.io/posts/cve-2019-18683/</guid>
         <description>Bài viết này nhằm mục đích ghi lại những kiến thức đã học để nhớ và hiểu rõ hơn. Bài viết tham khảo chủ yếu từ CVE-2019-18683: Exploiting a Linux kernel vulnerability in the V4L2 subsystem  Vulnerabilities chúng ta tải source code kernel về và xem tại: linux-x/drivers/media/platform/vivid/   Lỗ hổng bắt nguồn từ sai sót trong hiện thực, sử dụng mutex lock của driver vivid trong subsystem V4L2 - (drivers/media/platform/vivid).</description>
         
