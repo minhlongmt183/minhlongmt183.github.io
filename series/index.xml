@@ -14,11 +14,29 @@
     <managingEditor>edisc.ctf@gmail.com (Edisc)</managingEditor>
     <webMaster>edisc.ctf@gmail.com (Edisc)</webMaster>
     <copyright>©2021, All Rights Reserved</copyright>
-    <lastBuildDate>Tue, 08 Sep 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 15 Sep 2020 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://minhlongmt183.github.io/series/index.xml" rel="self" type="application/rss+xml" />
     
 
+      
+      <item>
+        <title>docker</title>
+        <link>https://minhlongmt183.github.io/series/docker/</link>
+        <pubDate>Tue, 15 Sep 2020 00:00:00 +0000</pubDate>
+        <author>edisc.ctf@gmail.com (Edisc)</author>
+        
+        <guid>https://minhlongmt183.github.io/series/docker/</guid>
+        <description></description>
+        
+        <dc:creator>Edisc</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
       
       <item>
         <title>cve</title>
@@ -45,24 +63,6 @@
         <author>edisc.ctf@gmail.com (Edisc)</author>
         
         <guid>https://minhlongmt183.github.io/series/skill/</guid>
-        <description></description>
-        
-        <dc:creator>Edisc</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
-      
-      <item>
-        <title>docker</title>
-        <link>https://minhlongmt183.github.io/series/docker/</link>
-        <pubDate>Tue, 23 Jun 2020 00:00:00 +0000</pubDate>
-        <author>edisc.ctf@gmail.com (Edisc)</author>
-        
-        <guid>https://minhlongmt183.github.io/series/docker/</guid>
         <description></description>
         
         <dc:creator>Edisc</dc:creator>

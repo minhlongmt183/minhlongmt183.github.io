@@ -14,11 +14,47 @@
     <managingEditor>edisc.ctf@gmail.com (Edisc)</managingEditor>
     <webMaster>edisc.ctf@gmail.com (Edisc)</webMaster>
     <copyright>©2021, All Rights Reserved</copyright>
-    <lastBuildDate>Tue, 23 Jun 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 15 Sep 2020 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://minhlongmt183.github.io/series/docker/index.xml" rel="self" type="application/rss+xml" />
     
 
+      
+      <item>
+        <title>Tìm hiểu và sử dụng docker (P8)</title>
+        <link>https://minhlongmt183.github.io/posts/docker_p8/</link>
+        <pubDate>Tue, 15 Sep 2020 00:00:00 +0000</pubDate>
+        <author>edisc.ctf@gmail.com (Edisc)</author>
+        <atom:modified>Tue, 15 Sep 2020 00:00:00 +0000</atom:modified>
+        <guid>https://minhlongmt183.github.io/posts/docker_p8/</guid>
+        <description>Docker security Docker security non-events Protect the Docker daemon socket Using certificates for repository client verification User trusted images Antivirus software AppArmor security profiles Seccomp security profiles Chế độ điện toán an toàn Secure computing mode (seccomp) là một tính năng của Linux kernel, dùng để hạn chế một số action trong container. Hàm seccomp() system call dùng để xử lí trạng thái của seccomp.</description>
+        
+        <dc:creator>Edisc</dc:creator>
+        <media:content url="https://minhlongmt183.github.io/images/posts/docker_p7/docker_foundation.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>Docker</category>
+            
+          
+        
+        
+          
+            
+              <category>pwn</category>
+            
+          
+        
+        
+          
+            
+              <category>docker</category>
+            
+          
+        
+      </item>
       
       <item>
         <title>Tìm hiểu và sử dụng docker (P7)</title>
