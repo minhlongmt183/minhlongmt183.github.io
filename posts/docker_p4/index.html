@@ -18,9 +18,9 @@
 
 <script defer src="/js/lazysizes.min.fb649fcae62177dfe63e67081ddceb830b5ce1f05a4184e9bbb7d87ac4b8f4e5.js"></script>
 
-<script defer src="/js/helper/getParents.min.ccd45f158c1b17849307ba913a72beac239c410f2b6e648496a79842da84e55b.js"></script>
+<script defer src="/js/helper/getParents.min.1618c696be7c98933f9a92677f518b512a74e55bdbb976b09936b4182e93181b.js"></script>
 
-<script defer src="/js/helper/fadeinout.min.1d13d3e810c3940e80cbba6216a1c76fbf42b5431fc83537ea6997863802362b.js"></script>
+<script defer src="/js/helper/fadeinout.min.efa35f4c090622130b3f4cfae6971448b5ffb61c5f0a8f21cdfd157fa712abc4.js"></script>
 
 <script defer src="/js/helper/closest.min.js"></script>
   
@@ -1359,7 +1359,7 @@
     <meta property="twitter:description" content="Phần này chúng ta sẽ học về : cài đặt và cấu hình một hệ thống trên docker gồm  3 container chạy 3 dịch vụ khác nhau: mysql, php, máy chủ web apache httpd. trong đó máy chủ web truy cập được cổng 9999 trên host">
   
 
-<meta name="generator" content="Hugo 0.84.1" />
+<meta name="generator" content="Hugo 0.68.3" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1419,14 +1419,16 @@
 
     
   
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-G6WT3WSKMH"></script>
-<script>
+<script type="application/javascript">
 var doNotTrack = false;
 if (!doNotTrack) {
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
-	gtag('config', 'G-G6WT3WSKMH', { 'anonymize_ip': false });
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'G-G6WT3WSKMH', 'auto');
+	
+	ga('send', 'pageview');
 }
 </script>
 
@@ -1879,7 +1881,7 @@ CONTAINER ID        IMAGE               COMMAND                  CREATED        
 2894c033c93f        php:7.3-fpm         <span class="s2">&#34;docker-php-entrypoi…&#34;</span>   <span class="m">2</span> minutes ago       Up <span class="m">2</span> minutes        9000/tcp            c-php
 </code></pre></td></tr></table>
 </div>
-</div><p>Ở đây, vì sau khi tạo chúng ta không muốn vào trực tiệp docker nên không dùng tùy chọn <code>-it</code>, tuy nhiên thêm lệnh <code>-d</code> để sau khi tạo docker tiếp tục chạy nền. Ỏ đây, tôi dùng linux nên quá trình diễn ra khá thuận lợi, nhưng theo tác giả thì nếu bạn dùng Windows hay MacOs thì cần phải thiết lập thư mục ở chế độ share với docker thì mới có thể tạo được. Chi tiết bạn có thể vào kênh của anh <a href="https://www.youtube.com/watch?v=qwofZjKaeMs&amp;list=PLwJr0JSP7i8At14UIC-JR4r73G4hQ1CXO&amp;index=6">XuanThuLabChanel</a> để xem rõ hơn. Bên cạnh đó, ta cũng thấy container mới được tạo này chạy đang chạy lệnh &ldquo;docker-php-entrypoi…&rdquo;, bản chất lệnh này dùng để gọi dịch vụ php-fpm để chạy và lắng nghe ở cổng 9000.</p>
+</div><p>Ở đây, vì sau khi tạo chúng ta không muốn vào trực tiệp docker nên không dùng tùy chọn <code>-it</code>, tuy nhiên thêm lệnh <code>-d</code> để sau khi tạo docker tiếp tục chạy nền. Ỏ đây, tôi dùng linux nên quá trình diễn ra khá thuận lợi, nhưng theo tác giả thì nếu bạn dùng Windows hay MacOs thì cần phải thiết lập thư mục ở chế độ share với docker thì mới có thể tạo được. Chi tiết bạn có thể vào kênh của anh <a href="https://www.youtube.com/watch?v=qwofZjKaeMs&amp;list=PLwJr0JSP7i8At14UIC-JR4r73G4hQ1CXO&amp;index=6">XuanThuLabChanel</a> để xem rõ hơn. Bên cạnh đó, ta cũng thấy container mới được tạo này chạy đang chạy lệnh &ldquo;docker-php-entrypoi…&quot;, bản chất lệnh này dùng để gọi dịch vụ php-fpm để chạy và lắng nghe ở cổng 9000.</p>
 <h3 id="kiểm-tra-php">Kiểm tra php</h3>
 <p>Chúng ta vào container vừa mới tạo, ôn lại kiến thức cũ, thay vì vào container bằng lệnh <code>docker attach</code> ta còn có một cách khác đó là thực thi câu lệnh bash trong container từ host thông qua <code>docker exec</code></p>
 <div class="highlight"><div class="chroma">
@@ -2024,8 +2026,8 @@ c1.txt  data_container2.txt  d.txt  httpd.conf  www
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-php" data-lang="php"><span class="nx">DocumentRoot</span> <span class="s2">&#34;/usr/local/apache2/htdocs&#34;</span>
-<span class="o">&lt;</span><span class="nx">Directory</span> <span class="s2">&#34;/usr/local/apache2/htdocs&#34;</span><span class="o">&gt;</span>
+<pre class="chroma"><code class="language-php" data-lang="php">DocumentRoot &#34;/usr/local/apache2/htdocs&#34;
+<span class="p">&lt;</span><span class="nt">Directory</span> <span class="err">&#34;/</span><span class="na">usr</span><span class="err">/</span><span class="na">local</span><span class="err">/</span><span class="na">apache2</span><span class="err">/</span><span class="na">htdocs</span><span class="err">&#34;</span><span class="p">&gt;</span>
 </code></pre></td></tr></table>
 </div>
 </div><p>Thay đổi thành thư mục mà chúng ta muốn mount vào.<br />
@@ -2108,7 +2110,7 @@ Như vậy, proxy đã gọi được test.php.</p>
 VALUE1
 / <span class="c1"># echo $BIEN2</span>
 VALUE2
-/ <span class="c1"># </span>
+/ # 
 </code></pre></td></tr></table>
 </div>
 </div><p>Đây là cách thức nhiều image đóng gói và thiết lập biến môi trường giúp chúng ta thiết lập các container khi chạy.</p>
@@ -3043,7 +3045,7 @@ mysql&gt; <span class="k">select</span> User from user<span class="p">;</span>
 </div>
 
 
-<script defer src="/js/swipe.min.989e074dfb92ce7f57a92c1df7027f88b53c50a54fd9ad450a673a64aa91bfa4.js"></script>
+<script defer src="/js/swipe.min.b4b82839155519d9ca67746615a4c86ccbc1061c196fe6d8aa26e4fe22902718.js"></script>
 
 <script defer src="/js/micromodal.min.de01b44b2f383056bbcaf6ee921fd385d79108ec1129afd0eb2f3f5a07e11f45.js"></script>
 

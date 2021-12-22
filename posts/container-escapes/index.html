@@ -18,9 +18,9 @@
 
 <script defer src="/js/lazysizes.min.fb649fcae62177dfe63e67081ddceb830b5ce1f05a4184e9bbb7d87ac4b8f4e5.js"></script>
 
-<script defer src="/js/helper/getParents.min.ccd45f158c1b17849307ba913a72beac239c410f2b6e648496a79842da84e55b.js"></script>
+<script defer src="/js/helper/getParents.min.1618c696be7c98933f9a92677f518b512a74e55bdbb976b09936b4182e93181b.js"></script>
 
-<script defer src="/js/helper/fadeinout.min.1d13d3e810c3940e80cbba6216a1c76fbf42b5431fc83537ea6997863802362b.js"></script>
+<script defer src="/js/helper/fadeinout.min.efa35f4c090622130b3f4cfae6971448b5ffb61c5f0a8f21cdfd157fa712abc4.js"></script>
 
 <script defer src="/js/helper/closest.min.js"></script>
   
@@ -1359,7 +1359,7 @@
     <meta property="twitter:description" content="Tìm hiểu về Container Escapes">
   
 
-<meta name="generator" content="Hugo 0.84.1" />
+<meta name="generator" content="Hugo 0.68.3" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1419,14 +1419,16 @@
 
     
   
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-G6WT3WSKMH"></script>
-<script>
+<script type="application/javascript">
 var doNotTrack = false;
 if (!doNotTrack) {
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
-	gtag('config', 'G-G6WT3WSKMH', { 'anonymize_ip': false });
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'G-G6WT3WSKMH', 'auto');
+	
+	ga('send', 'pageview');
 }
 </script>
 
@@ -1874,17 +1876,17 @@ Bằng cách thay đổi điều này để trỏ đến một chương trình b
 </div><p><strong>Những vector quan trọng nào đang bị chặn?</strong></p>
 <ul>
 <li>
-<p><strong>uevent_helper</strong>: uevents là những sự kiện được kernel kích hoạt khi một thiết bị thêm vào hoặc xóa đi. Điều đáng chú ý là đường dẫn của &ldquo;uevent_helper&rdquo; có thể được chỉnh sửa bằng cách ghi vào <strong>&quot;/sys/kernel/uevent_helper&quot;</strong>.<br />
-Do đó, khi một uevent được kích hoạt (cũng có thể được thực hiện từ userland bằng cách ghi vào các tệp như <strong>&quot;/sys/class/mem/null/event&quot;</strong>), &ldquo;uevent_helper độc hại&rdquo; sẽ được thực thi.</p>
+<p><strong>uevent_helper</strong>: uevents là những sự kiện được kernel kích hoạt khi một thiết bị thêm vào hoặc xóa đi. Điều đáng chú ý là đường dẫn của &ldquo;uevent_helper&rdquo; có thể được chỉnh sửa bằng cách ghi vào <strong>&quot;/sys/kernel/uevent_helper&rdquo;</strong>.<br />
+Do đó, khi một uevent được kích hoạt (cũng có thể được thực hiện từ userland bằng cách ghi vào các tệp như <strong>&quot;/sys/class/mem/null/event&rdquo;</strong>), &ldquo;uevent_helper độc hại&rdquo; sẽ được thực thi.</p>
 </li>
 <li>
-<p><strong>modprobe</strong>: modprobe là một tiện ích thuộc userland, được kernel gọi khi kernel cần load một kernel module. Vị trí của nó có thể được thay đổi bằng cách sửa đổi <strong>&quot;/proc/sys/kernel/modprobe&quot;</strong>,<br />
+<p><strong>modprobe</strong>: modprobe là một tiện ích thuộc userland, được kernel gọi khi kernel cần load một kernel module. Vị trí của nó có thể được thay đổi bằng cách sửa đổi <strong>&quot;/proc/sys/kernel/modprobe&rdquo;</strong>,<br />
 và sau đó chúng ta chỉ cần thực hiện một hành động nào đó để kernel tải một kernel module, code chúng ta sẽ được thực thi. (Chẳng hạn như sử dụng crypto-API để tải crypto-module hoặc sử dụng <code>ifconfig</code> để tải networking module cho thiết bị hiện không sử dụng.)</p>
 </li>
 <li>
 <p><strong>core_pattern</strong>: core_patterns thường sử dụng để cho kernel biết cách đặt tên và định dạng các core dumps được tạo khi chương trình bị crash.<br />
 Tuy nhiên, nó lại có 1 tính năng rất tệ: &ldquo;từ Linux kernel 2.6.19. Linux hỗ trợ cú pháp thay thế cho tệp <strong>/proc/sys/kernel/core_patterm</strong>. Nếu ký tự đầu tiên của tệp này là kí tự pipe <strong>(|)</strong>,<br />
-thì phần còn lại của dòng này được hiểu là một chương trình sẽ được thực thi. Thay vì được ghi vào đĩa, core dump lúc bây giờ sẽ được xem là một chuẩn input của chương trình trên.&rdquo;.<br />
+thì phần còn lại của dòng này được hiểu là một chương trình sẽ được thực thi. Thay vì được ghi vào đĩa, core dump lúc bây giờ sẽ được xem là một chuẩn input của chương trình trên.&quot;.<br />
 Sử dụng tính năng trên, <strong>core_pattern</strong> có thể được chỉ định để gọi chương trình của chúng ta, rồi để kích hoạt nó, ta chỉ cần làm cho chương trình bị crash.</p>
 </li>
 <li>
@@ -2024,7 +2026,7 @@ privileged và unprivileged của LXC containers. Vì vậy, những người d�
 LXC privileged container. Những phiên bản mới của LXC đã bỏ SYS_RAWIO và có thêm những luật AppArmor để chặn truy cập vào &ldquo;/proc/bus&rdquo;.</li>
 <li>Từ bên trong containter, ta có thể truy cập vào &ldquo;control regions&rdquo; của thiết bị được gắn vào host PCI bus bằng &ldquo;/proc/bus/pci/interface&rdquo;. Để truy cập vào &ldquo;/proc/interface&rdquo; cần phải có quyền SYS_RAWIO.<br />
 Thậm chí, đường dẫn &ldquo;/proc&rdquo; bị chặn bởi AppArmor, container với SYS_RAWIO vẫn có thể tiếp tục truy cập vào interface này thông qua <strong>&ldquo;iopl/ioperm&rdquo;</strong><br />
-(sau đó sử dụng inb, outb, friends để truy cập vào IO ports). Một điều lưu ý là Docker không bị lỗi này, vì <strong>&quot;/proc&quot;</strong> thường được gắn cho chế độ chỉ đọc và SYS_RAWIO bị loại bỏ.<br />
+(sau đó sử dụng inb, outb, friends để truy cập vào IO ports). Một điều lưu ý là Docker không bị lỗi này, vì <strong>&quot;/proc&rdquo;</strong> thường được gắn cho chế độ chỉ đọc và SYS_RAWIO bị loại bỏ.<br />
 Trong phản hồi về lỗi này, nhóm LXC nhận xét rằng họ coi các vùng privileged container vốn không an toàn, vì có một lỗ hổng đã biết và &ldquo;không thể sửa&rdquo; trong các vùng privileged containers.</li>
 </ul>
 <h3 id="the-ptrace-hole">The ptrace Hole</h3>
@@ -2584,7 +2586,7 @@ Bỏ qua ulimit, hai điều kiện Dos khác có thể được khai thác tron
 </div>
 
 
-<script defer src="/js/swipe.min.989e074dfb92ce7f57a92c1df7027f88b53c50a54fd9ad450a673a64aa91bfa4.js"></script>
+<script defer src="/js/swipe.min.b4b82839155519d9ca67746615a4c86ccbc1061c196fe6d8aa26e4fe22902718.js"></script>
 
 <script defer src="/js/micromodal.min.de01b44b2f383056bbcaf6ee921fd385d79108ec1129afd0eb2f3f5a07e11f45.js"></script>
 
