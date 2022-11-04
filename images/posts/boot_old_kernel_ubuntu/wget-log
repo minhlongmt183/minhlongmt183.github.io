@@ -1,0 +1,6 @@
+--2022-11-04 10:43:44--  https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fea4c9ae7-10b1-44df-afd3-983c9ea24a35%2FUntitled.png?table=block
+Resolving www.notion.so (www.notion.so)... 104.18.6.183, 104.18.7.183, 2606:4700::6812:6b7, ...
+Connecting to www.notion.so (www.notion.so)|104.18.6.183|:443... connected.
+HTTP request sent, awaiting response... 400 Bad Request
+2022-11-04 10:43:45 ERROR 400: Bad Request.
+

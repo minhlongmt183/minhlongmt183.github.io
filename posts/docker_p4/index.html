@@ -10,17 +10,17 @@
 
 
   
-  <script defer src="/js/fuse.min.32195737929df2c8096e855a5789cbb3f1331224d9169e8705493e7008f47df8.js"></script>
+  <script defer src="/js/fuse.min.8dfbf8696f107ab8b55732efbb04c5c51576692a4a2cce6effef9f6e92d341a7.js"></script>
 
 
 
-<script src="/js/enquire.min.dfb99dee1e029d51d6cfb672d847929890b1585402de17f5ed092edd72a688b4.js"></script>
+<script src="/js/enquire.min.aa37bdcb743826eecdae5c5d177fc7d6552340f1b4378ffaa9c82b2c6111400b.js"></script>
 
-<script defer src="/js/lazysizes.min.fb649fcae62177dfe63e67081ddceb830b5ce1f05a4184e9bbb7d87ac4b8f4e5.js"></script>
+<script defer src="/js/lazysizes.min.498676c34eb225e85357ab0ce19c3c1244f3bd0bf595e5684d1b9d50ea4fbc42.js"></script>
 
-<script defer src="/js/helper/getParents.min.1618c696be7c98933f9a92677f518b512a74e55bdbb976b09936b4182e93181b.js"></script>
+<script defer src="/js/helper/getParents.min.086022fb02d7a1517e33c2670bffb976b3e80bcacd9caeee0c6a586064f20e42.js"></script>
 
-<script defer src="/js/helper/fadeinout.min.efa35f4c090622130b3f4cfae6971448b5ffb61c5f0a8f21cdfd157fa712abc4.js"></script>
+<script defer src="/js/helper/fadeinout.min.3ce954c8aea3b69cc5e6f734d8273ba4cd48d3a7987dbdca145849bc4b8fc296.js"></script>
 
 <script defer src="/js/helper/closest.min.js"></script>
   
@@ -1359,7 +1359,7 @@
     <meta property="twitter:description" content="Phần này chúng ta sẽ học về : cài đặt và cấu hình một hệ thống trên docker gồm  3 container chạy 3 dịch vụ khác nhau: mysql, php, máy chủ web apache httpd. trong đó máy chủ web truy cập được cổng 9999 trên host">
   
 
-<meta name="generator" content="Hugo 0.68.3" />
+<meta name="generator" content="Hugo 0.105.0">
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1419,16 +1419,14 @@
 
     
   
-<script type="application/javascript">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-G6WT3WSKMH"></script>
+<script>
 var doNotTrack = false;
 if (!doNotTrack) {
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	ga('create', 'G-G6WT3WSKMH', 'auto');
-	
-	ga('send', 'pageview');
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-G6WT3WSKMH', { 'anonymize_ip': false });
 }
 </script>
 
@@ -1768,7 +1766,7 @@ if (!doNotTrack) {
 <p>Chúng ta tải bản 7.3-fpm từ docker hub. <code>fpm</code> ở đây có nghĩa là trong gói này, có thêm dịch vụ php-fpm. Dịch vụ này lắng nghe và tạo ra nhiều tiến trình php trên cổng <code>9000</code> chờ các webserver như http, nginx kết nối vào.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1792,35 +1790,35 @@ if (!doNotTrack) {
 </span><span class="lnt">22
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">❯ docker pull php:7.3-fpm
-7.3-fpm: Pulling from library/php
-69692152171a: Pull <span class="nb">complete</span> 
-2040822db325: Pull <span class="nb">complete</span> 
-9b4ca5ae9dfa: Pull <span class="nb">complete</span> 
-ac1fe7c6d966: Pull <span class="nb">complete</span> 
-c342d9e76a3c: Pull <span class="nb">complete</span> 
-6ead8e46ae7b: Pull <span class="nb">complete</span> 
-5c98df0d7626: Pull <span class="nb">complete</span> 
-dd302d19deb7: Pull <span class="nb">complete</span> 
-7701b71427d2: Pull <span class="nb">complete</span> 
-672353cf3439: Pull <span class="nb">complete</span> 
-b379e47d0c20: Pull <span class="nb">complete</span> 
-Digest: sha256:d38892103d2f76e3245a080875718d74414d6d7a57cfe7000a91f4aa668f870b
-Status: Downloaded newer image <span class="k">for</span> php:7.3-fpm
-❯ docker images
-REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
-newimage            version2            a8e04dcf8737        <span class="m">2</span> days ago          170MB
-busybox             latest              69593048aa3a        <span class="m">2</span> days ago          1.24MB
-php                 7.3-fpm             2692864592ed        <span class="m">4</span> weeks ago         399MB
-ubuntu              latest              7e0aa2d69a15        <span class="m">6</span> weeks ago         72.7MB
-centos              latest              300e315adb2f        <span class="m">6</span> months ago        209MB
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">❯ docker pull php:7.3-fpm
+</span></span><span class="line"><span class="cl">7.3-fpm: Pulling from library/php
+</span></span><span class="line"><span class="cl">69692152171a: Pull <span class="nb">complete</span> 
+</span></span><span class="line"><span class="cl">2040822db325: Pull <span class="nb">complete</span> 
+</span></span><span class="line"><span class="cl">9b4ca5ae9dfa: Pull <span class="nb">complete</span> 
+</span></span><span class="line"><span class="cl">ac1fe7c6d966: Pull <span class="nb">complete</span> 
+</span></span><span class="line"><span class="cl">c342d9e76a3c: Pull <span class="nb">complete</span> 
+</span></span><span class="line"><span class="cl">6ead8e46ae7b: Pull <span class="nb">complete</span> 
+</span></span><span class="line"><span class="cl">5c98df0d7626: Pull <span class="nb">complete</span> 
+</span></span><span class="line"><span class="cl">dd302d19deb7: Pull <span class="nb">complete</span> 
+</span></span><span class="line"><span class="cl">7701b71427d2: Pull <span class="nb">complete</span> 
+</span></span><span class="line"><span class="cl">672353cf3439: Pull <span class="nb">complete</span> 
+</span></span><span class="line"><span class="cl">b379e47d0c20: Pull <span class="nb">complete</span> 
+</span></span><span class="line"><span class="cl">Digest: sha256:d38892103d2f76e3245a080875718d74414d6d7a57cfe7000a91f4aa668f870b
+</span></span><span class="line"><span class="cl">Status: Downloaded newer image <span class="k">for</span> php:7.3-fpm
+</span></span><span class="line"><span class="cl">❯ docker images
+</span></span><span class="line"><span class="cl">REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+</span></span><span class="line"><span class="cl">newimage            version2            a8e04dcf8737        <span class="m">2</span> days ago          170MB
+</span></span><span class="line"><span class="cl">busybox             latest              69593048aa3a        <span class="m">2</span> days ago          1.24MB
+</span></span><span class="line"><span class="cl">php                 7.3-fpm             2692864592ed        <span class="m">4</span> weeks ago         399MB
+</span></span><span class="line"><span class="cl">ubuntu              latest              7e0aa2d69a15        <span class="m">6</span> weeks ago         72.7MB
+</span></span><span class="line"><span class="cl">centos              latest              300e315adb2f        <span class="m">6</span> months ago        209MB
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="tạo-mạng-bridge">Tạo mạng bridge</h3>
 <p>Đầu tiên chúng ta tạo một bride network có tên là <code>www-net</code></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -1830,21 +1828,21 @@ centos              latest              300e315adb2f        <span class="m">6</s
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">❯ docker network create --driver bridge www-net
-4d9c8d81da85fd9118cea666265aab88ae6ab71ac1d53a2dd81b168d87c9d290
-❯ docker network ls
-NETWORK ID          NAME                DRIVER              SCOPE
-286d5161c9f6        bridge              bridge              <span class="nb">local</span>
-0f2ab02aa9f4        host                host                <span class="nb">local</span>
-271997adaaa9        none                null                <span class="nb">local</span>
-4d9c8d81da85        www-net             bridge              <span class="nb">local</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">❯ docker network create --driver bridge www-net
+</span></span><span class="line"><span class="cl">4d9c8d81da85fd9118cea666265aab88ae6ab71ac1d53a2dd81b168d87c9d290
+</span></span><span class="line"><span class="cl">❯ docker network ls
+</span></span><span class="line"><span class="cl">NETWORK ID          NAME                DRIVER              SCOPE
+</span></span><span class="line"><span class="cl">286d5161c9f6        bridge              bridge              <span class="nb">local</span>
+</span></span><span class="line"><span class="cl">0f2ab02aa9f4        host                host                <span class="nb">local</span>
+</span></span><span class="line"><span class="cl">271997adaaa9        none                null                <span class="nb">local</span>
+</span></span><span class="line"><span class="cl">4d9c8d81da85        www-net             bridge              <span class="nb">local</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="tạo-thư-mục-chia-sẻ-dữ-liệu-giữa-máy-host-và-container">Tạo thư mục chia sẻ dữ liệu giữa máy host và container</h3>
 <p>Trên máy host, ta xây dựng một cây thư mục để lưu trữ dữ liệu chia sẻ với container như sau:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -1853,61 +1851,61 @@ NETWORK ID          NAME                DRIVER              SCOPE
 </span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">.
-├── docker
-│   └── data
-│       ├── c1.txt
-│       ├── data_container2.txt
-│       ├── d.txt
-│       └── www
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">.
+</span></span><span class="line"><span class="cl">├── docker
+</span></span><span class="line"><span class="cl">│   └── data
+</span></span><span class="line"><span class="cl">│       ├── c1.txt
+</span></span><span class="line"><span class="cl">│       ├── data_container2.txt
+</span></span><span class="line"><span class="cl">│       ├── d.txt
+</span></span><span class="line"><span class="cl">│       └── www
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Về kiến thức liên quan về chia sẻ dữ liệu giữa máy host và container, bạn có thể xem kĩ hơn ở <a href="../docker_p2">phần 2</a></p>
 <h3 id="chạy-container-php-fpm">Chạy container php-fpm</h3>
 <p>Chúng ta tạo một container có tên là c-php</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">❯ docker run -d --name c-php -v /home/edisc/Desktop/docker/data:/home/SharedData --network www-net php:7.3-fpm
-2894c033c93f5e4f2b02198afbb94cc9b5e62467b2e4c1291a7c2444f30659a7
-❯ docker ps
-CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS               NAMES
-2894c033c93f        php:7.3-fpm         <span class="s2">&#34;docker-php-entrypoi…&#34;</span>   <span class="m">2</span> minutes ago       Up <span class="m">2</span> minutes        9000/tcp            c-php
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">❯ docker run -d --name c-php -v /home/edisc/Desktop/docker/data:/home/SharedData --network www-net php:7.3-fpm
+</span></span><span class="line"><span class="cl">2894c033c93f5e4f2b02198afbb94cc9b5e62467b2e4c1291a7c2444f30659a7
+</span></span><span class="line"><span class="cl">❯ docker ps
+</span></span><span class="line"><span class="cl">CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS               NAMES
+</span></span><span class="line"><span class="cl">2894c033c93f        php:7.3-fpm         <span class="s2">&#34;docker-php-entrypoi…&#34;</span>   <span class="m">2</span> minutes ago       Up <span class="m">2</span> minutes        9000/tcp            c-php
+</span></span></code></pre></td></tr></table>
 </div>
-</div><p>Ở đây, vì sau khi tạo chúng ta không muốn vào trực tiệp docker nên không dùng tùy chọn <code>-it</code>, tuy nhiên thêm lệnh <code>-d</code> để sau khi tạo docker tiếp tục chạy nền. Ỏ đây, tôi dùng linux nên quá trình diễn ra khá thuận lợi, nhưng theo tác giả thì nếu bạn dùng Windows hay MacOs thì cần phải thiết lập thư mục ở chế độ share với docker thì mới có thể tạo được. Chi tiết bạn có thể vào kênh của anh <a href="https://www.youtube.com/watch?v=qwofZjKaeMs&amp;list=PLwJr0JSP7i8At14UIC-JR4r73G4hQ1CXO&amp;index=6">XuanThuLabChanel</a> để xem rõ hơn. Bên cạnh đó, ta cũng thấy container mới được tạo này chạy đang chạy lệnh &ldquo;docker-php-entrypoi…&quot;, bản chất lệnh này dùng để gọi dịch vụ php-fpm để chạy và lắng nghe ở cổng 9000.</p>
+</div><p>Ở đây, vì sau khi tạo chúng ta không muốn vào trực tiệp docker nên không dùng tùy chọn <code>-it</code>, tuy nhiên thêm lệnh <code>-d</code> để sau khi tạo docker tiếp tục chạy nền. Ỏ đây, tôi dùng linux nên quá trình diễn ra khá thuận lợi, nhưng theo tác giả thì nếu bạn dùng Windows hay MacOs thì cần phải thiết lập thư mục ở chế độ share với docker thì mới có thể tạo được. Chi tiết bạn có thể vào kênh của anh <a href="https://www.youtube.com/watch?v=qwofZjKaeMs&amp;list=PLwJr0JSP7i8At14UIC-JR4r73G4hQ1CXO&amp;index=6">XuanThuLabChanel</a> để xem rõ hơn. Bên cạnh đó, ta cũng thấy container mới được tạo này chạy đang chạy lệnh &ldquo;docker-php-entrypoi…&rdquo;, bản chất lệnh này dùng để gọi dịch vụ php-fpm để chạy và lắng nghe ở cổng 9000.</p>
 <h3 id="kiểm-tra-php">Kiểm tra php</h3>
 <p>Chúng ta vào container vừa mới tạo, ôn lại kiến thức cũ, thay vì vào container bằng lệnh <code>docker attach</code> ta còn có một cách khác đó là thực thi câu lệnh bash trong container từ host thông qua <code>docker exec</code></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">❯ docker <span class="nb">exec</span> -it c-php bash
-root@2894c033c93f:/var/www/html# 
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">❯ docker <span class="nb">exec</span> -it c-php bash
+</span></span><span class="line"><span class="cl">root@2894c033c93f:/var/www/html# 
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Ta vào thư mục chia sẻ <code>/home/SharedData/</code> để kiểm tra dữ liệu trên thư mục</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">root@2894c033c93f:/var/www/html# <span class="nb">cd</span> /home/SharedData/
-root@2894c033c93f:/home/SharedData# ls
-c1.txt	d.txt  data_container2.txt  www
-root@2894c033c93f:/home/SharedData# 
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">root@2894c033c93f:/var/www/html# <span class="nb">cd</span> /home/SharedData/
+</span></span><span class="line"><span class="cl">root@2894c033c93f:/home/SharedData# ls
+</span></span><span class="line"><span class="cl">c1.txt	d.txt  data_container2.txt  www
+</span></span><span class="line"><span class="cl">root@2894c033c93f:/home/SharedData# 
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Trên máy host, ta tạo file <code>test.php</code> trong thư mục www và dễ thấy nó cũng hiện ở trong container.<br />
 <img src="/images/posts/docker_cli/test_php.png" alt="test_php" /><br />
@@ -1916,24 +1914,24 @@ Tiến hành chạy lệnh file test.php:<br />
 Ta đã chạy được php, php trên container là phiên bản <code>PHP 7.3.28</code></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">root@2894c033c93f:/home/SharedData/www# php --version
-PHP 7.3.28 <span class="o">(</span>cli<span class="o">)</span> <span class="o">(</span>built: May <span class="m">12</span> <span class="m">2021</span> 13:46:47<span class="o">)</span> <span class="o">(</span> NTS <span class="o">)</span>
-Copyright <span class="o">(</span>c<span class="o">)</span> 1997-2018 The PHP Group
-Zend Engine v3.3.28, Copyright <span class="o">(</span>c<span class="o">)</span> 1998-2018 Zend Technologies
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">root@2894c033c93f:/home/SharedData/www# php --version
+</span></span><span class="line"><span class="cl">PHP 7.3.28 <span class="o">(</span>cli<span class="o">)</span> <span class="o">(</span>built: May <span class="m">12</span> <span class="m">2021</span> 13:46:47<span class="o">)</span> <span class="o">(</span> NTS <span class="o">)</span>
+</span></span><span class="line"><span class="cl">Copyright <span class="o">(</span>c<span class="o">)</span> 1997-2018 The PHP Group
+</span></span><span class="line"><span class="cl">Zend Engine v3.3.28, Copyright <span class="o">(</span>c<span class="o">)</span> 1998-2018 Zend Technologies
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="cài-đặt-chạy-apache-httpd-bằng-docker">Cài đặt, chạy Apache HTTPD bằng Docker</h2>
 <h3 id="tải-image-apache-httpd">Tải image Apache httpd</h3>
 <p>Chúng ta đã cài conatiner c-php, tiếp theo cài máy chủ httpd. Chúng ta tải image httpd phiên bản mới nhất về với câu lệnh quen thuộc:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1953,47 +1951,47 @@ Zend Engine v3.3.28, Copyright <span class="o">(</span>c<span class="o">)</span>
 </span><span class="lnt">18
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">❯ docker pull httpd
-Using default tag: latest
-latest: Pulling from library/httpd
-69692152171a: Already exists 
-7284b4e0cc7b: Pull <span class="nb">complete</span> 
-3678b2d55ccd: Pull <span class="nb">complete</span> 
-aeb67982a725: Pull <span class="nb">complete</span> 
-06954f8169fd: Pull <span class="nb">complete</span> 
-Digest: sha256:48bae0ac5d0d75168f1c1282c0eb21b43302cb1b5c5dc9fa3b4a758ccfb36fe9
-Status: Downloaded newer image <span class="k">for</span> httpd:latest
-❯ docker images
-REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
-newimage            version2            a8e04dcf8737        <span class="m">2</span> days ago          170MB
-busybox             latest              69593048aa3a        <span class="m">2</span> days ago          1.24MB
-httpd               latest              39c2d1c93266        <span class="m">2</span> weeks ago         138MB
-php                 7.3-fpm             2692864592ed        <span class="m">4</span> weeks ago         399MB
-ubuntu              latest              7e0aa2d69a15        <span class="m">6</span> weeks ago         72.7MB
-centos              latest              300e315adb2f        <span class="m">6</span> months ago        209MB
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">❯ docker pull httpd
+</span></span><span class="line"><span class="cl">Using default tag: latest
+</span></span><span class="line"><span class="cl">latest: Pulling from library/httpd
+</span></span><span class="line"><span class="cl">69692152171a: Already exists 
+</span></span><span class="line"><span class="cl">7284b4e0cc7b: Pull <span class="nb">complete</span> 
+</span></span><span class="line"><span class="cl">3678b2d55ccd: Pull <span class="nb">complete</span> 
+</span></span><span class="line"><span class="cl">aeb67982a725: Pull <span class="nb">complete</span> 
+</span></span><span class="line"><span class="cl">06954f8169fd: Pull <span class="nb">complete</span> 
+</span></span><span class="line"><span class="cl">Digest: sha256:48bae0ac5d0d75168f1c1282c0eb21b43302cb1b5c5dc9fa3b4a758ccfb36fe9
+</span></span><span class="line"><span class="cl">Status: Downloaded newer image <span class="k">for</span> httpd:latest
+</span></span><span class="line"><span class="cl">❯ docker images
+</span></span><span class="line"><span class="cl">REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+</span></span><span class="line"><span class="cl">newimage            version2            a8e04dcf8737        <span class="m">2</span> days ago          170MB
+</span></span><span class="line"><span class="cl">busybox             latest              69593048aa3a        <span class="m">2</span> days ago          1.24MB
+</span></span><span class="line"><span class="cl">httpd               latest              39c2d1c93266        <span class="m">2</span> weeks ago         138MB
+</span></span><span class="line"><span class="cl">php                 7.3-fpm             2692864592ed        <span class="m">4</span> weeks ago         399MB
+</span></span><span class="line"><span class="cl">ubuntu              latest              7e0aa2d69a15        <span class="m">6</span> weeks ago         72.7MB
+</span></span><span class="line"><span class="cl">centos              latest              300e315adb2f        <span class="m">6</span> months ago        209MB
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="lấy-cấu-hình-httpdconf">Lấy cấu hình httpd.conf</h3>
 <p>Khi htppd chạy, nó sẽ nạp file cấu hình trong đường dẫn ở container: <code>/usr/local/apache2/conf/httpd.conf</code>. Do đó, đây cũng là nơi để chúng ta muốn cấu hình tùy chỉnh theo ý muốn của mình.<br />
 Đầu tiên, ta sẽ chạy tạm thời container httpd để trích xuất file cấu hình <code>httpd.conf</code> ra máy host trước.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">❯ docker run --rm -v /home/edisc/Desktop/docker/data:/home/SharedData httpd cp /usr/local/apache2/conf/httpd.conf /home/SharedData/
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">❯ docker run --rm -v /home/edisc/Desktop/docker/data:/home/SharedData httpd cp /usr/local/apache2/conf/httpd.conf /home/SharedData/
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Vì chúng ta chạy container này một lần để trích xuất file <code>httpd.conf</code> nên ta thêm tùy chọn <code>--rm</code> để docker sẽ tự động xóa sau khi chạy, bên cạnh đó, khi chạy container ta cũng thực hiện luôn câu lệnh copy file httpd.conf đến thư mục chia sẻ dữ liệu của mình. Sau khi chạy lệnh trên, chúng ta đã có file httpd.conf trên thư mục data ở host.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">❯ ls
-c1.txt  data_container2.txt  d.txt  httpd.conf  www
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">❯ ls
+</span></span><span class="line"><span class="cl">c1.txt  data_container2.txt  d.txt  httpd.conf  www
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="cấu-hình-httpdconf">Cấu hình httpd.conf</h3>
 <p>Sau khi có được file httpd.conf, ta mở ra và tiến hành cấu hình.<br />
@@ -2010,11 +2008,11 @@ c1.txt  data_container2.txt  d.txt  httpd.conf  www
 <p>Thêm <code>AddHandler</code> để chỉ thị apache chạy php thông qua proxy. Ta thêm dòng lệnh sau vào cuối file:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">AddHandler <span class="s2">&#34;proxy:fcgi://ip:9000&#34;</span> .php
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">AddHandler <span class="s2">&#34;proxy:fcgi://ip:9000&#34;</span> .php
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>trường hợp này, ta truy vấn để container <code>c-php</code> nên ở <code>ip</code> ta thay thành <code>c-php</code> và cổng vẫn là <code>9000</code><br />
 <img src="/images/posts/docker_cli/httpd_config4.png" alt="httpd_config4" /></p>
@@ -2022,13 +2020,13 @@ c1.txt  data_container2.txt  d.txt  httpd.conf  www
 <p>Để thiết lập thư mục mặc định khi chúng ta share, chúng ta sẽ thay đổi ở</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-php" data-lang="php">DocumentRoot &#34;/usr/local/apache2/htdocs&#34;
-<span class="p">&lt;</span><span class="nt">Directory</span> <span class="err">&#34;/</span><span class="na">usr</span><span class="err">/</span><span class="na">local</span><span class="err">/</span><span class="na">apache2</span><span class="err">/</span><span class="na">htdocs</span><span class="err">&#34;</span><span class="p">&gt;</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="nx">DocumentRoot</span> <span class="s2">&#34;/usr/local/apache2/htdocs&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="o">&lt;</span><span class="nx">Directory</span> <span class="s2">&#34;/usr/local/apache2/htdocs&#34;</span><span class="o">&gt;</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Thay đổi thành thư mục mà chúng ta muốn mount vào.<br />
 <img src="/images/posts/docker_cli/httpd_config5.png" alt="httpd_config5" /></p>
@@ -2036,11 +2034,11 @@ c1.txt  data_container2.txt  d.txt  httpd.conf  www
 <p>Ta chạy câu lệnh:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">docker run --network www-net --name c-httpd -h httpd -p 9999:80 -p 443:443 -v /home/edisc/Desktop/docker/data:/home/SharedData -v /home/edisc/Desktop/docker/data/httpd.conf:/usr/local/apache2/conf/httpd.conf httpd
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker run --network www-net --name c-httpd -h httpd -p 9999:80 -p 443:443 -v /home/edisc/Desktop/docker/data:/home/SharedData -v /home/edisc/Desktop/docker/data/httpd.conf:/usr/local/apache2/conf/httpd.conf httpd
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Ở đây:</p>
 <ul>
@@ -2051,13 +2049,13 @@ c1.txt  data_container2.txt  d.txt  httpd.conf  www
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">docker: Error response from daemon: driver failed programming external connectivity on endpoint c-httpd <span class="o">(</span>e0fa76873fc8a5b1b73a0e9589774a25d7a7c377a777d3af6c5313bf7c44adc7<span class="o">)</span>: Error starting userland proxy: listen tcp 0.0.0.0:443: bind: address already in use.
-ERRO<span class="o">[</span>0000<span class="o">]</span> error waiting <span class="k">for</span> container: context canceled 
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker: Error response from daemon: driver failed programming external connectivity on endpoint c-httpd <span class="o">(</span>e0fa76873fc8a5b1b73a0e9589774a25d7a7c377a777d3af6c5313bf7c44adc7<span class="o">)</span>: Error starting userland proxy: listen tcp 0.0.0.0:443: bind: address already in use.
+</span></span><span class="line"><span class="cl">ERRO<span class="o">[</span>0000<span class="o">]</span> error waiting <span class="k">for</span> container: context canceled 
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Tức là cổng mà chúng ta ánh xạ trên máy host đã được sử dụng bởi một tiến trình nào đó. Lúc bây giờ có 2 cách giải quyết:</p>
 <ol>
@@ -2067,7 +2065,7 @@ Ta được kết quả.</li>
 </ol>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -2076,14 +2074,14 @@ Ta được kết quả.</li>
 </span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">❯ docker run --network www-net --name c-httpd -h httpd -p 9999:80 -p 443:443 -v /home/edisc/Desktop/docker/data:/home/SharedData -v /home/edisc/Desktop/docker/data/httpd.conf:/usr/local/apache2/conf/httpd.conf httpd
-<span class="o">[</span>Thu Jun <span class="m">10</span> 08:10:54.751670 2021<span class="o">]</span> <span class="o">[</span>proxy_html:notice<span class="o">]</span> <span class="o">[</span>pid 1:tid 139955972379776<span class="o">]</span> AH01425: I18n support in mod_proxy_html requires mod_xml2enc. Without it, non-ASCII characters in proxied pages are likely to display incorrectly.
-AH00558: httpd: Could not reliably determine the server<span class="s1">&#39;s fully qualified domain name, using 172.23.0.2. Set the &#39;</span>ServerName<span class="s1">&#39; directive globally to suppress this message
-</span><span class="s1">[Thu Jun 10 08:10:54.767249 2021] [proxy_html:notice] [pid 1:tid 139955972379776] AH01425: I18n support in mod_proxy_html requires mod_xml2enc. Without it, non-ASCII characters in proxied pages are likely to display incorrectly.
-</span><span class="s1">AH00558: httpd: Could not reliably determine the server&#39;</span>s fully qualified domain name, using 172.23.0.2. Set the <span class="s1">&#39;ServerName&#39;</span> directive globally to suppress this message
-<span class="o">[</span>Thu Jun <span class="m">10</span> 08:10:54.771929 2021<span class="o">]</span> <span class="o">[</span>mpm_event:notice<span class="o">]</span> <span class="o">[</span>pid 1:tid 139955972379776<span class="o">]</span> AH00489: Apache/2.4.48 <span class="o">(</span>Unix<span class="o">)</span> configured -- resuming normal operations
-<span class="o">[</span>Thu Jun <span class="m">10</span> 08:10:54.772004 2021<span class="o">]</span> <span class="o">[</span>core:notice<span class="o">]</span> <span class="o">[</span>pid 1:tid 139955972379776<span class="o">]</span> AH00094: Command line: <span class="s1">&#39;httpd -D FOREGROUND&#39;</span>  
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">❯ docker run --network www-net --name c-httpd -h httpd -p 9999:80 -p 443:443 -v /home/edisc/Desktop/docker/data:/home/SharedData -v /home/edisc/Desktop/docker/data/httpd.conf:/usr/local/apache2/conf/httpd.conf httpd
+</span></span><span class="line"><span class="cl"><span class="o">[</span>Thu Jun <span class="m">10</span> 08:10:54.751670 2021<span class="o">]</span> <span class="o">[</span>proxy_html:notice<span class="o">]</span> <span class="o">[</span>pid 1:tid 139955972379776<span class="o">]</span> AH01425: I18n support in mod_proxy_html requires mod_xml2enc. Without it, non-ASCII characters in proxied pages are likely to display incorrectly.
+</span></span><span class="line"><span class="cl">AH00558: httpd: Could not reliably determine the server<span class="s1">&#39;s fully qualified domain name, using 172.23.0.2. Set the &#39;</span>ServerName<span class="s1">&#39; directive globally to suppress this message
+</span></span></span><span class="line"><span class="cl"><span class="s1">[Thu Jun 10 08:10:54.767249 2021] [proxy_html:notice] [pid 1:tid 139955972379776] AH01425: I18n support in mod_proxy_html requires mod_xml2enc. Without it, non-ASCII characters in proxied pages are likely to display incorrectly.
+</span></span></span><span class="line"><span class="cl"><span class="s1">AH00558: httpd: Could not reliably determine the server&#39;</span>s fully qualified domain name, using 172.23.0.2. Set the <span class="s1">&#39;ServerName&#39;</span> directive globally to suppress this message
+</span></span><span class="line"><span class="cl"><span class="o">[</span>Thu Jun <span class="m">10</span> 08:10:54.771929 2021<span class="o">]</span> <span class="o">[</span>mpm_event:notice<span class="o">]</span> <span class="o">[</span>pid 1:tid 139955972379776<span class="o">]</span> AH00489: Apache/2.4.48 <span class="o">(</span>Unix<span class="o">)</span> configured -- resuming normal operations
+</span></span><span class="line"><span class="cl"><span class="o">[</span>Thu Jun <span class="m">10</span> 08:10:54.772004 2021<span class="o">]</span> <span class="o">[</span>core:notice<span class="o">]</span> <span class="o">[</span>pid 1:tid 139955972379776<span class="o">]</span> AH00094: Command line: <span class="s1">&#39;httpd -D FOREGROUND&#39;</span>  
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="kiểm-tra-apache">Kiểm tra apache</h3>
 <p>Như vậy ở bước trên máy chủ apache của chúng ta đã chạy. Để kiểm tra, ta tiến hành mở trình duyệt <code>127.0.0.1:9999</code> hoặc <code>localhost:9999</code><br />
@@ -2097,7 +2095,7 @@ Như vậy, proxy đã gọi được test.php.</p>
 <p>Docker cho phép chúng ta thiết lập các biến môi trường cho container thông qua tùy chọn <code>-e</code>. Ví dụ, ta chạy một container từ image busybox, trong đó, thiết lập các biến môi trường cho container:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -2105,20 +2103,20 @@ Như vậy, proxy đã gọi được test.php.</p>
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">❯ docker run -it --rm -e <span class="nv">BIEN1</span><span class="o">=</span>VALUE1 -e <span class="nv">BIEN2</span><span class="o">=</span><span class="s2">&#34;VALUE2&#34;</span> busybox
-/ <span class="c1"># echo $BIEN1</span>
-VALUE1
-/ <span class="c1"># echo $BIEN2</span>
-VALUE2
-/ # 
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">❯ docker run -it --rm -e <span class="nv">BIEN1</span><span class="o">=</span>VALUE1 -e <span class="nv">BIEN2</span><span class="o">=</span><span class="s2">&#34;VALUE2&#34;</span> busybox
+</span></span><span class="line"><span class="cl">/ <span class="c1"># echo $BIEN1</span>
+</span></span><span class="line"><span class="cl">VALUE1
+</span></span><span class="line"><span class="cl">/ <span class="c1"># echo $BIEN2</span>
+</span></span><span class="line"><span class="cl">VALUE2
+</span></span><span class="line"><span class="cl">/ <span class="c1"># </span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Đây là cách thức nhiều image đóng gói và thiết lập biến môi trường giúp chúng ta thiết lập các container khi chạy.</p>
 <h3 id="tải-về-phiên-bản-mysql">Tải về phiên bản mysql</h3>
 <p>Chúng ta tải phiên bản mới nhât của mysql bằng lệnh <code>docker pull</code></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -2147,41 +2145,41 @@ VALUE2
 </span><span class="lnt">27
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">❯ docker pull mysql
-Using default tag: latest
-latest: Pulling from library/mysql
-69692152171a: Already exists 
-1651b0be3df3: Pull <span class="nb">complete</span> 
-951da7386bc8: Pull <span class="nb">complete</span> 
-0f86c95aa242: Pull <span class="nb">complete</span> 
-37ba2d8bd4fe: Pull <span class="nb">complete</span> 
-6d278bb05e94: Pull <span class="nb">complete</span> 
-497efbd93a3e: Pull <span class="nb">complete</span> 
-f7fddf10c2c2: Pull <span class="nb">complete</span> 
-16415d159dfb: Pull <span class="nb">complete</span> 
-0e530ffc6b73: Pull <span class="nb">complete</span> 
-b0a4a1a77178: Pull <span class="nb">complete</span> 
-cd90f92aa9ef: Pull <span class="nb">complete</span> 
-Digest: sha256:d50098d7fcb25b1fcb24e2d3247cae3fc55815d64fec640dc395840f8fa80969
-Status: Downloaded newer image <span class="k">for</span> mysql:latest
-
-❯ docker images
-REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
-newimage            version2            a8e04dcf8737        <span class="m">2</span> days ago          170MB
-busybox             latest              69593048aa3a        <span class="m">2</span> days ago          1.24MB
-httpd               latest              39c2d1c93266        <span class="m">2</span> weeks ago         138MB
-php                 7.3-fpm             2692864592ed        <span class="m">4</span> weeks ago         399MB
-mysql               latest              c0cdc95609f1        <span class="m">4</span> weeks ago         556MB
-ubuntu              latest              7e0aa2d69a15        <span class="m">6</span> weeks ago         72.7MB
-centos              latest              300e315adb2f        <span class="m">6</span> months ago        209MB
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">❯ docker pull mysql
+</span></span><span class="line"><span class="cl">Using default tag: latest
+</span></span><span class="line"><span class="cl">latest: Pulling from library/mysql
+</span></span><span class="line"><span class="cl">69692152171a: Already exists 
+</span></span><span class="line"><span class="cl">1651b0be3df3: Pull <span class="nb">complete</span> 
+</span></span><span class="line"><span class="cl">951da7386bc8: Pull <span class="nb">complete</span> 
+</span></span><span class="line"><span class="cl">0f86c95aa242: Pull <span class="nb">complete</span> 
+</span></span><span class="line"><span class="cl">37ba2d8bd4fe: Pull <span class="nb">complete</span> 
+</span></span><span class="line"><span class="cl">6d278bb05e94: Pull <span class="nb">complete</span> 
+</span></span><span class="line"><span class="cl">497efbd93a3e: Pull <span class="nb">complete</span> 
+</span></span><span class="line"><span class="cl">f7fddf10c2c2: Pull <span class="nb">complete</span> 
+</span></span><span class="line"><span class="cl">16415d159dfb: Pull <span class="nb">complete</span> 
+</span></span><span class="line"><span class="cl">0e530ffc6b73: Pull <span class="nb">complete</span> 
+</span></span><span class="line"><span class="cl">b0a4a1a77178: Pull <span class="nb">complete</span> 
+</span></span><span class="line"><span class="cl">cd90f92aa9ef: Pull <span class="nb">complete</span> 
+</span></span><span class="line"><span class="cl">Digest: sha256:d50098d7fcb25b1fcb24e2d3247cae3fc55815d64fec640dc395840f8fa80969
+</span></span><span class="line"><span class="cl">Status: Downloaded newer image <span class="k">for</span> mysql:latest
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">❯ docker images
+</span></span><span class="line"><span class="cl">REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+</span></span><span class="line"><span class="cl">newimage            version2            a8e04dcf8737        <span class="m">2</span> days ago          170MB
+</span></span><span class="line"><span class="cl">busybox             latest              69593048aa3a        <span class="m">2</span> days ago          1.24MB
+</span></span><span class="line"><span class="cl">httpd               latest              39c2d1c93266        <span class="m">2</span> weeks ago         138MB
+</span></span><span class="line"><span class="cl">php                 7.3-fpm             2692864592ed        <span class="m">4</span> weeks ago         399MB
+</span></span><span class="line"><span class="cl">mysql               latest              c0cdc95609f1        <span class="m">4</span> weeks ago         556MB
+</span></span><span class="line"><span class="cl">ubuntu              latest              7e0aa2d69a15        <span class="m">6</span> weeks ago         72.7MB
+</span></span><span class="line"><span class="cl">centos              latest              300e315adb2f        <span class="m">6</span> months ago        209MB
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p><a href="https://hub.docker.com/_/mysql">Một số thông tin chính cần chú ý trước khi bắt đầu làm việc với mysql</a>:</p>
 <ul>
 <li>port: <code>3384</code></li>
 <li>MYSQL 8.0 có thể có một số máy cũ không hỗ trợ, có thể cần cấu hình để hệ thống cũ có thể login vào mysql này. khi đó ta thêm vào file config nội dung sau:</li>
 </ul>
-<pre><code>[mysqld]
+<pre tabindex="0"><code>[mysqld]
 default-authentication-plugin=mysql_native_password
 </code></pre><ul>
 <li>file config: <code>/etc/mysql/my.cnf</code> của container</li>
@@ -2196,15 +2194,15 @@ default-authentication-plugin=mysql_native_password
 <p>Chúng ta chạy file mysql và trích xuất file my.cnf ra.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">❯ docker run --rm -v /home/edisc/Desktop/docker/data:/home/SharedData mysql cp /etc/mysql/my.cnf /home/SharedData/
-❯ ls
-c1.txt  data_container2.txt  d.txt  httpd.conf  my.cnf  www
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">❯ docker run --rm -v /home/edisc/Desktop/docker/data:/home/SharedData mysql cp /etc/mysql/my.cnf /home/SharedData/
+</span></span><span class="line"><span class="cl">❯ ls
+</span></span><span class="line"><span class="cl">c1.txt  data_container2.txt  d.txt  httpd.conf  my.cnf  www
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="cấu-hình-file-mycnf">Cấu hình file my.cnf</h3>
 <ul>
@@ -2212,11 +2210,11 @@ c1.txt  data_container2.txt  d.txt  httpd.conf  my.cnf  www
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">default-authentication-plugin<span class="o">=</span>mysql_native_password
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">default-authentication-plugin<span class="o">=</span>mysql_native_password
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>vào cuối file <code>my.cnf</code><br />
 <img src="/images/posts/docker_cli/config_sql_1.png" alt="config_sql_1" /></p>
@@ -2236,7 +2234,7 @@ c1.txt  data_container2.txt  d.txt  httpd.conf  my.cnf  www
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -2256,25 +2254,25 @@ c1.txt  data_container2.txt  d.txt  httpd.conf  my.cnf  www
 </span><span class="lnt">18
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">❯ docker run -e <span class="nv">MYSQL_ROOT_PASSWORD</span><span class="o">=</span>docker123 -v /home/edisc/Desktop/docker/data/my.cnf:/etc/mysql/my.cnf -v /home/edisc/Desktop/docker/data/db:/var/lib/mysql --name c-mysql mysql
-2021-06-10 09:02:24+00:00 <span class="o">[</span>Note<span class="o">]</span> <span class="o">[</span>Entrypoint<span class="o">]</span>: Entrypoint script <span class="k">for</span> MySQL Server 8.0.25-1debian10 started.
-2021-06-10 09:02:25+00:00 <span class="o">[</span>Note<span class="o">]</span> <span class="o">[</span>Entrypoint<span class="o">]</span>: Switching to dedicated user <span class="s1">&#39;mysql&#39;</span>
-2021-06-10 09:02:25+00:00 <span class="o">[</span>Note<span class="o">]</span> <span class="o">[</span>Entrypoint<span class="o">]</span>: Entrypoint script <span class="k">for</span> MySQL Server 8.0.25-1debian10 started.
-2021-06-10 09:02:25+00:00 <span class="o">[</span>Note<span class="o">]</span> <span class="o">[</span>Entrypoint<span class="o">]</span>: Initializing database files
-2021-06-10T09:02:25.233559Z <span class="m">0</span> <span class="o">[</span>System<span class="o">]</span> <span class="o">[</span>MY-013169<span class="o">]</span> <span class="o">[</span>Server<span class="o">]</span> /usr/sbin/mysqld <span class="o">(</span>mysqld 8.0.25<span class="o">)</span> initializing of server in progress as process <span class="m">43</span>
-2021-06-10T09:02:25.244471Z <span class="m">1</span> <span class="o">[</span>System<span class="o">]</span> <span class="o">[</span>MY-013576<span class="o">]</span> <span class="o">[</span>InnoDB<span class="o">]</span> InnoDB initialization has started.
-2021-06-10T09:02:26.680645Z <span class="m">1</span> <span class="o">[</span>System<span class="o">]</span> <span class="o">[</span>MY-013577<span class="o">]</span> <span class="o">[</span>InnoDB<span class="o">]</span> InnoDB initialization has ended.
-2021-06-10T09:02:29.942913Z <span class="m">6</span> <span class="o">[</span>Warning<span class="o">]</span> <span class="o">[</span>MY-010453<span class="o">]</span> <span class="o">[</span>Server<span class="o">]</span> root@localhost is created with an empty password ! Please consider switching off the --initialize-insecure option.
-2021-06-10 09:02:38+00:00 <span class="o">[</span>Note<span class="o">]</span> <span class="o">[</span>Entrypoint<span class="o">]</span>: Database files initialized
-2021-06-10 09:02:38+00:00 <span class="o">[</span>Note<span class="o">]</span> <span class="o">[</span>Entrypoint<span class="o">]</span>: Starting temporary server
-2021-06-10T09:02:39.196368Z <span class="m">0</span> <span class="o">[</span>System<span class="o">]</span> <span class="o">[</span>MY-010116<span class="o">]</span> <span class="o">[</span>Server<span class="o">]</span> /usr/sbin/mysqld <span class="o">(</span>mysqld 8.0.25<span class="o">)</span> starting as process <span class="m">88</span>
-2021-06-10T09:02:39.243106Z <span class="m">1</span> <span class="o">[</span>System<span class="o">]</span> <span class="o">[</span>MY-013576<span class="o">]</span> <span class="o">[</span>InnoDB<span class="o">]</span> InnoDB initialization has started.
-2021-06-10T09:02:39.910377Z <span class="m">1</span> <span class="o">[</span>System<span class="o">]</span> <span class="o">[</span>MY-013577<span class="o">]</span> <span class="o">[</span>InnoDB<span class="o">]</span> InnoDB initialization has ended.
-2021-06-10T09:02:40.126089Z <span class="m">0</span> <span class="o">[</span>System<span class="o">]</span> <span class="o">[</span>MY-011323<span class="o">]</span> <span class="o">[</span>Server<span class="o">]</span> X Plugin ready <span class="k">for</span> connections. Socket: /var/run/mysqld/mysqlx.sock
-2021-06-10T09:02:40.376702Z <span class="m">0</span> <span class="o">[</span>Warning<span class="o">]</span> <span class="o">[</span>MY-010068<span class="o">]</span> <span class="o">[</span>Server<span class="o">]</span> CA certificate ca.pem is self signed.
-2021-06-10T09:02:40.377098Z <span class="m">0</span> <span class="o">[</span>System<span class="o">]</span> <span class="o">[</span>MY-013602<span class="o">]</span> <span class="o">[</span>Server<span class="o">]</span> Channel mysql_main configured to support TLS. Encrypted connections are now supported <span class="k">for</span> this channel.
-...
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">❯ docker run -e <span class="nv">MYSQL_ROOT_PASSWORD</span><span class="o">=</span>docker123 -v /home/edisc/Desktop/docker/data/my.cnf:/etc/mysql/my.cnf -v /home/edisc/Desktop/docker/data/db:/var/lib/mysql --name c-mysql mysql
+</span></span><span class="line"><span class="cl">2021-06-10 09:02:24+00:00 <span class="o">[</span>Note<span class="o">]</span> <span class="o">[</span>Entrypoint<span class="o">]</span>: Entrypoint script <span class="k">for</span> MySQL Server 8.0.25-1debian10 started.
+</span></span><span class="line"><span class="cl">2021-06-10 09:02:25+00:00 <span class="o">[</span>Note<span class="o">]</span> <span class="o">[</span>Entrypoint<span class="o">]</span>: Switching to dedicated user <span class="s1">&#39;mysql&#39;</span>
+</span></span><span class="line"><span class="cl">2021-06-10 09:02:25+00:00 <span class="o">[</span>Note<span class="o">]</span> <span class="o">[</span>Entrypoint<span class="o">]</span>: Entrypoint script <span class="k">for</span> MySQL Server 8.0.25-1debian10 started.
+</span></span><span class="line"><span class="cl">2021-06-10 09:02:25+00:00 <span class="o">[</span>Note<span class="o">]</span> <span class="o">[</span>Entrypoint<span class="o">]</span>: Initializing database files
+</span></span><span class="line"><span class="cl">2021-06-10T09:02:25.233559Z <span class="m">0</span> <span class="o">[</span>System<span class="o">]</span> <span class="o">[</span>MY-013169<span class="o">]</span> <span class="o">[</span>Server<span class="o">]</span> /usr/sbin/mysqld <span class="o">(</span>mysqld 8.0.25<span class="o">)</span> initializing of server in progress as process <span class="m">43</span>
+</span></span><span class="line"><span class="cl">2021-06-10T09:02:25.244471Z <span class="m">1</span> <span class="o">[</span>System<span class="o">]</span> <span class="o">[</span>MY-013576<span class="o">]</span> <span class="o">[</span>InnoDB<span class="o">]</span> InnoDB initialization has started.
+</span></span><span class="line"><span class="cl">2021-06-10T09:02:26.680645Z <span class="m">1</span> <span class="o">[</span>System<span class="o">]</span> <span class="o">[</span>MY-013577<span class="o">]</span> <span class="o">[</span>InnoDB<span class="o">]</span> InnoDB initialization has ended.
+</span></span><span class="line"><span class="cl">2021-06-10T09:02:29.942913Z <span class="m">6</span> <span class="o">[</span>Warning<span class="o">]</span> <span class="o">[</span>MY-010453<span class="o">]</span> <span class="o">[</span>Server<span class="o">]</span> root@localhost is created with an empty password ! Please consider switching off the --initialize-insecure option.
+</span></span><span class="line"><span class="cl">2021-06-10 09:02:38+00:00 <span class="o">[</span>Note<span class="o">]</span> <span class="o">[</span>Entrypoint<span class="o">]</span>: Database files initialized
+</span></span><span class="line"><span class="cl">2021-06-10 09:02:38+00:00 <span class="o">[</span>Note<span class="o">]</span> <span class="o">[</span>Entrypoint<span class="o">]</span>: Starting temporary server
+</span></span><span class="line"><span class="cl">2021-06-10T09:02:39.196368Z <span class="m">0</span> <span class="o">[</span>System<span class="o">]</span> <span class="o">[</span>MY-010116<span class="o">]</span> <span class="o">[</span>Server<span class="o">]</span> /usr/sbin/mysqld <span class="o">(</span>mysqld 8.0.25<span class="o">)</span> starting as process <span class="m">88</span>
+</span></span><span class="line"><span class="cl">2021-06-10T09:02:39.243106Z <span class="m">1</span> <span class="o">[</span>System<span class="o">]</span> <span class="o">[</span>MY-013576<span class="o">]</span> <span class="o">[</span>InnoDB<span class="o">]</span> InnoDB initialization has started.
+</span></span><span class="line"><span class="cl">2021-06-10T09:02:39.910377Z <span class="m">1</span> <span class="o">[</span>System<span class="o">]</span> <span class="o">[</span>MY-013577<span class="o">]</span> <span class="o">[</span>InnoDB<span class="o">]</span> InnoDB initialization has ended.
+</span></span><span class="line"><span class="cl">2021-06-10T09:02:40.126089Z <span class="m">0</span> <span class="o">[</span>System<span class="o">]</span> <span class="o">[</span>MY-011323<span class="o">]</span> <span class="o">[</span>Server<span class="o">]</span> X Plugin ready <span class="k">for</span> connections. Socket: /var/run/mysqld/mysqlx.sock
+</span></span><span class="line"><span class="cl">2021-06-10T09:02:40.376702Z <span class="m">0</span> <span class="o">[</span>Warning<span class="o">]</span> <span class="o">[</span>MY-010068<span class="o">]</span> <span class="o">[</span>Server<span class="o">]</span> CA certificate ca.pem is self signed.
+</span></span><span class="line"><span class="cl">2021-06-10T09:02:40.377098Z <span class="m">0</span> <span class="o">[</span>System<span class="o">]</span> <span class="o">[</span>MY-013602<span class="o">]</span> <span class="o">[</span>Server<span class="o">]</span> Channel mysql_main configured to support TLS. Encrypted connections are now supported <span class="k">for</span> this channel.
+</span></span><span class="line"><span class="cl">...
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Chúng ta không thiết lập tham số ánh xạ cổng vì ở đây chưa có nhu cầu truy cập từ bên ngoài vào csdl <code>c-mysql</code> mà csdl này chỉ để cho <code>c-php</code> và <code>c-httpd</code> truy cập thông qua cổng <code>3306</code>. Trong thực tế, chúng ta muốn truy cập từ xa, để các server kết nối với nhau, ta cần ánh xạ cổng <code>3306</code> này tới máy host.</p>
 <h3 id="thi-hành-một-số-lệnh-trong-container-c-mysql">Thi hành một số lệnh trong container c-mysql</h3>
@@ -2283,7 +2281,7 @@ c1.txt  data_container2.txt  d.txt  httpd.conf  my.cnf  www
 <p>Đầu tiên, vào container c-mysql bằng lệnh <code>docker exec</code>:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -2292,20 +2290,20 @@ c1.txt  data_container2.txt  d.txt  httpd.conf  my.cnf  www
 </span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">❯ docker ps
-CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                                        NAMES
-10c415b14dbe        mysql               <span class="s2">&#34;docker-entrypoint.s…&#34;</span>   <span class="m">5</span> minutes ago       Up <span class="m">5</span> minutes        3306/tcp, 33060/tcp                          c-mysql
-7e8910d1b55c        php:7.3-fpm         <span class="s2">&#34;docker-php-entrypoi…&#34;</span>   <span class="m">43</span> minutes ago      Up <span class="m">43</span> minutes       9000/tcp                                     c-php
-a9d05fe2fc94        httpd               <span class="s2">&#34;httpd-foreground&#34;</span>       About an hour ago   Up <span class="m">34</span> minutes       0.0.0.0:443-&gt;443/tcp, 0.0.0.0:9999-&gt;80/tcp   c-httpd
-❯ docker <span class="nb">exec</span> -it c-mysql bash
-root@10c415b14dbe:/# 
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">❯ docker ps
+</span></span><span class="line"><span class="cl">CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                                        NAMES
+</span></span><span class="line"><span class="cl">10c415b14dbe        mysql               <span class="s2">&#34;docker-entrypoint.s…&#34;</span>   <span class="m">5</span> minutes ago       Up <span class="m">5</span> minutes        3306/tcp, 33060/tcp                          c-mysql
+</span></span><span class="line"><span class="cl">7e8910d1b55c        php:7.3-fpm         <span class="s2">&#34;docker-php-entrypoi…&#34;</span>   <span class="m">43</span> minutes ago      Up <span class="m">43</span> minutes       9000/tcp                                     c-php
+</span></span><span class="line"><span class="cl">a9d05fe2fc94        httpd               <span class="s2">&#34;httpd-foreground&#34;</span>       About an hour ago   Up <span class="m">34</span> minutes       0.0.0.0:443-&gt;443/tcp, 0.0.0.0:9999-&gt;80/tcp   c-httpd
+</span></span><span class="line"><span class="cl">❯ docker <span class="nb">exec</span> -it c-mysql bash
+</span></span><span class="line"><span class="cl">root@10c415b14dbe:/# 
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h4 id="kết-nối-với-mysql">Kết nối với mysql</h4>
 <p>mysql của chúng ta có username là <code>root</code> và có password là <code>docker123</code> (thiết lập ở trên). Tham số <code>-pdocker123</code> giúp chúng ta không cần phải nhập lại password.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -2322,28 +2320,28 @@ root@10c415b14dbe:/#
 </span><span class="lnt">15
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">root@10c415b14dbe:/# mysql -u root -pdocker123    
-mysql: <span class="o">[</span>Warning<span class="o">]</span> Using a password on the <span class="nb">command</span> line interface can be insecure.
-Welcome to the MySQL monitor.  Commands end with <span class="p">;</span> or <span class="se">\g</span>.
-Your MySQL connection id is <span class="m">8</span>
-Server version: 8.0.25 MySQL Community Server - GPL
-
-Copyright <span class="o">(</span>c<span class="o">)</span> 2000, 2021, Oracle and/or its affiliates.
-
-Oracle is a registered trademark of Oracle Corporation and/or its
-affiliates. Other names may be trademarks of their respective
-owners.
-
-Type <span class="s1">&#39;help;&#39;</span> or <span class="s1">&#39;\h&#39;</span> <span class="k">for</span> help. Type <span class="s1">&#39;\c&#39;</span> to clear the current input statement.
-
-mysql&gt;
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">root@10c415b14dbe:/# mysql -u root -pdocker123    
+</span></span><span class="line"><span class="cl">mysql: <span class="o">[</span>Warning<span class="o">]</span> Using a password on the <span class="nb">command</span> line interface can be insecure.
+</span></span><span class="line"><span class="cl">Welcome to the MySQL monitor.  Commands end with <span class="p">;</span> or <span class="se">\g</span>.
+</span></span><span class="line"><span class="cl">Your MySQL connection id is <span class="m">8</span>
+</span></span><span class="line"><span class="cl">Server version: 8.0.25 MySQL Community Server - GPL
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Copyright <span class="o">(</span>c<span class="o">)</span> 2000, 2021, Oracle and/or its affiliates.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Oracle is a registered trademark of Oracle Corporation and/or its
+</span></span><span class="line"><span class="cl">affiliates. Other names may be trademarks of their respective
+</span></span><span class="line"><span class="cl">owners.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Type <span class="s1">&#39;help;&#39;</span> or <span class="s1">&#39;\h&#39;</span> <span class="k">for</span> help. Type <span class="s1">&#39;\c&#39;</span> to clear the current input statement.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">mysql&gt;
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Như vậy chúng ta đã kết nối được mysql và vào bên trong của sql-server.</p>
 <h4 id="kiểm-tra-có-những-database-nào-trong-mysql">Kiểm tra có những database nào trong mysql</h4>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -2356,23 +2354,23 @@ mysql&gt;
 </span><span class="lnt">11
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">mysql&gt; show databases<span class="p">;</span>
-+--------------------+
-<span class="p">|</span> Database           <span class="p">|</span>
-+--------------------+
-<span class="p">|</span> information_schema <span class="p">|</span>
-<span class="p">|</span> mysql              <span class="p">|</span>
-<span class="p">|</span> performance_schema <span class="p">|</span>
-<span class="p">|</span> sys                <span class="p">|</span>
-+--------------------+
-<span class="m">4</span> rows in <span class="nb">set</span> <span class="o">(</span>0.00 sec<span class="o">)</span>
-mysql&gt;
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">mysql&gt; show databases<span class="p">;</span>
+</span></span><span class="line"><span class="cl">+--------------------+
+</span></span><span class="line"><span class="cl"><span class="p">|</span> Database           <span class="p">|</span>
+</span></span><span class="line"><span class="cl">+--------------------+
+</span></span><span class="line"><span class="cl"><span class="p">|</span> information_schema <span class="p">|</span>
+</span></span><span class="line"><span class="cl"><span class="p">|</span> mysql              <span class="p">|</span>
+</span></span><span class="line"><span class="cl"><span class="p">|</span> performance_schema <span class="p">|</span>
+</span></span><span class="line"><span class="cl"><span class="p">|</span> sys                <span class="p">|</span>
+</span></span><span class="line"><span class="cl">+--------------------+
+</span></span><span class="line"><span class="cl"><span class="m">4</span> rows in <span class="nb">set</span> <span class="o">(</span>0.00 sec<span class="o">)</span>
+</span></span><span class="line"><span class="cl">mysql&gt;
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h4 id="sử-dụng-database-mysql">Sử dụng database mysql</h4>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -2380,18 +2378,18 @@ mysql&gt;
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">mysql&gt; use mysql<span class="p">;</span>
-Reading table information <span class="k">for</span> completion of table and column names
-You can turn off this feature to get a quicker startup with -A
-
-Database changed
-mysql&gt;  
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">mysql&gt; use mysql<span class="p">;</span>
+</span></span><span class="line"><span class="cl">Reading table information <span class="k">for</span> completion of table and column names
+</span></span><span class="line"><span class="cl">You can turn off this feature to get a quicker startup with -A
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Database changed
+</span></span><span class="line"><span class="cl">mysql&gt;  
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h4 id="show-table">Show table</h4>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -2436,55 +2434,55 @@ mysql&gt;
 </span><span class="lnt">43
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">mysql&gt; show tables<span class="p">;</span>
-+------------------------------------------------------+
-<span class="p">|</span> Tables_in_mysql                                      <span class="p">|</span>
-+------------------------------------------------------+
-<span class="p">|</span> columns_priv                                         <span class="p">|</span>
-<span class="p">|</span> component                                            <span class="p">|</span>
-<span class="p">|</span> db                                                   <span class="p">|</span>
-<span class="p">|</span> default_roles                                        <span class="p">|</span>
-<span class="p">|</span> engine_cost                                          <span class="p">|</span>
-<span class="p">|</span> func                                                 <span class="p">|</span>
-<span class="p">|</span> general_log                                          <span class="p">|</span>
-<span class="p">|</span> global_grants                                        <span class="p">|</span>
-<span class="p">|</span> gtid_executed                                        <span class="p">|</span>
-<span class="p">|</span> help_category                                        <span class="p">|</span>
-<span class="p">|</span> help_keyword                                         <span class="p">|</span>
-<span class="p">|</span> help_relation                                        <span class="p">|</span>
-<span class="p">|</span> help_topic                                           <span class="p">|</span>
-<span class="p">|</span> innodb_index_stats                                   <span class="p">|</span>
-<span class="p">|</span> innodb_table_stats                                   <span class="p">|</span>
-<span class="p">|</span> password_history                                     <span class="p">|</span>
-<span class="p">|</span> plugin                                               <span class="p">|</span>
-<span class="p">|</span> procs_priv                                           <span class="p">|</span>
-<span class="p">|</span> proxies_priv                                         <span class="p">|</span>
-<span class="p">|</span> replication_asynchronous_connection_failover         <span class="p">|</span>
-<span class="p">|</span> replication_asynchronous_connection_failover_managed <span class="p">|</span>
-<span class="p">|</span> role_edges                                           <span class="p">|</span>
-<span class="p">|</span> server_cost                                          <span class="p">|</span>
-<span class="p">|</span> servers                                              <span class="p">|</span>
-<span class="p">|</span> slave_master_info                                    <span class="p">|</span>
-<span class="p">|</span> slave_relay_log_info                                 <span class="p">|</span>
-<span class="p">|</span> slave_worker_info                                    <span class="p">|</span>
-<span class="p">|</span> slow_log                                             <span class="p">|</span>
-<span class="p">|</span> tables_priv                                          <span class="p">|</span>
-<span class="p">|</span> time_zone                                            <span class="p">|</span>
-<span class="p">|</span> time_zone_leap_second                                <span class="p">|</span>
-<span class="p">|</span> time_zone_name                                       <span class="p">|</span>
-<span class="p">|</span> time_zone_transition                                 <span class="p">|</span>
-<span class="p">|</span> time_zone_transition_type                            <span class="p">|</span>
-<span class="p">|</span> user                                                 <span class="p">|</span>
-+------------------------------------------------------+
-<span class="m">35</span> rows in <span class="nb">set</span> <span class="o">(</span>0.00 sec<span class="o">)</span>
-
-mysql&gt;
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">mysql&gt; show tables<span class="p">;</span>
+</span></span><span class="line"><span class="cl">+------------------------------------------------------+
+</span></span><span class="line"><span class="cl"><span class="p">|</span> Tables_in_mysql                                      <span class="p">|</span>
+</span></span><span class="line"><span class="cl">+------------------------------------------------------+
+</span></span><span class="line"><span class="cl"><span class="p">|</span> columns_priv                                         <span class="p">|</span>
+</span></span><span class="line"><span class="cl"><span class="p">|</span> component                                            <span class="p">|</span>
+</span></span><span class="line"><span class="cl"><span class="p">|</span> db                                                   <span class="p">|</span>
+</span></span><span class="line"><span class="cl"><span class="p">|</span> default_roles                                        <span class="p">|</span>
+</span></span><span class="line"><span class="cl"><span class="p">|</span> engine_cost                                          <span class="p">|</span>
+</span></span><span class="line"><span class="cl"><span class="p">|</span> func                                                 <span class="p">|</span>
+</span></span><span class="line"><span class="cl"><span class="p">|</span> general_log                                          <span class="p">|</span>
+</span></span><span class="line"><span class="cl"><span class="p">|</span> global_grants                                        <span class="p">|</span>
+</span></span><span class="line"><span class="cl"><span class="p">|</span> gtid_executed                                        <span class="p">|</span>
+</span></span><span class="line"><span class="cl"><span class="p">|</span> help_category                                        <span class="p">|</span>
+</span></span><span class="line"><span class="cl"><span class="p">|</span> help_keyword                                         <span class="p">|</span>
+</span></span><span class="line"><span class="cl"><span class="p">|</span> help_relation                                        <span class="p">|</span>
+</span></span><span class="line"><span class="cl"><span class="p">|</span> help_topic                                           <span class="p">|</span>
+</span></span><span class="line"><span class="cl"><span class="p">|</span> innodb_index_stats                                   <span class="p">|</span>
+</span></span><span class="line"><span class="cl"><span class="p">|</span> innodb_table_stats                                   <span class="p">|</span>
+</span></span><span class="line"><span class="cl"><span class="p">|</span> password_history                                     <span class="p">|</span>
+</span></span><span class="line"><span class="cl"><span class="p">|</span> plugin                                               <span class="p">|</span>
+</span></span><span class="line"><span class="cl"><span class="p">|</span> procs_priv                                           <span class="p">|</span>
+</span></span><span class="line"><span class="cl"><span class="p">|</span> proxies_priv                                         <span class="p">|</span>
+</span></span><span class="line"><span class="cl"><span class="p">|</span> replication_asynchronous_connection_failover         <span class="p">|</span>
+</span></span><span class="line"><span class="cl"><span class="p">|</span> replication_asynchronous_connection_failover_managed <span class="p">|</span>
+</span></span><span class="line"><span class="cl"><span class="p">|</span> role_edges                                           <span class="p">|</span>
+</span></span><span class="line"><span class="cl"><span class="p">|</span> server_cost                                          <span class="p">|</span>
+</span></span><span class="line"><span class="cl"><span class="p">|</span> servers                                              <span class="p">|</span>
+</span></span><span class="line"><span class="cl"><span class="p">|</span> slave_master_info                                    <span class="p">|</span>
+</span></span><span class="line"><span class="cl"><span class="p">|</span> slave_relay_log_info                                 <span class="p">|</span>
+</span></span><span class="line"><span class="cl"><span class="p">|</span> slave_worker_info                                    <span class="p">|</span>
+</span></span><span class="line"><span class="cl"><span class="p">|</span> slow_log                                             <span class="p">|</span>
+</span></span><span class="line"><span class="cl"><span class="p">|</span> tables_priv                                          <span class="p">|</span>
+</span></span><span class="line"><span class="cl"><span class="p">|</span> time_zone                                            <span class="p">|</span>
+</span></span><span class="line"><span class="cl"><span class="p">|</span> time_zone_leap_second                                <span class="p">|</span>
+</span></span><span class="line"><span class="cl"><span class="p">|</span> time_zone_name                                       <span class="p">|</span>
+</span></span><span class="line"><span class="cl"><span class="p">|</span> time_zone_transition                                 <span class="p">|</span>
+</span></span><span class="line"><span class="cl"><span class="p">|</span> time_zone_transition_type                            <span class="p">|</span>
+</span></span><span class="line"><span class="cl"><span class="p">|</span> user                                                 <span class="p">|</span>
+</span></span><span class="line"><span class="cl">+------------------------------------------------------+
+</span></span><span class="line"><span class="cl"><span class="m">35</span> rows in <span class="nb">set</span> <span class="o">(</span>0.00 sec<span class="o">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">mysql&gt;
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h4 id="tạo-dữ-liệu">Tạo dữ liệu</h4>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -2514,41 +2512,39 @@ mysql&gt;
 </span><span class="lnt">28
 </span><span class="lnt">29
 </span><span class="lnt">30
-</span><span class="lnt">31
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">mysql&gt; CREATE USER <span class="s1">&#39;testuser&#39;</span>@<span class="s1">&#39;%&#39;</span> IDENTIFIED BY <span class="s1">&#39;testpass&#39;</span><span class="p">;</span>
-Query OK, <span class="m">0</span> rows affected <span class="o">(</span>0.03 sec<span class="o">)</span>
-
-mysql&gt; create database db_test<span class="p">;</span>
-Query OK, <span class="m">1</span> row affected <span class="o">(</span>0.02 sec<span class="o">)</span>
-
-mysql&gt; show databases<span class="p">;</span>
-+--------------------+
-<span class="p">|</span> Database           <span class="p">|</span>
-+--------------------+
-<span class="p">|</span> db_test            <span class="p">|</span>
-<span class="p">|</span> information_schema <span class="p">|</span>
-<span class="p">|</span> mysql              <span class="p">|</span>
-<span class="p">|</span> performance_schema <span class="p">|</span>
-<span class="p">|</span> sys                <span class="p">|</span>
-+--------------------+
-<span class="m">5</span> rows in <span class="nb">set</span> <span class="o">(</span>0.00 sec<span class="o">)</span>
-
-mysql&gt; <span class="k">select</span> User from user<span class="p">;</span>
-+------------------+
-<span class="p">|</span> User             <span class="p">|</span>
-+------------------+
-<span class="p">|</span> root             <span class="p">|</span>
-<span class="p">|</span> testuser         <span class="p">|</span>
-<span class="p">|</span> mysql.infoschema <span class="p">|</span>
-<span class="p">|</span> mysql.session    <span class="p">|</span>
-<span class="p">|</span> mysql.sys        <span class="p">|</span>
-<span class="p">|</span> root             <span class="p">|</span>
-+------------------+
-<span class="m">6</span> rows in <span class="nb">set</span> <span class="o">(</span>0.00 sec<span class="o">)</span>
-
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">mysql&gt; CREATE USER <span class="s1">&#39;testuser&#39;</span>@<span class="s1">&#39;%&#39;</span> IDENTIFIED BY <span class="s1">&#39;testpass&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">Query OK, <span class="m">0</span> rows affected <span class="o">(</span>0.03 sec<span class="o">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">mysql&gt; create database db_test<span class="p">;</span>
+</span></span><span class="line"><span class="cl">Query OK, <span class="m">1</span> row affected <span class="o">(</span>0.02 sec<span class="o">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">mysql&gt; show databases<span class="p">;</span>
+</span></span><span class="line"><span class="cl">+--------------------+
+</span></span><span class="line"><span class="cl"><span class="p">|</span> Database           <span class="p">|</span>
+</span></span><span class="line"><span class="cl">+--------------------+
+</span></span><span class="line"><span class="cl"><span class="p">|</span> db_test            <span class="p">|</span>
+</span></span><span class="line"><span class="cl"><span class="p">|</span> information_schema <span class="p">|</span>
+</span></span><span class="line"><span class="cl"><span class="p">|</span> mysql              <span class="p">|</span>
+</span></span><span class="line"><span class="cl"><span class="p">|</span> performance_schema <span class="p">|</span>
+</span></span><span class="line"><span class="cl"><span class="p">|</span> sys                <span class="p">|</span>
+</span></span><span class="line"><span class="cl">+--------------------+
+</span></span><span class="line"><span class="cl"><span class="m">5</span> rows in <span class="nb">set</span> <span class="o">(</span>0.00 sec<span class="o">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">mysql&gt; <span class="k">select</span> User from user<span class="p">;</span>
+</span></span><span class="line"><span class="cl">+------------------+
+</span></span><span class="line"><span class="cl"><span class="p">|</span> User             <span class="p">|</span>
+</span></span><span class="line"><span class="cl">+------------------+
+</span></span><span class="line"><span class="cl"><span class="p">|</span> root             <span class="p">|</span>
+</span></span><span class="line"><span class="cl"><span class="p">|</span> testuser         <span class="p">|</span>
+</span></span><span class="line"><span class="cl"><span class="p">|</span> mysql.infoschema <span class="p">|</span>
+</span></span><span class="line"><span class="cl"><span class="p">|</span> mysql.session    <span class="p">|</span>
+</span></span><span class="line"><span class="cl"><span class="p">|</span> mysql.sys        <span class="p">|</span>
+</span></span><span class="line"><span class="cl"><span class="p">|</span> root             <span class="p">|</span>
+</span></span><span class="line"><span class="cl">+------------------+
+</span></span><span class="line"><span class="cl"><span class="m">6</span> rows in <span class="nb">set</span> <span class="o">(</span>0.00 sec<span class="o">)</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Như vậy ta có các user là: <code>root</code> và <code>testuser</code>. Với <code>testuser</code> có password là <code>testpass</code>.</p>
 <h2 id="kết-luận">Kết luận</h2>
@@ -2557,7 +2553,7 @@ mysql&gt; <span class="k">select</span> User from user<span class="p">;</span>
     </article>
     
     
-<script defer src="/js/clipboard.min.1626706afc88d95ebe1173b553ec732c6dc82a576989315fdf5e7779af738a44.js"></script>
+<script defer src="/js/clipboard.min.c168d3a04c45a631be76437054619a4a3b30107960cb9730be96012fef5762b0.js"></script>
 
 <script defer src="/js/helper/prev.min.js"></script>
 
@@ -3045,7 +3041,7 @@ mysql&gt; <span class="k">select</span> User from user<span class="p">;</span>
 </div>
 
 
-<script defer src="/js/swipe.min.b4b82839155519d9ca67746615a4c86ccbc1061c196fe6d8aa26e4fe22902718.js"></script>
+<script defer src="/js/swipe.min.7be2debdadbc35f9430de39f9010d89df5aee1904747098818b5c01cd0672180.js"></script>
 
 <script defer src="/js/micromodal.min.de01b44b2f383056bbcaf6ee921fd385d79108ec1129afd0eb2f3f5a07e11f45.js"></script>
 
@@ -4036,7 +4032,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 
             <p class="caption">
                 
-                    ©2021, All Rights Reserved
+                    ©2022, All Rights Reserved
                 
             </p>
         
