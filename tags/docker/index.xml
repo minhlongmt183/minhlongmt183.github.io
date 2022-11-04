@@ -14,47 +14,11 @@
     <managingEditor>edisc.ctf@gmail.com (Edisc)</managingEditor>
     <webMaster>edisc.ctf@gmail.com (Edisc)</webMaster>
     <copyright>©2022, All Rights Reserved</copyright>
-    <lastBuildDate>Fri, 04 Nov 2022 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 15 Sep 2020 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://minhlongmt183.github.io/tags/docker/index.xml" rel="self" type="application/rss+xml" />
     
 
-      
-      <item>
-        <title>How to boot with an old kernel version in Ubuntu</title>
-        <link>https://minhlongmt183.github.io/posts/boot_old_kernel_ubuntu/</link>
-        <pubDate>Fri, 04 Nov 2022 00:00:00 +0000</pubDate>
-        <author>edisc.ctf@gmail.com (Edisc)</author>
-        <atom:modified>Fri, 04 Nov 2022 00:00:00 +0000</atom:modified>
-        <guid>https://minhlongmt183.github.io/posts/boot_old_kernel_ubuntu/</guid>
-        <description>Mở đầu Cũng một thời gian khá lâu rồi tôi không còn viết blog nữa. Phần lớn vì tôi tập trung học các kiến thức mới. Tuy nhiên sau một thời gian nghiên cứu, tôi lại phát hiện ra viết blog là cách để tôi lưu giữ và hiểu kiến thức sâu hơn. Đồng thời, được sự khuyến khích từ mentor, tôi sẽ quay lại với thói quen viết blog này, chia sẻ, lưu trữ lại các kiến thức mình đã học!</description>
-        
-        <dc:creator>Edisc</dc:creator>
-        <media:content url="https://minhlongmt183.github.io/images/posts/linux-kernel.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
-        
-        
-        
-          
-            
-              <category>Docker</category>
-            
-          
-        
-        
-          
-            
-              <category>pwn</category>
-            
-          
-        
-        
-          
-            
-              <category>kernel-exploitation</category>
-            
-          
-        
-      </item>
       
       <item>
         <title>Tìm hiểu và sử dụng docker (P8)</title>

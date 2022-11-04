@@ -5,13 +5,13 @@
     <loc>https://minhlongmt183.github.io/categories/</loc>
     <lastmod>2022-11-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://minhlongmt183.github.io/tags/docker/</loc>
-    <lastmod>2022-11-04T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://minhlongmt183.github.io/</loc>
     <lastmod>2022-11-04T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://minhlongmt183.github.io/posts/boot_old_kernel_ubuntu/</loc>
+    <lastmod>2022-11-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://minhlongmt183.github.io/tags/kernel/</loc>
     <lastmod>2022-11-04T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://minhlongmt183.github.io/series/kernel-exploitation/</loc>
@@ -51,6 +51,9 @@
     <lastmod>2020-09-22T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://minhlongmt183.github.io/series/docker/</loc>
+    <lastmod>2020-09-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://minhlongmt183.github.io/tags/docker/</loc>
     <lastmod>2020-09-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://minhlongmt183.github.io/posts/docker_p8/</loc>
