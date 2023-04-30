@@ -18,9 +18,9 @@
 
 <script defer src="/js/lazysizes.min.498676c34eb225e85357ab0ce19c3c1244f3bd0bf595e5684d1b9d50ea4fbc42.js"></script>
 
-<script defer src="/js/helper/getParents.min.086022fb02d7a1517e33c2670bffb976b3e80bcacd9caeee0c6a586064f20e42.js"></script>
+<script defer src="/js/helper/getParents.min.1618c696be7c98933f9a92677f518b512a74e55bdbb976b09936b4182e93181b.js"></script>
 
-<script defer src="/js/helper/fadeinout.min.3ce954c8aea3b69cc5e6f734d8273ba4cd48d3a7987dbdca145849bc4b8fc296.js"></script>
+<script defer src="/js/helper/fadeinout.min.efa35f4c090622130b3f4cfae6971448b5ffb61c5f0a8f21cdfd157fa712abc4.js"></script>
 
 <script defer src="/js/helper/closest.min.js"></script>
   
@@ -1359,7 +1359,7 @@
     <meta property="twitter:description" content="Ôn lại docker và chuyển nội dung học">
   
 
-<meta name="generator" content="Hugo 0.105.0">
+<meta name="generator" content="Hugo 0.68.3" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1419,14 +1419,16 @@
 
     
   
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-G6WT3WSKMH"></script>
-<script>
+<script type="application/javascript">
 var doNotTrack = false;
 if (!doNotTrack) {
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
-	gtag('config', 'G-G6WT3WSKMH', { 'anonymize_ip': false });
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'G-G6WT3WSKMH', 'auto');
+	
+	ga('send', 'pageview');
 }
 </script>
 
@@ -1817,7 +1819,7 @@ Khi hủy một không gian tên mạng sẽ phá hủy bất kỳ giao diện �
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -1826,33 +1828,33 @@ Khi hủy một không gian tên mạng sẽ phá hủy bất kỳ giao diện �
 </span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ sudo unshare --fork --pid --mount-proc bash
-</span></span><span class="line"><span class="cl">$ ps
-</span></span><span class="line"><span class="cl">  PID TTY          TIME CMD
-</span></span><span class="line"><span class="cl">    <span class="m">1</span> pts/0    00:00:00 bash
-</span></span><span class="line"><span class="cl">    <span class="m">9</span> pts/0    00:00:00 ps
-</span></span><span class="line"><span class="cl">$ <span class="nb">exit</span>
-</span></span><span class="line"><span class="cl"><span class="nb">exit</span>
-</span></span></code></pre></td></tr></table>
+<pre class="chroma"><code class="language-bash" data-lang="bash">$ sudo unshare --fork --pid --mount-proc bash
+$ ps
+  PID TTY          TIME CMD
+    <span class="m">1</span> pts/0    00:00:00 bash
+    <span class="m">9</span> pts/0    00:00:00 ps
+$ <span class="nb">exit</span>
+<span class="nb">exit</span>
+</code></pre></td></tr></table>
 </div>
 </div><h4 id="what-happens-when-we-share-a-namespace">What happens when we share a namespace?</h4>
 <p>Chúng ta có thể liệt kê tất cả những namespace bằng lệnh:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ls -lha /proc/<span class="nv">$DBPID</span>/ns/  
-</span></span></code></pre></td></tr></table>
+<pre class="chroma"><code class="language-bash" data-lang="bash">ls -lha /proc/<span class="nv">$DBPID</span>/ns/  
+</code></pre></td></tr></table>
 </div>
 </div><p>Một công cụ khác chúng ta có thể dùng đó là <code>nsenter</code> dùng để gán một process vào một không gian tên đã tồn tại, công cụ này sẽ hữu dụng khi debug.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">nsenter --target <span class="nv">$DBPID</span> --mount --uts --ipc --net --pid ps aux
-</span></span></code></pre></td></tr></table>
+<pre class="chroma"><code class="language-bash" data-lang="bash">nsenter --target <span class="nv">$DBPID</span> --mount --uts --ipc --net --pid ps aux
+</code></pre></td></tr></table>
 </div>
 </div><h2 id="container-images">Container images</h2>
 <p>Container images chúng ta đã được học kĩ trong các bài trước, ở đây có một số chú ý nhỏ nhỏ:</p>
@@ -1877,13 +1879,13 @@ Khi hủy một không gian tên mạng sẽ phá hủy bất kỳ giao diện �
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker ps
-</span></span><span class="line"><span class="cl">docker port container_id port_number
-</span></span></code></pre></td></tr></table>
+<pre class="chroma"><code class="language-bash" data-lang="bash">docker ps
+docker port container_id port_number
+</code></pre></td></tr></table>
 </div>
 </div><ul>
 <li><code>Step 4</code>: Thiết lập chia sẻ dữ liệu giữa container và host cũng như các container với nhau, đảm bảo dữ liệu cần thiết sẽ được lưu khi container bị xóa.</li>
@@ -1898,7 +1900,7 @@ Những phần này chúng ta đã được học ở những bài trước.</li
 <p><code>Dockerfile</code> là một dạng file text, không có phần đuôi mở rộng, chứa tập các lệnh mô tả các bước để build một docker image.</p>
 <h5 id="cú-pháp-của-một-dockerfile">Cú pháp của một dockerfile.</h5>
 <p>Cấu trúc chung của một dockerfile có dạng</p>
-<pre tabindex="0"><code>INSTRUCTION arguments
+<pre><code>INSTRUCTION arguments
 </code></pre><p>Trong đó:</p>
 <ul>
 <li><code>INSTRUCTION:</code> là tên các chỉ thị có trong Dockerfile, mỗi chỉ thị thực hiện một nhiệm vụ nhất định, do dockerfile quy định. Mặc định, lệnh này phải được viết bằng chữ IN HOA</li>
@@ -1907,13 +1909,13 @@ Ví dụ:</li>
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-dockerfile" data-lang="dockerfile"><span class="line"><span class="cl"><span class="k">FROM</span><span class="s"> nginx:alpine</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">COPY</span> . /usr/share/nginx/html<span class="err">
-</span></span></span></code></pre></td></tr></table>
+<pre class="chroma"><code class="language-dockerfile" data-lang="dockerfile"><span class="k">FROM</span><span class="s"> nginx:alpine</span><span class="err">
+</span><span class="err"></span><span class="k">COPY</span> . /usr/share/nginx/html<span class="err">
+</span></code></pre></td></tr></table>
 </div>
 </div><p>Dòng lệnh 1 để  định nghĩa base images và dòng lệnh 2 để chỉ thị copy tất cả nội dụng tại vị trí hiện tại vào một địa chỉ cụ thể trên container, ở đây là <code>/usr/share/nginx/html</code>.</p>
 <h5 id="các-chỉ-thị-chính-trong-dockerfile">Các chỉ thị chính trong dockerfile</h5>
@@ -1925,28 +1927,28 @@ Cú pháp:</li>
 </ol>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">FROM &lt;image&gt; <span class="o">[</span>AS &lt;name&gt;<span class="o">]</span> 
-</span></span><span class="line"><span class="cl">FROM &lt;image&gt;<span class="o">[</span>:&lt;tag&gt;<span class="o">]</span> <span class="o">[</span>AS &lt;name&gt;<span class="o">]</span>
-</span></span><span class="line"><span class="cl">FROM &lt;image&gt;<span class="o">[</span>@&lt;digest&gt;<span class="o">]</span> <span class="o">[</span>AS &lt;name&gt;<span class="o">]</span> 
-</span></span></code></pre></td></tr></table>
+<pre class="chroma"><code class="language-bash" data-lang="bash">FROM &lt;image&gt; <span class="o">[</span>AS &lt;name&gt;<span class="o">]</span> 
+FROM &lt;image&gt;<span class="o">[</span>:&lt;tag&gt;<span class="o">]</span> <span class="o">[</span>AS &lt;name&gt;<span class="o">]</span>
+FROM &lt;image&gt;<span class="o">[</span>@&lt;digest&gt;<span class="o">]</span> <span class="o">[</span>AS &lt;name&gt;<span class="o">]</span> 
+</code></pre></td></tr></table>
 </div>
 </div><p>Ví dụ:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">FROM ubuntu 
-</span></span><span class="line"><span class="cl">hoặc 
-</span></span><span class="line"><span class="cl">FROM ubuntu:latest
-</span></span></code></pre></td></tr></table>
+<pre class="chroma"><code class="language-bash" data-lang="bash">FROM ubuntu 
+hoặc 
+FROM ubuntu:latest
+</code></pre></td></tr></table>
 </div>
 </div><ol start="2">
 <li><strong>LABEL</strong><br />
@@ -1956,21 +1958,21 @@ Nếu cùng 1 key mà có nhiều value thì value gần nhất sẽ đè nhữn
 <p>Cú pháp:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">LABEL &lt;key1&gt;&lt;value1&gt; &lt;key2&gt;&lt;value2&gt; ... &lt;key_n&gt;&lt;value_n&gt;
-</span></span></code></pre></td></tr></table>
+<pre class="chroma"><code class="language-bash" data-lang="bash">LABEL &lt;key1&gt;&lt;value1&gt; &lt;key2&gt;&lt;value2&gt; ... &lt;key_n&gt;&lt;value_n&gt;
+</code></pre></td></tr></table>
 </div>
 </div><p>Có thể khai báo metadata cho Image theo từng dòng chỉ thị hoặc có thể tách ra khai báo thành từng dòng riêng biệt.<br />
 Để xem thông tin meta của một image, ta dùng lệnh <code>docker inspect</code></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker inspect &lt;image id&gt;
-</span></span></code></pre></td></tr></table>
+<pre class="chroma"><code class="language-bash" data-lang="bash">docker inspect &lt;image id&gt;
+</code></pre></td></tr></table>
 </div>
 </div><ol start="3">
 <li><strong>MAINTAINER</strong><br />
@@ -1979,20 +1981,20 @@ Cú pháp:</li>
 </ol>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">MAINTAINER &lt;name&gt; <span class="o">[</span>&lt;email&gt;<span class="o">]</span>
-</span></span></code></pre></td></tr></table>
+<pre class="chroma"><code class="language-bash" data-lang="bash">MAINTAINER &lt;name&gt; <span class="o">[</span>&lt;email&gt;<span class="o">]</span>
+</code></pre></td></tr></table>
 </div>
 </div><p>Ví dụ:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">MAINTAINER &lt;edisc&gt; <span class="o">[</span>&lt;edisc.ctf@gmail.com&gt;<span class="o">]</span>
-</span></span></code></pre></td></tr></table>
+<pre class="chroma"><code class="language-bash" data-lang="bash">MAINTAINER &lt;edisc&gt; <span class="o">[</span>&lt;edisc.ctf@gmail.com&gt;<span class="o">]</span>
+</code></pre></td></tr></table>
 </div>
 </div><ol start="4">
 <li><strong>RUN</strong><br />
@@ -2001,39 +2003,39 @@ Cú pháp:</li>
 </ol>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">RUN &lt;command&gt;
-</span></span><span class="line"><span class="cl">RUN <span class="o">[</span><span class="s2">&#34;executable&#34;</span>, <span class="s2">&#34;param1&#34;</span>, <span class="s2">&#34;param2&#34;</span><span class="o">]</span>
-</span></span></code></pre></td></tr></table>
+<pre class="chroma"><code class="language-bash" data-lang="bash">RUN &lt;command&gt;
+RUN <span class="o">[</span><span class="s2">&#34;executable&#34;</span>, <span class="s2">&#34;param1&#34;</span>, <span class="s2">&#34;param2&#34;</span><span class="o">]</span>
+</code></pre></td></tr></table>
 </div>
 </div><p>Ví dụ</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">RUN apt-get update -y
-</span></span><span class="line"><span class="cl">RUN <span class="o">[</span><span class="s2">&#34;/bin/bash&#34;</span>, <span class="s2">&#34;-c&#34;</span>, <span class="s2">&#34;echo Run&#34;</span><span class="o">]</span>
-</span></span></code></pre></td></tr></table>
+<pre class="chroma"><code class="language-bash" data-lang="bash">RUN apt-get update -y
+RUN <span class="o">[</span><span class="s2">&#34;/bin/bash&#34;</span>, <span class="s2">&#34;-c&#34;</span>, <span class="s2">&#34;echo Run&#34;</span><span class="o">]</span>
+</code></pre></td></tr></table>
 </div>
 </div><p>Ở shell form, có thể thực hiện nhiều câu lệnh bằng dấu <code>\</code>:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">FROM ubuntu:latest
-</span></span><span class="line"><span class="cl">RUN apt-get update -y <span class="se">\
-</span></span></span><span class="line"><span class="cl"><span class="se"></span>    apt-get install vim -y
-</span></span><span class="line"><span class="cl">    apt-get install curl -y
-</span></span></code></pre></td></tr></table>
+<pre class="chroma"><code class="language-bash" data-lang="bash">FROM ubuntu:latest
+RUN apt-get update -y <span class="se">\</span>
+    apt-get install vim -y
+    apt-get install curl -y
+</code></pre></td></tr></table>
 </div>
 </div><ol start="5">
 <li><strong>ADD</strong><br />
@@ -2042,13 +2044,13 @@ Cú pháp:</li>
 </ol>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ADD <span class="o">[</span>--chown<span class="o">=</span>&lt;user&gt;:&lt;group&gt;<span class="o">]</span> &lt;src&gt;... &lt;dest&gt;
-</span></span><span class="line"><span class="cl">ADD <span class="o">[</span>--chown<span class="o">=</span>&lt;user&gt;:&lt;group&gt;<span class="o">]</span> <span class="o">[</span><span class="s2">&#34;&lt;src&gt;&#34;</span>, ... <span class="s2">&#34;&lt;dest&gt;&#34;</span><span class="o">]</span>  
-</span></span></code></pre></td></tr></table>
+<pre class="chroma"><code class="language-bash" data-lang="bash">ADD <span class="o">[</span>--chown<span class="o">=</span>&lt;user&gt;:&lt;group&gt;<span class="o">]</span> &lt;src&gt;... &lt;dest&gt;
+ADD <span class="o">[</span>--chown<span class="o">=</span>&lt;user&gt;:&lt;group&gt;<span class="o">]</span> <span class="o">[</span><span class="s2">&#34;&lt;src&gt;&#34;</span>, ... <span class="s2">&#34;&lt;dest&gt;&#34;</span><span class="o">]</span>  
+</code></pre></td></tr></table>
 </div>
 </div><p>trong đó:</p>
 <ul>
@@ -2058,11 +2060,11 @@ Cú pháp:</li>
 <p>Ví dụ:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ADD --chown<span class="o">=</span>user:mygroup file* /somedir/
-</span></span></code></pre></td></tr></table>
+<pre class="chroma"><code class="language-bash" data-lang="bash">ADD --chown<span class="o">=</span>user:mygroup file* /somedir/
+</code></pre></td></tr></table>
 </div>
 </div><ol start="6">
 <li><strong>COPY</strong><br />
@@ -2071,13 +2073,13 @@ Cú pháp:</li>
 </ol>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">COPY <span class="o">[</span>--chown<span class="o">=</span>&lt;user&gt;:&lt;group&gt;<span class="o">]</span> &lt;src&gt;... &lt;dest&gt;
-</span></span><span class="line"><span class="cl">COPY <span class="o">[</span>--chown<span class="o">=</span>&lt;user&gt;:&lt;group&gt;<span class="o">]</span> <span class="o">[</span><span class="s2">&#34;&lt;src&gt;&#34;</span>,... <span class="s2">&#34;&lt;dest&gt;&#34;</span><span class="o">]</span>
-</span></span></code></pre></td></tr></table>
+<pre class="chroma"><code class="language-bash" data-lang="bash">COPY <span class="o">[</span>--chown<span class="o">=</span>&lt;user&gt;:&lt;group&gt;<span class="o">]</span> &lt;src&gt;... &lt;dest&gt;
+COPY <span class="o">[</span>--chown<span class="o">=</span>&lt;user&gt;:&lt;group&gt;<span class="o">]</span> <span class="o">[</span><span class="s2">&#34;&lt;src&gt;&#34;</span>,... <span class="s2">&#34;&lt;dest&gt;&#34;</span><span class="o">]</span>
+</code></pre></td></tr></table>
 </div>
 </div><ol start="7">
 <li><strong>ENV</strong><br />
@@ -2086,36 +2088,36 @@ Cú pháp:</li>
 </ol>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ENV &lt;key&gt;<span class="o">=</span>&lt;value&gt;
-</span></span></code></pre></td></tr></table>
+<pre class="chroma"><code class="language-bash" data-lang="bash">ENV &lt;key&gt;<span class="o">=</span>&lt;value&gt;
+</code></pre></td></tr></table>
 </div>
 </div><p>Ví dụ:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ENV <span class="nv">PORT</span><span class="o">=</span><span class="m">80</span>
-</span></span><span class="line"><span class="cl">ENV <span class="nv">USERNAME</span><span class="o">=</span><span class="s2">&#34;user&#34;</span> <span class="nv">PASSWORD</span><span class="o">=</span><span class="s2">&#34;password&#34;</span>
-</span></span></code></pre></td></tr></table>
+<pre class="chroma"><code class="language-bash" data-lang="bash">ENV <span class="nv">PORT</span><span class="o">=</span>80
+ENV <span class="nv">USERNAME</span><span class="o">=</span><span class="s2">&#34;user&#34;</span> <span class="nv">PASSWORD</span><span class="o">=</span><span class="s2">&#34;password&#34;</span>
+</code></pre></td></tr></table>
 </div>
 </div><p>Các biến môi trường có thể thay đổi với lệnh <code>docker run</code></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker run --env &lt;key&gt;<span class="o">=</span>&lt;value&gt;
-</span></span></code></pre></td></tr></table>
+<pre class="chroma"><code class="language-bash" data-lang="bash">docker run --env &lt;key&gt;<span class="o">=</span>&lt;value&gt;
+</code></pre></td></tr></table>
 </div>
 </div><p>Các command được sử dụng ENV:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -2127,17 +2129,17 @@ Cú pháp:</li>
 </span><span class="lnt">10
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ADD
-</span></span><span class="line"><span class="cl">COPY
-</span></span><span class="line"><span class="cl">ENV
-</span></span><span class="line"><span class="cl">EXPOSE
-</span></span><span class="line"><span class="cl">FROM
-</span></span><span class="line"><span class="cl">LABEL
-</span></span><span class="line"><span class="cl">STOPSIGNAL
-</span></span><span class="line"><span class="cl">USER
-</span></span><span class="line"><span class="cl">VOLUME
-</span></span><span class="line"><span class="cl">WORKDIR
-</span></span></code></pre></td></tr></table>
+<pre class="chroma"><code class="language-bash" data-lang="bash">ADD
+COPY
+ENV
+EXPOSE
+FROM
+LABEL
+STOPSIGNAL
+USER
+VOLUME
+WORKDIR
+</code></pre></td></tr></table>
 </div>
 </div><ol start="8">
 <li><strong>CMD</strong><br />
@@ -2146,26 +2148,26 @@ Cú pháp:</li>
 </ol>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">CMD <span class="o">[</span><span class="s2">&#34;executable&#34;</span>, <span class="s2">&#34;param1&#34;</span>, <span class="s2">&#34;param2&#34;</span><span class="o">]</span>
-</span></span><span class="line"><span class="cl">CMD <span class="o">[</span><span class="s2">&#34;param1&#34;</span>, <span class="s2">&#34;param2&#34;</span><span class="o">]</span>
-</span></span><span class="line"><span class="cl">CMD <span class="nb">command</span> param1 param2
-</span></span></code></pre></td></tr></table>
+<pre class="chroma"><code class="language-bash" data-lang="bash">CMD <span class="o">[</span><span class="s2">&#34;executable&#34;</span>, <span class="s2">&#34;param1&#34;</span>, <span class="s2">&#34;param2&#34;</span><span class="o">]</span>
+CMD <span class="o">[</span><span class="s2">&#34;param1&#34;</span>, <span class="s2">&#34;param2&#34;</span><span class="o">]</span>
+CMD <span class="nb">command</span> param1 param2
+</code></pre></td></tr></table>
 </div>
 </div><p>Ví dụ:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">FROM ubuntu:latest
-</span></span><span class="line"><span class="cl">CMD cat password.txt 
-</span></span></code></pre></td></tr></table>
+<pre class="chroma"><code class="language-bash" data-lang="bash">FROM ubuntu:latest
+CMD cat password.txt 
+</code></pre></td></tr></table>
 </div>
 </div><ol start="9">
 <li><strong>USER</strong><br />
@@ -2174,48 +2176,48 @@ Cú pháp:</li>
 </ol>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">USER &lt;user&gt;<span class="o">[</span>:&lt;group&gt;<span class="o">]</span>
-</span></span><span class="line"><span class="cl">hoặc 
-</span></span><span class="line"><span class="cl">USER &lt;UID&gt;<span class="o">[</span>:&lt;GID&gt;<span class="o">]</span> 
-</span></span></code></pre></td></tr></table>
+<pre class="chroma"><code class="language-bash" data-lang="bash">USER &lt;user&gt;<span class="o">[</span>:&lt;group&gt;<span class="o">]</span>
+hoặc 
+USER &lt;UID&gt;<span class="o">[</span>:&lt;GID&gt;<span class="o">]</span> 
+</code></pre></td></tr></table>
 </div>
 </div><p>Ví dụ:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">FROM alpine:3.4
-</span></span><span class="line"><span class="cl">RUN useradd -G /bin/bash edisc
-</span></span><span class="line"><span class="cl">USER edisc  
-</span></span></code></pre></td></tr></table>
+<pre class="chroma"><code class="language-bash" data-lang="bash">FROM alpine:3.4
+RUN useradd -G /bin/bash edisc
+USER edisc  
+</code></pre></td></tr></table>
 </div>
 </div><h4 id="build-docker-image">Build Docker Image</h4>
 <p>Ta dùng lệnh <code>docker build</code> để tiến hành build docker image từ Dockerfile vừa tạo.</p>
 <p>Cú pháp:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker build -t &lt;image_name&gt; &lt;build directory&gt;
-</span></span></code></pre></td></tr></table>
+<pre class="chroma"><code class="language-bash" data-lang="bash">docker build -t &lt;image_name&gt; &lt;build directory&gt;
+</code></pre></td></tr></table>
 </div>
 </div><p>Ví dụ:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker build -t myimage:v1 .
-</span></span></code></pre></td></tr></table>
+<pre class="chroma"><code class="language-bash" data-lang="bash">docker build -t myimage:v1 .
+</code></pre></td></tr></table>
 </div>
 </div><p><code>-t</code> ở đây cho phép chỉ định tên image và tag của nó.</p>
 <h4 id="run">RUN</h4>
@@ -2461,7 +2463,7 @@ Ngoài ra, chúng ta đã đi qua một vài nhánh nhỏ của <code>Docker Fou
     </div>
     <div class="whoami__desc">
       
-        Code Reverser
+        Cyber Security Engineer
       
     </div>
     <div class="whoami__social">
@@ -2513,6 +2515,10 @@ Ngoài ra, chúng ta đã đi qua một vài nhánh nhỏ của <code>Docker Fou
       
       
       
+      <a href="https://www.linkedin.com/in/long-v%C3%B5-minh-58374318b/" title="linkedin" aria-label="linkedin">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="#000000" viewBox="0 0 30 30" width="25" height="25"><path fill="currentColor" d="M24,4H6C4.895,4,4,4.895,4,6v18c0,1.105,0.895,2,2,2h18c1.105,0,2-0.895,2-2V6C26,4.895,25.105,4,24,4z M10.954,22h-2.95 v-9.492h2.95V22z M9.449,11.151c-0.951,0-1.72-0.771-1.72-1.72c0-0.949,0.77-1.719,1.72-1.719c0.948,0,1.719,0.771,1.719,1.719 C11.168,10.38,10.397,11.151,9.449,11.151z M22.004,22h-2.948v-4.616c0-1.101-0.02-2.517-1.533-2.517 c-1.535,0-1.771,1.199-1.771,2.437V22h-2.948v-9.492h2.83v1.297h0.04c0.394-0.746,1.356-1.533,2.791-1.533 c2.987,0,3.539,1.966,3.539,4.522V22z"/></svg>
+
+      </a>
       
       
       
@@ -2536,6 +2542,16 @@ Ngoài ra, chúng ta đã đi qua một vài nhánh nhỏ của <code>Docker Fou
       
       
       
+      
+      
+      <a href="https://twitter.com/edisc_1" title="twitter" aria-label="twitter">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="25" height="25" viewBox="0 0 32 32" version="1.1">
+<g id="surface676">
+<path fill="currentColor" d="M 28 8.558594 C 27.117188 8.949219 26.167969 9.214844 25.171875 9.332031 C 26.1875 8.722656 26.96875 7.757812 27.335938 6.609375 C 26.386719 7.171875 25.332031 7.582031 24.210938 7.804688 C 23.3125 6.847656 22.03125 6.246094 20.617188 6.246094 C 17.898438 6.246094 15.691406 8.453125 15.691406 11.171875 C 15.691406 11.558594 15.734375 11.933594 15.820312 12.292969 C 11.726562 12.089844 8.097656 10.128906 5.671875 7.148438 C 5.246094 7.875 5.003906 8.722656 5.003906 9.625 C 5.003906 11.332031 5.871094 12.839844 7.195312 13.722656 C 6.386719 13.695312 5.628906 13.476562 4.964844 13.105469 C 4.964844 13.128906 4.964844 13.148438 4.964844 13.167969 C 4.964844 15.554688 6.660156 17.546875 8.914062 17.996094 C 8.5 18.109375 8.066406 18.171875 7.617188 18.171875 C 7.300781 18.171875 6.988281 18.140625 6.691406 18.082031 C 7.316406 20.039062 9.136719 21.460938 11.289062 21.503906 C 9.605469 22.824219 7.480469 23.609375 5.175781 23.609375 C 4.777344 23.609375 4.386719 23.585938 4 23.539062 C 6.179688 24.9375 8.765625 25.753906 11.546875 25.753906 C 20.605469 25.753906 25.558594 18.25 25.558594 11.742188 C 25.558594 11.53125 25.550781 11.316406 25.542969 11.105469 C 26.503906 10.410156 27.339844 9.542969 28 8.558594 Z M 28 8.558594 "/>
+</g>
+</svg>
+
+      </a>
       
       
       
@@ -2715,7 +2731,7 @@ Ngoài ra, chúng ta đã đi qua một vài nhánh nhỏ của <code>Docker Fou
 </div>
 
 
-<script defer src="/js/swipe.min.7be2debdadbc35f9430de39f9010d89df5aee1904747098818b5c01cd0672180.js"></script>
+<script defer src="/js/swipe.min.b4b82839155519d9ca67746615a4c86ccbc1061c196fe6d8aa26e4fe22902718.js"></script>
 
 <script defer src="/js/micromodal.min.de01b44b2f383056bbcaf6ee921fd385d79108ec1129afd0eb2f3f5a07e11f45.js"></script>
 
@@ -3634,6 +3650,11 @@ document.addEventListener('DOMContentLoaded', function () {
     
             
     
+      
+      <a href="https://www.linkedin.com/in/long-v%C3%B5-minh-58374318b/" title="linkedin" aria-label="linkedin">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="#000000" viewBox="0 0 30 30" width="32" height="32"><path fill="currentColor" d="M24,4H6C4.895,4,4,4.895,4,6v18c0,1.105,0.895,2,2,2h18c1.105,0,2-0.895,2-2V6C26,4.895,25.105,4,24,4z M10.954,22h-2.95 v-9.492h2.95V22z M9.449,11.151c-0.951,0-1.72-0.771-1.72-1.72c0-0.949,0.77-1.719,1.72-1.719c0.948,0,1.719,0.771,1.719,1.719 C11.168,10.38,10.397,11.151,9.449,11.151z M22.004,22h-2.948v-4.616c0-1.101-0.02-2.517-1.533-2.517 c-1.535,0-1.771,1.199-1.771,2.437V22h-2.948v-9.492h2.83v1.297h0.04c0.394-0.746,1.356-1.533,2.791-1.533 c2.987,0,3.539,1.966,3.539,4.522V22z"/></svg>
+
+      </a>
             
     
             
@@ -3658,6 +3679,15 @@ document.addEventListener('DOMContentLoaded', function () {
     
             
     
+      
+      <a href="https://twitter.com/edisc_1" title="twitter" aria-label="twitter">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32" version="1.1">
+<g id="surface676">
+<path fill="currentColor" d="M 28 8.558594 C 27.117188 8.949219 26.167969 9.214844 25.171875 9.332031 C 26.1875 8.722656 26.96875 7.757812 27.335938 6.609375 C 26.386719 7.171875 25.332031 7.582031 24.210938 7.804688 C 23.3125 6.847656 22.03125 6.246094 20.617188 6.246094 C 17.898438 6.246094 15.691406 8.453125 15.691406 11.171875 C 15.691406 11.558594 15.734375 11.933594 15.820312 12.292969 C 11.726562 12.089844 8.097656 10.128906 5.671875 7.148438 C 5.246094 7.875 5.003906 8.722656 5.003906 9.625 C 5.003906 11.332031 5.871094 12.839844 7.195312 13.722656 C 6.386719 13.695312 5.628906 13.476562 4.964844 13.105469 C 4.964844 13.128906 4.964844 13.148438 4.964844 13.167969 C 4.964844 15.554688 6.660156 17.546875 8.914062 17.996094 C 8.5 18.109375 8.066406 18.171875 7.617188 18.171875 C 7.300781 18.171875 6.988281 18.140625 6.691406 18.082031 C 7.316406 20.039062 9.136719 21.460938 11.289062 21.503906 C 9.605469 22.824219 7.480469 23.609375 5.175781 23.609375 C 4.777344 23.609375 4.386719 23.585938 4 23.539062 C 6.179688 24.9375 8.765625 25.753906 11.546875 25.753906 C 20.605469 25.753906 25.558594 18.25 25.558594 11.742188 C 25.558594 11.53125 25.550781 11.316406 25.542969 11.105469 C 26.503906 10.410156 27.339844 9.542969 28 8.558594 Z M 28 8.558594 "/>
+</g>
+</svg>
+
+      </a>
             
     
             
@@ -3706,7 +3736,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 
             <p class="caption">
                 
-                    ©2022, All Rights Reserved
+                    ©2023, All Rights Reserved
                 
             </p>
         

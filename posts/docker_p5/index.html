@@ -18,9 +18,9 @@
 
 <script defer src="/js/lazysizes.min.498676c34eb225e85357ab0ce19c3c1244f3bd0bf595e5684d1b9d50ea4fbc42.js"></script>
 
-<script defer src="/js/helper/getParents.min.086022fb02d7a1517e33c2670bffb976b3e80bcacd9caeee0c6a586064f20e42.js"></script>
+<script defer src="/js/helper/getParents.min.1618c696be7c98933f9a92677f518b512a74e55bdbb976b09936b4182e93181b.js"></script>
 
-<script defer src="/js/helper/fadeinout.min.3ce954c8aea3b69cc5e6f734d8273ba4cd48d3a7987dbdca145849bc4b8fc296.js"></script>
+<script defer src="/js/helper/fadeinout.min.efa35f4c090622130b3f4cfae6971448b5ffb61c5f0a8f21cdfd157fa712abc4.js"></script>
 
 <script defer src="/js/helper/closest.min.js"></script>
   
@@ -1359,7 +1359,7 @@
     <meta property="twitter:description" content="Tra cứu thông tin Image, Container và giám sát hoạt động container Docker">
   
 
-<meta name="generator" content="Hugo 0.105.0">
+<meta name="generator" content="Hugo 0.68.3" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1419,14 +1419,16 @@
 
     
   
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-G6WT3WSKMH"></script>
-<script>
+<script type="application/javascript">
 var doNotTrack = false;
 if (!doNotTrack) {
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
-	gtag('config', 'G-G6WT3WSKMH', { 'anonymize_ip': false });
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'G-G6WT3WSKMH', 'auto');
+	
+	ga('send', 'pageview');
 }
 </script>
 
@@ -1777,16 +1779,16 @@ if (!doNotTrack) {
 <p>Dùng để truy vấn thông tin lịch sử các thao tác để hình thành nên một image. Cú pháp:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker image <span class="nb">history</span> image_name
-</span></span></code></pre></td></tr></table>
+<pre class="chroma"><code class="language-bash" data-lang="bash">docker image <span class="nb">history</span> image_name
+</code></pre></td></tr></table>
 </div>
 </div><p>Khi chạy, ta được kết quả như sau:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1816,51 +1818,51 @@ if (!doNotTrack) {
 </span><span class="lnt">28
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">❯ docker image <span class="nb">history</span> php:8.1.0alpha1-fpm-buster
-</span></span><span class="line"><span class="cl">IMAGE          CREATED       CREATED BY                                      SIZE      COMMENT
-</span></span><span class="line"><span class="cl">65167ddfe773   <span class="m">3</span> days ago    /bin/sh -c <span class="c1">#(nop)  CMD [&#34;php-fpm&#34;]              0B        </span>
-</span></span><span class="line"><span class="cl">&lt;missing&gt;      <span class="m">3</span> days ago    /bin/sh -c <span class="c1">#(nop)  EXPOSE 9000                  0B        </span>
-</span></span><span class="line"><span class="cl">&lt;missing&gt;      <span class="m">3</span> days ago    /bin/sh -c <span class="c1">#(nop)  STOPSIGNAL SIGQUIT           0B        </span>
-</span></span><span class="line"><span class="cl">&lt;missing&gt;      <span class="m">3</span> days ago    /bin/sh -c <span class="nb">set</span> -eux<span class="p">;</span>  <span class="nb">cd</span> /usr/local/etc<span class="p">;</span>  <span class="k">if</span>…   26.6kB    
-</span></span><span class="line"><span class="cl">&lt;missing&gt;      <span class="m">3</span> days ago    /bin/sh -c <span class="c1">#(nop) WORKDIR /var/www/html         0B        </span>
-</span></span><span class="line"><span class="cl">&lt;missing&gt;      <span class="m">3</span> days ago    /bin/sh -c <span class="c1">#(nop)  ENTRYPOINT [&#34;docker-php-e…   0B        </span>
-</span></span><span class="line"><span class="cl">&lt;missing&gt;      <span class="m">3</span> days ago    /bin/sh -c docker-php-ext-enable sodium         17B       
-</span></span><span class="line"><span class="cl">&lt;missing&gt;      <span class="m">3</span> days ago    /bin/sh -c <span class="c1">#(nop) COPY multi:6dfba8f7e64bd54…   6.75kB    </span>
-</span></span><span class="line"><span class="cl">&lt;missing&gt;      <span class="m">3</span> days ago    /bin/sh -c <span class="nb">set</span> -eux<span class="p">;</span>   <span class="nv">savedAptMark</span><span class="o">=</span><span class="s2">&#34;</span><span class="k">$(</span>apt-m…   104MB     
-</span></span><span class="line"><span class="cl">&lt;missing&gt;      <span class="m">3</span> days ago    /bin/sh -c <span class="c1">#(nop) COPY file:ce57c04b70896f77…   587B      </span>
-</span></span><span class="line"><span class="cl">&lt;missing&gt;      <span class="m">3</span> days ago    /bin/sh -c <span class="nb">set</span> -eux<span class="p">;</span>   <span class="nv">savedAptMark</span><span class="o">=</span><span class="s2">&#34;</span><span class="k">$(</span>apt-m…   12.5MB    
-</span></span><span class="line"><span class="cl">&lt;missing&gt;      <span class="m">3</span> days ago    /bin/sh -c <span class="c1">#(nop)  ENV PHP_SHA256=131a81ef9e…   0B        </span>
-</span></span><span class="line"><span class="cl">&lt;missing&gt;      <span class="m">3</span> days ago    /bin/sh -c <span class="c1">#(nop)  ENV PHP_URL=https://downl…   0B        </span>
-</span></span><span class="line"><span class="cl">&lt;missing&gt;      <span class="m">3</span> days ago    /bin/sh -c <span class="c1">#(nop)  ENV PHP_VERSION=8.1.0alph…   0B        </span>
-</span></span><span class="line"><span class="cl">&lt;missing&gt;      <span class="m">3</span> days ago    /bin/sh -c <span class="c1">#(nop)  ENV GPG_KEYS=528995BFEDFB…   0B        </span>
-</span></span><span class="line"><span class="cl">&lt;missing&gt;      <span class="m">4</span> weeks ago   /bin/sh -c <span class="c1">#(nop)  ENV PHP_LDFLAGS=-Wl,-O1 -…   0B        </span>
-</span></span><span class="line"><span class="cl">&lt;missing&gt;      <span class="m">4</span> weeks ago   /bin/sh -c <span class="c1">#(nop)  ENV PHP_CPPFLAGS=-fstack-…   0B        </span>
-</span></span><span class="line"><span class="cl">&lt;missing&gt;      <span class="m">4</span> weeks ago   /bin/sh -c <span class="c1">#(nop)  ENV PHP_CFLAGS=-fstack-pr…   0B        </span>
-</span></span><span class="line"><span class="cl">&lt;missing&gt;      <span class="m">4</span> weeks ago   /bin/sh -c <span class="c1">#(nop)  ENV PHP_EXTRA_CONFIGURE_A…   0B        </span>
-</span></span><span class="line"><span class="cl">&lt;missing&gt;      <span class="m">4</span> weeks ago   /bin/sh -c <span class="nb">set</span> -eux<span class="p">;</span>  mkdir -p <span class="s2">&#34;</span><span class="nv">$PHP_INI_DIR</span><span class="s2">…   0B        
-</span></span></span><span class="line"><span class="cl"><span class="s2">&lt;missing&gt;      4 weeks ago   /bin/sh -c #(nop)  ENV PHP_INI_DIR=/usr/loca…   0B        
-</span></span></span><span class="line"><span class="cl"><span class="s2">&lt;missing&gt;      4 weeks ago   /bin/sh -c set -eux;  apt-get update;  apt-g…   227MB     
-</span></span></span><span class="line"><span class="cl"><span class="s2">&lt;missing&gt;      4 weeks ago   /bin/sh -c #(nop)  ENV PHPIZE_DEPS=autoconf …   0B        
-</span></span></span><span class="line"><span class="cl"><span class="s2">&lt;missing&gt;      4 weeks ago   /bin/sh -c set -eux;  {   echo &#39;Package: php…   46B       
-</span></span></span><span class="line"><span class="cl"><span class="s2">&lt;missing&gt;      4 weeks ago   /bin/sh -c #(nop)  CMD [&#34;</span>bash<span class="s2">&#34;]                 0B        
-</span></span></span><span class="line"><span class="cl"><span class="s2">&lt;missing&gt;      4 weeks ago   /bin/sh -c #(nop) ADD file:7362e0e50f30ff454…   69.3MB
-</span></span></span></code></pre></td></tr></table>
+<pre class="chroma"><code class="language-bash" data-lang="bash">❯ docker image <span class="nb">history</span> php:8.1.0alpha1-fpm-buster
+IMAGE          CREATED       CREATED BY                                      SIZE      COMMENT
+65167ddfe773   <span class="m">3</span> days ago    /bin/sh -c <span class="c1">#(nop)  CMD [&#34;php-fpm&#34;]              0B</span>        
+&lt;missing&gt;      <span class="m">3</span> days ago    /bin/sh -c <span class="c1">#(nop)  EXPOSE 9000                  0B</span>        
+&lt;missing&gt;      <span class="m">3</span> days ago    /bin/sh -c <span class="c1">#(nop)  STOPSIGNAL SIGQUIT           0B</span>        
+&lt;missing&gt;      <span class="m">3</span> days ago    /bin/sh -c <span class="nb">set</span> -eux<span class="p">;</span>  <span class="nb">cd</span> /usr/local/etc<span class="p">;</span>  <span class="k">if</span>…   26.6kB    
+&lt;missing&gt;      <span class="m">3</span> days ago    /bin/sh -c <span class="c1">#(nop) WORKDIR /var/www/html         0B</span>        
+&lt;missing&gt;      <span class="m">3</span> days ago    /bin/sh -c <span class="c1">#(nop)  ENTRYPOINT [&#34;docker-php-e…   0B</span>        
+&lt;missing&gt;      <span class="m">3</span> days ago    /bin/sh -c docker-php-ext-enable sodium         17B       
+&lt;missing&gt;      <span class="m">3</span> days ago    /bin/sh -c <span class="c1">#(nop) COPY multi:6dfba8f7e64bd54…   6.75kB</span>    
+&lt;missing&gt;      <span class="m">3</span> days ago    /bin/sh -c <span class="nb">set</span> -eux<span class="p">;</span>   <span class="nv">savedAptMark</span><span class="o">=</span><span class="s2">&#34;</span><span class="k">$(</span>apt-m…   104MB     
+&lt;missing&gt;      <span class="m">3</span> days ago    /bin/sh -c <span class="c1">#(nop) COPY file:ce57c04b70896f77…   587B</span>      
+&lt;missing&gt;      <span class="m">3</span> days ago    /bin/sh -c <span class="nb">set</span> -eux<span class="p">;</span>   <span class="nv">savedAptMark</span><span class="o">=</span><span class="s2">&#34;</span><span class="k">$(</span>apt-m…   12.5MB    
+&lt;missing&gt;      <span class="m">3</span> days ago    /bin/sh -c <span class="c1">#(nop)  ENV PHP_SHA256=131a81ef9e…   0B</span>        
+&lt;missing&gt;      <span class="m">3</span> days ago    /bin/sh -c <span class="c1">#(nop)  ENV PHP_URL=https://downl…   0B</span>        
+&lt;missing&gt;      <span class="m">3</span> days ago    /bin/sh -c <span class="c1">#(nop)  ENV PHP_VERSION=8.1.0alph…   0B</span>        
+&lt;missing&gt;      <span class="m">3</span> days ago    /bin/sh -c <span class="c1">#(nop)  ENV GPG_KEYS=528995BFEDFB…   0B</span>        
+&lt;missing&gt;      <span class="m">4</span> weeks ago   /bin/sh -c <span class="c1">#(nop)  ENV PHP_LDFLAGS=-Wl,-O1 -…   0B</span>        
+&lt;missing&gt;      <span class="m">4</span> weeks ago   /bin/sh -c <span class="c1">#(nop)  ENV PHP_CPPFLAGS=-fstack-…   0B</span>        
+&lt;missing&gt;      <span class="m">4</span> weeks ago   /bin/sh -c <span class="c1">#(nop)  ENV PHP_CFLAGS=-fstack-pr…   0B</span>        
+&lt;missing&gt;      <span class="m">4</span> weeks ago   /bin/sh -c <span class="c1">#(nop)  ENV PHP_EXTRA_CONFIGURE_A…   0B</span>        
+&lt;missing&gt;      <span class="m">4</span> weeks ago   /bin/sh -c <span class="nb">set</span> -eux<span class="p">;</span>  mkdir -p <span class="s2">&#34;</span><span class="nv">$PHP_INI_DIR</span><span class="s2">…   0B        
+</span><span class="s2">&lt;missing&gt;      4 weeks ago   /bin/sh -c #(nop)  ENV PHP_INI_DIR=/usr/loca…   0B        
+</span><span class="s2">&lt;missing&gt;      4 weeks ago   /bin/sh -c set -eux;  apt-get update;  apt-g…   227MB     
+</span><span class="s2">&lt;missing&gt;      4 weeks ago   /bin/sh -c #(nop)  ENV PHPIZE_DEPS=autoconf …   0B        
+</span><span class="s2">&lt;missing&gt;      4 weeks ago   /bin/sh -c set -eux;  {   echo &#39;Package: php…   46B       
+</span><span class="s2">&lt;missing&gt;      4 weeks ago   /bin/sh -c #(nop)  CMD [&#34;</span>bash<span class="s2">&#34;]                 0B        
+</span><span class="s2">&lt;missing&gt;      4 weeks ago   /bin/sh -c #(nop) ADD file:7362e0e50f30ff454…   69.3MB
+</span></code></pre></td></tr></table>
 </div>
 </div><p>Qua dữ kiện trên ta biết từ thao tác cơ sở đã trải qua những bước nào để có thể tạo thành image php</p>
 <h3 id="docker-inspect">docker inspect</h3>
 <p>Lệnh này trả về thông tin của image dưới dạng JSON</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker inspect image_name/id
-</span></span></code></pre></td></tr></table>
+<pre class="chroma"><code class="language-bash" data-lang="bash">docker inspect image_name/id
+</code></pre></td></tr></table>
 </div>
 </div><p>Lệnh này liệt kê tất cả các thông tin về image, ví dụ sau đây là một phần thông tin về các lớp layer của image php</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1878,39 +1880,39 @@ if (!doNotTrack) {
 </span><span class="lnt">16
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">        <span class="s2">&#34;RootFS&#34;</span>: <span class="o">{</span>
-</span></span><span class="line"><span class="cl">            <span class="s2">&#34;Type&#34;</span>: <span class="s2">&#34;layers&#34;</span>,
-</span></span><span class="line"><span class="cl">            <span class="s2">&#34;Layers&#34;</span>: <span class="o">[</span>
-</span></span><span class="line"><span class="cl">                <span class="s2">&#34;sha256:02c055ef67f5904019f43a41ea5f099996d8e7633749b6e606c400526b2c4b33&#34;</span>,
-</span></span><span class="line"><span class="cl">                <span class="s2">&#34;sha256:d2252dfd3726823303a8f54483e10f3ed7959f33ba63ea3a19bd0fc46587bc8f&#34;</span>,
-</span></span><span class="line"><span class="cl">                <span class="s2">&#34;sha256:6c63b3f282cb455ac2e456fb99cdceab42a876603b54cc97087c17b9999b780b&#34;</span>,
-</span></span><span class="line"><span class="cl">                <span class="s2">&#34;sha256:8e859e616115511355eadb05cbdcf86333434621f77c3ac80c410257ea39f115&#34;</span>,
-</span></span><span class="line"><span class="cl">                <span class="s2">&#34;sha256:363c2d4617a0df71a4d53f484a522caa9f2f02ba1271c7f7b4ceb524c5bac61a&#34;</span>,
-</span></span><span class="line"><span class="cl">                <span class="s2">&#34;sha256:c66c7f1f8019ed243ea38cb9ca384135cfeb3cda372de18deece786702c0c582&#34;</span>,
-</span></span><span class="line"><span class="cl">                <span class="s2">&#34;sha256:d87b1d289a070d7d2503bfedb8263ff5431423cd9eca8e577ce93d2e74392315&#34;</span>,
-</span></span><span class="line"><span class="cl">                <span class="s2">&#34;sha256:7d973749b6e2ff44d90f4df11576a27388c317f99400b746e8d8c021a747c91f&#34;</span>,
-</span></span><span class="line"><span class="cl">                <span class="s2">&#34;sha256:d5677f1776e8f36c5ba0cd40ff850a2e1ce919e22019bb76529ce6102c7b89ab&#34;</span>,
-</span></span><span class="line"><span class="cl">                <span class="s2">&#34;sha256:1cce6b181873aeb25ca52478d8f6c6b1c66213689085cc7a89e229ea045abd24&#34;</span>
-</span></span><span class="line"><span class="cl">            <span class="o">]</span>
-</span></span><span class="line"><span class="cl">        <span class="o">}</span>,
-</span></span></code></pre></td></tr></table>
+<pre class="chroma"><code class="language-bash" data-lang="bash">
+        <span class="s2">&#34;RootFS&#34;</span>: <span class="o">{</span>
+            <span class="s2">&#34;Type&#34;</span>: <span class="s2">&#34;layers&#34;</span>,
+            <span class="s2">&#34;Layers&#34;</span>: <span class="o">[</span>
+                <span class="s2">&#34;sha256:02c055ef67f5904019f43a41ea5f099996d8e7633749b6e606c400526b2c4b33&#34;</span>,
+                <span class="s2">&#34;sha256:d2252dfd3726823303a8f54483e10f3ed7959f33ba63ea3a19bd0fc46587bc8f&#34;</span>,
+                <span class="s2">&#34;sha256:6c63b3f282cb455ac2e456fb99cdceab42a876603b54cc97087c17b9999b780b&#34;</span>,
+                <span class="s2">&#34;sha256:8e859e616115511355eadb05cbdcf86333434621f77c3ac80c410257ea39f115&#34;</span>,
+                <span class="s2">&#34;sha256:363c2d4617a0df71a4d53f484a522caa9f2f02ba1271c7f7b4ceb524c5bac61a&#34;</span>,
+                <span class="s2">&#34;sha256:c66c7f1f8019ed243ea38cb9ca384135cfeb3cda372de18deece786702c0c582&#34;</span>,
+                <span class="s2">&#34;sha256:d87b1d289a070d7d2503bfedb8263ff5431423cd9eca8e577ce93d2e74392315&#34;</span>,
+                <span class="s2">&#34;sha256:7d973749b6e2ff44d90f4df11576a27388c317f99400b746e8d8c021a747c91f&#34;</span>,
+                <span class="s2">&#34;sha256:d5677f1776e8f36c5ba0cd40ff850a2e1ce919e22019bb76529ce6102c7b89ab&#34;</span>,
+                <span class="s2">&#34;sha256:1cce6b181873aeb25ca52478d8f6c6b1c66213689085cc7a89e229ea045abd24&#34;</span>
+            <span class="o">]</span>
+        <span class="o">}</span>,
+</code></pre></td></tr></table>
 </div>
 </div><p>Bên cạnh đó, lệnh này còn có thể tra cứu thông tin chi tiết của container, chúng ta chỉ cần thay tên/id của image thành tên/id của container để tra cứu thông tin chi tiết của container.</p>
 <h3 id="docker-diff">docker diff</h3>
 <p>Như đã nói ở trên, một container được sinh ra từ một <code>platform image</code>, sau khi docker chạy, cài đặt, chỉnh sửa, thay đổi cấu trúc bên trong rồi <code>commit</code> lại thành những layer. Để xem những thay đổi của cấu trúc thư mục bên trong từ thời điểm tạo ra đến thời điểm hiện tại, ta dùng lệnh <code>docker diff</code>. Cú pháp:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker diff container_id/name
-</span></span></code></pre></td></tr></table>
+<pre class="chroma"><code class="language-bash" data-lang="bash">docker diff container_id/name
+</code></pre></td></tr></table>
 </div>
 </div><p>Ví dụ, ta kiểm tra từ lúc tạo ra cho đến thời điểm hiện tại, cấu trúc thư mục bên trong container <code>c-php</code> đã thay đổi như thế nào:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1934,45 +1936,45 @@ if (!doNotTrack) {
 </span><span class="lnt">22
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">❯ docker diff c-php
-</span></span><span class="line"><span class="cl">C /home
-</span></span><span class="line"><span class="cl">A /home/SharedData
-</span></span><span class="line"><span class="cl">C /usr
-</span></span><span class="line"><span class="cl">C /usr/local
-</span></span><span class="line"><span class="cl">C /usr/local/lib
-</span></span><span class="line"><span class="cl">C /usr/local/lib/php
-</span></span><span class="line"><span class="cl">C /usr/local/lib/php/extensions
-</span></span><span class="line"><span class="cl">C /usr/local/lib/php/extensions/no-debug-non-zts-20201009
-</span></span><span class="line"><span class="cl">A /usr/local/lib/php/extensions/no-debug-non-zts-20201009/mysqli.so
-</span></span><span class="line"><span class="cl">A /usr/local/lib/php/extensions/no-debug-non-zts-20201009/pdo_mysql.so
-</span></span><span class="line"><span class="cl">C /usr/local/etc
-</span></span><span class="line"><span class="cl">C /usr/local/etc/php
-</span></span><span class="line"><span class="cl">C /usr/local/etc/php/conf.d
-</span></span><span class="line"><span class="cl">A /usr/local/etc/php/conf.d/docker-php-ext-mysqli.ini
-</span></span><span class="line"><span class="cl">A /usr/local/etc/php/conf.d/docker-php-ext-pdo_mysql.ini
-</span></span><span class="line"><span class="cl">C /usr/local/include
-</span></span><span class="line"><span class="cl">C /usr/local/include/php
-</span></span><span class="line"><span class="cl">C /usr/local/include/php/ext
-</span></span><span class="line"><span class="cl">A /usr/local/include/php/ext/mysqli
-</span></span><span class="line"><span class="cl">A /usr/local/include/php/ext/mysqli/php_mysqli_structs.h
-</span></span><span class="line"><span class="cl">A /usr/local/include/php/ext/mysqli/mysqli_mysqlnd.h
-</span></span></code></pre></td></tr></table>
+<pre class="chroma"><code class="language-bash" data-lang="bash">❯ docker diff c-php
+C /home
+A /home/SharedData
+C /usr
+C /usr/local
+C /usr/local/lib
+C /usr/local/lib/php
+C /usr/local/lib/php/extensions
+C /usr/local/lib/php/extensions/no-debug-non-zts-20201009
+A /usr/local/lib/php/extensions/no-debug-non-zts-20201009/mysqli.so
+A /usr/local/lib/php/extensions/no-debug-non-zts-20201009/pdo_mysql.so
+C /usr/local/etc
+C /usr/local/etc/php
+C /usr/local/etc/php/conf.d
+A /usr/local/etc/php/conf.d/docker-php-ext-mysqli.ini
+A /usr/local/etc/php/conf.d/docker-php-ext-pdo_mysql.ini
+C /usr/local/include
+C /usr/local/include/php
+C /usr/local/include/php/ext
+A /usr/local/include/php/ext/mysqli
+A /usr/local/include/php/ext/mysqli/php_mysqli_structs.h
+A /usr/local/include/php/ext/mysqli/mysqli_mysqlnd.h
+</code></pre></td></tr></table>
 </div>
 </div><p>ở đây kí tư <code>C</code> thể hiện rằng thư mục đó đã được cập nhật, còn <code>A</code> là thư mục đó vừa được thêm vào.</p>
 <h3 id="docker-log">docker log</h3>
 <p>Khi container hoạt động, dấu vết hoạt động của nó được ghi vào hệ thống log của container. Để kiểm tra log của container, chúng ta dùng lệnh:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker logs container_name/id
-</span></span></code></pre></td></tr></table>
+<pre class="chroma"><code class="language-bash" data-lang="bash">docker logs container_name/id
+</code></pre></td></tr></table>
 </div>
 </div><p>Ví dụ ta kiểm tra log của c-php xem trong quá trình hoạt động nó đã ghi những gì:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -2013,51 +2015,51 @@ if (!doNotTrack) {
 </span><span class="lnt">39
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">❯ docker logs c-php
-</span></span><span class="line"><span class="cl"><span class="o">[</span>11-Jun-2021 07:15:23<span class="o">]</span> NOTICE: fpm is running, pid <span class="m">1</span>
-</span></span><span class="line"><span class="cl"><span class="o">[</span>11-Jun-2021 07:15:23<span class="o">]</span> NOTICE: ready to handle connections
-</span></span><span class="line"><span class="cl">172.23.0.4 -  11/Jun/2021:07:16:07 +0000 <span class="s2">&#34;POST /wp-admin/setup-config.php&#34;</span> <span class="m">500</span>
-</span></span><span class="line"><span class="cl"><span class="o">[</span>11-Jun-2021 07:17:34<span class="o">]</span> NOTICE: Finishing ...
-</span></span><span class="line"><span class="cl"><span class="o">[</span>11-Jun-2021 07:17:34<span class="o">]</span> NOTICE: exiting, bye-bye!
-</span></span><span class="line"><span class="cl"><span class="o">[</span>11-Jun-2021 07:17:35<span class="o">]</span> NOTICE: fpm is running, pid <span class="m">1</span>
-</span></span><span class="line"><span class="cl"><span class="o">[</span>11-Jun-2021 07:17:35<span class="o">]</span> NOTICE: ready to handle connections
-</span></span><span class="line"><span class="cl">172.23.0.4 -  11/Jun/2021:07:17:42 +0000 <span class="s2">&#34;POST /wp-admin/setup-config.php&#34;</span> <span class="m">500</span>
-</span></span><span class="line"><span class="cl">172.23.0.4 -  11/Jun/2021:07:17:48 +0000 <span class="s2">&#34;POST /wp-admin/setup-config.php&#34;</span> <span class="m">500</span>
-</span></span><span class="line"><span class="cl">172.23.0.4 -  11/Jun/2021:07:17:53 +0000 <span class="s2">&#34;GET /index.php&#34;</span> <span class="m">302</span>
-</span></span><span class="line"><span class="cl">172.23.0.4 -  11/Jun/2021:07:17:53 +0000 <span class="s2">&#34;GET /wp-admin/setup-config.php&#34;</span> <span class="m">200</span>
-</span></span><span class="line"><span class="cl">172.23.0.4 -  11/Jun/2021:07:17:58 +0000 <span class="s2">&#34;GET /wp-admin/setup-config.php&#34;</span> <span class="m">200</span>
-</span></span><span class="line"><span class="cl">172.23.0.4 -  11/Jun/2021:07:18:19 +0000 <span class="s2">&#34;POST /wp-admin/setup-config.php&#34;</span> <span class="m">500</span>
-</span></span><span class="line"><span class="cl">172.23.0.4 -  11/Jun/2021:07:22:34 +0000 <span class="s2">&#34;POST /wp-admin/setup-config.php&#34;</span> <span class="m">500</span>
-</span></span><span class="line"><span class="cl">172.23.0.4 -  11/Jun/2021:07:22:43 +0000 <span class="s2">&#34;GET /index.php&#34;</span> <span class="m">302</span>
-</span></span><span class="line"><span class="cl">172.23.0.4 -  11/Jun/2021:07:22:43 +0000 <span class="s2">&#34;GET /wp-admin/setup-config.php&#34;</span> <span class="m">200</span>
-</span></span><span class="line"><span class="cl">172.23.0.4 -  11/Jun/2021:07:23:32 +0000 <span class="s2">&#34;GET /wp-admin/setup-config.php&#34;</span> <span class="m">200</span>
-</span></span><span class="line"><span class="cl">172.23.0.4 -  11/Jun/2021:07:24:31 +0000 <span class="s2">&#34;POST /wp-admin/setup-config.php&#34;</span> <span class="m">500</span>
-</span></span><span class="line"><span class="cl">172.23.0.4 -  11/Jun/2021:07:26:46 +0000 <span class="s2">&#34;POST /wp-admin/setup-config.php&#34;</span> <span class="m">500</span>
-</span></span><span class="line"><span class="cl">172.23.0.4 -  11/Jun/2021:07:36:12 +0000 <span class="s2">&#34;POST /wp-admin/setup-config.php&#34;</span> <span class="m">500</span>
-</span></span><span class="line"><span class="cl">172.23.0.4 -  11/Jun/2021:10:39:55 +0000 <span class="s2">&#34;GET /index.php&#34;</span> <span class="m">302</span>
-</span></span><span class="line"><span class="cl">172.23.0.4 -  11/Jun/2021:10:39:55 +0000 <span class="s2">&#34;GET /wp-admin/setup-config.php&#34;</span> <span class="m">200</span>
-</span></span><span class="line"><span class="cl">172.23.0.4 -  11/Jun/2021:10:39:59 +0000 <span class="s2">&#34;GET /wp-admin/setup-config.php&#34;</span> <span class="m">200</span>
-</span></span><span class="line"><span class="cl">172.23.0.4 -  11/Jun/2021:10:40:43 +0000 <span class="s2">&#34;POST /wp-admin/setup-config.php&#34;</span> <span class="m">500</span>
-</span></span><span class="line"><span class="cl">172.23.0.4 -  11/Jun/2021:11:16:52 +0000 <span class="s2">&#34;POST /wp-admin/setup-config.php&#34;</span> <span class="m">500</span>
-</span></span><span class="line"><span class="cl"><span class="o">[</span>11-Jun-2021 11:19:58<span class="o">]</span> NOTICE: Finishing ...
-</span></span><span class="line"><span class="cl"><span class="o">[</span>11-Jun-2021 11:19:58<span class="o">]</span> NOTICE: exiting, bye-bye!
-</span></span><span class="line"><span class="cl"><span class="o">[</span>11-Jun-2021 11:20:00<span class="o">]</span> NOTICE: fpm is running, pid <span class="m">1</span>
-</span></span><span class="line"><span class="cl"><span class="o">[</span>11-Jun-2021 11:20:00<span class="o">]</span> NOTICE: ready to handle connections
-</span></span><span class="line"><span class="cl">172.23.0.4 -  11/Jun/2021:11:20:05 +0000 <span class="s2">&#34;POST /wp-admin/setup-config.php&#34;</span> <span class="m">500</span>
-</span></span><span class="line"><span class="cl">172.23.0.4 -  11/Jun/2021:11:20:09 +0000 <span class="s2">&#34;GET /index.php&#34;</span> <span class="m">302</span>
-</span></span><span class="line"><span class="cl">172.23.0.4 -  11/Jun/2021:11:20:09 +0000 <span class="s2">&#34;GET /wp-admin/setup-config.php&#34;</span> <span class="m">200</span>
-</span></span><span class="line"><span class="cl">172.23.0.4 -  11/Jun/2021:11:22:19 +0000 <span class="s2">&#34;GET /wp-admin/setup-config.php&#34;</span> <span class="m">200</span>
-</span></span><span class="line"><span class="cl">172.23.0.4 -  11/Jun/2021:11:22:43 +0000 <span class="s2">&#34;POST /wp-admin/setup-config.php&#34;</span> <span class="m">500</span>
-</span></span><span class="line"><span class="cl"><span class="o">[</span>11-Jun-2021 11:27:42<span class="o">]</span> NOTICE: Finishing ...
-</span></span><span class="line"><span class="cl"><span class="o">[</span>11-Jun-2021 11:27:42<span class="o">]</span> NOTICE: exiting, bye-bye!
-</span></span><span class="line"><span class="cl"><span class="o">[</span>14-Jun-2021 02:55:15<span class="o">]</span> NOTICE: fpm is running, pid <span class="m">1</span>
-</span></span><span class="line"><span class="cl"><span class="o">[</span>14-Jun-2021 02:55:15<span class="o">]</span> NOTICE: ready to handle connections
-</span></span></code></pre></td></tr></table>
+<pre class="chroma"><code class="language-bash" data-lang="bash">❯ docker logs c-php
+<span class="o">[</span>11-Jun-2021 07:15:23<span class="o">]</span> NOTICE: fpm is running, pid 1
+<span class="o">[</span>11-Jun-2021 07:15:23<span class="o">]</span> NOTICE: ready to handle connections
+172.23.0.4 -  11/Jun/2021:07:16:07 +0000 <span class="s2">&#34;POST /wp-admin/setup-config.php&#34;</span> 500
+<span class="o">[</span>11-Jun-2021 07:17:34<span class="o">]</span> NOTICE: Finishing ...
+<span class="o">[</span>11-Jun-2021 07:17:34<span class="o">]</span> NOTICE: exiting, bye-bye!
+<span class="o">[</span>11-Jun-2021 07:17:35<span class="o">]</span> NOTICE: fpm is running, pid 1
+<span class="o">[</span>11-Jun-2021 07:17:35<span class="o">]</span> NOTICE: ready to handle connections
+172.23.0.4 -  11/Jun/2021:07:17:42 +0000 <span class="s2">&#34;POST /wp-admin/setup-config.php&#34;</span> 500
+172.23.0.4 -  11/Jun/2021:07:17:48 +0000 <span class="s2">&#34;POST /wp-admin/setup-config.php&#34;</span> 500
+172.23.0.4 -  11/Jun/2021:07:17:53 +0000 <span class="s2">&#34;GET /index.php&#34;</span> 302
+172.23.0.4 -  11/Jun/2021:07:17:53 +0000 <span class="s2">&#34;GET /wp-admin/setup-config.php&#34;</span> 200
+172.23.0.4 -  11/Jun/2021:07:17:58 +0000 <span class="s2">&#34;GET /wp-admin/setup-config.php&#34;</span> 200
+172.23.0.4 -  11/Jun/2021:07:18:19 +0000 <span class="s2">&#34;POST /wp-admin/setup-config.php&#34;</span> 500
+172.23.0.4 -  11/Jun/2021:07:22:34 +0000 <span class="s2">&#34;POST /wp-admin/setup-config.php&#34;</span> 500
+172.23.0.4 -  11/Jun/2021:07:22:43 +0000 <span class="s2">&#34;GET /index.php&#34;</span> 302
+172.23.0.4 -  11/Jun/2021:07:22:43 +0000 <span class="s2">&#34;GET /wp-admin/setup-config.php&#34;</span> 200
+172.23.0.4 -  11/Jun/2021:07:23:32 +0000 <span class="s2">&#34;GET /wp-admin/setup-config.php&#34;</span> 200
+172.23.0.4 -  11/Jun/2021:07:24:31 +0000 <span class="s2">&#34;POST /wp-admin/setup-config.php&#34;</span> 500
+172.23.0.4 -  11/Jun/2021:07:26:46 +0000 <span class="s2">&#34;POST /wp-admin/setup-config.php&#34;</span> 500
+172.23.0.4 -  11/Jun/2021:07:36:12 +0000 <span class="s2">&#34;POST /wp-admin/setup-config.php&#34;</span> 500
+172.23.0.4 -  11/Jun/2021:10:39:55 +0000 <span class="s2">&#34;GET /index.php&#34;</span> 302
+172.23.0.4 -  11/Jun/2021:10:39:55 +0000 <span class="s2">&#34;GET /wp-admin/setup-config.php&#34;</span> 200
+172.23.0.4 -  11/Jun/2021:10:39:59 +0000 <span class="s2">&#34;GET /wp-admin/setup-config.php&#34;</span> 200
+172.23.0.4 -  11/Jun/2021:10:40:43 +0000 <span class="s2">&#34;POST /wp-admin/setup-config.php&#34;</span> 500
+172.23.0.4 -  11/Jun/2021:11:16:52 +0000 <span class="s2">&#34;POST /wp-admin/setup-config.php&#34;</span> 500
+<span class="o">[</span>11-Jun-2021 11:19:58<span class="o">]</span> NOTICE: Finishing ...
+<span class="o">[</span>11-Jun-2021 11:19:58<span class="o">]</span> NOTICE: exiting, bye-bye!
+<span class="o">[</span>11-Jun-2021 11:20:00<span class="o">]</span> NOTICE: fpm is running, pid 1
+<span class="o">[</span>11-Jun-2021 11:20:00<span class="o">]</span> NOTICE: ready to handle connections
+172.23.0.4 -  11/Jun/2021:11:20:05 +0000 <span class="s2">&#34;POST /wp-admin/setup-config.php&#34;</span> 500
+172.23.0.4 -  11/Jun/2021:11:20:09 +0000 <span class="s2">&#34;GET /index.php&#34;</span> 302
+172.23.0.4 -  11/Jun/2021:11:20:09 +0000 <span class="s2">&#34;GET /wp-admin/setup-config.php&#34;</span> 200
+172.23.0.4 -  11/Jun/2021:11:22:19 +0000 <span class="s2">&#34;GET /wp-admin/setup-config.php&#34;</span> 200
+172.23.0.4 -  11/Jun/2021:11:22:43 +0000 <span class="s2">&#34;POST /wp-admin/setup-config.php&#34;</span> 500
+<span class="o">[</span>11-Jun-2021 11:27:42<span class="o">]</span> NOTICE: Finishing ...
+<span class="o">[</span>11-Jun-2021 11:27:42<span class="o">]</span> NOTICE: exiting, bye-bye!
+<span class="o">[</span>14-Jun-2021 02:55:15<span class="o">]</span> NOTICE: fpm is running, pid 1
+<span class="o">[</span>14-Jun-2021 02:55:15<span class="o">]</span> NOTICE: ready to handle connections
+</code></pre></td></tr></table>
 </div>
 </div><p>Trường hợp log quá dài, ta có thể chỉ định số dòng kiểm tra bằng cách thêm option <code>--tail so_dong</code></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -2070,67 +2072,67 @@ if (!doNotTrack) {
 </span><span class="lnt">11
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">❯ docker logs --tail <span class="m">10</span> c-php
-</span></span><span class="line"><span class="cl"><span class="o">[</span>11-Jun-2021 11:20:00<span class="o">]</span> NOTICE: ready to handle connections
-</span></span><span class="line"><span class="cl">172.23.0.4 -  11/Jun/2021:11:20:05 +0000 <span class="s2">&#34;POST /wp-admin/setup-config.php&#34;</span> <span class="m">500</span>
-</span></span><span class="line"><span class="cl">172.23.0.4 -  11/Jun/2021:11:20:09 +0000 <span class="s2">&#34;GET /index.php&#34;</span> <span class="m">302</span>
-</span></span><span class="line"><span class="cl">172.23.0.4 -  11/Jun/2021:11:20:09 +0000 <span class="s2">&#34;GET /wp-admin/setup-config.php&#34;</span> <span class="m">200</span>
-</span></span><span class="line"><span class="cl">172.23.0.4 -  11/Jun/2021:11:22:19 +0000 <span class="s2">&#34;GET /wp-admin/setup-config.php&#34;</span> <span class="m">200</span>
-</span></span><span class="line"><span class="cl">172.23.0.4 -  11/Jun/2021:11:22:43 +0000 <span class="s2">&#34;POST /wp-admin/setup-config.php&#34;</span> <span class="m">500</span>
-</span></span><span class="line"><span class="cl"><span class="o">[</span>11-Jun-2021 11:27:42<span class="o">]</span> NOTICE: Finishing ...
-</span></span><span class="line"><span class="cl"><span class="o">[</span>11-Jun-2021 11:27:42<span class="o">]</span> NOTICE: exiting, bye-bye!
-</span></span><span class="line"><span class="cl"><span class="o">[</span>14-Jun-2021 02:55:15<span class="o">]</span> NOTICE: fpm is running, pid <span class="m">1</span>
-</span></span><span class="line"><span class="cl"><span class="o">[</span>14-Jun-2021 02:55:15<span class="o">]</span> NOTICE: ready to handle connections
-</span></span></code></pre></td></tr></table>
+<pre class="chroma"><code class="language-bash" data-lang="bash">❯ docker logs --tail <span class="m">10</span> c-php
+<span class="o">[</span>11-Jun-2021 11:20:00<span class="o">]</span> NOTICE: ready to handle connections
+172.23.0.4 -  11/Jun/2021:11:20:05 +0000 <span class="s2">&#34;POST /wp-admin/setup-config.php&#34;</span> 500
+172.23.0.4 -  11/Jun/2021:11:20:09 +0000 <span class="s2">&#34;GET /index.php&#34;</span> 302
+172.23.0.4 -  11/Jun/2021:11:20:09 +0000 <span class="s2">&#34;GET /wp-admin/setup-config.php&#34;</span> 200
+172.23.0.4 -  11/Jun/2021:11:22:19 +0000 <span class="s2">&#34;GET /wp-admin/setup-config.php&#34;</span> 200
+172.23.0.4 -  11/Jun/2021:11:22:43 +0000 <span class="s2">&#34;POST /wp-admin/setup-config.php&#34;</span> 500
+<span class="o">[</span>11-Jun-2021 11:27:42<span class="o">]</span> NOTICE: Finishing ...
+<span class="o">[</span>11-Jun-2021 11:27:42<span class="o">]</span> NOTICE: exiting, bye-bye!
+<span class="o">[</span>14-Jun-2021 02:55:15<span class="o">]</span> NOTICE: fpm is running, pid 1
+<span class="o">[</span>14-Jun-2021 02:55:15<span class="o">]</span> NOTICE: ready to handle connections
+</code></pre></td></tr></table>
 </div>
 </div><p>Để kiểm tra log theo thời gian thực khi docker đang chạy, ta thêm tùy chọn <code>-f</code> vào:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker logs -f container_name/id
-</span></span></code></pre></td></tr></table>
+<pre class="chroma"><code class="language-bash" data-lang="bash">docker logs -f container_name/id
+</code></pre></td></tr></table>
 </div>
 </div><h3 id="docker-stats">docker stats</h3>
 <p>Khi container đang chạy, nó có sử dụng các tài nguyên của hệ thống, để giám sát mức độ sử dụng tài nguyên, ta sử dụng cú pháp:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker stats container_name/id
-</span></span></code></pre></td></tr></table>
+<pre class="chroma"><code class="language-bash" data-lang="bash">docker stats container_name/id
+</code></pre></td></tr></table>
 </div>
 </div><p>khi dùng</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker stats
-</span></span></code></pre></td></tr></table>
+<pre class="chroma"><code class="language-bash" data-lang="bash">docker stats
+</code></pre></td></tr></table>
 </div>
 </div><p>mặc định, nó sẽ giám sát toàn bộ container đang chạy trên hệ thống</p>
 <h2 id="process">Process</h2>
 <h3 id="docker-top">docker top</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker top docker_name/id
-</span></span></code></pre></td></tr></table>
+<pre class="chroma"><code class="language-bash" data-lang="bash">docker top docker_name/id
+</code></pre></td></tr></table>
 </div>
 </div><p>Dùng để xem thông tin về tiến trình (process) của docker, bao gồm PID (process Id) và PPID (Parent Process Id).<br />
 Chúng ta còn có thể xem thông tin về các tiến trình ở dạng cây:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pstree -c -p -A <span class="k">$(</span>pgrep dockerd<span class="k">)</span>
-</span></span></code></pre></td></tr></table>
+<pre class="chroma"><code class="language-bash" data-lang="bash">pstree -c -p -A <span class="k">$(</span>pgrep dockerd<span class="k">)</span>
+</code></pre></td></tr></table>
 </div>
 </div>
     </article>
@@ -2370,7 +2372,7 @@ Chúng ta còn có thể xem thông tin về các tiến trình ở dạng cây:
     </div>
     <div class="whoami__desc">
       
-        Code Reverser
+        Cyber Security Engineer
       
     </div>
     <div class="whoami__social">
@@ -2422,6 +2424,10 @@ Chúng ta còn có thể xem thông tin về các tiến trình ở dạng cây:
       
       
       
+      <a href="https://www.linkedin.com/in/long-v%C3%B5-minh-58374318b/" title="linkedin" aria-label="linkedin">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="#000000" viewBox="0 0 30 30" width="25" height="25"><path fill="currentColor" d="M24,4H6C4.895,4,4,4.895,4,6v18c0,1.105,0.895,2,2,2h18c1.105,0,2-0.895,2-2V6C26,4.895,25.105,4,24,4z M10.954,22h-2.95 v-9.492h2.95V22z M9.449,11.151c-0.951,0-1.72-0.771-1.72-1.72c0-0.949,0.77-1.719,1.72-1.719c0.948,0,1.719,0.771,1.719,1.719 C11.168,10.38,10.397,11.151,9.449,11.151z M22.004,22h-2.948v-4.616c0-1.101-0.02-2.517-1.533-2.517 c-1.535,0-1.771,1.199-1.771,2.437V22h-2.948v-9.492h2.83v1.297h0.04c0.394-0.746,1.356-1.533,2.791-1.533 c2.987,0,3.539,1.966,3.539,4.522V22z"/></svg>
+
+      </a>
       
       
       
@@ -2445,6 +2451,16 @@ Chúng ta còn có thể xem thông tin về các tiến trình ở dạng cây:
       
       
       
+      
+      
+      <a href="https://twitter.com/edisc_1" title="twitter" aria-label="twitter">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="25" height="25" viewBox="0 0 32 32" version="1.1">
+<g id="surface676">
+<path fill="currentColor" d="M 28 8.558594 C 27.117188 8.949219 26.167969 9.214844 25.171875 9.332031 C 26.1875 8.722656 26.96875 7.757812 27.335938 6.609375 C 26.386719 7.171875 25.332031 7.582031 24.210938 7.804688 C 23.3125 6.847656 22.03125 6.246094 20.617188 6.246094 C 17.898438 6.246094 15.691406 8.453125 15.691406 11.171875 C 15.691406 11.558594 15.734375 11.933594 15.820312 12.292969 C 11.726562 12.089844 8.097656 10.128906 5.671875 7.148438 C 5.246094 7.875 5.003906 8.722656 5.003906 9.625 C 5.003906 11.332031 5.871094 12.839844 7.195312 13.722656 C 6.386719 13.695312 5.628906 13.476562 4.964844 13.105469 C 4.964844 13.128906 4.964844 13.148438 4.964844 13.167969 C 4.964844 15.554688 6.660156 17.546875 8.914062 17.996094 C 8.5 18.109375 8.066406 18.171875 7.617188 18.171875 C 7.300781 18.171875 6.988281 18.140625 6.691406 18.082031 C 7.316406 20.039062 9.136719 21.460938 11.289062 21.503906 C 9.605469 22.824219 7.480469 23.609375 5.175781 23.609375 C 4.777344 23.609375 4.386719 23.585938 4 23.539062 C 6.179688 24.9375 8.765625 25.753906 11.546875 25.753906 C 20.605469 25.753906 25.558594 18.25 25.558594 11.742188 C 25.558594 11.53125 25.550781 11.316406 25.542969 11.105469 C 26.503906 10.410156 27.339844 9.542969 28 8.558594 Z M 28 8.558594 "/>
+</g>
+</svg>
+
+      </a>
       
       
       
@@ -2624,7 +2640,7 @@ Chúng ta còn có thể xem thông tin về các tiến trình ở dạng cây:
 </div>
 
 
-<script defer src="/js/swipe.min.7be2debdadbc35f9430de39f9010d89df5aee1904747098818b5c01cd0672180.js"></script>
+<script defer src="/js/swipe.min.b4b82839155519d9ca67746615a4c86ccbc1061c196fe6d8aa26e4fe22902718.js"></script>
 
 <script defer src="/js/micromodal.min.de01b44b2f383056bbcaf6ee921fd385d79108ec1129afd0eb2f3f5a07e11f45.js"></script>
 
@@ -3543,6 +3559,11 @@ document.addEventListener('DOMContentLoaded', function () {
     
             
     
+      
+      <a href="https://www.linkedin.com/in/long-v%C3%B5-minh-58374318b/" title="linkedin" aria-label="linkedin">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="#000000" viewBox="0 0 30 30" width="32" height="32"><path fill="currentColor" d="M24,4H6C4.895,4,4,4.895,4,6v18c0,1.105,0.895,2,2,2h18c1.105,0,2-0.895,2-2V6C26,4.895,25.105,4,24,4z M10.954,22h-2.95 v-9.492h2.95V22z M9.449,11.151c-0.951,0-1.72-0.771-1.72-1.72c0-0.949,0.77-1.719,1.72-1.719c0.948,0,1.719,0.771,1.719,1.719 C11.168,10.38,10.397,11.151,9.449,11.151z M22.004,22h-2.948v-4.616c0-1.101-0.02-2.517-1.533-2.517 c-1.535,0-1.771,1.199-1.771,2.437V22h-2.948v-9.492h2.83v1.297h0.04c0.394-0.746,1.356-1.533,2.791-1.533 c2.987,0,3.539,1.966,3.539,4.522V22z"/></svg>
+
+      </a>
             
     
             
@@ -3567,6 +3588,15 @@ document.addEventListener('DOMContentLoaded', function () {
     
             
     
+      
+      <a href="https://twitter.com/edisc_1" title="twitter" aria-label="twitter">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32" version="1.1">
+<g id="surface676">
+<path fill="currentColor" d="M 28 8.558594 C 27.117188 8.949219 26.167969 9.214844 25.171875 9.332031 C 26.1875 8.722656 26.96875 7.757812 27.335938 6.609375 C 26.386719 7.171875 25.332031 7.582031 24.210938 7.804688 C 23.3125 6.847656 22.03125 6.246094 20.617188 6.246094 C 17.898438 6.246094 15.691406 8.453125 15.691406 11.171875 C 15.691406 11.558594 15.734375 11.933594 15.820312 12.292969 C 11.726562 12.089844 8.097656 10.128906 5.671875 7.148438 C 5.246094 7.875 5.003906 8.722656 5.003906 9.625 C 5.003906 11.332031 5.871094 12.839844 7.195312 13.722656 C 6.386719 13.695312 5.628906 13.476562 4.964844 13.105469 C 4.964844 13.128906 4.964844 13.148438 4.964844 13.167969 C 4.964844 15.554688 6.660156 17.546875 8.914062 17.996094 C 8.5 18.109375 8.066406 18.171875 7.617188 18.171875 C 7.300781 18.171875 6.988281 18.140625 6.691406 18.082031 C 7.316406 20.039062 9.136719 21.460938 11.289062 21.503906 C 9.605469 22.824219 7.480469 23.609375 5.175781 23.609375 C 4.777344 23.609375 4.386719 23.585938 4 23.539062 C 6.179688 24.9375 8.765625 25.753906 11.546875 25.753906 C 20.605469 25.753906 25.558594 18.25 25.558594 11.742188 C 25.558594 11.53125 25.550781 11.316406 25.542969 11.105469 C 26.503906 10.410156 27.339844 9.542969 28 8.558594 Z M 28 8.558594 "/>
+</g>
+</svg>
+
+      </a>
             
     
             
@@ -3615,7 +3645,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 
             <p class="caption">
                 
-                    ©2022, All Rights Reserved
+                    ©2023, All Rights Reserved
                 
             </p>
         

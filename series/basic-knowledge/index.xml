@@ -13,7 +13,7 @@
     <language>vi</language>
     <managingEditor>edisc.ctf@gmail.com (Edisc)</managingEditor>
     <webMaster>edisc.ctf@gmail.com (Edisc)</webMaster>
-    <copyright>©2022, All Rights Reserved</copyright>
+    <copyright>©2023, All Rights Reserved</copyright>
     <lastBuildDate>Wed, 22 Dec 2021 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://minhlongmt183.github.io/series/basic-knowledge/index.xml" rel="self" type="application/rss+xml" />
@@ -27,7 +27,7 @@
         <author>edisc.ctf@gmail.com (Edisc)</author>
         <atom:modified>Wed, 22 Dec 2021 00:00:00 +0000</atom:modified>
         <guid>https://minhlongmt183.github.io/posts/htb_format/</guid>
-        <description>Bước 1 - Phân tích Đầu tiên, chúng ta kiểm tra checksec của tệp tin 1 2 3 4 5 6 7 ➜ Format git:(main) ✗ checksec format [*] &amp;#39;/home/ubuntu/Edisc/CTF/pwn-college/hackthebox/Format/format&amp;#39; Arch: amd64-64-little RELRO: Full RELRO Stack: Canary found NX: NX enabled PIE: PIE enabled Dễ dàng thấy hầu hết các cơ chế bảo mật đều được bật ở trên tệp tin này. Tựa đề là format, nên ta dễ dàng biết được đây thuộc loại lỗi format-string 1 2 3 ➜ Format git:(main) ✗ .</description>
+        <description>Bước 1 - Phân tích  Đầu tiên, chúng ta kiểm tra checksec của tệp tin  1 2 3 4 5 6 7  ➜ Format git:(main) ✗ checksec format [*] &amp;#39;/home/ubuntu/Edisc/CTF/pwn-college/hackthebox/Format/format&amp;#39;Arch: amd64-64-littleRELRO: Full RELROStack: Canary foundNX: NX enabledPIE: PIE enabled   Dễ dàng thấy hầu hết các cơ chế bảo mật đều được bật ở trên tệp tin này. Tựa đề là format, nên ta dễ dàng biết được đây thuộc loại lỗi format-string  1 2 3  ➜ Format git:(main) ✗ .</description>
         
         <dc:creator>Edisc</dc:creator>
         <media:content url="https://minhlongmt183.github.io/images/posts/hack-the-box/hack-the-box.png" medium="image"><media:title type="html">featured image</media:title></media:content>
@@ -64,7 +64,7 @@
         <atom:modified>Mon, 13 Dec 2021 00:00:00 +0000</atom:modified>
         <guid>https://minhlongmt183.github.io/posts/format-string/</guid>
         <description>Mở đầu Khai thác lỗi format string là một kĩ thuật cho phép chúng ta chiếm quyền kiểm soát của mộ chương trình đặc quyền. Giống như buffer overflow, format string cũng phụ thuộc vào lỗi khi lập trình, những lỗi này khi nhìn sơ qua thì không thấy có ảnh hưởng gì đến chương trình.
-Nội dung chính Format Paraameters 1 function sử dụng định dạng chuỗi, như là prrintf(), chỉ cần xem xét định dạng được truyền vào nó và thực hiện những hoạt động đặc biệt mỗi khi gặp phải tham số truyền vào.</description>
+Nội dung chính Format Paraameters  1 function sử dụng định dạng chuỗi, như là prrintf(), chỉ cần xem xét định dạng được truyền vào nó và thực hiện những hoạt động đặc biệt mỗi khi gặp phải tham số truyền vào.</description>
         
         <dc:creator>Edisc</dc:creator>
         <media:content url="https://minhlongmt183.github.io/images/posts/CVE-2019-18683/v4l2_objects.png" medium="image"><media:title type="html">featured image</media:title></media:content>

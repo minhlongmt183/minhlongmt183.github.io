@@ -18,9 +18,9 @@
 
 <script defer src="/js/lazysizes.min.498676c34eb225e85357ab0ce19c3c1244f3bd0bf595e5684d1b9d50ea4fbc42.js"></script>
 
-<script defer src="/js/helper/getParents.min.086022fb02d7a1517e33c2670bffb976b3e80bcacd9caeee0c6a586064f20e42.js"></script>
+<script defer src="/js/helper/getParents.min.1618c696be7c98933f9a92677f518b512a74e55bdbb976b09936b4182e93181b.js"></script>
 
-<script defer src="/js/helper/fadeinout.min.3ce954c8aea3b69cc5e6f734d8273ba4cd48d3a7987dbdca145849bc4b8fc296.js"></script>
+<script defer src="/js/helper/fadeinout.min.efa35f4c090622130b3f4cfae6971448b5ffb61c5f0a8f21cdfd157fa712abc4.js"></script>
 
 <script defer src="/js/helper/closest.min.js"></script>
   
@@ -1359,7 +1359,7 @@
     <meta property="twitter:description" content="Phần này chúng ta sẽ học về : Mạng | Networking trong Docker, tạo và quản lý network trong container Docker ">
   
 
-<meta name="generator" content="Hugo 0.105.0">
+<meta name="generator" content="Hugo 0.68.3" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1419,14 +1419,16 @@
 
     
   
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-G6WT3WSKMH"></script>
-<script>
+<script type="application/javascript">
 var doNotTrack = false;
 if (!doNotTrack) {
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
-	gtag('config', 'G-G6WT3WSKMH', { 'anonymize_ip': false });
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'G-G6WT3WSKMH', 'auto');
+	
+	ga('send', 'pageview');
 }
 </script>
 
@@ -1766,7 +1768,7 @@ if (!doNotTrack) {
 Tải image busybox:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -1774,30 +1776,30 @@ Tải image busybox:</p>
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">❯ docker pull busybox
-</span></span><span class="line"><span class="cl">Using default tag: latest
-</span></span><span class="line"><span class="cl">latest: Pulling from library/busybox
-</span></span><span class="line"><span class="cl">b71f96345d44: Pull <span class="nb">complete</span> 
-</span></span><span class="line"><span class="cl">Digest: sha256:930490f97e5b921535c153e0e7110d251134cc4b72bbb8133c6a5065cc68580d
-</span></span><span class="line"><span class="cl">Status: Downloaded newer image <span class="k">for</span> busybox:latest
-</span></span></code></pre></td></tr></table>
+<pre class="chroma"><code class="language-bash" data-lang="bash">❯ docker pull busybox
+Using default tag: latest
+latest: Pulling from library/busybox
+b71f96345d44: Pull <span class="nb">complete</span> 
+Digest: sha256:930490f97e5b921535c153e0e7110d251134cc4b72bbb8133c6a5065cc68580d
+Status: Downloaded newer image <span class="k">for</span> busybox:latest
+</code></pre></td></tr></table>
 </div>
 </div><p>Tạo một container chạy image busybox</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">❯ docker run -it --rm busybox
-</span></span><span class="line"><span class="cl">/ <span class="c1"># </span>
-</span></span></code></pre></td></tr></table>
+<pre class="chroma"><code class="language-bash" data-lang="bash">❯ docker run -it --rm busybox
+/ # 
+</code></pre></td></tr></table>
 </div>
 </div><p>Option <code>--rm</code> dùng cho những container muốn chạy một lần, sau khi chạy xong docker sẽ tự động xóa container đó đi.<br />
 Container của image busybox có rất nhiều lệnh, để liệt kê các lệnh, ta dùng:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -1806,33 +1808,33 @@ Container của image busybox có rất nhiều lệnh, để liệt kê các l�
 </span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">/ <span class="c1"># ls /bin/ -la </span>
-</span></span><span class="line"><span class="cl">total <span class="m">449700</span>
-</span></span><span class="line"><span class="cl">drwxr-xr-x    <span class="m">2</span> root     root         <span class="m">12288</span> Jun  <span class="m">7</span> 17:34 .
-</span></span><span class="line"><span class="cl">drwxr-xr-x    <span class="m">1</span> root     root          <span class="m">4096</span> Jun  <span class="m">9</span> 16:00 ..
-</span></span><span class="line"><span class="cl">-rwxr-xr-x  <span class="m">400</span> root     root       <span class="m">1149184</span> Jun  <span class="m">7</span> 17:34 <span class="o">[</span>
-</span></span><span class="line"><span class="cl">-rwxr-xr-x  <span class="m">400</span> root     root       <span class="m">1149184</span> Jun  <span class="m">7</span> 17:34 <span class="o">[[</span>
-</span></span><span class="line"><span class="cl">-rwxr-xr-x  <span class="m">400</span> root     root       <span class="m">1149184</span> Jun  <span class="m">7</span> 17:34 acpid
-</span></span></code></pre></td></tr></table>
+<pre class="chroma"><code class="language-bash" data-lang="bash">/ <span class="c1"># ls /bin/ -la</span> 
+total 449700
+drwxr-xr-x    <span class="m">2</span> root     root         <span class="m">12288</span> Jun  <span class="m">7</span> 17:34 .
+drwxr-xr-x    <span class="m">1</span> root     root          <span class="m">4096</span> Jun  <span class="m">9</span> 16:00 ..
+-rwxr-xr-x  <span class="m">400</span> root     root       <span class="m">1149184</span> Jun  <span class="m">7</span> 17:34 <span class="o">[</span>
+-rwxr-xr-x  <span class="m">400</span> root     root       <span class="m">1149184</span> Jun  <span class="m">7</span> 17:34 <span class="o">[[</span>
+-rwxr-xr-x  <span class="m">400</span> root     root       <span class="m">1149184</span> Jun  <span class="m">7</span> 17:34 acpid
+</code></pre></td></tr></table>
 </div>
 </div><h2 id="giới-thiệu-mạng-network-trong-docker-mạng-bridge">Giới thiệu mạng, network trong docker, mạng bridge</h2>
 <h3 id="liệt-kê-các-mạng-có-trong-docker">Liệt kê các mạng có trong docker.</h3>
 <p>Kiểm tra trong docker có những mạng nào, ta dùng lệnh:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">❯ docker network ls
-</span></span><span class="line"><span class="cl">NETWORK ID          NAME                DRIVER              SCOPE
-</span></span><span class="line"><span class="cl">e0b165102300        bridge              bridge              <span class="nb">local</span>
-</span></span><span class="line"><span class="cl">0f2ab02aa9f4        host                host                <span class="nb">local</span>
-</span></span><span class="line"><span class="cl">271997adaaa9        none                null                <span class="nb">local</span>
-</span></span></code></pre></td></tr></table>
+<pre class="chroma"><code class="language-bash" data-lang="bash">❯ docker network ls
+NETWORK ID          NAME                DRIVER              SCOPE
+e0b165102300        bridge              bridge              <span class="nb">local</span>
+0f2ab02aa9f4        host                host                <span class="nb">local</span>
+271997adaaa9        none                null                <span class="nb">local</span>
+</code></pre></td></tr></table>
 </div>
 </div><p>Ở đây chúng ta có 3 network được tạo mặc định khi docker tạo, bao gồm: bridge dùng DRIVER bridge, host dùng DRIVE host và none dùng DRIVE null.</p>
 <h3 id="kiểm-tra-thông-tin-network">Kiểm tra thông tin network</h3>
@@ -1840,7 +1842,7 @@ Container của image busybox có rất nhiều lệnh, để liệt kê các l�
 <code>docker network inspect &lt;NAME&gt;</code></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1880,52 +1882,52 @@ Container của image busybox có rất nhiều lệnh, để liệt kê các l�
 </span><span class="lnt">38
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">❯ docker network inspect bridge
-</span></span><span class="line"><span class="cl"><span class="o">[</span>
-</span></span><span class="line"><span class="cl">    <span class="o">{</span>
-</span></span><span class="line"><span class="cl">        <span class="s2">&#34;Name&#34;</span>: <span class="s2">&#34;bridge&#34;</span>,
-</span></span><span class="line"><span class="cl">        <span class="s2">&#34;Id&#34;</span>: <span class="s2">&#34;e0b1651023003b4e6235e7b45319daa20d80a247d66e0b303eaf5e53fb90f0f8&#34;</span>,
-</span></span><span class="line"><span class="cl">        <span class="s2">&#34;Created&#34;</span>: <span class="s2">&#34;2021-06-09T20:59:15.89942017+07:00&#34;</span>,
-</span></span><span class="line"><span class="cl">        <span class="s2">&#34;Scope&#34;</span>: <span class="s2">&#34;local&#34;</span>,
-</span></span><span class="line"><span class="cl">        <span class="s2">&#34;Driver&#34;</span>: <span class="s2">&#34;bridge&#34;</span>,
-</span></span><span class="line"><span class="cl">        <span class="s2">&#34;EnableIPv6&#34;</span>: false,
-</span></span><span class="line"><span class="cl">        <span class="s2">&#34;IPAM&#34;</span>: <span class="o">{</span>
-</span></span><span class="line"><span class="cl">            <span class="s2">&#34;Driver&#34;</span>: <span class="s2">&#34;default&#34;</span>,
-</span></span><span class="line"><span class="cl">            <span class="s2">&#34;Options&#34;</span>: null,
-</span></span><span class="line"><span class="cl">            <span class="s2">&#34;Config&#34;</span>: <span class="o">[</span>
-</span></span><span class="line"><span class="cl">                <span class="o">{</span>
-</span></span><span class="line"><span class="cl">                    <span class="s2">&#34;Subnet&#34;</span>: <span class="s2">&#34;172.17.0.0/16&#34;</span>,
-</span></span><span class="line"><span class="cl">                    <span class="s2">&#34;Gateway&#34;</span>: <span class="s2">&#34;172.17.0.1&#34;</span>
-</span></span><span class="line"><span class="cl">                <span class="o">}</span>
-</span></span><span class="line"><span class="cl">            <span class="o">]</span>
-</span></span><span class="line"><span class="cl">        <span class="o">}</span>,
-</span></span><span class="line"><span class="cl">        <span class="s2">&#34;Internal&#34;</span>: false,
-</span></span><span class="line"><span class="cl">        <span class="s2">&#34;Attachable&#34;</span>: false,
-</span></span><span class="line"><span class="cl">        <span class="s2">&#34;Ingress&#34;</span>: false,
-</span></span><span class="line"><span class="cl">        <span class="s2">&#34;ConfigFrom&#34;</span>: <span class="o">{</span>
-</span></span><span class="line"><span class="cl">            <span class="s2">&#34;Network&#34;</span>: <span class="s2">&#34;&#34;</span>
-</span></span><span class="line"><span class="cl">        <span class="o">}</span>,
-</span></span><span class="line"><span class="cl">        <span class="s2">&#34;ConfigOnly&#34;</span>: false,
-</span></span><span class="line"><span class="cl">        <span class="s2">&#34;Containers&#34;</span>: <span class="o">{}</span>,
-</span></span><span class="line"><span class="cl">        <span class="s2">&#34;Options&#34;</span>: <span class="o">{</span>
-</span></span><span class="line"><span class="cl">            <span class="s2">&#34;com.docker.network.bridge.default_bridge&#34;</span>: <span class="s2">&#34;true&#34;</span>,
-</span></span><span class="line"><span class="cl">            <span class="s2">&#34;com.docker.network.bridge.enable_icc&#34;</span>: <span class="s2">&#34;true&#34;</span>,
-</span></span><span class="line"><span class="cl">            <span class="s2">&#34;com.docker.network.bridge.enable_ip_masquerade&#34;</span>: <span class="s2">&#34;true&#34;</span>,
-</span></span><span class="line"><span class="cl">            <span class="s2">&#34;com.docker.network.bridge.host_binding_ipv4&#34;</span>: <span class="s2">&#34;0.0.0.0&#34;</span>,
-</span></span><span class="line"><span class="cl">            <span class="s2">&#34;com.docker.network.bridge.name&#34;</span>: <span class="s2">&#34;docker0&#34;</span>,
-</span></span><span class="line"><span class="cl">            <span class="s2">&#34;com.docker.network.driver.mtu&#34;</span>: <span class="s2">&#34;1500&#34;</span>
-</span></span><span class="line"><span class="cl">        <span class="o">}</span>,
-</span></span><span class="line"><span class="cl">        <span class="s2">&#34;Labels&#34;</span>: <span class="o">{}</span>
-</span></span><span class="line"><span class="cl">    <span class="o">}</span>
-</span></span><span class="line"><span class="cl"><span class="o">]</span>
-</span></span></code></pre></td></tr></table>
+<pre class="chroma"><code class="language-bash" data-lang="bash">❯ docker network inspect bridge
+<span class="o">[</span>
+    <span class="o">{</span>
+        <span class="s2">&#34;Name&#34;</span>: <span class="s2">&#34;bridge&#34;</span>,
+        <span class="s2">&#34;Id&#34;</span>: <span class="s2">&#34;e0b1651023003b4e6235e7b45319daa20d80a247d66e0b303eaf5e53fb90f0f8&#34;</span>,
+        <span class="s2">&#34;Created&#34;</span>: <span class="s2">&#34;2021-06-09T20:59:15.89942017+07:00&#34;</span>,
+        <span class="s2">&#34;Scope&#34;</span>: <span class="s2">&#34;local&#34;</span>,
+        <span class="s2">&#34;Driver&#34;</span>: <span class="s2">&#34;bridge&#34;</span>,
+        <span class="s2">&#34;EnableIPv6&#34;</span>: false,
+        <span class="s2">&#34;IPAM&#34;</span>: <span class="o">{</span>
+            <span class="s2">&#34;Driver&#34;</span>: <span class="s2">&#34;default&#34;</span>,
+            <span class="s2">&#34;Options&#34;</span>: null,
+            <span class="s2">&#34;Config&#34;</span>: <span class="o">[</span>
+                <span class="o">{</span>
+                    <span class="s2">&#34;Subnet&#34;</span>: <span class="s2">&#34;172.17.0.0/16&#34;</span>,
+                    <span class="s2">&#34;Gateway&#34;</span>: <span class="s2">&#34;172.17.0.1&#34;</span>
+                <span class="o">}</span>
+            <span class="o">]</span>
+        <span class="o">}</span>,
+        <span class="s2">&#34;Internal&#34;</span>: false,
+        <span class="s2">&#34;Attachable&#34;</span>: false,
+        <span class="s2">&#34;Ingress&#34;</span>: false,
+        <span class="s2">&#34;ConfigFrom&#34;</span>: <span class="o">{</span>
+            <span class="s2">&#34;Network&#34;</span>: <span class="s2">&#34;&#34;</span>
+        <span class="o">}</span>,
+        <span class="s2">&#34;ConfigOnly&#34;</span>: false,
+        <span class="s2">&#34;Containers&#34;</span>: <span class="o">{}</span>,
+        <span class="s2">&#34;Options&#34;</span>: <span class="o">{</span>
+            <span class="s2">&#34;com.docker.network.bridge.default_bridge&#34;</span>: <span class="s2">&#34;true&#34;</span>,
+            <span class="s2">&#34;com.docker.network.bridge.enable_icc&#34;</span>: <span class="s2">&#34;true&#34;</span>,
+            <span class="s2">&#34;com.docker.network.bridge.enable_ip_masquerade&#34;</span>: <span class="s2">&#34;true&#34;</span>,
+            <span class="s2">&#34;com.docker.network.bridge.host_binding_ipv4&#34;</span>: <span class="s2">&#34;0.0.0.0&#34;</span>,
+            <span class="s2">&#34;com.docker.network.bridge.name&#34;</span>: <span class="s2">&#34;docker0&#34;</span>,
+            <span class="s2">&#34;com.docker.network.driver.mtu&#34;</span>: <span class="s2">&#34;1500&#34;</span>
+        <span class="o">}</span>,
+        <span class="s2">&#34;Labels&#34;</span>: <span class="o">{}</span>
+    <span class="o">}</span>
+<span class="o">]</span>
+</code></pre></td></tr></table>
 </div>
 </div><p>Ở đây chúng ta chú ý, trường Container rỗng, có nghĩa là không có container nào kết nối vào.</p>
 <h3 id="mạng-bridge">Mạng bridge.</h3>
 <p>Ta tiến hành tạo một container B1 và kiêm tra lại mạng bridge.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1978,65 +1980,65 @@ Container của image busybox có rất nhiều lệnh, để liệt kê các l�
 </span><span class="lnt">51
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">❯ docker run -it --name B1 busybox
-</span></span><span class="line"><span class="cl">/ <span class="c1"># %                                                                           ❯ docker ps</span>
-</span></span><span class="line"><span class="cl">CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
-</span></span><span class="line"><span class="cl">2f6dd1dda04d        busybox             <span class="s2">&#34;sh&#34;</span>                <span class="m">9</span> seconds ago       Up <span class="m">8</span> seconds                            B1
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">❯ docker network inspect bridge
-</span></span><span class="line"><span class="cl"><span class="o">[</span>
-</span></span><span class="line"><span class="cl">    <span class="o">{</span>
-</span></span><span class="line"><span class="cl">        <span class="s2">&#34;Name&#34;</span>: <span class="s2">&#34;bridge&#34;</span>,
-</span></span><span class="line"><span class="cl">        <span class="s2">&#34;Id&#34;</span>: <span class="s2">&#34;e0b1651023003b4e6235e7b45319daa20d80a247d66e0b303eaf5e53fb90f0f8&#34;</span>,
-</span></span><span class="line"><span class="cl">        <span class="s2">&#34;Created&#34;</span>: <span class="s2">&#34;2021-06-09T20:59:15.89942017+07:00&#34;</span>,
-</span></span><span class="line"><span class="cl">        <span class="s2">&#34;Scope&#34;</span>: <span class="s2">&#34;local&#34;</span>,
-</span></span><span class="line"><span class="cl">        <span class="s2">&#34;Driver&#34;</span>: <span class="s2">&#34;bridge&#34;</span>,
-</span></span><span class="line"><span class="cl">        <span class="s2">&#34;EnableIPv6&#34;</span>: false,
-</span></span><span class="line"><span class="cl">        <span class="s2">&#34;IPAM&#34;</span>: <span class="o">{</span>
-</span></span><span class="line"><span class="cl">            <span class="s2">&#34;Driver&#34;</span>: <span class="s2">&#34;default&#34;</span>,
-</span></span><span class="line"><span class="cl">            <span class="s2">&#34;Options&#34;</span>: null,
-</span></span><span class="line"><span class="cl">            <span class="s2">&#34;Config&#34;</span>: <span class="o">[</span>
-</span></span><span class="line"><span class="cl">                <span class="o">{</span>
-</span></span><span class="line"><span class="cl">                    <span class="s2">&#34;Subnet&#34;</span>: <span class="s2">&#34;172.17.0.0/16&#34;</span>,
-</span></span><span class="line"><span class="cl">                    <span class="s2">&#34;Gateway&#34;</span>: <span class="s2">&#34;172.17.0.1&#34;</span>
-</span></span><span class="line"><span class="cl">                <span class="o">}</span>
-</span></span><span class="line"><span class="cl">            <span class="o">]</span>
-</span></span><span class="line"><span class="cl">        <span class="o">}</span>,
-</span></span><span class="line"><span class="cl">        <span class="s2">&#34;Internal&#34;</span>: false,
-</span></span><span class="line"><span class="cl">        <span class="s2">&#34;Attachable&#34;</span>: false,
-</span></span><span class="line"><span class="cl">        <span class="s2">&#34;Ingress&#34;</span>: false,
-</span></span><span class="line"><span class="cl">        <span class="s2">&#34;ConfigFrom&#34;</span>: <span class="o">{</span>
-</span></span><span class="line"><span class="cl">            <span class="s2">&#34;Network&#34;</span>: <span class="s2">&#34;&#34;</span>
-</span></span><span class="line"><span class="cl">        <span class="o">}</span>,
-</span></span><span class="line"><span class="cl">        <span class="s2">&#34;ConfigOnly&#34;</span>: false,
-</span></span><span class="line"><span class="cl">        <span class="s2">&#34;Containers&#34;</span>: <span class="o">{</span>
-</span></span><span class="line"><span class="cl">            <span class="s2">&#34;2f6dd1dda04d0ab42434a6cff6f9c7eb42474f81acdf32809486f8fa82be8951&#34;</span>: <span class="o">{</span>
-</span></span><span class="line"><span class="cl">                <span class="s2">&#34;Name&#34;</span>: <span class="s2">&#34;B1&#34;</span>,
-</span></span><span class="line"><span class="cl">                <span class="s2">&#34;EndpointID&#34;</span>: <span class="s2">&#34;0af6a3739786e89d5161f25edf7bb2a5d900ab580ab53e8f852a197134e010b7&#34;</span>,
-</span></span><span class="line"><span class="cl">                <span class="s2">&#34;MacAddress&#34;</span>: <span class="s2">&#34;02:42:ac:11:00:02&#34;</span>,
-</span></span><span class="line"><span class="cl">                <span class="s2">&#34;IPv4Address&#34;</span>: <span class="s2">&#34;172.17.0.2/16&#34;</span>,
-</span></span><span class="line"><span class="cl">                <span class="s2">&#34;IPv6Address&#34;</span>: <span class="s2">&#34;&#34;</span>
-</span></span><span class="line"><span class="cl">            <span class="o">}</span>
-</span></span><span class="line"><span class="cl">        <span class="o">}</span>,
-</span></span><span class="line"><span class="cl">        <span class="s2">&#34;Options&#34;</span>: <span class="o">{</span>
-</span></span><span class="line"><span class="cl">            <span class="s2">&#34;com.docker.network.bridge.default_bridge&#34;</span>: <span class="s2">&#34;true&#34;</span>,
-</span></span><span class="line"><span class="cl">            <span class="s2">&#34;com.docker.network.bridge.enable_icc&#34;</span>: <span class="s2">&#34;true&#34;</span>,
-</span></span><span class="line"><span class="cl">            <span class="s2">&#34;com.docker.network.bridge.enable_ip_masquerade&#34;</span>: <span class="s2">&#34;true&#34;</span>,
-</span></span><span class="line"><span class="cl">            <span class="s2">&#34;com.docker.network.bridge.host_binding_ipv4&#34;</span>: <span class="s2">&#34;0.0.0.0&#34;</span>,
-</span></span><span class="line"><span class="cl">            <span class="s2">&#34;com.docker.network.bridge.name&#34;</span>: <span class="s2">&#34;docker0&#34;</span>,
-</span></span><span class="line"><span class="cl">            <span class="s2">&#34;com.docker.network.driver.mtu&#34;</span>: <span class="s2">&#34;1500&#34;</span>
-</span></span><span class="line"><span class="cl">        <span class="o">}</span>,
-</span></span><span class="line"><span class="cl">        <span class="s2">&#34;Labels&#34;</span>: <span class="o">{}</span>
-</span></span><span class="line"><span class="cl">    <span class="o">}</span>
-</span></span><span class="line"><span class="cl"><span class="o">]</span>
-</span></span></code></pre></td></tr></table>
+<pre class="chroma"><code class="language-bash" data-lang="bash">❯ docker run -it --name B1 busybox
+/ <span class="c1"># %                                                                           ❯ docker ps</span>
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+2f6dd1dda04d        busybox             <span class="s2">&#34;sh&#34;</span>                <span class="m">9</span> seconds ago       Up <span class="m">8</span> seconds                            B1
+
+❯ docker network inspect bridge
+<span class="o">[</span>
+    <span class="o">{</span>
+        <span class="s2">&#34;Name&#34;</span>: <span class="s2">&#34;bridge&#34;</span>,
+        <span class="s2">&#34;Id&#34;</span>: <span class="s2">&#34;e0b1651023003b4e6235e7b45319daa20d80a247d66e0b303eaf5e53fb90f0f8&#34;</span>,
+        <span class="s2">&#34;Created&#34;</span>: <span class="s2">&#34;2021-06-09T20:59:15.89942017+07:00&#34;</span>,
+        <span class="s2">&#34;Scope&#34;</span>: <span class="s2">&#34;local&#34;</span>,
+        <span class="s2">&#34;Driver&#34;</span>: <span class="s2">&#34;bridge&#34;</span>,
+        <span class="s2">&#34;EnableIPv6&#34;</span>: false,
+        <span class="s2">&#34;IPAM&#34;</span>: <span class="o">{</span>
+            <span class="s2">&#34;Driver&#34;</span>: <span class="s2">&#34;default&#34;</span>,
+            <span class="s2">&#34;Options&#34;</span>: null,
+            <span class="s2">&#34;Config&#34;</span>: <span class="o">[</span>
+                <span class="o">{</span>
+                    <span class="s2">&#34;Subnet&#34;</span>: <span class="s2">&#34;172.17.0.0/16&#34;</span>,
+                    <span class="s2">&#34;Gateway&#34;</span>: <span class="s2">&#34;172.17.0.1&#34;</span>
+                <span class="o">}</span>
+            <span class="o">]</span>
+        <span class="o">}</span>,
+        <span class="s2">&#34;Internal&#34;</span>: false,
+        <span class="s2">&#34;Attachable&#34;</span>: false,
+        <span class="s2">&#34;Ingress&#34;</span>: false,
+        <span class="s2">&#34;ConfigFrom&#34;</span>: <span class="o">{</span>
+            <span class="s2">&#34;Network&#34;</span>: <span class="s2">&#34;&#34;</span>
+        <span class="o">}</span>,
+        <span class="s2">&#34;ConfigOnly&#34;</span>: false,
+        <span class="s2">&#34;Containers&#34;</span>: <span class="o">{</span>
+            <span class="s2">&#34;2f6dd1dda04d0ab42434a6cff6f9c7eb42474f81acdf32809486f8fa82be8951&#34;</span>: <span class="o">{</span>
+                <span class="s2">&#34;Name&#34;</span>: <span class="s2">&#34;B1&#34;</span>,
+                <span class="s2">&#34;EndpointID&#34;</span>: <span class="s2">&#34;0af6a3739786e89d5161f25edf7bb2a5d900ab580ab53e8f852a197134e010b7&#34;</span>,
+                <span class="s2">&#34;MacAddress&#34;</span>: <span class="s2">&#34;02:42:ac:11:00:02&#34;</span>,
+                <span class="s2">&#34;IPv4Address&#34;</span>: <span class="s2">&#34;172.17.0.2/16&#34;</span>,
+                <span class="s2">&#34;IPv6Address&#34;</span>: <span class="s2">&#34;&#34;</span>
+            <span class="o">}</span>
+        <span class="o">}</span>,
+        <span class="s2">&#34;Options&#34;</span>: <span class="o">{</span>
+            <span class="s2">&#34;com.docker.network.bridge.default_bridge&#34;</span>: <span class="s2">&#34;true&#34;</span>,
+            <span class="s2">&#34;com.docker.network.bridge.enable_icc&#34;</span>: <span class="s2">&#34;true&#34;</span>,
+            <span class="s2">&#34;com.docker.network.bridge.enable_ip_masquerade&#34;</span>: <span class="s2">&#34;true&#34;</span>,
+            <span class="s2">&#34;com.docker.network.bridge.host_binding_ipv4&#34;</span>: <span class="s2">&#34;0.0.0.0&#34;</span>,
+            <span class="s2">&#34;com.docker.network.bridge.name&#34;</span>: <span class="s2">&#34;docker0&#34;</span>,
+            <span class="s2">&#34;com.docker.network.driver.mtu&#34;</span>: <span class="s2">&#34;1500&#34;</span>
+        <span class="o">}</span>,
+        <span class="s2">&#34;Labels&#34;</span>: <span class="o">{}</span>
+    <span class="o">}</span>
+<span class="o">]</span>
+</code></pre></td></tr></table>
 </div>
 </div><p>Xem lại trường container thì đã thấy có thêm một container có tên là B1 đang chạy. Ngoài ra chúng ta còn có thể kiếm tra container đang dùng mạng nào và được cấp địa chỉ IP bằng bao nhiêu thông qua lệnh <code>docker inspect &lt;container_name&gt;</code><br />
 Tạo ra thêm 1 container tên B2, khi đó container B1, B2 có thể nhìn thấy nhau, chúng ta có thể  kiểm tra thông qua lệnh <code>ping</code>.<br />
 Trong image busybox, có sẵn một công cụ để tạo máy chủ web http. Giả sử ta muốn cho container B2 chạy máy chủ web http, chúng ta vào <code>/var/www</code> và chạy lệnh <code>httpd</code></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -2045,28 +2047,28 @@ Trong image busybox, có sẵn một công cụ để tạo máy chủ web http.
 </span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">❯ docker attach B2
-</span></span><span class="line"><span class="cl">/ <span class="c1"># cd var/</span>
-</span></span><span class="line"><span class="cl">/var <span class="c1"># ls</span>
-</span></span><span class="line"><span class="cl">spool  www
-</span></span><span class="line"><span class="cl">/var <span class="c1"># cd www/</span>
-</span></span><span class="line"><span class="cl">/var/www <span class="c1"># httpd</span>
-</span></span><span class="line"><span class="cl">/var/www <span class="c1"># </span>
-</span></span></code></pre></td></tr></table>
+<pre class="chroma"><code class="language-bash" data-lang="bash">❯ docker attach B2
+/ <span class="c1"># cd var/</span>
+/var <span class="c1"># ls</span>
+spool  www
+/var <span class="c1"># cd www/</span>
+/var/www <span class="c1"># httpd</span>
+/var/www # 
+</code></pre></td></tr></table>
 </div>
 </div><p>Tạo một file <code>index.html</code> với nội dung là:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-index.html" data-lang="index.html"><span class="line"><span class="cl">web server is running...
-</span></span></code></pre></td></tr></table>
+<pre class="chroma"><code class="language-index.html" data-lang="index.html">web server is running...
+</code></pre></td></tr></table>
 </div>
 </div><p>Từ container B1, ta tiến hành <code>wget</code> tới B2</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -2076,15 +2078,15 @@ Trong image busybox, có sẵn một công cụ để tạo máy chủ web http.
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">❯ docker attach B1
-</span></span><span class="line"><span class="cl">/ <span class="c1"># wget -O - 172.17.0.3</span>
-</span></span><span class="line"><span class="cl">Connecting to 172.17.0.3 <span class="o">(</span>172.17.0.3:80<span class="o">)</span>
-</span></span><span class="line"><span class="cl">writing to stdout
-</span></span><span class="line"><span class="cl">web server is running...
-</span></span><span class="line"><span class="cl">-                    100% <span class="p">|</span>********************************<span class="p">|</span>    <span class="m">25</span>  0:00:00 ETA
-</span></span><span class="line"><span class="cl">written to stdout
-</span></span><span class="line"><span class="cl">/ <span class="c1"># </span>
-</span></span></code></pre></td></tr></table>
+<pre class="chroma"><code class="language-bash" data-lang="bash">❯ docker attach B1
+/ <span class="c1"># wget -O - 172.17.0.3</span>
+Connecting to 172.17.0.3 <span class="o">(</span>172.17.0.3:80<span class="o">)</span>
+writing to stdout
+web server is running...
+-                    100% <span class="p">|</span>********************************<span class="p">|</span>    <span class="m">25</span>  0:00:00 ETA
+written to stdout
+/ # 
+</code></pre></td></tr></table>
 </div>
 </div><p>Với <code>172.17.0.3</code> là địa chỉ của container B2, có thể xem bằng lệnh <code>docker network inspect bridge</code>. Rõ ràng, container B1 đã đọc được file index mà B2 trả về với dòng chữ <code>web server is running...</code></p>
 <h2 id="ánh-xạ-cổng-mạng-trong-docker">Ánh xạ cổng mạng trong docker</h2>
@@ -2094,26 +2096,26 @@ Trong image busybox, có sẵn một công cụ để tạo máy chủ web http.
 <code>docker run -it --name &lt;name&gt; -p &lt;host_port&gt;:&lt;container_port&gt; image</code></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">❯ docker run -it --name B2 -p 8888:80 busybox
-</span></span><span class="line"><span class="cl">/ <span class="c1"># </span>
-</span></span></code></pre></td></tr></table>
+<pre class="chroma"><code class="language-bash" data-lang="bash">❯ docker run -it --name B2 -p 8888:80 busybox
+/ # 
+</code></pre></td></tr></table>
 </div>
 </div><p>Khi kiểm tra bằng lệnh <code>docker ps</code> ta sẽ thấy container B2 đã ánh xạ cổng 80 lệnh 8888 của máy host ở PORT.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">❯ docker ps
-</span></span><span class="line"><span class="cl">CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS                  NAMES
-</span></span><span class="line"><span class="cl">bdd19faad9cf        busybox             <span class="s2">&#34;sh&#34;</span>                <span class="m">8</span> minutes ago       Up <span class="m">8</span> minutes        0.0.0.0:8888-&gt;80/tcp   B2
-</span></span></code></pre></td></tr></table>
+<pre class="chroma"><code class="language-bash" data-lang="bash">❯ docker ps
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS                  NAMES
+bdd19faad9cf        busybox             <span class="s2">&#34;sh&#34;</span>                <span class="m">8</span> minutes ago       Up <span class="m">8</span> minutes        0.0.0.0:8888-&gt;80/tcp   B2
+</code></pre></td></tr></table>
 </div>
 </div><p>Chúng ta sẽ thao tác lại một lần ở docker B2 để chạy <code>httpd</code> và tạo file <code>index.html</code> với nội dung <code>web server is running...</code> trong thư mục <code>/var/www</code>. Sau đó, chúng ta truy cập ở trình duyện chrome từ máy host đến địa chỉ <code>127.0.0.1:8888</code><br />
 <img src="/images/posts/docker_cli/docker_webserver.png" alt="docker access" /><br />
@@ -2124,7 +2126,7 @@ Như vậy, ta đã có thể truy cập đến file <code>index.html</code> tro
 Ở đây chúng ta muốn tạo thêm mạng bridge nên sau <code>--driver</code> sẽ là <code>bridge</code></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -2142,39 +2144,39 @@ Như vậy, ta đã có thể truy cập đến file <code>index.html</code> tro
 </span><span class="lnt">16
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">❯ docker network ls
-</span></span><span class="line"><span class="cl">NETWORK ID          NAME                DRIVER              SCOPE
-</span></span><span class="line"><span class="cl">286d5161c9f6        bridge              bridge              <span class="nb">local</span>
-</span></span><span class="line"><span class="cl">0f2ab02aa9f4        host                host                <span class="nb">local</span>
-</span></span><span class="line"><span class="cl">271997adaaa9        none                null                <span class="nb">local</span>
-</span></span><span class="line"><span class="cl">❯ docker network create --driver bridge mynetwork
-</span></span><span class="line"><span class="cl">6c224f5d1a9819ba01d68ed6cd3a15357709d3b8dcf0b1ab0e289d11973f43d0
-</span></span><span class="line"><span class="cl">❯ docker network create --driver bridge network1
-</span></span><span class="line"><span class="cl">8f94d7a2e8ff372c3072294dd5260bbea0d0fb2692c2bedc3acad080b07b229c
-</span></span><span class="line"><span class="cl">❯ docker network ls
-</span></span><span class="line"><span class="cl">NETWORK ID          NAME                DRIVER              SCOPE
-</span></span><span class="line"><span class="cl">286d5161c9f6        bridge              bridge              <span class="nb">local</span>
-</span></span><span class="line"><span class="cl">0f2ab02aa9f4        host                host                <span class="nb">local</span>
-</span></span><span class="line"><span class="cl">6c224f5d1a98        mynetwork           bridge              <span class="nb">local</span>
-</span></span><span class="line"><span class="cl">8f94d7a2e8ff        network1            bridge              <span class="nb">local</span>
-</span></span><span class="line"><span class="cl">271997adaaa9        none                null                <span class="nb">local</span>
-</span></span></code></pre></td></tr></table>
+<pre class="chroma"><code class="language-bash" data-lang="bash">❯ docker network ls
+NETWORK ID          NAME                DRIVER              SCOPE
+286d5161c9f6        bridge              bridge              <span class="nb">local</span>
+0f2ab02aa9f4        host                host                <span class="nb">local</span>
+271997adaaa9        none                null                <span class="nb">local</span>
+❯ docker network create --driver bridge mynetwork
+6c224f5d1a9819ba01d68ed6cd3a15357709d3b8dcf0b1ab0e289d11973f43d0
+❯ docker network create --driver bridge network1
+8f94d7a2e8ff372c3072294dd5260bbea0d0fb2692c2bedc3acad080b07b229c
+❯ docker network ls
+NETWORK ID          NAME                DRIVER              SCOPE
+286d5161c9f6        bridge              bridge              <span class="nb">local</span>
+0f2ab02aa9f4        host                host                <span class="nb">local</span>
+6c224f5d1a98        mynetwork           bridge              <span class="nb">local</span>
+8f94d7a2e8ff        network1            bridge              <span class="nb">local</span>
+271997adaaa9        none                null                <span class="nb">local</span>
+</code></pre></td></tr></table>
 </div>
 </div><p>Chúng ta tiến hành tạo một số container không kết nối mặc định vào network bridge mà sẽ kết nối vào mynetwork của chúng ta.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">❯ docker run -it --name B3 --network mynetwork busybox
-</span></span><span class="line"><span class="cl">/ <span class="c1"># </span>
-</span></span></code></pre></td></tr></table>
+<pre class="chroma"><code class="language-bash" data-lang="bash">❯ docker run -it --name B3 --network mynetwork busybox
+/ # 
+</code></pre></td></tr></table>
 </div>
 </div><p>Để chỉ định network khi tạo, ta thêm tùy chọn <code>--network</code> và theo sau là tên của network mình muốn kết nối tới. Chúng ta kiểm tra xem B3 có thật sự đã kết nối tới mynetwork chưa.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -2215,51 +2217,51 @@ Như vậy, ta đã có thể truy cập đến file <code>index.html</code> tro
 </span><span class="lnt">39
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">❯ docker network inspect mynetwork
-</span></span><span class="line"><span class="cl"><span class="o">[</span>
-</span></span><span class="line"><span class="cl">    <span class="o">{</span>
-</span></span><span class="line"><span class="cl">        <span class="s2">&#34;Name&#34;</span>: <span class="s2">&#34;mynetwork&#34;</span>,
-</span></span><span class="line"><span class="cl">        <span class="s2">&#34;Id&#34;</span>: <span class="s2">&#34;6c224f5d1a9819ba01d68ed6cd3a15357709d3b8dcf0b1ab0e289d11973f43d0&#34;</span>,
-</span></span><span class="line"><span class="cl">        <span class="s2">&#34;Created&#34;</span>: <span class="s2">&#34;2021-06-10T07:59:52.392658153+07:00&#34;</span>,
-</span></span><span class="line"><span class="cl">        <span class="s2">&#34;Scope&#34;</span>: <span class="s2">&#34;local&#34;</span>,
-</span></span><span class="line"><span class="cl">        <span class="s2">&#34;Driver&#34;</span>: <span class="s2">&#34;bridge&#34;</span>,
-</span></span><span class="line"><span class="cl">        <span class="s2">&#34;EnableIPv6&#34;</span>: false,
-</span></span><span class="line"><span class="cl">        <span class="s2">&#34;IPAM&#34;</span>: <span class="o">{</span>
-</span></span><span class="line"><span class="cl">            <span class="s2">&#34;Driver&#34;</span>: <span class="s2">&#34;default&#34;</span>,
-</span></span><span class="line"><span class="cl">            <span class="s2">&#34;Options&#34;</span>: <span class="o">{}</span>,
-</span></span><span class="line"><span class="cl">            <span class="s2">&#34;Config&#34;</span>: <span class="o">[</span>
-</span></span><span class="line"><span class="cl">                <span class="o">{</span>
-</span></span><span class="line"><span class="cl">                    <span class="s2">&#34;Subnet&#34;</span>: <span class="s2">&#34;172.20.0.0/16&#34;</span>,
-</span></span><span class="line"><span class="cl">                    <span class="s2">&#34;Gateway&#34;</span>: <span class="s2">&#34;172.20.0.1&#34;</span>
-</span></span><span class="line"><span class="cl">                <span class="o">}</span>
-</span></span><span class="line"><span class="cl">            <span class="o">]</span>
-</span></span><span class="line"><span class="cl">        <span class="o">}</span>,
-</span></span><span class="line"><span class="cl">        <span class="s2">&#34;Internal&#34;</span>: false,
-</span></span><span class="line"><span class="cl">        <span class="s2">&#34;Attachable&#34;</span>: false,
-</span></span><span class="line"><span class="cl">        <span class="s2">&#34;Ingress&#34;</span>: false,
-</span></span><span class="line"><span class="cl">        <span class="s2">&#34;ConfigFrom&#34;</span>: <span class="o">{</span>
-</span></span><span class="line"><span class="cl">            <span class="s2">&#34;Network&#34;</span>: <span class="s2">&#34;&#34;</span>
-</span></span><span class="line"><span class="cl">        <span class="o">}</span>,
-</span></span><span class="line"><span class="cl">        <span class="s2">&#34;ConfigOnly&#34;</span>: false,
-</span></span><span class="line"><span class="cl">        <span class="s2">&#34;Containers&#34;</span>: <span class="o">{</span>
-</span></span><span class="line"><span class="cl">            <span class="s2">&#34;a7231f2ebe678e679ff063d0d8a09613a81db899ffb7e11eb6ba6c202e2e97d7&#34;</span>: <span class="o">{</span>
-</span></span><span class="line"><span class="cl">                <span class="s2">&#34;Name&#34;</span>: <span class="s2">&#34;B3&#34;</span>,
-</span></span><span class="line"><span class="cl">                <span class="s2">&#34;EndpointID&#34;</span>: <span class="s2">&#34;d8f6cf60953a1ebd7c1a84a95e5503bc726a5e77df2c939e8072fe6ca7406d65&#34;</span>,
-</span></span><span class="line"><span class="cl">                <span class="s2">&#34;MacAddress&#34;</span>: <span class="s2">&#34;02:42:ac:14:00:02&#34;</span>,
-</span></span><span class="line"><span class="cl">                <span class="s2">&#34;IPv4Address&#34;</span>: <span class="s2">&#34;172.20.0.2/16&#34;</span>,
-</span></span><span class="line"><span class="cl">                <span class="s2">&#34;IPv6Address&#34;</span>: <span class="s2">&#34;&#34;</span>
-</span></span><span class="line"><span class="cl">            <span class="o">}</span>
-</span></span><span class="line"><span class="cl">        <span class="o">}</span>,
-</span></span><span class="line"><span class="cl">        <span class="s2">&#34;Options&#34;</span>: <span class="o">{}</span>,
-</span></span><span class="line"><span class="cl">        <span class="s2">&#34;Labels&#34;</span>: <span class="o">{}</span>
-</span></span><span class="line"><span class="cl">    <span class="o">}</span>
-</span></span><span class="line"><span class="cl"><span class="o">]</span>
-</span></span></code></pre></td></tr></table>
+<pre class="chroma"><code class="language-bash" data-lang="bash">❯ docker network inspect mynetwork
+<span class="o">[</span>
+    <span class="o">{</span>
+        <span class="s2">&#34;Name&#34;</span>: <span class="s2">&#34;mynetwork&#34;</span>,
+        <span class="s2">&#34;Id&#34;</span>: <span class="s2">&#34;6c224f5d1a9819ba01d68ed6cd3a15357709d3b8dcf0b1ab0e289d11973f43d0&#34;</span>,
+        <span class="s2">&#34;Created&#34;</span>: <span class="s2">&#34;2021-06-10T07:59:52.392658153+07:00&#34;</span>,
+        <span class="s2">&#34;Scope&#34;</span>: <span class="s2">&#34;local&#34;</span>,
+        <span class="s2">&#34;Driver&#34;</span>: <span class="s2">&#34;bridge&#34;</span>,
+        <span class="s2">&#34;EnableIPv6&#34;</span>: false,
+        <span class="s2">&#34;IPAM&#34;</span>: <span class="o">{</span>
+            <span class="s2">&#34;Driver&#34;</span>: <span class="s2">&#34;default&#34;</span>,
+            <span class="s2">&#34;Options&#34;</span>: <span class="o">{}</span>,
+            <span class="s2">&#34;Config&#34;</span>: <span class="o">[</span>
+                <span class="o">{</span>
+                    <span class="s2">&#34;Subnet&#34;</span>: <span class="s2">&#34;172.20.0.0/16&#34;</span>,
+                    <span class="s2">&#34;Gateway&#34;</span>: <span class="s2">&#34;172.20.0.1&#34;</span>
+                <span class="o">}</span>
+            <span class="o">]</span>
+        <span class="o">}</span>,
+        <span class="s2">&#34;Internal&#34;</span>: false,
+        <span class="s2">&#34;Attachable&#34;</span>: false,
+        <span class="s2">&#34;Ingress&#34;</span>: false,
+        <span class="s2">&#34;ConfigFrom&#34;</span>: <span class="o">{</span>
+            <span class="s2">&#34;Network&#34;</span>: <span class="s2">&#34;&#34;</span>
+        <span class="o">}</span>,
+        <span class="s2">&#34;ConfigOnly&#34;</span>: false,
+        <span class="s2">&#34;Containers&#34;</span>: <span class="o">{</span>
+            <span class="s2">&#34;a7231f2ebe678e679ff063d0d8a09613a81db899ffb7e11eb6ba6c202e2e97d7&#34;</span>: <span class="o">{</span>
+                <span class="s2">&#34;Name&#34;</span>: <span class="s2">&#34;B3&#34;</span>,
+                <span class="s2">&#34;EndpointID&#34;</span>: <span class="s2">&#34;d8f6cf60953a1ebd7c1a84a95e5503bc726a5e77df2c939e8072fe6ca7406d65&#34;</span>,
+                <span class="s2">&#34;MacAddress&#34;</span>: <span class="s2">&#34;02:42:ac:14:00:02&#34;</span>,
+                <span class="s2">&#34;IPv4Address&#34;</span>: <span class="s2">&#34;172.20.0.2/16&#34;</span>,
+                <span class="s2">&#34;IPv6Address&#34;</span>: <span class="s2">&#34;&#34;</span>
+            <span class="o">}</span>
+        <span class="o">}</span>,
+        <span class="s2">&#34;Options&#34;</span>: <span class="o">{}</span>,
+        <span class="s2">&#34;Labels&#34;</span>: <span class="o">{}</span>
+    <span class="o">}</span>
+<span class="o">]</span>
+</code></pre></td></tr></table>
 </div>
 </div><p>Rõ ràng ở trường container đã thêm một container là B3 với địa chỉ là <code>172.20.0.2</code>. Chúng ta tiếp tục tạo thêm một container B4 kết nối với <code>mynetwork</code> và chỉ định cổng 80 của nó ánh xạ tới cổng <code>9999</code> trên máy host.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -2269,15 +2271,15 @@ Như vậy, ta đã có thể truy cập đến file <code>index.html</code> tro
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">❯ docker run -it --name B4 --network mynetwork -p 9999:80 busybox
-</span></span><span class="line"><span class="cl">/ <span class="c1"># %                                                                           </span>
-</span></span><span class="line"><span class="cl">❯ docker ps
-</span></span><span class="line"><span class="cl">CONTAINER ID        IMAGE               COMMAND             CREATED              STATUS              PORTS                  NAMES
-</span></span><span class="line"><span class="cl">1b39318c8d5b        busybox             <span class="s2">&#34;sh&#34;</span>                About a minute ago   Up About a minute   0.0.0.0:9999-&gt;80/tcp   B4
-</span></span><span class="line"><span class="cl">a7231f2ebe67        busybox             <span class="s2">&#34;sh&#34;</span>                <span class="m">5</span> minutes ago        Up <span class="m">5</span> minutes                               B3
-</span></span><span class="line"><span class="cl">bdd19faad9cf        busybox             <span class="s2">&#34;sh&#34;</span>                <span class="m">37</span> minutes ago       Up <span class="m">37</span> minutes       0.0.0.0:8888-&gt;80/tcp   B2
-</span></span><span class="line"><span class="cl">2f6dd1dda04d        busybox             <span class="s2">&#34;sh&#34;</span>                <span class="m">9</span> hours ago          Up <span class="m">3</span> seconds                               B1
-</span></span></code></pre></td></tr></table>
+<pre class="chroma"><code class="language-bash" data-lang="bash">❯ docker run -it --name B4 --network mynetwork -p 9999:80 busybox
+/ <span class="c1"># %</span>                                                                           
+❯ docker ps
+CONTAINER ID        IMAGE               COMMAND             CREATED              STATUS              PORTS                  NAMES
+1b39318c8d5b        busybox             <span class="s2">&#34;sh&#34;</span>                About a minute ago   Up About a minute   0.0.0.0:9999-&gt;80/tcp   B4
+a7231f2ebe67        busybox             <span class="s2">&#34;sh&#34;</span>                <span class="m">5</span> minutes ago        Up <span class="m">5</span> minutes                               B3
+bdd19faad9cf        busybox             <span class="s2">&#34;sh&#34;</span>                <span class="m">37</span> minutes ago       Up <span class="m">37</span> minutes       0.0.0.0:8888-&gt;80/tcp   B2
+2f6dd1dda04d        busybox             <span class="s2">&#34;sh&#34;</span>                <span class="m">9</span> hours ago          Up <span class="m">3</span> seconds                               B1
+</code></pre></td></tr></table>
 </div>
 </div><p>Như vậy, trên máy của chúng ta đang 2 mạng là <code>bridge</code> và <code>mynetwork</code>:</p>
 <ul>
@@ -2289,7 +2291,7 @@ Khi tạo ra 2 network thì những máy cùng 1 network (B1 với B2 hoặc B3 
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -2313,45 +2315,45 @@ Khi tạo ra 2 network thì những máy cùng 1 network (B1 với B2 hoặc B3 
 </span><span class="lnt">22
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">❯ docker attach B1
-</span></span><span class="line"><span class="cl">/ <span class="c1"># ping 172.17.0.2</span>
-</span></span><span class="line"><span class="cl">PING 172.17.0.2 <span class="o">(</span>172.17.0.2<span class="o">)</span>: <span class="m">56</span> data bytes
-</span></span><span class="line"><span class="cl"><span class="m">64</span> bytes from 172.17.0.2: <span class="nv">seq</span><span class="o">=</span><span class="m">0</span> <span class="nv">ttl</span><span class="o">=</span><span class="m">64</span> <span class="nv">time</span><span class="o">=</span>0.268 ms
-</span></span><span class="line"><span class="cl"><span class="m">64</span> bytes from 172.17.0.2: <span class="nv">seq</span><span class="o">=</span><span class="m">1</span> <span class="nv">ttl</span><span class="o">=</span><span class="m">64</span> <span class="nv">time</span><span class="o">=</span>0.101 ms
-</span></span><span class="line"><span class="cl"><span class="m">64</span> bytes from 172.17.0.2: <span class="nv">seq</span><span class="o">=</span><span class="m">2</span> <span class="nv">ttl</span><span class="o">=</span><span class="m">64</span> <span class="nv">time</span><span class="o">=</span>0.198 ms
-</span></span><span class="line"><span class="cl"><span class="m">64</span> bytes from 172.17.0.2: <span class="nv">seq</span><span class="o">=</span><span class="m">3</span> <span class="nv">ttl</span><span class="o">=</span><span class="m">64</span> <span class="nv">time</span><span class="o">=</span>0.162 ms
-</span></span><span class="line"><span class="cl"><span class="m">64</span> bytes from 172.17.0.2: <span class="nv">seq</span><span class="o">=</span><span class="m">4</span> <span class="nv">ttl</span><span class="o">=</span><span class="m">64</span> <span class="nv">time</span><span class="o">=</span>0.165 ms
-</span></span><span class="line"><span class="cl"><span class="m">64</span> bytes from 172.17.0.2: <span class="nv">seq</span><span class="o">=</span><span class="m">5</span> <span class="nv">ttl</span><span class="o">=</span><span class="m">64</span> <span class="nv">time</span><span class="o">=</span>0.164 ms
-</span></span><span class="line"><span class="cl"><span class="m">64</span> bytes from 172.17.0.2: <span class="nv">seq</span><span class="o">=</span><span class="m">6</span> <span class="nv">ttl</span><span class="o">=</span><span class="m">64</span> <span class="nv">time</span><span class="o">=</span>0.139 ms
-</span></span><span class="line"><span class="cl"><span class="m">64</span> bytes from 172.17.0.2: <span class="nv">seq</span><span class="o">=</span><span class="m">7</span> <span class="nv">ttl</span><span class="o">=</span><span class="m">64</span> <span class="nv">time</span><span class="o">=</span>0.160 ms
-</span></span><span class="line"><span class="cl"><span class="m">64</span> bytes from 172.17.0.2: <span class="nv">seq</span><span class="o">=</span><span class="m">8</span> <span class="nv">ttl</span><span class="o">=</span><span class="m">64</span> <span class="nv">time</span><span class="o">=</span>0.181 ms
-</span></span><span class="line"><span class="cl">^C
-</span></span><span class="line"><span class="cl">--- 172.17.0.2 ping statistics ---
-</span></span><span class="line"><span class="cl"><span class="m">9</span> packets transmitted, <span class="m">9</span> packets received, 0% packet loss
-</span></span><span class="line"><span class="cl">round-trip min/avg/max <span class="o">=</span> 0.101/0.170/0.268 ms
-</span></span><span class="line"><span class="cl">/ <span class="c1"># ping 172.20.0.2</span>
-</span></span><span class="line"><span class="cl">PING 172.20.0.2 <span class="o">(</span>172.20.0.2<span class="o">)</span>: <span class="m">56</span> data bytes
-</span></span><span class="line"><span class="cl">^C                              
-</span></span><span class="line"><span class="cl">--- 172.20.0.2 ping statistics ---
-</span></span><span class="line"><span class="cl"><span class="m">25</span> packets transmitted, <span class="m">0</span> packets received, 100% packet loss
-</span></span><span class="line"><span class="cl">/ <span class="c1"># </span>
-</span></span></code></pre></td></tr></table>
+<pre class="chroma"><code class="language-bash" data-lang="bash">❯ docker attach B1
+/ <span class="c1"># ping 172.17.0.2</span>
+PING 172.17.0.2 <span class="o">(</span>172.17.0.2<span class="o">)</span>: <span class="m">56</span> data bytes
+<span class="m">64</span> bytes from 172.17.0.2: <span class="nv">seq</span><span class="o">=</span><span class="m">0</span> <span class="nv">ttl</span><span class="o">=</span><span class="m">64</span> <span class="nv">time</span><span class="o">=</span>0.268 ms
+<span class="m">64</span> bytes from 172.17.0.2: <span class="nv">seq</span><span class="o">=</span><span class="m">1</span> <span class="nv">ttl</span><span class="o">=</span><span class="m">64</span> <span class="nv">time</span><span class="o">=</span>0.101 ms
+<span class="m">64</span> bytes from 172.17.0.2: <span class="nv">seq</span><span class="o">=</span><span class="m">2</span> <span class="nv">ttl</span><span class="o">=</span><span class="m">64</span> <span class="nv">time</span><span class="o">=</span>0.198 ms
+<span class="m">64</span> bytes from 172.17.0.2: <span class="nv">seq</span><span class="o">=</span><span class="m">3</span> <span class="nv">ttl</span><span class="o">=</span><span class="m">64</span> <span class="nv">time</span><span class="o">=</span>0.162 ms
+<span class="m">64</span> bytes from 172.17.0.2: <span class="nv">seq</span><span class="o">=</span><span class="m">4</span> <span class="nv">ttl</span><span class="o">=</span><span class="m">64</span> <span class="nv">time</span><span class="o">=</span>0.165 ms
+<span class="m">64</span> bytes from 172.17.0.2: <span class="nv">seq</span><span class="o">=</span><span class="m">5</span> <span class="nv">ttl</span><span class="o">=</span><span class="m">64</span> <span class="nv">time</span><span class="o">=</span>0.164 ms
+<span class="m">64</span> bytes from 172.17.0.2: <span class="nv">seq</span><span class="o">=</span><span class="m">6</span> <span class="nv">ttl</span><span class="o">=</span><span class="m">64</span> <span class="nv">time</span><span class="o">=</span>0.139 ms
+<span class="m">64</span> bytes from 172.17.0.2: <span class="nv">seq</span><span class="o">=</span><span class="m">7</span> <span class="nv">ttl</span><span class="o">=</span><span class="m">64</span> <span class="nv">time</span><span class="o">=</span>0.160 ms
+<span class="m">64</span> bytes from 172.17.0.2: <span class="nv">seq</span><span class="o">=</span><span class="m">8</span> <span class="nv">ttl</span><span class="o">=</span><span class="m">64</span> <span class="nv">time</span><span class="o">=</span>0.181 ms
+^C
+--- 172.17.0.2 ping statistics ---
+<span class="m">9</span> packets transmitted, <span class="m">9</span> packets received, 0% packet loss
+round-trip min/avg/max <span class="o">=</span> 0.101/0.170/0.268 ms
+/ <span class="c1"># ping 172.20.0.2</span>
+PING 172.20.0.2 <span class="o">(</span>172.20.0.2<span class="o">)</span>: <span class="m">56</span> data bytes
+^C                              
+--- 172.20.0.2 ping statistics ---
+<span class="m">25</span> packets transmitted, <span class="m">0</span> packets received, 100% packet loss
+/ # 
+</code></pre></td></tr></table>
 </div>
 </div><h3 id="ánh-xạ-cổng-cho-một-container-đang-chạy">Ánh xạ cổng cho một container đang chạy.</h3>
 <p>Trong ví dụ trên, B3 đang kết nối tới mynetwork, ta muốn cho B3 kết nối thẳng tới network bridge, ta làm như sau:<br />
 <code>docker network connect &lt;ten_mang_muon_ket_noi&gt; &lt;ten_container&gt;</code></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">❯ docker network connect bridge B3
-</span></span></code></pre></td></tr></table>
+<pre class="chroma"><code class="language-bash" data-lang="bash">❯ docker network connect bridge B3
+</code></pre></td></tr></table>
 </div>
 </div><p>Kiểm tra mạng bridge để xem B3 đã thực sự kết nối chưa:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -2413,72 +2415,72 @@ Khi tạo ra 2 network thì những máy cùng 1 network (B1 với B2 hoặc B3 
 </span><span class="lnt">60
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">❯ docker network inspect bridge
-</span></span><span class="line"><span class="cl"><span class="o">[</span>
-</span></span><span class="line"><span class="cl">    <span class="o">{</span>
-</span></span><span class="line"><span class="cl">        <span class="s2">&#34;Name&#34;</span>: <span class="s2">&#34;bridge&#34;</span>,
-</span></span><span class="line"><span class="cl">        <span class="s2">&#34;Id&#34;</span>: <span class="s2">&#34;286d5161c9f65235af68d99040f31b167b4bf23f9803fa3a2b3bd7de61b7c81c&#34;</span>,
-</span></span><span class="line"><span class="cl">        <span class="s2">&#34;Created&#34;</span>: <span class="s2">&#34;2021-06-10T06:58:33.069522692+07:00&#34;</span>,
-</span></span><span class="line"><span class="cl">        <span class="s2">&#34;Scope&#34;</span>: <span class="s2">&#34;local&#34;</span>,
-</span></span><span class="line"><span class="cl">        <span class="s2">&#34;Driver&#34;</span>: <span class="s2">&#34;bridge&#34;</span>,
-</span></span><span class="line"><span class="cl">        <span class="s2">&#34;EnableIPv6&#34;</span>: false,
-</span></span><span class="line"><span class="cl">        <span class="s2">&#34;IPAM&#34;</span>: <span class="o">{</span>
-</span></span><span class="line"><span class="cl">            <span class="s2">&#34;Driver&#34;</span>: <span class="s2">&#34;default&#34;</span>,
-</span></span><span class="line"><span class="cl">            <span class="s2">&#34;Options&#34;</span>: null,
-</span></span><span class="line"><span class="cl">            <span class="s2">&#34;Config&#34;</span>: <span class="o">[</span>
-</span></span><span class="line"><span class="cl">                <span class="o">{</span>
-</span></span><span class="line"><span class="cl">                    <span class="s2">&#34;Subnet&#34;</span>: <span class="s2">&#34;172.17.0.0/16&#34;</span>,
-</span></span><span class="line"><span class="cl">                    <span class="s2">&#34;Gateway&#34;</span>: <span class="s2">&#34;172.17.0.1&#34;</span>
-</span></span><span class="line"><span class="cl">                <span class="o">}</span>
-</span></span><span class="line"><span class="cl">            <span class="o">]</span>
-</span></span><span class="line"><span class="cl">        <span class="o">}</span>,
-</span></span><span class="line"><span class="cl">        <span class="s2">&#34;Internal&#34;</span>: false,
-</span></span><span class="line"><span class="cl">        <span class="s2">&#34;Attachable&#34;</span>: false,
-</span></span><span class="line"><span class="cl">        <span class="s2">&#34;Ingress&#34;</span>: false,
-</span></span><span class="line"><span class="cl">        <span class="s2">&#34;ConfigFrom&#34;</span>: <span class="o">{</span>
-</span></span><span class="line"><span class="cl">            <span class="s2">&#34;Network&#34;</span>: <span class="s2">&#34;&#34;</span>
-</span></span><span class="line"><span class="cl">        <span class="o">}</span>,
-</span></span><span class="line"><span class="cl">        <span class="s2">&#34;ConfigOnly&#34;</span>: false,
-</span></span><span class="line"><span class="cl">        <span class="s2">&#34;Containers&#34;</span>: <span class="o">{</span>
-</span></span><span class="line"><span class="cl">            <span class="s2">&#34;2f6dd1dda04d0ab42434a6cff6f9c7eb42474f81acdf32809486f8fa82be8951&#34;</span>: <span class="o">{</span>
-</span></span><span class="line"><span class="cl">                <span class="s2">&#34;Name&#34;</span>: <span class="s2">&#34;B1&#34;</span>,
-</span></span><span class="line"><span class="cl">                <span class="s2">&#34;EndpointID&#34;</span>: <span class="s2">&#34;5ddc6f87b486401bd0e2cfea3e1c8324300f9045712778f1c321e35349c56cff&#34;</span>,
-</span></span><span class="line"><span class="cl">                <span class="s2">&#34;MacAddress&#34;</span>: <span class="s2">&#34;02:42:ac:11:00:03&#34;</span>,
-</span></span><span class="line"><span class="cl">                <span class="s2">&#34;IPv4Address&#34;</span>: <span class="s2">&#34;172.17.0.3/16&#34;</span>,
-</span></span><span class="line"><span class="cl">                <span class="s2">&#34;IPv6Address&#34;</span>: <span class="s2">&#34;&#34;</span>
-</span></span><span class="line"><span class="cl">            <span class="o">}</span>,
-</span></span><span class="line"><span class="cl">            <span class="s2">&#34;a7231f2ebe678e679ff063d0d8a09613a81db899ffb7e11eb6ba6c202e2e97d7&#34;</span>: <span class="o">{</span>
-</span></span><span class="line"><span class="cl">                <span class="s2">&#34;Name&#34;</span>: <span class="s2">&#34;B3&#34;</span>,
-</span></span><span class="line"><span class="cl">                <span class="s2">&#34;EndpointID&#34;</span>: <span class="s2">&#34;f1c96c1089fbe206c52832089be7b18321aeea7abff840f5169d3d171fa5ca1d&#34;</span>,
-</span></span><span class="line"><span class="cl">                <span class="s2">&#34;MacAddress&#34;</span>: <span class="s2">&#34;02:42:ac:11:00:04&#34;</span>,
-</span></span><span class="line"><span class="cl">                <span class="s2">&#34;IPv4Address&#34;</span>: <span class="s2">&#34;172.17.0.4/16&#34;</span>,
-</span></span><span class="line"><span class="cl">                <span class="s2">&#34;IPv6Address&#34;</span>: <span class="s2">&#34;&#34;</span>
-</span></span><span class="line"><span class="cl">            <span class="o">}</span>,
-</span></span><span class="line"><span class="cl">            <span class="s2">&#34;bdd19faad9cfe6ba9f49a532cf245b3a1bec95d8d20688f4c6b52018d45538b2&#34;</span>: <span class="o">{</span>
-</span></span><span class="line"><span class="cl">                <span class="s2">&#34;Name&#34;</span>: <span class="s2">&#34;B2&#34;</span>,
-</span></span><span class="line"><span class="cl">                <span class="s2">&#34;EndpointID&#34;</span>: <span class="s2">&#34;32f69c565c649791c9f70db3a7a224e6a8d882b41fb9dc7c6477d4f33b9ec32b&#34;</span>,
-</span></span><span class="line"><span class="cl">                <span class="s2">&#34;MacAddress&#34;</span>: <span class="s2">&#34;02:42:ac:11:00:02&#34;</span>,
-</span></span><span class="line"><span class="cl">                <span class="s2">&#34;IPv4Address&#34;</span>: <span class="s2">&#34;172.17.0.2/16&#34;</span>,
-</span></span><span class="line"><span class="cl">                <span class="s2">&#34;IPv6Address&#34;</span>: <span class="s2">&#34;&#34;</span>
-</span></span><span class="line"><span class="cl">            <span class="o">}</span>
-</span></span><span class="line"><span class="cl">        <span class="o">}</span>,
-</span></span><span class="line"><span class="cl">        <span class="s2">&#34;Options&#34;</span>: <span class="o">{</span>
-</span></span><span class="line"><span class="cl">            <span class="s2">&#34;com.docker.network.bridge.default_bridge&#34;</span>: <span class="s2">&#34;true&#34;</span>,
-</span></span><span class="line"><span class="cl">            <span class="s2">&#34;com.docker.network.bridge.enable_icc&#34;</span>: <span class="s2">&#34;true&#34;</span>,
-</span></span><span class="line"><span class="cl">            <span class="s2">&#34;com.docker.network.bridge.enable_ip_masquerade&#34;</span>: <span class="s2">&#34;true&#34;</span>,
-</span></span><span class="line"><span class="cl">            <span class="s2">&#34;com.docker.network.bridge.host_binding_ipv4&#34;</span>: <span class="s2">&#34;0.0.0.0&#34;</span>,
-</span></span><span class="line"><span class="cl">            <span class="s2">&#34;com.docker.network.bridge.name&#34;</span>: <span class="s2">&#34;docker0&#34;</span>,
-</span></span><span class="line"><span class="cl">            <span class="s2">&#34;com.docker.network.driver.mtu&#34;</span>: <span class="s2">&#34;1500&#34;</span>
-</span></span><span class="line"><span class="cl">        <span class="o">}</span>,
-</span></span><span class="line"><span class="cl">        <span class="s2">&#34;Labels&#34;</span>: <span class="o">{}</span>
-</span></span><span class="line"><span class="cl">    <span class="o">}</span>
-</span></span><span class="line"><span class="cl"><span class="o">]</span>
-</span></span></code></pre></td></tr></table>
+<pre class="chroma"><code class="language-bash" data-lang="bash">❯ docker network inspect bridge
+<span class="o">[</span>
+    <span class="o">{</span>
+        <span class="s2">&#34;Name&#34;</span>: <span class="s2">&#34;bridge&#34;</span>,
+        <span class="s2">&#34;Id&#34;</span>: <span class="s2">&#34;286d5161c9f65235af68d99040f31b167b4bf23f9803fa3a2b3bd7de61b7c81c&#34;</span>,
+        <span class="s2">&#34;Created&#34;</span>: <span class="s2">&#34;2021-06-10T06:58:33.069522692+07:00&#34;</span>,
+        <span class="s2">&#34;Scope&#34;</span>: <span class="s2">&#34;local&#34;</span>,
+        <span class="s2">&#34;Driver&#34;</span>: <span class="s2">&#34;bridge&#34;</span>,
+        <span class="s2">&#34;EnableIPv6&#34;</span>: false,
+        <span class="s2">&#34;IPAM&#34;</span>: <span class="o">{</span>
+            <span class="s2">&#34;Driver&#34;</span>: <span class="s2">&#34;default&#34;</span>,
+            <span class="s2">&#34;Options&#34;</span>: null,
+            <span class="s2">&#34;Config&#34;</span>: <span class="o">[</span>
+                <span class="o">{</span>
+                    <span class="s2">&#34;Subnet&#34;</span>: <span class="s2">&#34;172.17.0.0/16&#34;</span>,
+                    <span class="s2">&#34;Gateway&#34;</span>: <span class="s2">&#34;172.17.0.1&#34;</span>
+                <span class="o">}</span>
+            <span class="o">]</span>
+        <span class="o">}</span>,
+        <span class="s2">&#34;Internal&#34;</span>: false,
+        <span class="s2">&#34;Attachable&#34;</span>: false,
+        <span class="s2">&#34;Ingress&#34;</span>: false,
+        <span class="s2">&#34;ConfigFrom&#34;</span>: <span class="o">{</span>
+            <span class="s2">&#34;Network&#34;</span>: <span class="s2">&#34;&#34;</span>
+        <span class="o">}</span>,
+        <span class="s2">&#34;ConfigOnly&#34;</span>: false,
+        <span class="s2">&#34;Containers&#34;</span>: <span class="o">{</span>
+            <span class="s2">&#34;2f6dd1dda04d0ab42434a6cff6f9c7eb42474f81acdf32809486f8fa82be8951&#34;</span>: <span class="o">{</span>
+                <span class="s2">&#34;Name&#34;</span>: <span class="s2">&#34;B1&#34;</span>,
+                <span class="s2">&#34;EndpointID&#34;</span>: <span class="s2">&#34;5ddc6f87b486401bd0e2cfea3e1c8324300f9045712778f1c321e35349c56cff&#34;</span>,
+                <span class="s2">&#34;MacAddress&#34;</span>: <span class="s2">&#34;02:42:ac:11:00:03&#34;</span>,
+                <span class="s2">&#34;IPv4Address&#34;</span>: <span class="s2">&#34;172.17.0.3/16&#34;</span>,
+                <span class="s2">&#34;IPv6Address&#34;</span>: <span class="s2">&#34;&#34;</span>
+            <span class="o">}</span>,
+            <span class="s2">&#34;a7231f2ebe678e679ff063d0d8a09613a81db899ffb7e11eb6ba6c202e2e97d7&#34;</span>: <span class="o">{</span>
+                <span class="s2">&#34;Name&#34;</span>: <span class="s2">&#34;B3&#34;</span>,
+                <span class="s2">&#34;EndpointID&#34;</span>: <span class="s2">&#34;f1c96c1089fbe206c52832089be7b18321aeea7abff840f5169d3d171fa5ca1d&#34;</span>,
+                <span class="s2">&#34;MacAddress&#34;</span>: <span class="s2">&#34;02:42:ac:11:00:04&#34;</span>,
+                <span class="s2">&#34;IPv4Address&#34;</span>: <span class="s2">&#34;172.17.0.4/16&#34;</span>,
+                <span class="s2">&#34;IPv6Address&#34;</span>: <span class="s2">&#34;&#34;</span>
+            <span class="o">}</span>,
+            <span class="s2">&#34;bdd19faad9cfe6ba9f49a532cf245b3a1bec95d8d20688f4c6b52018d45538b2&#34;</span>: <span class="o">{</span>
+                <span class="s2">&#34;Name&#34;</span>: <span class="s2">&#34;B2&#34;</span>,
+                <span class="s2">&#34;EndpointID&#34;</span>: <span class="s2">&#34;32f69c565c649791c9f70db3a7a224e6a8d882b41fb9dc7c6477d4f33b9ec32b&#34;</span>,
+                <span class="s2">&#34;MacAddress&#34;</span>: <span class="s2">&#34;02:42:ac:11:00:02&#34;</span>,
+                <span class="s2">&#34;IPv4Address&#34;</span>: <span class="s2">&#34;172.17.0.2/16&#34;</span>,
+                <span class="s2">&#34;IPv6Address&#34;</span>: <span class="s2">&#34;&#34;</span>
+            <span class="o">}</span>
+        <span class="o">}</span>,
+        <span class="s2">&#34;Options&#34;</span>: <span class="o">{</span>
+            <span class="s2">&#34;com.docker.network.bridge.default_bridge&#34;</span>: <span class="s2">&#34;true&#34;</span>,
+            <span class="s2">&#34;com.docker.network.bridge.enable_icc&#34;</span>: <span class="s2">&#34;true&#34;</span>,
+            <span class="s2">&#34;com.docker.network.bridge.enable_ip_masquerade&#34;</span>: <span class="s2">&#34;true&#34;</span>,
+            <span class="s2">&#34;com.docker.network.bridge.host_binding_ipv4&#34;</span>: <span class="s2">&#34;0.0.0.0&#34;</span>,
+            <span class="s2">&#34;com.docker.network.bridge.name&#34;</span>: <span class="s2">&#34;docker0&#34;</span>,
+            <span class="s2">&#34;com.docker.network.driver.mtu&#34;</span>: <span class="s2">&#34;1500&#34;</span>
+        <span class="o">}</span>,
+        <span class="s2">&#34;Labels&#34;</span>: <span class="o">{}</span>
+    <span class="o">}</span>
+<span class="o">]</span>
+</code></pre></td></tr></table>
 </div>
 </div><p>Trong trường container đã có thêm container B3, và kiểm tra network mynetwork thì thấy B3 vẫn đang kết nối tới mynetwork.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -2526,58 +2528,58 @@ Khi tạo ra 2 network thì những máy cùng 1 network (B1 với B2 hoặc B3 
 </span><span class="lnt">46
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">❯ docker network inspect mynetwork
-</span></span><span class="line"><span class="cl"><span class="o">[</span>
-</span></span><span class="line"><span class="cl">    <span class="o">{</span>
-</span></span><span class="line"><span class="cl">        <span class="s2">&#34;Name&#34;</span>: <span class="s2">&#34;mynetwork&#34;</span>,
-</span></span><span class="line"><span class="cl">        <span class="s2">&#34;Id&#34;</span>: <span class="s2">&#34;6c224f5d1a9819ba01d68ed6cd3a15357709d3b8dcf0b1ab0e289d11973f43d0&#34;</span>,
-</span></span><span class="line"><span class="cl">        <span class="s2">&#34;Created&#34;</span>: <span class="s2">&#34;2021-06-10T07:59:52.392658153+07:00&#34;</span>,
-</span></span><span class="line"><span class="cl">        <span class="s2">&#34;Scope&#34;</span>: <span class="s2">&#34;local&#34;</span>,
-</span></span><span class="line"><span class="cl">        <span class="s2">&#34;Driver&#34;</span>: <span class="s2">&#34;bridge&#34;</span>,
-</span></span><span class="line"><span class="cl">        <span class="s2">&#34;EnableIPv6&#34;</span>: false,
-</span></span><span class="line"><span class="cl">        <span class="s2">&#34;IPAM&#34;</span>: <span class="o">{</span>
-</span></span><span class="line"><span class="cl">            <span class="s2">&#34;Driver&#34;</span>: <span class="s2">&#34;default&#34;</span>,
-</span></span><span class="line"><span class="cl">            <span class="s2">&#34;Options&#34;</span>: <span class="o">{}</span>,
-</span></span><span class="line"><span class="cl">            <span class="s2">&#34;Config&#34;</span>: <span class="o">[</span>
-</span></span><span class="line"><span class="cl">                <span class="o">{</span>
-</span></span><span class="line"><span class="cl">                    <span class="s2">&#34;Subnet&#34;</span>: <span class="s2">&#34;172.20.0.0/16&#34;</span>,
-</span></span><span class="line"><span class="cl">                    <span class="s2">&#34;Gateway&#34;</span>: <span class="s2">&#34;172.20.0.1&#34;</span>
-</span></span><span class="line"><span class="cl">                <span class="o">}</span>
-</span></span><span class="line"><span class="cl">            <span class="o">]</span>
-</span></span><span class="line"><span class="cl">        <span class="o">}</span>,
-</span></span><span class="line"><span class="cl">        <span class="s2">&#34;Internal&#34;</span>: false,
-</span></span><span class="line"><span class="cl">        <span class="s2">&#34;Attachable&#34;</span>: false,
-</span></span><span class="line"><span class="cl">        <span class="s2">&#34;Ingress&#34;</span>: false,
-</span></span><span class="line"><span class="cl">        <span class="s2">&#34;ConfigFrom&#34;</span>: <span class="o">{</span>
-</span></span><span class="line"><span class="cl">            <span class="s2">&#34;Network&#34;</span>: <span class="s2">&#34;&#34;</span>
-</span></span><span class="line"><span class="cl">        <span class="o">}</span>,
-</span></span><span class="line"><span class="cl">        <span class="s2">&#34;ConfigOnly&#34;</span>: false,
-</span></span><span class="line"><span class="cl">        <span class="s2">&#34;Containers&#34;</span>: <span class="o">{</span>
-</span></span><span class="line"><span class="cl">            <span class="s2">&#34;1b39318c8d5b92261c22321f765945b85231160b53a9a3933b5fe120db80e7c2&#34;</span>: <span class="o">{</span>
-</span></span><span class="line"><span class="cl">                <span class="s2">&#34;Name&#34;</span>: <span class="s2">&#34;B4&#34;</span>,
-</span></span><span class="line"><span class="cl">                <span class="s2">&#34;EndpointID&#34;</span>: <span class="s2">&#34;5f26179cc819ffe9f6089c8de41cc236a36ce90c5ac646041d99de7d4a54d3e5&#34;</span>,
-</span></span><span class="line"><span class="cl">                <span class="s2">&#34;MacAddress&#34;</span>: <span class="s2">&#34;02:42:ac:14:00:03&#34;</span>,
-</span></span><span class="line"><span class="cl">                <span class="s2">&#34;IPv4Address&#34;</span>: <span class="s2">&#34;172.20.0.3/16&#34;</span>,
-</span></span><span class="line"><span class="cl">                <span class="s2">&#34;IPv6Address&#34;</span>: <span class="s2">&#34;&#34;</span>
-</span></span><span class="line"><span class="cl">            <span class="o">}</span>,
-</span></span><span class="line"><span class="cl">            <span class="s2">&#34;a7231f2ebe678e679ff063d0d8a09613a81db899ffb7e11eb6ba6c202e2e97d7&#34;</span>: <span class="o">{</span>
-</span></span><span class="line"><span class="cl">                <span class="s2">&#34;Name&#34;</span>: <span class="s2">&#34;B3&#34;</span>,
-</span></span><span class="line"><span class="cl">                <span class="s2">&#34;EndpointID&#34;</span>: <span class="s2">&#34;d8f6cf60953a1ebd7c1a84a95e5503bc726a5e77df2c939e8072fe6ca7406d65&#34;</span>,
-</span></span><span class="line"><span class="cl">                <span class="s2">&#34;MacAddress&#34;</span>: <span class="s2">&#34;02:42:ac:14:00:02&#34;</span>,
-</span></span><span class="line"><span class="cl">                <span class="s2">&#34;IPv4Address&#34;</span>: <span class="s2">&#34;172.20.0.2/16&#34;</span>,
-</span></span><span class="line"><span class="cl">                <span class="s2">&#34;IPv6Address&#34;</span>: <span class="s2">&#34;&#34;</span>
-</span></span><span class="line"><span class="cl">            <span class="o">}</span>
-</span></span><span class="line"><span class="cl">        <span class="o">}</span>,
-</span></span><span class="line"><span class="cl">        <span class="s2">&#34;Options&#34;</span>: <span class="o">{}</span>,
-</span></span><span class="line"><span class="cl">        <span class="s2">&#34;Labels&#34;</span>: <span class="o">{}</span>
-</span></span><span class="line"><span class="cl">    <span class="o">}</span>
-</span></span><span class="line"><span class="cl"><span class="o">]</span>
-</span></span></code></pre></td></tr></table>
+<pre class="chroma"><code class="language-bash" data-lang="bash">❯ docker network inspect mynetwork
+<span class="o">[</span>
+    <span class="o">{</span>
+        <span class="s2">&#34;Name&#34;</span>: <span class="s2">&#34;mynetwork&#34;</span>,
+        <span class="s2">&#34;Id&#34;</span>: <span class="s2">&#34;6c224f5d1a9819ba01d68ed6cd3a15357709d3b8dcf0b1ab0e289d11973f43d0&#34;</span>,
+        <span class="s2">&#34;Created&#34;</span>: <span class="s2">&#34;2021-06-10T07:59:52.392658153+07:00&#34;</span>,
+        <span class="s2">&#34;Scope&#34;</span>: <span class="s2">&#34;local&#34;</span>,
+        <span class="s2">&#34;Driver&#34;</span>: <span class="s2">&#34;bridge&#34;</span>,
+        <span class="s2">&#34;EnableIPv6&#34;</span>: false,
+        <span class="s2">&#34;IPAM&#34;</span>: <span class="o">{</span>
+            <span class="s2">&#34;Driver&#34;</span>: <span class="s2">&#34;default&#34;</span>,
+            <span class="s2">&#34;Options&#34;</span>: <span class="o">{}</span>,
+            <span class="s2">&#34;Config&#34;</span>: <span class="o">[</span>
+                <span class="o">{</span>
+                    <span class="s2">&#34;Subnet&#34;</span>: <span class="s2">&#34;172.20.0.0/16&#34;</span>,
+                    <span class="s2">&#34;Gateway&#34;</span>: <span class="s2">&#34;172.20.0.1&#34;</span>
+                <span class="o">}</span>
+            <span class="o">]</span>
+        <span class="o">}</span>,
+        <span class="s2">&#34;Internal&#34;</span>: false,
+        <span class="s2">&#34;Attachable&#34;</span>: false,
+        <span class="s2">&#34;Ingress&#34;</span>: false,
+        <span class="s2">&#34;ConfigFrom&#34;</span>: <span class="o">{</span>
+            <span class="s2">&#34;Network&#34;</span>: <span class="s2">&#34;&#34;</span>
+        <span class="o">}</span>,
+        <span class="s2">&#34;ConfigOnly&#34;</span>: false,
+        <span class="s2">&#34;Containers&#34;</span>: <span class="o">{</span>
+            <span class="s2">&#34;1b39318c8d5b92261c22321f765945b85231160b53a9a3933b5fe120db80e7c2&#34;</span>: <span class="o">{</span>
+                <span class="s2">&#34;Name&#34;</span>: <span class="s2">&#34;B4&#34;</span>,
+                <span class="s2">&#34;EndpointID&#34;</span>: <span class="s2">&#34;5f26179cc819ffe9f6089c8de41cc236a36ce90c5ac646041d99de7d4a54d3e5&#34;</span>,
+                <span class="s2">&#34;MacAddress&#34;</span>: <span class="s2">&#34;02:42:ac:14:00:03&#34;</span>,
+                <span class="s2">&#34;IPv4Address&#34;</span>: <span class="s2">&#34;172.20.0.3/16&#34;</span>,
+                <span class="s2">&#34;IPv6Address&#34;</span>: <span class="s2">&#34;&#34;</span>
+            <span class="o">}</span>,
+            <span class="s2">&#34;a7231f2ebe678e679ff063d0d8a09613a81db899ffb7e11eb6ba6c202e2e97d7&#34;</span>: <span class="o">{</span>
+                <span class="s2">&#34;Name&#34;</span>: <span class="s2">&#34;B3&#34;</span>,
+                <span class="s2">&#34;EndpointID&#34;</span>: <span class="s2">&#34;d8f6cf60953a1ebd7c1a84a95e5503bc726a5e77df2c939e8072fe6ca7406d65&#34;</span>,
+                <span class="s2">&#34;MacAddress&#34;</span>: <span class="s2">&#34;02:42:ac:14:00:02&#34;</span>,
+                <span class="s2">&#34;IPv4Address&#34;</span>: <span class="s2">&#34;172.20.0.2/16&#34;</span>,
+                <span class="s2">&#34;IPv6Address&#34;</span>: <span class="s2">&#34;&#34;</span>
+            <span class="o">}</span>
+        <span class="o">}</span>,
+        <span class="s2">&#34;Options&#34;</span>: <span class="o">{}</span>,
+        <span class="s2">&#34;Labels&#34;</span>: <span class="o">{}</span>
+    <span class="o">}</span>
+<span class="o">]</span>
+</code></pre></td></tr></table>
 </div>
 </div><p>Lúc này, B3 có thể kết nối tới B2 và B1 và ngược lại.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -2593,26 +2595,26 @@ Khi tạo ra 2 network thì những máy cùng 1 network (B1 với B2 hoặc B3 
 </span><span class="lnt">14
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">❯ docker attach B1
-</span></span><span class="line"><span class="cl">/ <span class="c1"># ping 173.20.0.2</span>
-</span></span><span class="line"><span class="cl">PING 173.20.0.2 <span class="o">(</span>173.20.0.2<span class="o">)</span>: <span class="m">56</span> data bytes
-</span></span><span class="line"><span class="cl"><span class="m">64</span> bytes from 173.20.0.2: <span class="nv">seq</span><span class="o">=</span><span class="m">0</span> <span class="nv">ttl</span><span class="o">=</span><span class="m">49</span> <span class="nv">time</span><span class="o">=</span>325.730 ms
-</span></span><span class="line"><span class="cl"><span class="m">64</span> bytes from 173.20.0.2: <span class="nv">seq</span><span class="o">=</span><span class="m">1</span> <span class="nv">ttl</span><span class="o">=</span><span class="m">49</span> <span class="nv">time</span><span class="o">=</span>297.840 ms
-</span></span><span class="line"><span class="cl"><span class="m">64</span> bytes from 173.20.0.2: <span class="nv">seq</span><span class="o">=</span><span class="m">2</span> <span class="nv">ttl</span><span class="o">=</span><span class="m">49</span> <span class="nv">time</span><span class="o">=</span>280.704 ms
-</span></span><span class="line"><span class="cl"><span class="m">64</span> bytes from 173.20.0.2: <span class="nv">seq</span><span class="o">=</span><span class="m">3</span> <span class="nv">ttl</span><span class="o">=</span><span class="m">49</span> <span class="nv">time</span><span class="o">=</span>328.708 ms
-</span></span><span class="line"><span class="cl"><span class="m">64</span> bytes from 173.20.0.2: <span class="nv">seq</span><span class="o">=</span><span class="m">4</span> <span class="nv">ttl</span><span class="o">=</span><span class="m">49</span> <span class="nv">time</span><span class="o">=</span>274.586 ms
-</span></span><span class="line"><span class="cl"><span class="m">64</span> bytes from 173.20.0.2: <span class="nv">seq</span><span class="o">=</span><span class="m">5</span> <span class="nv">ttl</span><span class="o">=</span><span class="m">49</span> <span class="nv">time</span><span class="o">=</span>295.232 ms
-</span></span><span class="line"><span class="cl"><span class="m">64</span> bytes from 173.20.0.2: <span class="nv">seq</span><span class="o">=</span><span class="m">6</span> <span class="nv">ttl</span><span class="o">=</span><span class="m">49</span> <span class="nv">time</span><span class="o">=</span>274.058 ms
-</span></span><span class="line"><span class="cl">^C
-</span></span><span class="line"><span class="cl">--- 173.20.0.2 ping statistics ---
-</span></span><span class="line"><span class="cl"><span class="m">8</span> packets transmitted, <span class="m">7</span> packets received, 12% packet loss
-</span></span><span class="line"><span class="cl">round-trip min/avg/max <span class="o">=</span> 274.058/296.694/328.708 ms
-</span></span></code></pre></td></tr></table>
+<pre class="chroma"><code class="language-bash" data-lang="bash">❯ docker attach B1
+/ <span class="c1"># ping 173.20.0.2</span>
+PING 173.20.0.2 <span class="o">(</span>173.20.0.2<span class="o">)</span>: <span class="m">56</span> data bytes
+<span class="m">64</span> bytes from 173.20.0.2: <span class="nv">seq</span><span class="o">=</span><span class="m">0</span> <span class="nv">ttl</span><span class="o">=</span><span class="m">49</span> <span class="nv">time</span><span class="o">=</span>325.730 ms
+<span class="m">64</span> bytes from 173.20.0.2: <span class="nv">seq</span><span class="o">=</span><span class="m">1</span> <span class="nv">ttl</span><span class="o">=</span><span class="m">49</span> <span class="nv">time</span><span class="o">=</span>297.840 ms
+<span class="m">64</span> bytes from 173.20.0.2: <span class="nv">seq</span><span class="o">=</span><span class="m">2</span> <span class="nv">ttl</span><span class="o">=</span><span class="m">49</span> <span class="nv">time</span><span class="o">=</span>280.704 ms
+<span class="m">64</span> bytes from 173.20.0.2: <span class="nv">seq</span><span class="o">=</span><span class="m">3</span> <span class="nv">ttl</span><span class="o">=</span><span class="m">49</span> <span class="nv">time</span><span class="o">=</span>328.708 ms
+<span class="m">64</span> bytes from 173.20.0.2: <span class="nv">seq</span><span class="o">=</span><span class="m">4</span> <span class="nv">ttl</span><span class="o">=</span><span class="m">49</span> <span class="nv">time</span><span class="o">=</span>274.586 ms
+<span class="m">64</span> bytes from 173.20.0.2: <span class="nv">seq</span><span class="o">=</span><span class="m">5</span> <span class="nv">ttl</span><span class="o">=</span><span class="m">49</span> <span class="nv">time</span><span class="o">=</span>295.232 ms
+<span class="m">64</span> bytes from 173.20.0.2: <span class="nv">seq</span><span class="o">=</span><span class="m">6</span> <span class="nv">ttl</span><span class="o">=</span><span class="m">49</span> <span class="nv">time</span><span class="o">=</span>274.058 ms
+^C
+--- 173.20.0.2 ping statistics ---
+<span class="m">8</span> packets transmitted, <span class="m">7</span> packets received, 12% packet loss
+round-trip min/avg/max <span class="o">=</span> 274.058/296.694/328.708 ms
+</code></pre></td></tr></table>
 </div>
 </div><p>Một lưu ý là khi B3 và B4 cùng kết nối với nhau qua một mạng, bên cạnh kết nối với nhau qua địa chỉ thì chúng có thể kết nối với nhau qua tên.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -2625,38 +2627,38 @@ Khi tạo ra 2 network thì những máy cùng 1 network (B1 với B2 hoặc B3 
 </span><span class="lnt">11
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">❯ docker attach B3
-</span></span><span class="line"><span class="cl">/ <span class="c1"># ping B4</span>
-</span></span><span class="line"><span class="cl">PING B4 <span class="o">(</span>172.20.0.3<span class="o">)</span>: <span class="m">56</span> data bytes
-</span></span><span class="line"><span class="cl"><span class="m">64</span> bytes from 172.20.0.3: <span class="nv">seq</span><span class="o">=</span><span class="m">0</span> <span class="nv">ttl</span><span class="o">=</span><span class="m">64</span> <span class="nv">time</span><span class="o">=</span>0.283 ms
-</span></span><span class="line"><span class="cl"><span class="m">64</span> bytes from 172.20.0.3: <span class="nv">seq</span><span class="o">=</span><span class="m">1</span> <span class="nv">ttl</span><span class="o">=</span><span class="m">64</span> <span class="nv">time</span><span class="o">=</span>0.194 ms
-</span></span><span class="line"><span class="cl"><span class="m">64</span> bytes from 172.20.0.3: <span class="nv">seq</span><span class="o">=</span><span class="m">2</span> <span class="nv">ttl</span><span class="o">=</span><span class="m">64</span> <span class="nv">time</span><span class="o">=</span>0.164 ms
-</span></span><span class="line"><span class="cl"><span class="m">64</span> bytes from 172.20.0.3: <span class="nv">seq</span><span class="o">=</span><span class="m">3</span> <span class="nv">ttl</span><span class="o">=</span><span class="m">64</span> <span class="nv">time</span><span class="o">=</span>0.191 ms
-</span></span><span class="line"><span class="cl">^C
-</span></span><span class="line"><span class="cl">--- B4 ping statistics ---
-</span></span><span class="line"><span class="cl"><span class="m">4</span> packets transmitted, <span class="m">4</span> packets received, 0% packet loss
-</span></span><span class="line"><span class="cl">round-trip min/avg/max <span class="o">=</span> 0.164/0.208/0.283 ms
-</span></span></code></pre></td></tr></table>
+<pre class="chroma"><code class="language-bash" data-lang="bash">❯ docker attach B3
+/ <span class="c1"># ping B4</span>
+PING B4 <span class="o">(</span>172.20.0.3<span class="o">)</span>: <span class="m">56</span> data bytes
+<span class="m">64</span> bytes from 172.20.0.3: <span class="nv">seq</span><span class="o">=</span><span class="m">0</span> <span class="nv">ttl</span><span class="o">=</span><span class="m">64</span> <span class="nv">time</span><span class="o">=</span>0.283 ms
+<span class="m">64</span> bytes from 172.20.0.3: <span class="nv">seq</span><span class="o">=</span><span class="m">1</span> <span class="nv">ttl</span><span class="o">=</span><span class="m">64</span> <span class="nv">time</span><span class="o">=</span>0.194 ms
+<span class="m">64</span> bytes from 172.20.0.3: <span class="nv">seq</span><span class="o">=</span><span class="m">2</span> <span class="nv">ttl</span><span class="o">=</span><span class="m">64</span> <span class="nv">time</span><span class="o">=</span>0.164 ms
+<span class="m">64</span> bytes from 172.20.0.3: <span class="nv">seq</span><span class="o">=</span><span class="m">3</span> <span class="nv">ttl</span><span class="o">=</span><span class="m">64</span> <span class="nv">time</span><span class="o">=</span>0.191 ms
+^C
+--- B4 ping statistics ---
+<span class="m">4</span> packets transmitted, <span class="m">4</span> packets received, 0% packet loss
+round-trip min/avg/max <span class="o">=</span> 0.164/0.208/0.283 ms
+</code></pre></td></tr></table>
 </div>
 </div><p>Tuy nhiên B1, B2 cũng kết nối với nhau chung 1 mạng mà chúng không thể giao tiếp với nhau qua tên. Có thể do mạng của chúng cùng kết nối là mạng mặc định (bridge).</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">❯ docker attach B1
-</span></span><span class="line"><span class="cl">/ <span class="c1"># ping B2</span>
-</span></span><span class="line"><span class="cl">ping: bad address <span class="s1">&#39;B2&#39;</span>
-</span></span></code></pre></td></tr></table>
+<pre class="chroma"><code class="language-bash" data-lang="bash">❯ docker attach B1
+/ <span class="c1"># ping B2</span>
+ping: bad address <span class="s1">&#39;B2&#39;</span>
+</code></pre></td></tr></table>
 </div>
 </div><h3 id="xóa-mạng">Xóa mạng</h3>
 <p>Khi không có nhu cầu sử dụng network nữa, chúng ta có thể xóa chúng đi với cú pháp:<br />
 <code>docker network rm &lt;ten_network&gt;</code></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -2673,22 +2675,22 @@ Khi tạo ra 2 network thì những máy cùng 1 network (B1 với B2 hoặc B3 
 </span><span class="lnt">15
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">❯ docker network ls
-</span></span><span class="line"><span class="cl">NETWORK ID          NAME                DRIVER              SCOPE
-</span></span><span class="line"><span class="cl">286d5161c9f6        bridge              bridge              <span class="nb">local</span>
-</span></span><span class="line"><span class="cl">0f2ab02aa9f4        host                host                <span class="nb">local</span>
-</span></span><span class="line"><span class="cl">2f8c72e77060        mynetwork           bridge              <span class="nb">local</span>
-</span></span><span class="line"><span class="cl">258acbefb858        network1            bridge              <span class="nb">local</span>
-</span></span><span class="line"><span class="cl">271997adaaa9        none                null                <span class="nb">local</span>
-</span></span><span class="line"><span class="cl">❯ docker network rm network1
-</span></span><span class="line"><span class="cl">network1
-</span></span><span class="line"><span class="cl">❯ docker network ls
-</span></span><span class="line"><span class="cl">NETWORK ID          NAME                DRIVER              SCOPE
-</span></span><span class="line"><span class="cl">286d5161c9f6        bridge              bridge              <span class="nb">local</span>
-</span></span><span class="line"><span class="cl">0f2ab02aa9f4        host                host                <span class="nb">local</span>
-</span></span><span class="line"><span class="cl">2f8c72e77060        mynetwork           bridge              <span class="nb">local</span>
-</span></span><span class="line"><span class="cl">271997adaaa9        none                null                <span class="nb">local</span>
-</span></span></code></pre></td></tr></table>
+<pre class="chroma"><code class="language-bash" data-lang="bash">❯ docker network ls
+NETWORK ID          NAME                DRIVER              SCOPE
+286d5161c9f6        bridge              bridge              <span class="nb">local</span>
+0f2ab02aa9f4        host                host                <span class="nb">local</span>
+2f8c72e77060        mynetwork           bridge              <span class="nb">local</span>
+258acbefb858        network1            bridge              <span class="nb">local</span>
+271997adaaa9        none                null                <span class="nb">local</span>
+❯ docker network rm network1
+network1
+❯ docker network ls
+NETWORK ID          NAME                DRIVER              SCOPE
+286d5161c9f6        bridge              bridge              <span class="nb">local</span>
+0f2ab02aa9f4        host                host                <span class="nb">local</span>
+2f8c72e77060        mynetwork           bridge              <span class="nb">local</span>
+271997adaaa9        none                null                <span class="nb">local</span>
+</code></pre></td></tr></table>
 </div>
 </div><h2 id="kết-luận">Kết luận</h2>
 <p>Trong bài học này, chúng ta đã học được từ anh <a href="https://www.youtube.com/watch?v=9Gf4vRYSkK8&amp;list=PLwJr0JSP7i8At14UIC-JR4r73G4hQ1CXO&amp;index=3&amp;ab_channel=XuanThuLab">XuanThuLabChanel</a>  những kiến thức như sau:</p>
@@ -2936,7 +2938,7 @@ Khi tạo ra 2 network thì những máy cùng 1 network (B1 với B2 hoặc B3 
     </div>
     <div class="whoami__desc">
       
-        Code Reverser
+        Cyber Security Engineer
       
     </div>
     <div class="whoami__social">
@@ -2988,6 +2990,10 @@ Khi tạo ra 2 network thì những máy cùng 1 network (B1 với B2 hoặc B3 
       
       
       
+      <a href="https://www.linkedin.com/in/long-v%C3%B5-minh-58374318b/" title="linkedin" aria-label="linkedin">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="#000000" viewBox="0 0 30 30" width="25" height="25"><path fill="currentColor" d="M24,4H6C4.895,4,4,4.895,4,6v18c0,1.105,0.895,2,2,2h18c1.105,0,2-0.895,2-2V6C26,4.895,25.105,4,24,4z M10.954,22h-2.95 v-9.492h2.95V22z M9.449,11.151c-0.951,0-1.72-0.771-1.72-1.72c0-0.949,0.77-1.719,1.72-1.719c0.948,0,1.719,0.771,1.719,1.719 C11.168,10.38,10.397,11.151,9.449,11.151z M22.004,22h-2.948v-4.616c0-1.101-0.02-2.517-1.533-2.517 c-1.535,0-1.771,1.199-1.771,2.437V22h-2.948v-9.492h2.83v1.297h0.04c0.394-0.746,1.356-1.533,2.791-1.533 c2.987,0,3.539,1.966,3.539,4.522V22z"/></svg>
+
+      </a>
       
       
       
@@ -3011,6 +3017,16 @@ Khi tạo ra 2 network thì những máy cùng 1 network (B1 với B2 hoặc B3 
       
       
       
+      
+      
+      <a href="https://twitter.com/edisc_1" title="twitter" aria-label="twitter">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="25" height="25" viewBox="0 0 32 32" version="1.1">
+<g id="surface676">
+<path fill="currentColor" d="M 28 8.558594 C 27.117188 8.949219 26.167969 9.214844 25.171875 9.332031 C 26.1875 8.722656 26.96875 7.757812 27.335938 6.609375 C 26.386719 7.171875 25.332031 7.582031 24.210938 7.804688 C 23.3125 6.847656 22.03125 6.246094 20.617188 6.246094 C 17.898438 6.246094 15.691406 8.453125 15.691406 11.171875 C 15.691406 11.558594 15.734375 11.933594 15.820312 12.292969 C 11.726562 12.089844 8.097656 10.128906 5.671875 7.148438 C 5.246094 7.875 5.003906 8.722656 5.003906 9.625 C 5.003906 11.332031 5.871094 12.839844 7.195312 13.722656 C 6.386719 13.695312 5.628906 13.476562 4.964844 13.105469 C 4.964844 13.128906 4.964844 13.148438 4.964844 13.167969 C 4.964844 15.554688 6.660156 17.546875 8.914062 17.996094 C 8.5 18.109375 8.066406 18.171875 7.617188 18.171875 C 7.300781 18.171875 6.988281 18.140625 6.691406 18.082031 C 7.316406 20.039062 9.136719 21.460938 11.289062 21.503906 C 9.605469 22.824219 7.480469 23.609375 5.175781 23.609375 C 4.777344 23.609375 4.386719 23.585938 4 23.539062 C 6.179688 24.9375 8.765625 25.753906 11.546875 25.753906 C 20.605469 25.753906 25.558594 18.25 25.558594 11.742188 C 25.558594 11.53125 25.550781 11.316406 25.542969 11.105469 C 26.503906 10.410156 27.339844 9.542969 28 8.558594 Z M 28 8.558594 "/>
+</g>
+</svg>
+
+      </a>
       
       
       
@@ -3186,7 +3202,7 @@ Khi tạo ra 2 network thì những máy cùng 1 network (B1 với B2 hoặc B3 
 </div>
 
 
-<script defer src="/js/swipe.min.7be2debdadbc35f9430de39f9010d89df5aee1904747098818b5c01cd0672180.js"></script>
+<script defer src="/js/swipe.min.b4b82839155519d9ca67746615a4c86ccbc1061c196fe6d8aa26e4fe22902718.js"></script>
 
 <script defer src="/js/micromodal.min.de01b44b2f383056bbcaf6ee921fd385d79108ec1129afd0eb2f3f5a07e11f45.js"></script>
 
@@ -4105,6 +4121,11 @@ document.addEventListener('DOMContentLoaded', function () {
     
             
     
+      
+      <a href="https://www.linkedin.com/in/long-v%C3%B5-minh-58374318b/" title="linkedin" aria-label="linkedin">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="#000000" viewBox="0 0 30 30" width="32" height="32"><path fill="currentColor" d="M24,4H6C4.895,4,4,4.895,4,6v18c0,1.105,0.895,2,2,2h18c1.105,0,2-0.895,2-2V6C26,4.895,25.105,4,24,4z M10.954,22h-2.95 v-9.492h2.95V22z M9.449,11.151c-0.951,0-1.72-0.771-1.72-1.72c0-0.949,0.77-1.719,1.72-1.719c0.948,0,1.719,0.771,1.719,1.719 C11.168,10.38,10.397,11.151,9.449,11.151z M22.004,22h-2.948v-4.616c0-1.101-0.02-2.517-1.533-2.517 c-1.535,0-1.771,1.199-1.771,2.437V22h-2.948v-9.492h2.83v1.297h0.04c0.394-0.746,1.356-1.533,2.791-1.533 c2.987,0,3.539,1.966,3.539,4.522V22z"/></svg>
+
+      </a>
             
     
             
@@ -4129,6 +4150,15 @@ document.addEventListener('DOMContentLoaded', function () {
     
             
     
+      
+      <a href="https://twitter.com/edisc_1" title="twitter" aria-label="twitter">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32" version="1.1">
+<g id="surface676">
+<path fill="currentColor" d="M 28 8.558594 C 27.117188 8.949219 26.167969 9.214844 25.171875 9.332031 C 26.1875 8.722656 26.96875 7.757812 27.335938 6.609375 C 26.386719 7.171875 25.332031 7.582031 24.210938 7.804688 C 23.3125 6.847656 22.03125 6.246094 20.617188 6.246094 C 17.898438 6.246094 15.691406 8.453125 15.691406 11.171875 C 15.691406 11.558594 15.734375 11.933594 15.820312 12.292969 C 11.726562 12.089844 8.097656 10.128906 5.671875 7.148438 C 5.246094 7.875 5.003906 8.722656 5.003906 9.625 C 5.003906 11.332031 5.871094 12.839844 7.195312 13.722656 C 6.386719 13.695312 5.628906 13.476562 4.964844 13.105469 C 4.964844 13.128906 4.964844 13.148438 4.964844 13.167969 C 4.964844 15.554688 6.660156 17.546875 8.914062 17.996094 C 8.5 18.109375 8.066406 18.171875 7.617188 18.171875 C 7.300781 18.171875 6.988281 18.140625 6.691406 18.082031 C 7.316406 20.039062 9.136719 21.460938 11.289062 21.503906 C 9.605469 22.824219 7.480469 23.609375 5.175781 23.609375 C 4.777344 23.609375 4.386719 23.585938 4 23.539062 C 6.179688 24.9375 8.765625 25.753906 11.546875 25.753906 C 20.605469 25.753906 25.558594 18.25 25.558594 11.742188 C 25.558594 11.53125 25.550781 11.316406 25.542969 11.105469 C 26.503906 10.410156 27.339844 9.542969 28 8.558594 Z M 28 8.558594 "/>
+</g>
+</svg>
+
+      </a>
             
     
             
@@ -4177,7 +4207,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 
             <p class="caption">
                 
-                    ©2022, All Rights Reserved
+                    ©2023, All Rights Reserved
                 
             </p>
         
