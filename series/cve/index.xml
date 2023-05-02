@@ -14,11 +14,48 @@
     <managingEditor>edisc.ctf@gmail.com (Edisc)</managingEditor>
     <webMaster>edisc.ctf@gmail.com (Edisc)</webMaster>
     <copyright>©2023, All Rights Reserved</copyright>
-    <lastBuildDate>Sun, 30 Apr 2023 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 02 May 2023 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://minhlongmt183.github.io/series/cve/index.xml" rel="self" type="application/rss+xml" />
     
 
+      
+      <item>
+        <title>Reproduce bug: Remote Code Execution in Melis Platform</title>
+        <link>https://minhlongmt183.github.io/posts/reproduce-bug-remote-code-execution-in-melis-platform/</link>
+        <pubDate>Tue, 02 May 2023 00:00:00 +0000</pubDate>
+        <author>edisc.ctf@gmail.com (Edisc)</author>
+        <atom:modified>Tue, 02 May 2023 00:00:00 +0000</atom:modified>
+        <guid>https://minhlongmt183.github.io/posts/reproduce-bug-remote-code-execution-in-melis-platform/</guid>
+        <description>Reproduce bug: Remote Code Execution in Melis Platform Continuing from the previous article series, in this post, I will apply the knowledge learned and research on PHP deserialize to reproduce CVE-2022-39298
+ There is currently no POC code available on this internet for this CVE, but there is a blog post discussing it: Remote Code Execution in Melis Platform | Sonar (sonarsource.com) This blog is based on the blog Remote Code Execution in Melis Platform | Sonar (sonarsource.</description>
+        
+        <dc:creator>Edisc</dc:creator>
+        <media:content url="https://minhlongmt183.github.io//images/posts/Reproduce-bug-Remote-Code-Execution-in-Melis-Platform/melis-framework.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>cve, php</category>
+            
+          
+        
+        
+          
+            
+              <category>web</category>
+            
+          
+        
+        
+          
+            
+              <category>cve</category>
+            
+          
+        
+      </item>
       
       <item>
         <title>Khi newbie học PHP deserialize</title>
