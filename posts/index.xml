@@ -14,11 +14,49 @@
     <managingEditor>edisc.ctf@gmail.com (Edisc)</managingEditor>
     <webMaster>edisc.ctf@gmail.com (Edisc)</webMaster>
     <copyright>©2023, All Rights Reserved</copyright>
-    <lastBuildDate>Mon, 22 May 2023 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 28 Jun 2023 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://minhlongmt183.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
 
+      
+      <item>
+        <title>[.NET deserialize] SoapFormatter:ActivitySurrogateSelector</title>
+        <link>https://minhlongmt183.github.io/posts/dot_net_101_soapformatter_activitysurrogateselector/</link>
+        <pubDate>Wed, 28 Jun 2023 00:00:00 +0000</pubDate>
+        <author>edisc.ctf@gmail.com (Edisc)</author>
+        <atom:modified>Wed, 28 Jun 2023 00:00:00 +0000</atom:modified>
+        <guid>https://minhlongmt183.github.io/posts/dot_net_101_soapformatter_activitysurrogateselector/</guid>
+        <description>[.NET 101] SoapFormatter:ActivitySurrogateSelector Sau gần một tháng học về JavaDeserialize: học các khái niệm basic, reproduce các commonscollection thì lần này tôi có cơ hội tiếp xúc với .Net deserialize. Nội dung cho newbie là học các kiến thức basic và reproduce các chain kinh điển của .Net deserialize trên 先知社区 (aliyun.com)
+Khởi đầu khá thuận lợi với các bài:
+ dotnet serialize 101 .net deserialization of BinaryFormatter .net deserialized by XmlSerializer  Nhìn chung là vì có kiến thức cơ bản từ PHP deserialize và Java deserialize nên ở mức độ 101 này không quá khó với tôi.</description>
+        
+        <dc:creator>Edisc</dc:creator>
+        <media:content url="https://minhlongmt183.github.io//images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/NET.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>C#</category>
+            
+          
+        
+        
+          
+            
+              <category>web</category>
+            
+          
+        
+        
+          
+            
+              <category>websecurity</category>
+            
+          
+        
+      </item>
       
       <item>
         <title>From SQLi to PHP deserialize to RCE on Pandora FMS 742</title>
@@ -37,7 +75,7 @@ I Introducing Pandora FMS 742  Pandora FMS is a monitoring software that collect
         
           
             
-              <category>cve, php</category>
+              <category>php</category>
             
           
         
@@ -51,7 +89,7 @@ I Introducing Pandora FMS 742  Pandora FMS is a monitoring software that collect
         
           
             
-              <category>cve</category>
+              <category>websecurity</category>
             
           
         
@@ -74,7 +112,7 @@ I Introducing Pandora FMS 742  Pandora FMS is a monitoring software that collect
         
           
             
-              <category>cve, php</category>
+              <category>php</category>
             
           
         
@@ -88,7 +126,7 @@ I Introducing Pandora FMS 742  Pandora FMS is a monitoring software that collect
         
           
             
-              <category>cve</category>
+              <category>websecurity</category>
             
           
         

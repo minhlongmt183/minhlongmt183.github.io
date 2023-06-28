@@ -3,23 +3,48 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://minhlongmt183.github.io/posts/dot_net_101_soapformatter_activitysurrogateselector/</loc>
+    <lastmod>2023-06-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://minhlongmt183.github.io/tags/c#/</loc>
+    <lastmod>2023-06-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://minhlongmt183.github.io/categories/</loc>
-    <lastmod>2023-05-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://minhlongmt183.github.io/series/cve/</loc>
-    <lastmod>2023-05-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://minhlongmt183.github.io/tags/cve-php/</loc>
-    <lastmod>2023-05-22T00:00:00+00:00</lastmod>
+    <lastmod>2023-06-28T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://minhlongmt183.github.io/</loc>
-    <lastmod>2023-05-22T00:00:00+00:00</lastmod>
+    <lastmod>2023-06-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://minhlongmt183.github.io/posts/</loc>
+    <lastmod>2023-06-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://minhlongmt183.github.io/series/</loc>
+    <lastmod>2023-06-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://minhlongmt183.github.io/tags/</loc>
+    <lastmod>2023-06-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://minhlongmt183.github.io/categories/web/</loc>
+    <lastmod>2023-06-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://minhlongmt183.github.io/series/websecurity/</loc>
+    <lastmod>2023-06-28T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -28,28 +53,23 @@
   </url>
   
   <url>
-    <loc>https://minhlongmt183.github.io/posts/</loc>
-    <lastmod>2023-05-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://minhlongmt183.github.io/series/</loc>
-    <lastmod>2023-05-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://minhlongmt183.github.io/tags/</loc>
-    <lastmod>2023-05-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://minhlongmt183.github.io/categories/web/</loc>
+    <loc>https://minhlongmt183.github.io/tags/php/</loc>
     <lastmod>2023-05-22T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://minhlongmt183.github.io/posts/reproduce-bug-remote-code-execution-in-melis-platform/</loc>
     <lastmod>2023-05-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://minhlongmt183.github.io/series/cve/</loc>
+    <lastmod>2023-04-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://minhlongmt183.github.io/tags/cve-php/</loc>
+    <lastmod>2023-04-30T00:00:00+00:00</lastmod>
   </url>
   
   <url>
