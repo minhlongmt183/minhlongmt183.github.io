@@ -27,7 +27,7 @@
         <author>edisc.ctf@gmail.com (Edisc)</author>
         <atom:modified>Tue, 28 Jul 2020 00:00:00 +0000</atom:modified>
         <guid>https://minhlongmt183.github.io/posts/wining_the_racing/</guid>
-        <description>Bài viết này nhằm mục đích ghi lại những kiến thức đã học để nhớ và hiểu rõ hơn. Bài viết tham khảo chủ yếu từ Winning the race: Signals, symlinks, and TOC/TOU Giới thiệu  Không phải tất cả race condition đều là lỗ hổng, những phần lớn các race condition sẽ dẫn tới lỗ hổng ở một nơi nào đó. Nói cách khác, những lỗ hổng hình thành do race condition thường là những lỗ hổng cực kì nghiêm trọng.</description>
+        <description>Bài viết này nhằm mục đích ghi lại những kiến thức đã học để nhớ và hiểu rõ hơn. Bài viết tham khảo chủ yếu từ Winning the race: Signals, symlinks, and TOC/TOU  Giới thiệu  Không phải tất cả race condition đều là lỗ hổng, những phần lớn các race condition sẽ dẫn tới lỗ hổng ở một nơi nào đó. Nói cách khác, những lỗ hổng hình thành do race condition thường là những lỗ hổng cực kì nghiêm trọng.</description>
         
         <dc:creator>Edisc</dc:creator>
         <media:content url="https://minhlongmt183.github.io/images/posts/win_the_racing/wining_the_racing.png" medium="image"><media:title type="html">featured image</media:title></media:content>

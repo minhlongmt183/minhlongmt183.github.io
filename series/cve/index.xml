@@ -65,7 +65,7 @@
         <author>edisc.ctf@gmail.com (Edisc)</author>
         <atom:modified>Tue, 22 Sep 2020 00:00:00 +0000</atom:modified>
         <guid>https://minhlongmt183.github.io/posts/cve-2021-22555/</guid>
-        <description>Bài viết này nhằm mục đích học tập cá nhân, ghi lại những kiến thức đã học để nhớ và hiểu rõ hơn. Bài viết tham khảo chủ yếu từ CVE-2021-22555: Turning \x00\x00 into 10000$, phần lớn là dịch từ bài viết gốc cộng thêm một số lí giải của tôi. Tổng quan về lỗ hổng  Lỗ hỗng cho phép viết dữ liệu bên ngoài vùng cho phép trên heap (heap out-of-bound) Những phiên bản bị ảnh hưởng: Linux kernel *v2.</description>
+        <description>Bài viết này nhằm mục đích học tập cá nhân, ghi lại những kiến thức đã học để nhớ và hiểu rõ hơn. Bài viết tham khảo chủ yếu từ CVE-2021-22555: Turning \x00\x00 into 10000$, phần lớn là dịch từ bài viết gốc cộng thêm một số lí giải của tôi.  Tổng quan về lỗ hổng  Lỗ hỗng cho phép viết dữ liệu bên ngoài vùng cho phép trên heap (heap out-of-bound) Những phiên bản bị ảnh hưởng: Linux kernel *v2.</description>
         
         <dc:creator>Edisc</dc:creator>
         <media:content url="https://minhlongmt183.github.io/images/posts/CVE_2021_22555/avatar.png" medium="image"><media:title type="html">featured image</media:title></media:content>
@@ -101,7 +101,7 @@
         <author>edisc.ctf@gmail.com (Edisc)</author>
         <atom:modified>Sun, 16 Aug 2020 00:00:00 +0000</atom:modified>
         <guid>https://minhlongmt183.github.io/posts/cve-2021-3156/</guid>
-        <description>Bài viết này nhằm mục đích ghi lại những kiến thức đã học để nhớ và hiểu rõ hơn. Tổng quan Lỗi của CVE này thuộc loại heap-based buffer overflow trong sudo. Cụ thể:
+        <description>Bài viết này nhằm mục đích ghi lại những kiến thức đã học để nhớ và hiểu rõ hơn.  Tổng quan Lỗi của CVE này thuộc loại heap-based buffer overflow trong sudo. Cụ thể:
  Nó cho phép người dùng bình thường lấy được root mà không cần biết mật khẩu của root. Những phiên bản bị ảnh hưởng:  legacy có phiên bản của sudo từ 1.8.2 - 1.</description>
         
         <dc:creator>Edisc</dc:creator>
@@ -138,7 +138,7 @@
         <author>edisc.ctf@gmail.com (Edisc)</author>
         <atom:modified>Mon, 03 Aug 2020 00:00:00 +0000</atom:modified>
         <guid>https://minhlongmt183.github.io/posts/cve-2019-18683/</guid>
-        <description>Bài viết này nhằm mục đích ghi lại những kiến thức đã học để nhớ và hiểu rõ hơn. Bài viết tham khảo chủ yếu từ CVE-2019-18683: Exploiting a Linux kernel vulnerability in the V4L2 subsystem Vulnerabilities chúng ta tải source code kernel về và xem tại: linux-x/drivers/media/platform/vivid/  Lỗ hổng bắt nguồn từ sai sót trong hiện thực, sử dụng mutex lock của driver vivid trong subsystem V4L2 - (drivers/media/platform/vivid).</description>
+        <description>Bài viết này nhằm mục đích ghi lại những kiến thức đã học để nhớ và hiểu rõ hơn. Bài viết tham khảo chủ yếu từ CVE-2019-18683: Exploiting a Linux kernel vulnerability in the V4L2 subsystem  Vulnerabilities chúng ta tải source code kernel về và xem tại: linux-x/drivers/media/platform/vivid/   Lỗ hổng bắt nguồn từ sai sót trong hiện thực, sử dụng mutex lock của driver vivid trong subsystem V4L2 - (drivers/media/platform/vivid).</description>
         
         <dc:creator>Edisc</dc:creator>
         <media:content url="https://minhlongmt183.github.io/images/posts/CVE-2019-18683/v4l2_objects.png" medium="image"><media:title type="html">featured image</media:title></media:content>
@@ -174,7 +174,7 @@
         <author>edisc.ctf@gmail.com (Edisc)</author>
         <atom:modified>Wed, 24 Jun 2020 00:00:00 +0000</atom:modified>
         <guid>https://minhlongmt183.github.io/posts/cve-2021-20226/</guid>
-        <description>Bài viết này nhằm mục đích ghi lại những kiến thức đã học để nhớ và hiểu rõ hơn. Bài viết tham khảo chủ yếu từ CVE-2021–20226 a reference counting bug which leads to local privilege escalation in io_uring. Đôi nét về io_uring io_uring Asynchronous I/O (AIO) framework là một giao diện I/O mới cho Linux, được giới thiệu trên linux kernel version 5.1 (tháng 3 - 2019).
+        <description>Bài viết này nhằm mục đích ghi lại những kiến thức đã học để nhớ và hiểu rõ hơn. Bài viết tham khảo chủ yếu từ CVE-2021–20226 a reference counting bug which leads to local privilege escalation in io_uring.  Đôi nét về io_uring io_uring Asynchronous I/O (AIO) framework là một giao diện I/O mới cho Linux, được giới thiệu trên linux kernel version 5.1 (tháng 3 - 2019).
 Communication channel From: https://flattsecurity.</description>
         
         <dc:creator>Edisc</dc:creator>
