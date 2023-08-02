@@ -10,13 +10,13 @@
 
 
   
-  <script defer src="/js/fuse.min.32195737929df2c8096e855a5789cbb3f1331224d9169e8705493e7008f47df8.js"></script>
+  <script defer src="/js/fuse.min.8dfbf8696f107ab8b55732efbb04c5c51576692a4a2cce6effef9f6e92d341a7.js"></script>
 
 
 
-<script src="/js/enquire.min.dfb99dee1e029d51d6cfb672d847929890b1585402de17f5ed092edd72a688b4.js"></script>
+<script src="/js/enquire.min.aa37bdcb743826eecdae5c5d177fc7d6552340f1b4378ffaa9c82b2c6111400b.js"></script>
 
-<script defer src="/js/lazysizes.min.fb649fcae62177dfe63e67081ddceb830b5ce1f05a4184e9bbb7d87ac4b8f4e5.js"></script>
+<script defer src="/js/lazysizes.min.498676c34eb225e85357ab0ce19c3c1244f3bd0bf595e5684d1b9d50ea4fbc42.js"></script>
 
 <script defer src="/js/helper/getParents.min.1618c696be7c98933f9a92677f518b512a74e55bdbb976b09936b4182e93181b.js"></script>
 
@@ -1979,7 +1979,7 @@ if (!doNotTrack) {
 </blockquote>
 </li>
 <li>
-<p>Hãy sửa đổi đoạn code ban đầu của chúng ta một chút :</p>
+<p>Hãy sử đổi đoạn code ban đầu của chúng ta một chút :</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt"> 1
@@ -2445,7 +2445,7 @@ if (!doNotTrack) {
 </ul>
 <p><img src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%2026.png" alt="Untitled" /></p>
 <ul>
-<li>Đặt breakpoint tại <code>MySurrogateSelector</code> và tiếp tục, sẽ thấy <strong><code>surrogateSelector.GetSurrogate()</code></strong> ở dòng 79 sẽ gọi <code>MySurrogateSelector.GetSurrogate()</code></li>
+<li>Đặt breakpoint tại <code>MySurrogateSelector</code> và tiếp tục, sẽ thấy <strong><code>surrogateSelector.GetSurrogate()</code></strong> ở dòng 79 sẽ gọi <code>MySurrogateSelector.**GetSurrogate()**</code></li>
 </ul>
 <p><img src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%2027.png" alt="Untitled" /></p>
 <ul>
@@ -2875,7 +2875,7 @@ if (!doNotTrack) {
 <p>Nếu các bạn đã đi qua PHP-deserialize thì <code>__tostring()</code> là một trong những magic method thông dụng (sau <code>__wakeup(), __destruct()</code>) được dùng để khai thác lỗ hổng php deserialize. Với chain này trong .Net, James Forshaw cũng lấy ý tưởng như vậy:</p>
 <ol>
 <li>Tìm cách trigger ToString() khi deserialize</li>
-<li>Tìm chain từ ToString() gọi đến IEnumerable</li>
+<li>Tìm chain từ ToString() gọi đến Enumerable</li>
 </ol>
 </li>
 <li>
@@ -3038,7 +3038,7 @@ if (!doNotTrack) {
 <h3 id="3-hashtable-to-tostring">3. HashTable to ToString</h3>
 <ul>
 <li>Chúng ta đã thành công từ việc dùng <code>ToString()</code> để trigger LINQ, execute malicious code để popup calc</li>
-<li>Phần này chúng ta sẽ giải quyết vấn đề còn lại: Làm sao để trigger <code>ToString()</code> trong quá trình deserialize (<code>verb.ToString()</code> ở cuối phần trước chỉ là dùng để chứng mình ta thành công trong việc <code>ToString()</code> đến execute calc). Và solution ở đây là dùng HashTable</li>
+<li>Phần này chúng ta sẽ giải quyết vấn đê còn lại: Làm sao để trigger <code>ToString()</code> trong quá trình deserialize (<code>verb.ToString()</code> ở cuối phần trước chỉ là dùng để chứng mình ta thành công trong việc <code>ToString()</code> đến execute calc). Và solution ở đây là dùng HashTable</li>
 </ul>
 <blockquote>
 <p>FUN: Thấy HashTable làm tôi nghĩ ngay tới các commonsCollection trong Java Deserialize, HashTable cũng được dùng trong cc7</p>
@@ -3414,11 +3414,11 @@ if (!doNotTrack) {
 <p>Cụ thể, khi thêm phần handling của <strong><strong>System.Windows.Forms.AxHost.State:</strong></strong></p>
 <p><img src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%2061.png" alt="Untitled" /></p>
 <ul>
-<li>Khi <code>enumerator.Name = PropertyBagBinary</code>, câu lệnh tại dòng <code>7228</code> được thực thi</li>
+<li>Khi [<code>enumerator.Name](http://enumerator.Name) = PropertyBagBinary</code>, câu lệnh tại dòng <code>7228</code> được thực thi</li>
 </ul>
 <p><img src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%2062.png" alt="Untitled" /></p>
 <ul>
-<li>Đến đây thì stream sẽ được deserialize. Đây cũng là endpoint của 1 chain khác <strong><code>AxHostState attack chain</code></strong></li>
+<li>Đến đây thì stream sẽ được deserialize. Đây cũng là endpoint của 1 chain khác **<strong><code>AxHostState attack chain</code></strong></li>
 </ul>
 <p>Nhưng như thế thì liên quan gì đến đoạn code ban đầu của chúng ta? Tại sao không thêm đoạn này thì lại bị lỗi? Điều chúng ta cần đâu phải hàm Deserialize này vì trong đoạn code đã deserialize rồi mà??</p>
 <p>Tôi quyết định dùng DNSpy để decode.Chương trình đã vào phần xử lý lỗi khi deserialize Hashtable vì duplicate.</p>
@@ -3714,6 +3714,7 @@ if (!doNotTrack) {
 <h2 id="vi-tổng-kết">VI Tổng kết</h2>
 <ul>
 <li>Vậy là đi qua chain này rồi, tới đây và tại thời điểm này tôi nghĩ mình đã hiểu được 90-95% chain này.</li>
+<li>Soap</li>
 <li>Đây là một blog dài, nhưng với 1 .Net deserialize 2 tuần như tôi thì qua blog này tôi học được rất nhiều thứ.</li>
 <li>Và đây là tổng kết flow của chain <strong><strong>ActivitySurrogateSelector:</strong></strong>
 <ol>
@@ -3769,7 +3770,7 @@ if (!doNotTrack) {
     </article>
     
     
-<script defer src="/js/clipboard.min.1626706afc88d95ebe1173b553ec732c6dc82a576989315fdf5e7779af738a44.js"></script>
+<script defer src="/js/clipboard.min.c168d3a04c45a631be76437054619a4a3b30107960cb9730be96012fef5762b0.js"></script>
 
 <script defer src="/js/helper/prev.min.js"></script>
 

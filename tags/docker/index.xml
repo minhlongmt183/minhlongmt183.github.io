@@ -101,7 +101,7 @@ Step 1 - Base Images Tất cả các Docker Images đều bắt đầu từ mộ
         <author>edisc.ctf@gmail.com (Edisc)</author>
         <atom:modified>Sun, 21 Jun 2020 00:00:00 +0000</atom:modified>
         <guid>https://minhlongmt183.github.io/posts/docker_p6/</guid>
-        <description>Kể từ chương này, mình bắt đầu chuyển qua học nội dụng docker trên katacoda.com. Và cách học mình cũng sẽ khác, tóm tắt bằng sơ đồ tư duy và trình bày lại những gì mình hiểu sau khi học được trên blog theo flow của sơ đồ tư duy. Mục đích của blog này giúp mình ôn lại, hiểu rõ hơn những kiến thức đã học.  Tổng quan về khóa học Trong khóa học này, mình sẽ đi qua một số chủ đề chính như hình bên dưới.</description>
+        <description>Kể từ chương này, mình bắt đầu chuyển qua học nội dụng docker trên katacoda.com. Và cách học mình cũng sẽ khác, tóm tắt bằng sơ đồ tư duy và trình bày lại những gì mình hiểu sau khi học được trên blog theo flow của sơ đồ tư duy. Mục đích của blog này giúp mình ôn lại, hiểu rõ hơn những kiến thức đã học. Tổng quan về khóa học Trong khóa học này, mình sẽ đi qua một số chủ đề chính như hình bên dưới.</description>
         
         <dc:creator>Edisc</dc:creator>
         <media:content url="https://minhlongmt183.github.io/images/posts/docker_p6/docker_p6.png" medium="image"><media:title type="html">featured image</media:title></media:content>
@@ -137,7 +137,7 @@ Step 1 - Base Images Tất cả các Docker Images đều bắt đầu từ mộ
         <author>edisc.ctf@gmail.com (Edisc)</author>
         <atom:modified>Sun, 14 Jun 2020 00:00:00 +0000</atom:modified>
         <guid>https://minhlongmt183.github.io/posts/docker_p5/</guid>
-        <description>Toàn bộ series này được tham khảo từ hai nguồn chính: XuanThuLabChanel và DockerDoc. Em xin chân thành cảm ơn sự cống hiến của các tác giả của những kênh nói trên.❤️❤️❤️  Tra cứu thông tin Image, Container và giám sát hoạt động container Docker Các thành phần tạo nên Container Chúng ta đã thảo luận về các khái niệm căn bản của docker ở bải trước, sau đây là những khái niệm trên dưới góc nhìn của tác giả.</description>
+        <description>Toàn bộ series này được tham khảo từ hai nguồn chính: XuanThuLabChanel và DockerDoc. Em xin chân thành cảm ơn sự cống hiến của các tác giả của những kênh nói trên.❤️❤️❤️ Tra cứu thông tin Image, Container và giám sát hoạt động container Docker Các thành phần tạo nên Container Chúng ta đã thảo luận về các khái niệm căn bản của docker ở bải trước, sau đây là những khái niệm trên dưới góc nhìn của tác giả.</description>
         
         <dc:creator>Edisc</dc:creator>
         <media:content url="https://minhlongmt183.github.io/images/posts/docker.png" medium="image"><media:title type="html">featured image</media:title></media:content>
@@ -173,7 +173,7 @@ Step 1 - Base Images Tất cả các Docker Images đều bắt đầu từ mộ
         <author>edisc.ctf@gmail.com (Edisc)</author>
         <atom:modified>Wed, 10 Jun 2020 00:00:00 +0000</atom:modified>
         <guid>https://minhlongmt183.github.io/posts/docker_p4/</guid>
-        <description>Toàn bộ series này được tham khảo từ hai nguồn chính: XuanThuLabChanel và DockerDoc. Em xin chân thành cảm ơn sự cống hiến của các tác giả của những kênh nói trên.❤️❤️❤️  Cài đặt, tạo và chạy PHP, phiên bản có PHP-FPM bằng Docker pull phiên bản image php-fpm từ docker hub Chúng ta tải bản 7.3-fpm từ docker hub. fpm ở đây có nghĩa là trong gói này, có thêm dịch vụ php-fpm.</description>
+        <description>Toàn bộ series này được tham khảo từ hai nguồn chính: XuanThuLabChanel và DockerDoc. Em xin chân thành cảm ơn sự cống hiến của các tác giả của những kênh nói trên.❤️❤️❤️ Cài đặt, tạo và chạy PHP, phiên bản có PHP-FPM bằng Docker pull phiên bản image php-fpm từ docker hub Chúng ta tải bản 7.3-fpm từ docker hub. fpm ở đây có nghĩa là trong gói này, có thêm dịch vụ php-fpm.</description>
         
         <dc:creator>Edisc</dc:creator>
         <media:content url="https://minhlongmt183.github.io/images/posts/docker.png" medium="image"><media:title type="html">featured image</media:title></media:content>
@@ -209,7 +209,7 @@ Step 1 - Base Images Tất cả các Docker Images đều bắt đầu từ mộ
         <author>edisc.ctf@gmail.com (Edisc)</author>
         <atom:modified>Tue, 09 Jun 2020 00:00:00 +0000</atom:modified>
         <guid>https://minhlongmt183.github.io/posts/docker_p3/</guid>
-        <description>Toàn bộ series này được tham khảo từ hai nguồn chính: XuanThuLabChanel và DockerDoc. Em xin chân thành cảm ơn sự cống hiến của các tác giả của những kênh nói trên.❤️❤️❤️  Giới thiệu về Image Busybox Busybox là một image rất nhỏ gọn nhưng chứa rất nhiều công cụ dựa trên nền tảng linux.
+        <description>Toàn bộ series này được tham khảo từ hai nguồn chính: XuanThuLabChanel và DockerDoc. Em xin chân thành cảm ơn sự cống hiến của các tác giả của những kênh nói trên.❤️❤️❤️ Giới thiệu về Image Busybox Busybox là một image rất nhỏ gọn nhưng chứa rất nhiều công cụ dựa trên nền tảng linux.
 Tải image busybox:
 1 2 3 4 5 6  ❯ docker pull busyboxUsing default tag: latestlatest: Pulling from library/busyboxb71f96345d44: Pull complete Digest: sha256:930490f97e5b921535c153e0e7110d251134cc4b72bbb8133c6a5065cc68580dStatus: Downloaded newer image for busybox:latest  Tạo một container chạy image busybox</description>
         
@@ -247,7 +247,7 @@ Tải image busybox:
         <author>edisc.ctf@gmail.com (Edisc)</author>
         <atom:modified>Mon, 08 Jun 2020 00:00:00 +0000</atom:modified>
         <guid>https://minhlongmt183.github.io/posts/docker_p2/</guid>
-        <description>Toàn bộ series này được tham khảo từ hai nguồn chính: XuanThuLabChanel và DockerDoc. Em xin chân thành cảm ơn sự cống hiến của các tác giả của những kênh nói trên.❤️❤️❤️  Lệnh Docker exec, lưu container thành image với commit, xuất image ra file Docker exec Thông thường, để thực thi một lệnh trong container, ta sẽ vào container bằng lệnh docker attach &amp;lt;container name or id&amp;gt;. Tuy nhiên, nếu ta đang ở host và vẫn muốn thực thi một lệnh bên trong container đang chạy, ta sẽ dùng lệnh docker exec &amp;lt;container id / name&amp;gt; [COMMAND].</description>
+        <description>Toàn bộ series này được tham khảo từ hai nguồn chính: XuanThuLabChanel và DockerDoc. Em xin chân thành cảm ơn sự cống hiến của các tác giả của những kênh nói trên.❤️❤️❤️ Lệnh Docker exec, lưu container thành image với commit, xuất image ra file Docker exec Thông thường, để thực thi một lệnh trong container, ta sẽ vào container bằng lệnh docker attach &amp;lt;container name or id&amp;gt;. Tuy nhiên, nếu ta đang ở host và vẫn muốn thực thi một lệnh bên trong container đang chạy, ta sẽ dùng lệnh docker exec &amp;lt;container id / name&amp;gt; [COMMAND].</description>
         
         <dc:creator>Edisc</dc:creator>
         <media:content url="https://minhlongmt183.github.io/images/posts/docker.png" medium="image"><media:title type="html">featured image</media:title></media:content>
@@ -283,7 +283,7 @@ Tải image busybox:
         <author>edisc.ctf@gmail.com (Edisc)</author>
         <atom:modified>Sun, 07 Jun 2020 00:00:00 +0000</atom:modified>
         <guid>https://minhlongmt183.github.io/posts/docker_p1/</guid>
-        <description>Toàn bộ series này được tham khảo từ hai nguồn chính: XuanThuLabChanel và DockerDoc. Em xin chân thành cảm ơn sự cống hiến của các tác giả của những kênh nói trên.❤️❤️❤️  Làm quen với docker command line Khi làm việc với docker, lệnh chúng ta hay dùng đó chính là docker. Sau lệnh docker sẽ có nhiều lệnh nhỏ, để xem danh sách các lệnh nhỏ này, ta gõ</description>
+        <description>Toàn bộ series này được tham khảo từ hai nguồn chính: XuanThuLabChanel và DockerDoc. Em xin chân thành cảm ơn sự cống hiến của các tác giả của những kênh nói trên.❤️❤️❤️ Làm quen với docker command line Khi làm việc với docker, lệnh chúng ta hay dùng đó chính là docker. Sau lệnh docker sẽ có nhiều lệnh nhỏ, để xem danh sách các lệnh nhỏ này, ta gõ</description>
         
         <dc:creator>Edisc</dc:creator>
         <media:content url="https://minhlongmt183.github.io/images/posts/docker.png" medium="image"><media:title type="html">featured image</media:title></media:content>
@@ -358,7 +358,7 @@ Capabilities Since kernel 2.2, Linux divides the privileges associated with supe
         <author>edisc.ctf@gmail.com (Edisc)</author>
         <atom:modified>Mon, 01 Jun 2020 00:00:00 +0000</atom:modified>
         <guid>https://minhlongmt183.github.io/posts/docker_overview/</guid>
-        <description>Toàn bộ series này được tham khảo từ hai nguồn chính: XuanThuLabChanel và DockerDoc. Em xin chân thành cảm ơn sự cống hiến của các tác giả của những kênh nói trên.❤️❤️❤️  Tổng quan về Docker Docker là gì?  Docker là một container platform để phát triển, triển khai và quản lí ứng dụng nhanh chóng. Docker là nền tảng mở (open platform) để phát triển (developing), vận chuyển (shipping) hoặc chạy (running) các ứng dụng.</description>
+        <description>Toàn bộ series này được tham khảo từ hai nguồn chính: XuanThuLabChanel và DockerDoc. Em xin chân thành cảm ơn sự cống hiến của các tác giả của những kênh nói trên.❤️❤️❤️ Tổng quan về Docker Docker là gì?  Docker là một container platform để phát triển, triển khai và quản lí ứng dụng nhanh chóng. Docker là nền tảng mở (open platform) để phát triển (developing), vận chuyển (shipping) hoặc chạy (running) các ứng dụng.</description>
         
         <dc:creator>Edisc</dc:creator>
         <media:content url="https://minhlongmt183.github.io/images/posts/docker.png" medium="image"><media:title type="html">featured image</media:title></media:content>
