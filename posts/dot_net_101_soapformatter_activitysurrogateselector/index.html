@@ -1979,7 +1979,7 @@ if (!doNotTrack) {
 </blockquote>
 </li>
 <li>
-<p>Hãy sử đổi đoạn code ban đầu của chúng ta một chút :</p>
+<p>Hãy sửa đổi đoạn code ban đầu của chúng ta một chút :</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt"> 1
@@ -2445,7 +2445,7 @@ if (!doNotTrack) {
 </ul>
 <p><img src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%2026.png" alt="Untitled" /></p>
 <ul>
-<li>Đặt breakpoint tại <code>MySurrogateSelector</code> và tiếp tục, sẽ thấy <strong><code>surrogateSelector.GetSurrogate()</code></strong> ở dòng 79 sẽ gọi <code>MySurrogateSelector.**GetSurrogate()**</code></li>
+<li>Đặt breakpoint tại <code>MySurrogateSelector</code> và tiếp tục, sẽ thấy <strong><code>surrogateSelector.GetSurrogate()</code></strong> ở dòng 79 sẽ gọi <code>MySurrogateSelector.GetSurrogate()</code></li>
 </ul>
 <p><img src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%2027.png" alt="Untitled" /></p>
 <ul>
@@ -2875,7 +2875,7 @@ if (!doNotTrack) {
 <p>Nếu các bạn đã đi qua PHP-deserialize thì <code>__tostring()</code> là một trong những magic method thông dụng (sau <code>__wakeup(), __destruct()</code>) được dùng để khai thác lỗ hổng php deserialize. Với chain này trong .Net, James Forshaw cũng lấy ý tưởng như vậy:</p>
 <ol>
 <li>Tìm cách trigger ToString() khi deserialize</li>
-<li>Tìm chain từ ToString() gọi đến Enumerable</li>
+<li>Tìm chain từ ToString() gọi đến IEnumerable</li>
 </ol>
 </li>
 <li>
@@ -3038,7 +3038,7 @@ if (!doNotTrack) {
 <h3 id="3-hashtable-to-tostring">3. HashTable to ToString</h3>
 <ul>
 <li>Chúng ta đã thành công từ việc dùng <code>ToString()</code> để trigger LINQ, execute malicious code để popup calc</li>
-<li>Phần này chúng ta sẽ giải quyết vấn đê còn lại: Làm sao để trigger <code>ToString()</code> trong quá trình deserialize (<code>verb.ToString()</code> ở cuối phần trước chỉ là dùng để chứng mình ta thành công trong việc <code>ToString()</code> đến execute calc). Và solution ở đây là dùng HashTable</li>
+<li>Phần này chúng ta sẽ giải quyết vấn đề còn lại: Làm sao để trigger <code>ToString()</code> trong quá trình deserialize (<code>verb.ToString()</code> ở cuối phần trước chỉ là dùng để chứng mình ta thành công trong việc <code>ToString()</code> đến execute calc). Và solution ở đây là dùng HashTable</li>
 </ul>
 <blockquote>
 <p>FUN: Thấy HashTable làm tôi nghĩ ngay tới các commonsCollection trong Java Deserialize, HashTable cũng được dùng trong cc7</p>
@@ -3414,11 +3414,11 @@ if (!doNotTrack) {
 <p>Cụ thể, khi thêm phần handling của <strong><strong>System.Windows.Forms.AxHost.State:</strong></strong></p>
 <p><img src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%2061.png" alt="Untitled" /></p>
 <ul>
-<li>Khi [<code>enumerator.Name](http://enumerator.Name) = PropertyBagBinary</code>, câu lệnh tại dòng <code>7228</code> được thực thi</li>
+<li>Khi <code>enumerator.Name = PropertyBagBinary</code>, câu lệnh tại dòng <code>7228</code> được thực thi</li>
 </ul>
 <p><img src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%2062.png" alt="Untitled" /></p>
 <ul>
-<li>Đến đây thì stream sẽ được deserialize. Đây cũng là endpoint của 1 chain khác **<strong><code>AxHostState attack chain</code></strong></li>
+<li>Đến đây thì stream sẽ được deserialize. Đây cũng là endpoint của 1 chain khác <strong><code>AxHostState attack chain</code></strong></li>
 </ul>
 <p>Nhưng như thế thì liên quan gì đến đoạn code ban đầu của chúng ta? Tại sao không thêm đoạn này thì lại bị lỗi? Điều chúng ta cần đâu phải hàm Deserialize này vì trong đoạn code đã deserialize rồi mà??</p>
 <p>Tôi quyết định dùng DNSpy để decode.Chương trình đã vào phần xử lý lỗi khi deserialize Hashtable vì duplicate.</p>
@@ -3714,7 +3714,6 @@ if (!doNotTrack) {
 <h2 id="vi-tổng-kết">VI Tổng kết</h2>
 <ul>
 <li>Vậy là đi qua chain này rồi, tới đây và tại thời điểm này tôi nghĩ mình đã hiểu được 90-95% chain này.</li>
-<li>Soap</li>
 <li>Đây là một blog dài, nhưng với 1 .Net deserialize 2 tuần như tôi thì qua blog này tôi học được rất nhiều thứ.</li>
 <li>Và đây là tổng kết flow của chain <strong><strong>ActivitySurrogateSelector:</strong></strong>
 <ol>
@@ -3753,7 +3752,7 @@ if (!doNotTrack) {
 <p>LINQ exploit chain:</p>
 <ol>
 <li>Sử dụng <code>ActivitySurrogateSelector+ObjectSurrogate</code> để serialize những class không thể serialize, mục tiêu tại LINQ</li>
-<li>dùng LINQ thay thế delegate của nó thành <code>Assembly.Load</code> để load malicious code và tạo 1 instance</li>
+<li>Dùng LINQ thay thế delegate của nó thành <code>Assembly.Load</code> để load malicious code và tạo 1 instance</li>
 </ol>
 </li>
 <li>
@@ -4127,6 +4126,13 @@ if (!doNotTrack) {
       </a>
     
     <div class="grow"></div>
+    
+      <a href="https://minhlongmt183.github.io/posts/khi_newbie_hoc_java_deserialization_attack_readobject/" class="pagination-single__right">      
+        <div class="pagination-single__right-title">Khi newbie học Java deserialization attack: readObject() native</div>
+        <div class="pagination-single__icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M5 13h11.17l-4.88 4.88c-.39.39-.39 1.03 0 1.42.39.39 1.02.39 1.41 0l6.59-6.59c.39-.39.39-1.02 0-1.41l-6.58-6.6c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41L16.17 11H5c-.55 0-1 .45-1 1s.45 1 1 1z"/></svg>
+        </div>
+      </a>
     
   
 </nav>
