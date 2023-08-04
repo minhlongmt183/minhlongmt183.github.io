@@ -3,47 +3,57 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://minhlongmt183.github.io/categories/</loc>
+    <lastmod>2023-08-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://minhlongmt183.github.io/</loc>
+    <lastmod>2023-08-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://minhlongmt183.github.io/tags/java/</loc>
+    <lastmod>2023-08-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://minhlongmt183.github.io/posts/khi_newbie_hoc_java_deserialization_attack_readobject/</loc>
+    <lastmod>2023-08-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://minhlongmt183.github.io/posts/</loc>
+    <lastmod>2023-08-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://minhlongmt183.github.io/series/</loc>
+    <lastmod>2023-08-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://minhlongmt183.github.io/tags/</loc>
+    <lastmod>2023-08-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://minhlongmt183.github.io/categories/web/</loc>
+    <lastmod>2023-08-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://minhlongmt183.github.io/series/websecurity/</loc>
+    <lastmod>2023-08-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://minhlongmt183.github.io/posts/dot_net_101_soapformatter_activitysurrogateselector/</loc>
     <lastmod>2023-06-28T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://minhlongmt183.github.io/tags/c#/</loc>
-    <lastmod>2023-06-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://minhlongmt183.github.io/categories/</loc>
-    <lastmod>2023-06-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://minhlongmt183.github.io/</loc>
-    <lastmod>2023-06-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://minhlongmt183.github.io/posts/</loc>
-    <lastmod>2023-06-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://minhlongmt183.github.io/series/</loc>
-    <lastmod>2023-06-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://minhlongmt183.github.io/tags/</loc>
-    <lastmod>2023-06-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://minhlongmt183.github.io/categories/web/</loc>
-    <lastmod>2023-06-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://minhlongmt183.github.io/series/websecurity/</loc>
     <lastmod>2023-06-28T00:00:00+00:00</lastmod>
   </url>
   

@@ -14,11 +14,47 @@
     <managingEditor>edisc.ctf@gmail.com (Edisc)</managingEditor>
     <webMaster>edisc.ctf@gmail.com (Edisc)</webMaster>
     <copyright>©2023, All Rights Reserved</copyright>
-    <lastBuildDate>Wed, 28 Jun 2023 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 02 Aug 2023 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://minhlongmt183.github.io/series/websecurity/index.xml" rel="self" type="application/rss+xml" />
     
 
+      
+      <item>
+        <title>Khi newbie học Java deserialization attack: readObject() native</title>
+        <link>https://minhlongmt183.github.io/posts/khi_newbie_hoc_java_deserialization_attack_readobject/</link>
+        <pubDate>Wed, 02 Aug 2023 00:00:00 +0000</pubDate>
+        <author>edisc.ctf@gmail.com (Edisc)</author>
+        <atom:modified>Wed, 02 Aug 2023 00:00:00 +0000</atom:modified>
+        <guid>https://minhlongmt183.github.io/posts/khi_newbie_hoc_java_deserialization_attack_readobject/</guid>
+        <description>Khi newbie học Java deserialization attack: readObject() native I. Lời mở đầu   Sau hơn 2 tháng học về PHP deserilazation, tôi đã chuyển qua học Java deserialization với tham vọng sẽ rèn một loại lỗi Insecure deserialization trên các ngôn ngữ PHP, JAVA, .Net 🤭🤭🤭🤭🤭. Vì là một Java deserialize fan tháng 8 nên mọi thứ bắt đầu hầu như là số 0. Và phương pháp tiếp cận ở đây sẽ là đi từ đơn giản đến nâng cao thông qua rèn luyện nhiều hơn là đọc lý thuyết.</description>
+        
+        <dc:creator>Edisc</dc:creator>
+        <media:content url="https://minhlongmt183.github.io//images/posts/Khi_newbie_hoc_Java_deserialization_attack_readObject/java.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>java</category>
+            
+          
+        
+        
+          
+            
+              <category>web</category>
+            
+          
+        
+        
+          
+            
+              <category>websecurity</category>
+            
+          
+        
+      </item>
       
       <item>
         <title>[.NET deserialize] SoapFormatter:ActivitySurrogateSelector</title>
