@@ -2040,6 +2040,18 @@ public class ReadTest <span class="o">{</span>
 <h2 id="iv-tổng-kết">IV. Tổng kết</h2>
 <ul>
 <li>Như đã đề cập ở phần đầu, series này là của người bắt đầu nên các đơn vị kiến thức đều là basic và blog này tôi đề cập tới đơn vị kiến thức <strong>cơ bản của cơ bản: flow của readObject()</strong></li>
+<li>Một lưu ý ở đây, để detect java serialize, chúng ta có thể thực hiện các cách sau:
+<ol>
+<li>Java serialize object streams luôn bắt đầu với:
+<ul>
+<li>Magic bytes: <code>0xAC 0XED</code> trong HEX, <code>r00ABX</code> trong Base64-encoded</li>
+<li>Header HTTP response: <code>Content type: application/x-javaj-serialized-object</code></li>
+</ul>
+</li>
+<li>Bruteforce the input: Ysoserial by Chris Frohoff</li>
+<li>Kiểm tra các third-party product.</li>
+</ol>
+</li>
 <li>Kết thúc phần này, chúng ta sẽ có đủ kiến thức cơ bản để tiến hành nghiên cứu ApacheCommonsCollection.</li>
 </ul>
 <h2 id="v-nguồn-tham-khảo">V. Nguồn tham khảo</h2>
