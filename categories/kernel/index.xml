@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>kernel on Edisc Blog</title>
+    <link>https://minhlongmt183.github.io/categories/kernel/</link>
+    <description>Recent content in kernel on Edisc Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>vi</language>
+    <managingEditor>edisc.ctf@gmail.com (Edisc)</managingEditor>
+    <webMaster>edisc.ctf@gmail.com (Edisc)</webMaster>
+    <copyright>©2023, All Rights Reserved</copyright>
+    <lastBuildDate>Fri, 04 Nov 2022 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="https://minhlongmt183.github.io/categories/kernel/index.xml" rel="self" type="application/rss+xml" />
+    
+
+      
+      <item>
+        <title>TIP: How to boot with an old kernel version in Ubuntu</title>
+        <link>https://minhlongmt183.github.io/posts/pwn_tip_boost_old_kernel_version/</link>
+        <pubDate>Fri, 04 Nov 2022 00:00:00 +0000</pubDate>
+        <author>edisc.ctf@gmail.com (Edisc)</author>
+        <atom:modified>Fri, 04 Nov 2022 00:00:00 +0000</atom:modified>
+        <guid>https://minhlongmt183.github.io/posts/pwn_tip_boost_old_kernel_version/</guid>
+        <description>TIP: How to boot with an old kernel version in Ubuntu I. Mở đầu Cũng một thời gian khá lâu rồi tôi không còn viết blog nữa. Phần lớn vì tôi tập trung học các kiến thức mới. Tuy nhiên sau một thời gian nghiên cứu, tôi lại phát hiện ra viết blog là cách để tôi lưu giữ và hiểu kiến thức sâu hơn. Đồng thời, được sự khuyến khích từ mentor, tôi sẽ quay lại với thói quen viết blog này, chia sẻ, lưu trữ lại các kiến thức mình đã học!</description>
+        
+        <dc:creator>Edisc</dc:creator>
+        <media:content url="https://minhlongmt183.github.io//images/posts/PWN_tip_boost_old_kernel_version/linux.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>pwn</category>
+            
+          
+        
+        
+          
+            
+              <category>kernel</category>
+            
+          
+        
+        
+          
+            
+              <category>cve</category>
+            
+          
+        
+      </item>
+      
+
+    
+  </channel>
+</rss>
