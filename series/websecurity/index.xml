@@ -14,11 +14,49 @@
     <managingEditor>edisc.ctf@gmail.com (Edisc)</managingEditor>
     <webMaster>edisc.ctf@gmail.com (Edisc)</webMaster>
     <copyright>©2023, All Rights Reserved</copyright>
-    <lastBuildDate>Wed, 02 Aug 2023 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 28 Aug 2023 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://minhlongmt183.github.io/series/websecurity/index.xml" rel="self" type="application/rss+xml" />
     
 
+      
+      <item>
+        <title>Khi newbie học Java deserialization attack: CVE-2020-14645</title>
+        <link>https://minhlongmt183.github.io/posts/khi_newbie_hoc_java_deserialization_attack_cve_2020_14645/</link>
+        <pubDate>Mon, 28 Aug 2023 00:00:00 +0000</pubDate>
+        <author>edisc.ctf@gmail.com (Edisc)</author>
+        <atom:modified>Mon, 28 Aug 2023 00:00:00 +0000</atom:modified>
+        <guid>https://minhlongmt183.github.io/posts/khi_newbie_hoc_java_deserialization_attack_cve_2020_14645/</guid>
+        <description>I. Lời mở đầu Tiếp tục với series tự học Java Deserializee của newbie, trong bài này tôi trình bày về CVE-2020-14645 của weblogic.
+Giới thiệu sơ về đối tượng phân tích, CVE-2020-14645 là bypass của bản vá lỗi CVE-2020-2883. Trong bản patch lỗi CVE-2020-2883 sink MvelExtractor và ReflectionExtractor bị blacklisted, do đó cần tìm một extract class khác có malicious operations trong method.
+Vì các patch lỗi CVE-2020-2883 là đưa hàm sink bị lỗi vào blacklist, nên chúng ta chỉ cần tìm ra 1 sink khác và sử dụng chain trước của CVE-2020-2883 để khai thác.</description>
+        
+        <dc:creator>Edisc</dc:creator>
+        <media:content url="https://minhlongmt183.github.io//images/posts/Khi_newbie_hoc_Java_deserialization_attack_readObject/java.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>java</category>
+            
+          
+        
+        
+          
+            
+              <category>web</category>
+            
+          
+        
+        
+          
+            
+              <category>websecurity</category>
+            
+          
+        
+      </item>
       
       <item>
         <title>Khi newbie học Java deserialization attack: readObject() native</title>
