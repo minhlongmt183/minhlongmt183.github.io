@@ -14,11 +14,47 @@
     <managingEditor>edisc.ctf@gmail.com (Edisc)</managingEditor>
     <webMaster>edisc.ctf@gmail.com (Edisc)</webMaster>
     <copyright>©2023, All Rights Reserved</copyright>
-    <lastBuildDate>Sun, 30 Apr 2023 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 30 Sep 2023 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://minhlongmt183.github.io/series/cve/index.xml" rel="self" type="application/rss+xml" />
     
 
+      
+      <item>
+        <title>Reproducing CVE-2023-41892: CraftCMS RCE</title>
+        <link>https://minhlongmt183.github.io/posts/cve-2023-41892_craftcms_rce/</link>
+        <pubDate>Sat, 30 Sep 2023 00:00:00 +0000</pubDate>
+        <author>edisc.ctf@gmail.com (Edisc)</author>
+        <atom:modified>Sat, 30 Sep 2023 00:00:00 +0000</atom:modified>
+        <guid>https://minhlongmt183.github.io/posts/cve-2023-41892_craftcms_rce/</guid>
+        <description>I. Lời mở đầu  Sau vài tháng đắm chìm vào Java Deserialize attack, tôi tí nữa là bị chết chìm luôn 😟. Đợt này nhân tiện có CVE mới về CraftCMS và đọc được bài blog về nó trên https://blog.calif.io/p/craftcms-rce, tôi quyết định reproduce để ôn lại PHP và lấy lại mood. CraftCMS là một hệ thống quản lý nội dung (CMS) mã nguồn mở dựa trên PHP. Nó được thiết kế để tạo các trang web và ứng dụng web mạnh mẽ và linh hoạt.</description>
+        
+        <dc:creator>Edisc</dc:creator>
+        <media:content url="https://minhlongmt183.github.io//images/posts/CVE-2023-41892_CraftCMS_RCE/logo.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>cve, php</category>
+            
+          
+        
+        
+          
+            
+              <category>web</category>
+            
+          
+        
+        
+          
+            
+              <category>cve</category>
+            
+          
+        
+      </item>
       
       <item>
         <title>Khi newbie học PHP deserialize</title>
