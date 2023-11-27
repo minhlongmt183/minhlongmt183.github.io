@@ -1714,7 +1714,9 @@ if (!doNotTrack) {
 <h1 id="i-giới-thiệu-về-cve-2023-46214">I. Giới thiệu về CVE-2023-46214</h1>
 <hr />
 <p>CVE-2023-46214 là mã lỗi xuất hiện trên sản phẩm <a href="https://www.splunk.com/">Splunk Enterprise</a> cho phép attacker có thể thực thi lỗi ở server (RCE). Phiên bản bị lỗi từ <code>9.0.7--&gt;9.1.2</code>.</p>
-<p>Lỗ hổng này do lỗi trong cách xử lý các biến đổi ngôn ngữ kiểu dáng mở rộng (XSLT) của Splunk Enterprise. Kẻ tấn công có thể khai thác lỗ hổng để tải lên tệp XSLT độc hại sẽ được Splunk Enterprise thực thi. Điều này có thể cho phép kẻ tấn công kiểm soát hệ thống bị ảnh hưởng. <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-46214">https://nvd.nist.gov/vuln/detail/CVE-2023-46214</a></p>
+<p>Lỗ hổng này do lỗi trong cách xử lý các biến đổi ngôn ngữ kiểu dáng mở rộng (XSLT) của Splunk Enterprise. Kẻ tấn công có thể khai thác lỗ hổng để tải lên tệp XSLT độc hại sẽ được Splunk Enterprise thực thi. Điều này có thể cho phép kẻ tấn công kiểm soát hệ thống bị ảnh hưởng.<br />
+<img src="/images/posts/CVE_2023_46214_Splunk_RCE/Untitled00.png" alt="Untitled" /><br />
+<a href="https://nvd.nist.gov/vuln/detail/CVE-2023-46214">https://nvd.nist.gov/vuln/detail/CVE-2023-46214</a></p>
 <p>Như những CVE trước đó, để reproduce 1days, Ndays chúng ta cần phải tìm hiểu các kiến thức nền tảng cần thiết, cài môi trường bị lỗi, tìm sink, source rồi build payload và cuối cùng là kiếm chứng.</p>
 <h1 id="ii-kiến-thức-nền-tảng">II. Kiến thức nền tảng</h1>
 <hr />
