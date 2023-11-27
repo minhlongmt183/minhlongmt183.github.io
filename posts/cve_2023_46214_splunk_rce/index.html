@@ -1711,16 +1711,16 @@ if (!doNotTrack) {
 <li>Lại một tháng nữa đã trôi qua… Tháng trước tôi nghiên cứu về <strong><strong>CVE-2021-42237,</strong></strong> một lỗ hổng liên quan đến .Net Deserialization cho phép kẻ tấn công thực thi code trên hệ thống sitecore mà không cần cơ chế xác thực nào. Cũng tính viết một blog về nó, nhưng sau khi làm xong tôi phát hiện ra mình chưa đủ kiến thức để viết. Bởi vì với deserialization thì hầu hết sẽ có 2 bước quan trong đó là tìm được sink (nơi deserialize) và chain. Với CVE trên, sink thì từ source tới sink khá đơn giản để nói lại mà còn chain thì quá phức tạp (với người mới như tôi). Bên cạnh đó, sau khi đi qua nhiều ngôn ngữ để trải nghiệm thì kế hoạch sắp tới của tôi sẽ tập trung chuyên sâu vào ngôn ngữ Java và DotNet. Nên tôi sẽ quay lại và làm blog chi tiết về nó sau.</li>
 <li>Cứ ngỡ tháng này sẽ như tháng trước, sẽ bị phạt tiếp 200k vì trong tháng tôi chỉ lo đi học, pentest blackbox mà không có reproduce, research gì cả thì đùng một phát, sếp gửi có cái CVE của splunk và bảo reproduce. Đúng là trời hạn gặp mưa rào, bắt tay ngay vào việc thôi.😋😋😋😋.</li>
 </ul>
-<h1 id="i-giới-thiệu-về-cve-2023-46214">I. Giới thiệu về CVE-2023-46214</h1>
+<h2 id="i-giới-thiệu-về-cve-2023-46214">I. Giới thiệu về CVE-2023-46214</h2>
 <hr />
 <p>CVE-2023-46214 là mã lỗi xuất hiện trên sản phẩm <a href="https://www.splunk.com/">Splunk Enterprise</a> cho phép attacker có thể thực thi lỗi ở server (RCE). Phiên bản bị lỗi từ <code>9.0.7--&gt;9.1.2</code>.</p>
 <p>Lỗ hổng này do lỗi trong cách xử lý các biến đổi ngôn ngữ kiểu dáng mở rộng (XSLT) của Splunk Enterprise. Kẻ tấn công có thể khai thác lỗ hổng để tải lên tệp XSLT độc hại sẽ được Splunk Enterprise thực thi. Điều này có thể cho phép kẻ tấn công kiểm soát hệ thống bị ảnh hưởng.<br />
 <img src="/images/posts/CVE_2023_46214_Splunk_RCE/Untitled00.png" alt="Untitled" /></p>
 <p>Như những CVE trước đó, để reproduce 1days, Ndays chúng ta cần phải tìm hiểu các kiến thức nền tảng cần thiết, cài môi trường bị lỗi, tìm sink, source rồi build payload và cuối cùng là kiếm chứng.</p>
-<h1 id="ii-kiến-thức-nền-tảng">II. Kiến thức nền tảng</h1>
+<h2 id="ii-kiến-thức-nền-tảng">II. Kiến thức nền tảng</h2>
 <hr />
 <p>Trước khi đi vào phân tích lỗ hổng, chúng ta cùng đi qua một số đơn vị kiến thức cơ bản và cần thiết cho lỗ hổng này:</p>
-<h2 id="21-splunk-là-gì-cài-đặt-như-thế-nào">2.1 Splunk là gì? Cài đặt như thế nào?</h2>
+<h4 id="21-splunk-là-gì-cài-đặt-như-thế-nào">2.1 Splunk là gì? Cài đặt như thế nào?</h4>
 <p><img src="/images/posts/CVE_2023_46214_Splunk_RCE/logo.png" alt="/images/posts/CVE_2023_46214_Splunk_RCE/logo.png" /></p>
 <ul>
 <li>Splunk là một phần mềm chủ yếu được sử dụng để tìm kiếm, giám sát và kiểm tra dữ liệu do máy tạo ra thông qua giao diện web từ đó phân tích để đưa ra báo cáo cũng như cảnh báo với thời gian thực. Bạn có thể xem thêm thông tin tại đường dẫn sau: <a href="https://securityzone.vn/t/tong-hop-kien-thuc-co-ban-ve-splunk-danh-cho-nguoi-moi-bat-dau.11792/">Splunk - Tổng hợp kiến thức cơ bản về Splunk dành cho người mới bắt đầu | Lab Network System Security (securityzone.vn)</a></li>
@@ -1734,7 +1734,7 @@ if (!doNotTrack) {
 <li>Tôi nhanh chóng tiến hành cài đặt phiên bản bị lỗi để thử nghiệm.</li>
 </ul>
 <p><img src="/images/posts/CVE_2023_46214_Splunk_RCE/Untitled%201.png" alt="Untitled" /></p>
-<h2 id="22-extensible-stylesheet-language-transformations-xslt-là-gì">2.2 Extensible stylesheet language transformations (XSLT) là gì?</h2>
+<h4 id="22-extensible-stylesheet-language-transformations-xslt-là-gì">2.2 Extensible stylesheet language transformations (XSLT) là gì?</h4>
 <ul>
 <li>Theo mô tả, lỗ hổng này do lỗi trong cách xử lý các biến đổi ngôn ngữ kiểu dáng mở rộng (XSLT) của Splunk Enterprise. Vậy XSLT là gì?</li>
 <li>Nói một cách đơn giản, nếu CSS là ngôn ngữ để định dạng cho HTML thì XSL (eXtensible Stylesheet Language) được dùng để định dạng cho XML</li>
@@ -1744,10 +1744,10 @@ if (!doNotTrack) {
 <ul>
 <li>Với những ai lần đầu tiếp XSLT lần đầu như tôi thì <a href="https://www.w3schools.com/xml/xsl_intro.asp">w3school</a> là nơi lý tưởng để lấy một ít kiến thức cơ bản. Bên cạnh đó, <a href="https://www.youtube.com/watch?v=8YYa1CWI1AU">video</a> và <a href="https://prezi.com/y_fuybfudgnd/offensive-xslt/">slide</a> của Nicolas Gregoire - Agarri cũng là hai tài liệu quý giá khi mới tiếp cận về XSLT.</li>
 </ul>
-<h1 id="iii-diff-patch-để-tìm-sink">III. Diff-patch để tìm sink</h1>
+<h2 id="iii-diff-patch-để-tìm-sink">III. Diff-patch để tìm sink</h2>
 <hr />
 <p>Có nhiều cách để tìm sink trong đó, diff patch (cách nói ngắn gọn cho việc diff bản bị lỗi với bản vá để xem các đoạn code đã sửa) là phương pháp rất phổ biến đối với các mã nguồn mở hoặc các product có thể xem được mã nguồn. May mắn thay, với splunk, chúng ta có thể xem mã nguồn và từ đó diff patch một cách dễ dàng.</p>
-<h2 id="21-diff-patch-source-như-thế-nào">2.1 Diff patch source như thế nào?</h2>
+<h4 id="21-diff-patch-source-như-thế-nào">2.1 Diff patch source như thế nào?</h4>
 <ul>
 <li>Để xác định được sink (nơi bị lỗi), chúng ta cần mã nguồn của bản bị lỗi và bản đã vá, sau đó so sánh xem những đoạn code đã được sửa (diff).</li>
 <li>Chúng ta tải 2 phiên bản lỗi và đã fix</li>
@@ -1788,7 +1788,7 @@ if (!doNotTrack) {
 </li>
 </ul>
 <p>Giao diện tiện lợi cho tôi trace.</p>
-<h2 id="22-sink-ở-đâu">2.2. Sink ở đâu???</h2>
+<h4 id="22-sink-ở-đâu">2.2. Sink ở đâu???</h4>
 <ul>
 <li>Chúng ta đã giải quyết được bài toán làm sao để diff-patch được mã nguồn của bản bị lỗi và bản đã vá, đồng thời, chúng ta cũng cài đặt thành công phiên bản bị lỗi của splunk.</li>
 <li>Bước tiếp theo là cần để xác định được sink ở đâu. Bởi vì, dữ kiện duy nhất mà tôi có được từ CVE này là liên quan tới XSLT trong khi đây cũng là lần đầu tôi biết tới sự tồn tại của nó (gà quá mà 😢 😢). Do đó, điều tôi cần làm bây giờ là tìm hiểu xem có những tài liệu, blog nào liên quan tới việc tấn công sử dụng XSLT hay không, từ đó rút ra các dấu hiệu của nó. Ngoài ra, tôi còn phải tìm hiểu xem XSLT trong splunk có vai trò như thế nào? (được sử dụng ở đâu, implement như thế nào? source code nằm ở đâu).</li>
@@ -1858,7 +1858,7 @@ if (!doNotTrack) {
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">            <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;search api got xsl request: </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">moduleName</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">            <span class="c1"># get XSL file</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">## get XSL file</span>
 </span></span><span class="line"><span class="cl">            <span class="n">xslFilePath</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">bundle_paths</span><span class="o">.</span><span class="n">expandvars</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">moduleRoster</span><span class="p">[</span><span class="n">moduleName</span><span class="p">][</span><span class="s1">&#39;path&#39;</span><span class="p">],</span> <span class="n">kwargs</span><span class="p">[</span><span class="s1">&#39;xsl&#39;</span><span class="p">])))</span>
 </span></span><span class="line"><span class="cl">            <span class="n">splunkHomePath</span> <span class="o">=</span> <span class="n">bundle_paths</span><span class="o">.</span><span class="n">expandvars</span><span class="p">(</span><span class="s1">&#39;$SPLUNK_HOME&#39;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">
@@ -1880,10 +1880,10 @@ if (!doNotTrack) {
 </span></span><span class="line"><span class="cl">                    <span class="n">xslt_doc</span> <span class="o">=</span> <span class="n">et</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">                    <span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">                    <span class="c1"># generate transformer</span>
+</span></span><span class="line"><span class="cl">                    <span class="c1">## generate transformer</span>
 </span></span><span class="line"><span class="cl">                    <span class="n">transform</span> <span class="o">=</span> <span class="n">et</span><span class="o">.</span><span class="n">XSLT</span><span class="p">(</span><span class="n">xslt_doc</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">                    <span class="c1"># transform the XML</span>
+</span></span><span class="line"><span class="cl">                    <span class="c1">## transform the XML</span>
 </span></span><span class="line"><span class="cl">                    <span class="n">xmlDoc</span> <span class="o">=</span> <span class="n">et</span><span class="o">.</span><span class="n">fromstring</span><span class="p">(</span><span class="n">output</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">                    <span class="n">transformedOutput</span> <span class="o">=</span> <span class="n">transform</span><span class="p">(</span><span class="n">xmlDoc</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">
@@ -1964,10 +1964,10 @@ if (!doNotTrack) {
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="n">output</span> <span class="o">=</span> <span class="s1">&#39;&lt;catalog&gt;&lt;/catalog&gt;&#39;</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="c1"># generate transformer</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">## generate transformer</span>
 </span></span><span class="line"><span class="cl">    <span class="n">transform</span> <span class="o">=</span> <span class="n">et</span><span class="o">.</span><span class="n">XSLT</span><span class="p">(</span><span class="n">xslt_doc</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="c1"># transform the XML</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">## transform the XML</span>
 </span></span><span class="line"><span class="cl">    <span class="n">xmlDoc</span> <span class="o">=</span> <span class="n">et</span><span class="o">.</span><span class="n">fromstring</span><span class="p">(</span><span class="n">output</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">    <span class="n">transformedOutput</span> <span class="o">=</span> <span class="n">transform</span><span class="p">(</span><span class="n">xmlDoc</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">
@@ -2082,7 +2082,7 @@ if (!doNotTrack) {
 <p>Yeah, vậy là chúng ta đã thành công tạo ở local. Đến đây chúng ta đã khẳng định được đây chính là sink mà chúng ta tìm, đồng thời chúng ta cũng xây dựng được payload tạo file. Bước tiếp theo cần phải từ sink tìm source.</p>
 </li>
 </ul>
-<h1 id="iv-từ-sink-tìm-source-rồi-rce">IV. Từ sink tìm source rồi RCE</h1>
+<h2 id="iv-từ-sink-tìm-source-rồi-rce">IV. Từ sink tìm source rồi RCE</h2>
 <hr />
 <ul>
 <li>
@@ -2105,7 +2105,7 @@ if (!doNotTrack) {
 <p>Do đó, để truy cập tới endpoint thì ta sẽ có request dạng</p>
 <p><code>/api/search/jobs/:sid/:asset?param1=a&amp;param2=b&amp;...&amp;paramN=n</code></p>
 <p>Điều cần làm đầu tiên là phải có <code>sid</code>.</p>
-<h2 id="41-tìm-sid">4.1 Tìm sid</h2>
+<h4 id="41-tìm-sid">4.1 Tìm sid</h4>
 <ul>
 <li>Tôi bắt đầu dạo quanh các tính năng của splunk. Đây là kĩ năng thường được sử dụng khi tôi tiến hành blackbox. Kết hợp với type bug này thuộc dạng upload file, nên trong quá trình “đi dạo” tôi cũng chú ý tới các tính năng upload file.</li>
 <li>Với tiêu chí đó, tôi tin rằng bất kì bạn nào cũng sẽ như tôi, dễ dàng chú ý với tính năng này</li>
@@ -2123,7 +2123,7 @@ if (!doNotTrack) {
 <li>sid là giá trị nằm ở trường <code>text</code></li>
 </ul>
 <p><img src="/images/posts/CVE_2023_46214_Splunk_RCE/Untitled%2017.png" alt="Untitled" /></p>
-<h2 id="42-build-payload-tạo-file-bất-kì">4.2 Build payload tạo file bất kì.</h2>
+<h4 id="42-build-payload-tạo-file-bất-kì">4.2 Build payload tạo file bất kì.</h4>
 <ul>
 <li>Bây giờ đã có sid rồi, tiến hành kiểm tra xem thử suy đoán về endpoint của chúng ta có đúng không. Quay lại đọc hiểu đoạn code và thêm các điều kiện tương ứng để touch được tới hàm.Ngoài ra splunk cũng có document hỗ trợ các api của họ, đó cũng là nguồn tài liệu quý giá cho chúng ta tìm hiểu.</li>
 <li>Phương pháp tiếp cận để build payload mà tôi sử dụng là đi từ trong ra ngoài, tức là từ vị trí hàm bị lỗi trace ngược lại source để tìm các điều kiện hợp lệ. Quay lại với hàm sink:</li>
@@ -2167,7 +2167,7 @@ if (!doNotTrack) {
 <p>Phần còn lại là  cần một param <code>xsl</code> trong request và biến  <code>moduleName</code> cùng biến <code>output</code> phải khác rỗng.</p>
 </li>
 </ul>
-<h3 id="xác-định-module-name">Xác định module name</h3>
+<h6 id="xác-định-module-name">Xác định module name</h6>
 <ul>
 <li>
 <p>Hãy xem xét đoạn code sau đây</p>
@@ -2185,11 +2185,11 @@ if (!doNotTrack) {
 <p><img src="/images/posts/CVE_2023_46214_Splunk_RCE/Untitled%2025.png" alt="Untitled" /></p>
 </li>
 </ul>
-<h3 id="xác-định-giá-trị-tham-số-xsl">Xác định giá trị tham số xsl</h3>
+<h6 id="xác-định-giá-trị-tham-số-xsl">Xác định giá trị tham số xsl</h6>
 <hr />
 <p><img src="/images/posts/CVE_2023_46214_Splunk_RCE/Untitled%2026.png" alt="Untitled" /></p>
 <p>Dễ thấy <code>xsl</code> là địa chỉ file xsl đã được upload lên</p>
-<h3 id="xác-định-giá-trị-của-tham-số-output">Xác định giá trị của tham số output</h3>
+<h6 id="xác-định-giá-trị-của-tham-số-output">Xác định giá trị của tham số output</h6>
 <hr />
 <p>Giá trị output thì sẽ phụ thuộc vào giá trị <code>:asset</code> ở endpoint.</p>
 <p><img src="/images/posts/CVE_2023_46214_Splunk_RCE/Untitled%2027.png" alt="Untitled" /></p>
@@ -2263,11 +2263,11 @@ if (!doNotTrack) {
 </div>
 </div><p>tôi có thể trỏ địa chỉ viết file tại <code>href</code> đến bất cứ đâu. Và vì splunk trên local đang được deploy với quyền root nên hầu như tôi có thể viết file đến bất kì vị trí nào trên server.</p>
 <p>Tiếp theo, chúng ta cần phải tìm xem nên viết ở đâu để có thể trigger được RCE</p>
-<h2 id="43-rce">4.3 RCE</h2>
+<h4 id="43-rce">4.3 RCE</h4>
 <p>Chúng ta đã có thể ghi một file bất kì vào vị trí bất kì, bước tiếp theo là cần phải tìm cách để thực thi code trên server.</p>
 <p>Hãy bắt đầu với một vài keyword trên google nào: <code>splunk + execute code</code>; <code>splunk + run code</code></p>
 <p><img src="/images/posts/CVE_2023_46214_Splunk_RCE/Untitled%2030.png" alt="Untitled" /></p>
-<h3 id="431-rce-với-scripts">4.3.1 RCE với scripts</h3>
+<h6 id="431-rce-với-scripts">4.3.1 RCE với scripts</h6>
 <p>Dễ dàng chúng ta sẽ tìm đến được keyword: <code>scripts</code>. Cơ bản là scripts là một câu lệnh cho phép người dùng thực thi các đoạn code python đã được định nghĩa trước trên server để tối ưu quá trình thực thi. Chi tiết bạn có thể xem <a href="https://docs.splunk.com/Documentation/SplunkCloud/9.1.2308/SearchReference/Script">ở đây</a></p>
 <p>Để nhanh chóng, bạn có thể xem <a href="https://www.youtube.com/watch?v=PQFjSmvLOjw&amp;t=280s">video này</a></p>
 <p>Đơn giản là chúng ta chỉ cần viết một file python vào đường dẫn <code>$SPLUNK_HOME\bin\scripts</code> hoặc <code>$SPLUNK_HOME\etc\apps\search\bin</code> rồi load script của chúng ta lên, thế là chạy.</p>
@@ -2307,13 +2307,13 @@ if (!doNotTrack) {
 <li>Bước tiếp theo thì chỉ cần làm như video, load script của chúng ta lên thôi.</li>
 </ul>
 <p><a href="/images/posts/CVE_2023_46214_Splunk_RCE/Untitled.mp4">Video POC nè</a></p>
-<h3 id="432-rce-với-runshellscript">4.3.2 RCE với runshellscript</h3>
+<h6 id="432-rce-với-runshellscript">4.3.2 RCE với runshellscript</h6>
 <ul>
 <li>Khi đọc tài liệu của scripts trên splunk, tôi chú ý đến một chú ý về security</li>
 </ul>
 <p><img src="/images/posts/CVE_2023_46214_Splunk_RCE/Untitled%2031.png" alt="Untitled" /></p>
 <ul>
-<li>Vào đường dẫn <a href="https://docs.splunk.com/Documentation/Splunk/latest/Security/SPLsafeguards#SPL_safeguards_for_risky_commands">SPL safeguards for risky commands</a>, chúng ta sẽ thấy một list các command được đánh giá là rủi ro nếu sử dụng không đúng</li>
+<li>Vào đường dẫn <a href="https://docs.splunk.com/Documentation/Splunk/latest/Security/SPLsafeguards##SPL_safeguards_for_risky_commands">SPL safeguards for risky commands</a>, chúng ta sẽ thấy một list các command được đánh giá là rủi ro nếu sử dụng không đúng</li>
 </ul>
 <p><img src="/images/posts/CVE_2023_46214_Splunk_RCE/Untitled%2032.png" alt="Untitled" /></p>
 <ul>
@@ -2327,7 +2327,7 @@ if (!doNotTrack) {
 </li>
 <li></li>
 </ul>
-<h1 id="v-nguồn-tham-khảo">V. Nguồn tham khảo</h1>
+<h2 id="v-nguồn-tham-khảo">V. Nguồn tham khảo</h2>
 <hr />
 <p><a href="https://www.w3schools.com/xml/xsl_intro.asp">https://www.w3schools.com/xml/xsl_intro.asp</a></p>
 <p><a href="https://www.youtube.com/watch?v=8YYa1CWI1AU">https://www.youtube.com/watch?v=8YYa1CWI1AU</a></p>
@@ -3842,30 +3842,39 @@ document.addEventListener('DOMContentLoaded', function () {
         <div class="toc toc__outer " data-dir="ltr" data-folding="true" data-ani="true">
           <nav id="TableOfContents">
   <ul>
-    <li><a href="#21-splunk-là-gì-cài-đặt-như-thế-nào">2.1 Splunk là gì? Cài đặt như thế nào?</a></li>
-    <li><a href="#22-extensible-stylesheet-language-transformations-xslt-là-gì">2.2 Extensible stylesheet language transformations (XSLT) là gì?</a></li>
-  </ul>
-
-  <ul>
-    <li><a href="#21-diff-patch-source-như-thế-nào">2.1 Diff patch source như thế nào?</a></li>
-    <li><a href="#22-sink-ở-đâu">2.2. Sink ở đâu???</a></li>
-  </ul>
-
-  <ul>
-    <li><a href="#41-tìm-sid">4.1 Tìm sid</a></li>
-    <li><a href="#42-build-payload-tạo-file-bất-kì">4.2 Build payload tạo file bất kì.</a>
+    <li><a href="#i-giới-thiệu-về-cve-2023-46214">I. Giới thiệu về CVE-2023-46214</a></li>
+    <li><a href="#ii-kiến-thức-nền-tảng">II. Kiến thức nền tảng</a>
       <ul>
-        <li><a href="#xác-định-module-name">Xác định module name</a></li>
-        <li><a href="#xác-định-giá-trị-tham-số-xsl">Xác định giá trị tham số xsl</a></li>
-        <li><a href="#xác-định-giá-trị-của-tham-số-output">Xác định giá trị của tham số output</a></li>
+        <li>
+          <ul>
+            <li><a href="#21-splunk-là-gì-cài-đặt-như-thế-nào">2.1 Splunk là gì? Cài đặt như thế nào?</a></li>
+            <li><a href="#22-extensible-stylesheet-language-transformations-xslt-là-gì">2.2 Extensible stylesheet language transformations (XSLT) là gì?</a></li>
+          </ul>
+        </li>
       </ul>
     </li>
-    <li><a href="#43-rce">4.3 RCE</a>
+    <li><a href="#iii-diff-patch-để-tìm-sink">III. Diff-patch để tìm sink</a>
       <ul>
-        <li><a href="#431-rce-với-scripts">4.3.1 RCE với scripts</a></li>
-        <li><a href="#432-rce-với-runshellscript">4.3.2 RCE với runshellscript</a></li>
+        <li>
+          <ul>
+            <li><a href="#21-diff-patch-source-như-thế-nào">2.1 Diff patch source như thế nào?</a></li>
+            <li><a href="#22-sink-ở-đâu">2.2. Sink ở đâu???</a></li>
+          </ul>
+        </li>
       </ul>
     </li>
+    <li><a href="#iv-từ-sink-tìm-source-rồi-rce">IV. Từ sink tìm source rồi RCE</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#41-tìm-sid">4.1 Tìm sid</a></li>
+            <li><a href="#42-build-payload-tạo-file-bất-kì">4.2 Build payload tạo file bất kì.</a></li>
+            <li><a href="#43-rce">4.3 RCE</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#v-nguồn-tham-khảo">V. Nguồn tham khảo</a></li>
   </ul>
 </nav>
         </div>
