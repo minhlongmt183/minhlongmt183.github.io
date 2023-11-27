@@ -14,11 +14,47 @@
     <managingEditor>edisc.ctf@gmail.com (Edisc)</managingEditor>
     <webMaster>edisc.ctf@gmail.com (Edisc)</webMaster>
     <copyright>©2023, All Rights Reserved</copyright>
-    <lastBuildDate>Sat, 30 Sep 2023 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 27 Nov 2023 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://minhlongmt183.github.io/categories/web/index.xml" rel="self" type="application/rss+xml" />
     
 
+      
+      <item>
+        <title>Reproducing CVE-2023-46214: Splunk RCE</title>
+        <link>https://minhlongmt183.github.io/posts/cve_2023_46214_splunk_rce/</link>
+        <pubDate>Mon, 27 Nov 2023 00:00:00 +0000</pubDate>
+        <author>edisc.ctf@gmail.com (Edisc)</author>
+        <atom:modified>Mon, 27 Nov 2023 00:00:00 +0000</atom:modified>
+        <guid>https://minhlongmt183.github.io/posts/cve_2023_46214_splunk_rce/</guid>
+        <description>Lại một tháng nữa đã trôi qua… Tháng trước tôi nghiên cứu về CVE-2021-42237, một lỗ hổng liên quan đến .Net Deserialization cho phép kẻ tấn công thực thi code trên hệ thống sitecore mà không cần cơ chế xác thực nào. Cũng tính viết một blog về nó, nhưng sau khi làm xong tôi phát hiện ra mình chưa đủ kiến thức để viết. Bởi vì với deserialization thì hầu hết sẽ có 2 bước quan trong đó là tìm được sink (nơi deserialize) và chain.</description>
+        
+        <dc:creator>Edisc</dc:creator>
+        <media:content url="https://minhlongmt183.github.io//images/posts/CVE_2023_46214_Splunk_RCE/logo.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>cve, python</category>
+            
+          
+        
+        
+          
+            
+              <category>web</category>
+            
+          
+        
+        
+          
+            
+              <category>cve</category>
+            
+          
+        
+      </item>
       
       <item>
         <title>Reproducing CVE-2023-41892: CraftCMS RCE</title>
@@ -27,7 +63,7 @@
         <author>edisc.ctf@gmail.com (Edisc)</author>
         <atom:modified>Sat, 30 Sep 2023 00:00:00 +0000</atom:modified>
         <guid>https://minhlongmt183.github.io/posts/cve-2023-41892_craftcms_rce/</guid>
-        <description>I. Lời mở đầu  Sau vài tháng đắm chìm vào Java Deserialize attack, tôi tí nữa là bị chết chìm luôn 😟. Đợt này nhân tiện có CVE mới về CraftCMS và đọc được bài blog về nó trên https://blog.calif.io/p/craftcms-rce, tôi quyết định reproduce để ôn lại PHP và lấy lại mood. CraftCMS là một hệ thống quản lý nội dung (CMS) mã nguồn mở dựa trên PHP. Nó được thiết kế để tạo các trang web và ứng dụng web mạnh mẽ và linh hoạt.</description>
+        <description>I. Lời mở đầu Sau vài tháng đắm chìm vào Java Deserialize attack, tôi tí nữa là bị chết chìm luôn 😟. Đợt này nhân tiện có CVE mới về CraftCMS và đọc được bài blog về nó trên https://blog.calif.io/p/craftcms-rce, tôi quyết định reproduce để ôn lại PHP và lấy lại mood. CraftCMS là một hệ thống quản lý nội dung (CMS) mã nguồn mở dựa trên PHP. Nó được thiết kế để tạo các trang web và ứng dụng web mạnh mẽ và linh hoạt.</description>
         
         <dc:creator>Edisc</dc:creator>
         <media:content url="https://minhlongmt183.github.io//images/posts/CVE-2023-41892_CraftCMS_RCE/logo.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
@@ -101,7 +137,7 @@ Vì các patch lỗi CVE-2020-2883 là đưa hàm sink bị lỗi vào blacklist
         <author>edisc.ctf@gmail.com (Edisc)</author>
         <atom:modified>Wed, 02 Aug 2023 00:00:00 +0000</atom:modified>
         <guid>https://minhlongmt183.github.io/posts/khi_newbie_hoc_java_deserialization_attack_readobject/</guid>
-        <description>Khi newbie học Java deserialization attack: readObject() native I. Lời mở đầu   Sau hơn 2 tháng học về PHP deserilazation, tôi đã chuyển qua học Java deserialization với tham vọng sẽ rèn một loại lỗi Insecure deserialization trên các ngôn ngữ PHP, JAVA, .Net 🤭🤭🤭🤭🤭. Vì là một Java deserialize fan tháng 8 nên mọi thứ bắt đầu hầu như là số 0. Và phương pháp tiếp cận ở đây sẽ là đi từ đơn giản đến nâng cao thông qua rèn luyện nhiều hơn là đọc lý thuyết.</description>
+        <description>Khi newbie học Java deserialization attack: readObject() native I. Lời mở đầu Sau hơn 2 tháng học về PHP deserilazation, tôi đã chuyển qua học Java deserialization với tham vọng sẽ rèn một loại lỗi Insecure deserialization trên các ngôn ngữ PHP, JAVA, .Net 🤭🤭🤭🤭🤭. Vì là một Java deserialize fan tháng 8 nên mọi thứ bắt đầu hầu như là số 0. Và phương pháp tiếp cận ở đây sẽ là đi từ đơn giản đến nâng cao thông qua rèn luyện nhiều hơn là đọc lý thuyết.</description>
         
         <dc:creator>Edisc</dc:creator>
         <media:content url="https://minhlongmt183.github.io//images/posts/Khi_newbie_hoc_Java_deserialization_attack_readObject/java.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
@@ -139,7 +175,7 @@ Vì các patch lỗi CVE-2020-2883 là đưa hàm sink bị lỗi vào blacklist
         <guid>https://minhlongmt183.github.io/posts/dot_net_101_soapformatter_activitysurrogateselector/</guid>
         <description>[.NET 101] SoapFormatter:ActivitySurrogateSelector Sau gần một tháng học về JavaDeserialize: học các khái niệm basic, reproduce các commonscollection thì lần này tôi có cơ hội tiếp xúc với .Net deserialize. Nội dung cho newbie là học các kiến thức basic và reproduce các chain kinh điển của .Net deserialize trên 先知社区 (aliyun.com)
 Khởi đầu khá thuận lợi với các bài:
- dotnet serialize 101 .net deserialization of BinaryFormatter .net deserialized by XmlSerializer  Nhìn chung là vì có kiến thức cơ bản từ PHP deserialize và Java deserialize nên ở mức độ 101 này không quá khó với tôi.</description>
+dotnet serialize 101 .net deserialization of BinaryFormatter .net deserialized by XmlSerializer Nhìn chung là vì có kiến thức cơ bản từ PHP deserialize và Java deserialize nên ở mức độ 101 này không quá khó với tôi.</description>
         
         <dc:creator>Edisc</dc:creator>
         <media:content url="https://minhlongmt183.github.io//images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/NET.png" medium="image"><media:title type="html">featured image</media:title></media:content>
@@ -176,7 +212,7 @@ Khởi đầu khá thuận lợi với các bài:
         <atom:modified>Mon, 22 May 2023 00:00:00 +0000</atom:modified>
         <guid>https://minhlongmt183.github.io/posts/from_sqli_to_php_deserialize_to_rce_on_pandora_fms/</guid>
         <description>From SQLi to PHP deserialize to RCE on Pandora FMS 742 Welcome to my blog, dedicated to unraveling the intricated world of PHP vulnerabilities! Today, I’m thrilled to share my latest research findings on Pandora FMS 742, a prominent network monitoring tool. In my pursuit of enhancing the security landscape, I’ve meticulously analyzed the critical code vulnerabilities inherent in this widely-used software.
-I Introducing Pandora FMS 742  Pandora FMS is a monitoring software that collects data from any system, generates alerts based on that data and shows graphs, reports and maps of our environment.</description>
+I Introducing Pandora FMS 742 Pandora FMS is a monitoring software that collects data from any system, generates alerts based on that data and shows graphs, reports and maps of our environment.</description>
         
         <dc:creator>Edisc</dc:creator>
         <media:content url="https://minhlongmt183.github.io//images/posts/From_SQLi_to_PHP_deserialize_to_RCE_on_Pandora_FMS/Pandora-FMS.png" medium="image"><media:title type="html">featured image</media:title></media:content>
@@ -213,7 +249,7 @@ I Introducing Pandora FMS 742  Pandora FMS is a monitoring software that collect
         <atom:modified>Tue, 02 May 2023 00:00:00 +0000</atom:modified>
         <guid>https://minhlongmt183.github.io/posts/reproduce-bug-remote-code-execution-in-melis-platform/</guid>
         <description>Reproduce bug: Remote Code Execution in Melis Platform Continuing from the previous article series, in this post, I will apply the knowledge learned and research on PHP deserialize to reproduce CVE-2022-39298
- There is currently no POC code available on this internet for this CVE, but there is a blog post discussing it: Remote Code Execution in Melis Platform | Sonar (sonarsource.com) This blog is based on the blog Remote Code Execution in Melis Platform | Sonar (sonarsource.</description>
+There is currently no POC code available on this internet for this CVE, but there is a blog post discussing it: Remote Code Execution in Melis Platform | Sonar (sonarsource.com) This blog is based on the blog Remote Code Execution in Melis Platform | Sonar (sonarsource.</description>
         
         <dc:creator>Edisc</dc:creator>
         <media:content url="https://minhlongmt183.github.io//images/posts/Reproduce-bug-Remote-Code-Execution-in-Melis-Platform/melis-framework.png" medium="image"><media:title type="html">featured image</media:title></media:content>

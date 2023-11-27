@@ -28,7 +28,7 @@
         <atom:modified>Mon, 22 May 2023 00:00:00 +0000</atom:modified>
         <guid>https://minhlongmt183.github.io/posts/from_sqli_to_php_deserialize_to_rce_on_pandora_fms/</guid>
         <description>From SQLi to PHP deserialize to RCE on Pandora FMS 742 Welcome to my blog, dedicated to unraveling the intricated world of PHP vulnerabilities! Today, I’m thrilled to share my latest research findings on Pandora FMS 742, a prominent network monitoring tool. In my pursuit of enhancing the security landscape, I’ve meticulously analyzed the critical code vulnerabilities inherent in this widely-used software.
-I Introducing Pandora FMS 742  Pandora FMS is a monitoring software that collects data from any system, generates alerts based on that data and shows graphs, reports and maps of our environment.</description>
+I Introducing Pandora FMS 742 Pandora FMS is a monitoring software that collects data from any system, generates alerts based on that data and shows graphs, reports and maps of our environment.</description>
         
         <dc:creator>Edisc</dc:creator>
         <media:content url="https://minhlongmt183.github.io//images/posts/From_SQLi_to_PHP_deserialize_to_RCE_on_Pandora_FMS/Pandora-FMS.png" medium="image"><media:title type="html">featured image</media:title></media:content>
@@ -65,7 +65,7 @@ I Introducing Pandora FMS 742  Pandora FMS is a monitoring software that collect
         <atom:modified>Tue, 02 May 2023 00:00:00 +0000</atom:modified>
         <guid>https://minhlongmt183.github.io/posts/reproduce-bug-remote-code-execution-in-melis-platform/</guid>
         <description>Reproduce bug: Remote Code Execution in Melis Platform Continuing from the previous article series, in this post, I will apply the knowledge learned and research on PHP deserialize to reproduce CVE-2022-39298
- There is currently no POC code available on this internet for this CVE, but there is a blog post discussing it: Remote Code Execution in Melis Platform | Sonar (sonarsource.com) This blog is based on the blog Remote Code Execution in Melis Platform | Sonar (sonarsource.</description>
+There is currently no POC code available on this internet for this CVE, but there is a blog post discussing it: Remote Code Execution in Melis Platform | Sonar (sonarsource.com) This blog is based on the blog Remote Code Execution in Melis Platform | Sonar (sonarsource.</description>
         
         <dc:creator>Edisc</dc:creator>
         <media:content url="https://minhlongmt183.github.io//images/posts/Reproduce-bug-Remote-Code-Execution-in-Melis-Platform/melis-framework.png" medium="image"><media:title type="html">featured image</media:title></media:content>

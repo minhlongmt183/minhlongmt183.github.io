@@ -18,9 +18,9 @@
 
 <script defer src="/js/lazysizes.min.498676c34eb225e85357ab0ce19c3c1244f3bd0bf595e5684d1b9d50ea4fbc42.js"></script>
 
-<script defer src="/js/helper/getParents.min.1618c696be7c98933f9a92677f518b512a74e55bdbb976b09936b4182e93181b.js"></script>
+<script defer src="/js/helper/getParents.min.086022fb02d7a1517e33c2670bffb976b3e80bcacd9caeee0c6a586064f20e42.js"></script>
 
-<script defer src="/js/helper/fadeinout.min.efa35f4c090622130b3f4cfae6971448b5ffb61c5f0a8f21cdfd157fa712abc4.js"></script>
+<script defer src="/js/helper/fadeinout.min.3ce954c8aea3b69cc5e6f734d8273ba4cd48d3a7987dbdca145849bc4b8fc296.js"></script>
 
 <script defer src="/js/helper/closest.min.js"></script>
   
@@ -1368,16 +1368,14 @@
 
     
   
-<script type="application/javascript">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-G6WT3WSKMH"></script>
+<script>
 var doNotTrack = false;
 if (!doNotTrack) {
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	ga('create', 'G-G6WT3WSKMH', 'auto');
-	
-	ga('send', 'pageview');
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-G6WT3WSKMH', { 'anonymize_ip': false });
 }
 </script>
 
@@ -1776,11 +1774,11 @@ chúng ta có thể tạo images riêng hoặc sử dụng những images đã c
 <p>Những câu lệnh sau run một ubuntu container:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">$ docker run -i -t ubuntu /bin/bash
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ docker run -i -t ubuntu /bin/bash
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Khi chúng ta chạy lệnh này, quá trình thực hiện sẽ nhưu sau (xét trường hợp cấu hình là default):<br />
 1. Nếu chúng ta không có <strong>ubuntu image</strong> ở local, Docker pulls nó từ configured registry của chúng ta, chúng ta có thể kéo nó xuống bằng câu lệnh: <code>docker pull ubuntu</code><br />
@@ -1809,31 +1807,68 @@ có thể truy cập vào.</li>
 <ol>
 <li>Tạo <code>docker group</code>:</li>
 </ol>
-<pre><code class="language-console" data-lang="console">    $ sudo groupadd docker
-</code></pre><ol start="2">
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-console" data-lang="console"><span class="line"><span class="cl"><span class="go">    $ sudo groupadd docker
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="2">
 <li>Thêm user vào <code>docker</code> group</li>
 </ol>
-<pre><code class="language-console" data-lang="console">    $ sudo usermod -aG docker $USER
-</code></pre><ol start="3">
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-console" data-lang="console"><span class="line"><span class="cl"><span class="go">    $ sudo usermod -aG docker $USER
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="3">
 <li>Kích hoạt sự thay đổi</li>
 </ol>
-<pre><code class="language-console" data-lang="console">    $ newgrp docker
-</code></pre><h2 id="configure-docker-to-start-on-boot">Configure Docker to start on boot</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-console" data-lang="console"><span class="line"><span class="cl"><span class="go">    $ newgrp docker
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="configure-docker-to-start-on-boot">Configure Docker to start on boot</h2>
 <ul>
-<li>Trên Debian và Ubuntu, Docker service mặc định được cấu hình để khởi động khí boot. <br />
+<li>Trên Debian và Ubuntu, Docker service mặc định được cấu hình để khởi động khí boot.<br />
 Với những distros khác, ta có thể sử dụng lệnh sau đây để tự động chạy:</li>
 </ul>
-<pre><code class="language-console" data-lang="console">    $ sudo systemctl enable docker.service
-    $ sudo systemctl enable containerd.service
-</code></pre><ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-console" data-lang="console"><span class="line"><span class="cl"><span class="go">    $ sudo systemctl enable docker.service
+</span></span></span><span class="line"><span class="cl"><span class="go">    $ sudo systemctl enable containerd.service
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
 <li>Và để tắt chế độ trên:</li>
 </ul>
-<pre><code class="language-console" data-lang="console">    $ sudo systemctl disable docker.service
-    $ sudo systemctl disable containerd.service
-</code></pre><h3 id="cấu-hình-nơi-docker-daemon-lắng-nghe-để-kết-nối">Cấu hình nơi Docker daemon lắng nghe để kết nối</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-console" data-lang="console"><span class="line"><span class="cl"><span class="go">    $ sudo systemctl disable docker.service
+</span></span></span><span class="line"><span class="cl"><span class="go">    $ sudo systemctl disable containerd.service
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="cấu-hình-nơi-docker-daemon-lắng-nghe-để-kết-nối">Cấu hình nơi Docker daemon lắng nghe để kết nối</h3>
 <ul>
-<li>Mặc định, Docker daemon sẽ nghe kết nối ở UNIX socket để chấp nhận các yêu cầu từ local client. <br />
-Ngoài ra, chúng ta có thể cho phép Docker chấp nhận những yêu cầu từ remote host bằng việc cấu hình để nó lắng nghe <br />
+<li>Mặc định, Docker daemon sẽ nghe kết nối ở UNIX socket để chấp nhận các yêu cầu từ local client.<br />
+Ngoài ra, chúng ta có thể cho phép Docker chấp nhận những yêu cầu từ remote host bằng việc cấu hình để nó lắng nghe<br />
 trên một địa chỉ IP và một cổng, giống như UNIX socket.</li>
 </ul>
 <h4 id="configuring-remote-access-with-systemd-unit-file">Configuring remote access with systemd unit file</h4>
@@ -1841,35 +1876,81 @@ trên một địa chỉ IP và một cổng, giống như UNIX socket.</li>
 <li><code>sudo systemctl edit docker.service</code> để ghi đè file <code>docker.service</code>.</li>
 <li>Thêm / sửa những lệnh sau:</li>
 </ol>
-<pre><code class="language-console" data-lang="console">[Service]
-ExecStart=
-ExecStart=/usr/bin/dockerd -H fd:// -H tcp://127.0.0.1:2375
-</code></pre><ol start="3">
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-console" data-lang="console"><span class="line"><span class="cl"><span class="go">[Service]
+</span></span></span><span class="line"><span class="cl"><span class="go">ExecStart=
+</span></span></span><span class="line"><span class="cl"><span class="go">ExecStart=/usr/bin/dockerd -H fd:// -H tcp://127.0.0.1:2375
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="3">
 <li>Lưu file</li>
 <li>Reload lại cấu hình systemctl</li>
 </ol>
-<pre><code class="language-console" data-lang="console">$ sudo systemctl daemon-reload
-</code></pre><ol start="5">
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-console" data-lang="console"><span class="line"><span class="cl"><span class="gp">$</span> sudo systemctl daemon-reload
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="5">
 <li>Chạy lại Docker</li>
 </ol>
-<pre><code class="language-console" data-lang="console">$ sudo systemctl restart docker.service
-</code></pre><ol start="6">
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-console" data-lang="console"><span class="line"><span class="cl"><span class="gp">$</span> sudo systemctl restart docker.service
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="6">
 <li>Kiểm tra đảm bảo sự thay đổi</li>
 </ol>
-<pre><code class="language-console" data-lang="console">$ sudo netstat -lntp | grep dockerd
-</code></pre><h4 id="configuring-remote-access-with-daemonjson">Configuring remote access with daemon.json</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-console" data-lang="console"><span class="line"><span class="cl"><span class="gp">$</span> sudo netstat -lntp <span class="p">|</span> grep dockerd
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="configuring-remote-access-with-daemonjson">Configuring remote access with daemon.json</h4>
 <ol>
 <li>Thêm dòng lệnh vào <code>/etc/docker/daemon.json</code> để kết nối với UNIX socket và địa chỉ IP:</li>
 </ol>
-<pre><code class="language-console" data-lang="console">{
-  &quot;hosts&quot;: [&quot;unix:///var/run/docker.sock&quot;, &quot;tcp://127.0.0.1:2375&quot;]
-}
-</code></pre><ol start="2">
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-console" data-lang="console"><span class="line"><span class="cl"><span class="go">{
+</span></span></span><span class="line"><span class="cl"><span class="go">  &#34;hosts&#34;: [&#34;unix:///var/run/docker.sock&#34;, &#34;tcp://127.0.0.1:2375&#34;]
+</span></span></span><span class="line"><span class="cl"><span class="go">}
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="2">
 <li>Khởi động lại Docker</li>
 <li>Kiểm tra đảm bảo sự thay đổi</li>
 </ol>
-<pre><code class="language-console" data-lang="console">$ sudo netstat -lntp | grep dockerd
-</code></pre><p><a href="https://docs.docker.com/engine/install/linux-postinstall/">Thêm nhiều cấu hình khác</a></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-console" data-lang="console"><span class="line"><span class="cl"><span class="gp">$</span> sudo netstat -lntp <span class="p">|</span> grep dockerd
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><a href="https://docs.docker.com/engine/install/linux-postinstall/">Thêm nhiều cấu hình khác</a></p>
 
     </article>
     
@@ -2338,7 +2419,7 @@ ExecStart=/usr/bin/dockerd -H fd:// -H tcp://127.0.0.1:2375
 </div>
 
 
-<script defer src="/js/swipe.min.b4b82839155519d9ca67746615a4c86ccbc1061c196fe6d8aa26e4fe22902718.js"></script>
+<script defer src="/js/swipe.min.7be2debdadbc35f9430de39f9010d89df5aee1904747098818b5c01cd0672180.js"></script>
 
 <script defer src="/js/micromodal.min.de01b44b2f383056bbcaf6ee921fd385d79108ec1129afd0eb2f3f5a07e11f45.js"></script>
 
@@ -2997,7 +3078,7 @@ document.addEventListener('DOMContentLoaded', function () {
       e.trigger.classList.add('tooltipped');
       e.trigger.classList.add('tooltipped-s');
     });
-    // =================================================================
+    
 
 
 

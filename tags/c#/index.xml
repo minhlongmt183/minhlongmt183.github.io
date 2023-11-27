@@ -29,7 +29,7 @@
         <guid>https://minhlongmt183.github.io/posts/dot_net_101_soapformatter_activitysurrogateselector/</guid>
         <description>[.NET 101] SoapFormatter:ActivitySurrogateSelector Sau gần một tháng học về JavaDeserialize: học các khái niệm basic, reproduce các commonscollection thì lần này tôi có cơ hội tiếp xúc với .Net deserialize. Nội dung cho newbie là học các kiến thức basic và reproduce các chain kinh điển của .Net deserialize trên 先知社区 (aliyun.com)
 Khởi đầu khá thuận lợi với các bài:
- dotnet serialize 101 .net deserialization of BinaryFormatter .net deserialized by XmlSerializer  Nhìn chung là vì có kiến thức cơ bản từ PHP deserialize và Java deserialize nên ở mức độ 101 này không quá khó với tôi.</description>
+dotnet serialize 101 .net deserialization of BinaryFormatter .net deserialized by XmlSerializer Nhìn chung là vì có kiến thức cơ bản từ PHP deserialize và Java deserialize nên ở mức độ 101 này không quá khó với tôi.</description>
         
         <dc:creator>Edisc</dc:creator>
         <media:content url="https://minhlongmt183.github.io//images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/NET.png" medium="image"><media:title type="html">featured image</media:title></media:content>

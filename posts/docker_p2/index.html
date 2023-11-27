@@ -18,9 +18,9 @@
 
 <script defer src="/js/lazysizes.min.498676c34eb225e85357ab0ce19c3c1244f3bd0bf595e5684d1b9d50ea4fbc42.js"></script>
 
-<script defer src="/js/helper/getParents.min.1618c696be7c98933f9a92677f518b512a74e55bdbb976b09936b4182e93181b.js"></script>
+<script defer src="/js/helper/getParents.min.086022fb02d7a1517e33c2670bffb976b3e80bcacd9caeee0c6a586064f20e42.js"></script>
 
-<script defer src="/js/helper/fadeinout.min.efa35f4c090622130b3f4cfae6971448b5ffb61c5f0a8f21cdfd157fa712abc4.js"></script>
+<script defer src="/js/helper/fadeinout.min.3ce954c8aea3b69cc5e6f734d8273ba4cd48d3a7987dbdca145849bc4b8fc296.js"></script>
 
 <script defer src="/js/helper/closest.min.js"></script>
   
@@ -1368,16 +1368,14 @@
 
     
   
-<script type="application/javascript">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-G6WT3WSKMH"></script>
+<script>
 var doNotTrack = false;
 if (!doNotTrack) {
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	ga('create', 'G-G6WT3WSKMH', 'auto');
-	
-	ga('send', 'pageview');
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-G6WT3WSKMH', { 'anonymize_ip': false });
 }
 </script>
 
@@ -1718,7 +1716,7 @@ if (!doNotTrack) {
 Ví dụ, từ host, ta chạy lệnh <code>ls</code> để liệt kê tất cả các file trong container.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1745,43 +1743,43 @@ Ví dụ, từ host, ta chạy lệnh <code>ls</code> để liệt kê tất c�
 </span><span class="lnt">25
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">❯ docker ps
-CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
-6d1aa3dda644        ubuntu:latest       <span class="s2">&#34;/bin/bash&#34;</span>         <span class="m">3</span> minutes ago       Up <span class="m">3</span> minutes                            <span class="nb">test</span>
-❯ docker <span class="nb">exec</span> <span class="nb">test</span> ls
-bin
-boot
-dev
-etc
-home
-lib
-lib32
-lib64
-libx32
-media
-mnt
-opt
-proc
-root
-run
-sbin
-srv
-sys
-tmp
-usr
-var
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">❯ docker ps
+</span></span><span class="line"><span class="cl">CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+</span></span><span class="line"><span class="cl">6d1aa3dda644        ubuntu:latest       <span class="s2">&#34;/bin/bash&#34;</span>         <span class="m">3</span> minutes ago       Up <span class="m">3</span> minutes                            <span class="nb">test</span>
+</span></span><span class="line"><span class="cl">❯ docker <span class="nb">exec</span> <span class="nb">test</span> ls
+</span></span><span class="line"><span class="cl">bin
+</span></span><span class="line"><span class="cl">boot
+</span></span><span class="line"><span class="cl">dev
+</span></span><span class="line"><span class="cl">etc
+</span></span><span class="line"><span class="cl">home
+</span></span><span class="line"><span class="cl">lib
+</span></span><span class="line"><span class="cl">lib32
+</span></span><span class="line"><span class="cl">lib64
+</span></span><span class="line"><span class="cl">libx32
+</span></span><span class="line"><span class="cl">media
+</span></span><span class="line"><span class="cl">mnt
+</span></span><span class="line"><span class="cl">opt
+</span></span><span class="line"><span class="cl">proc
+</span></span><span class="line"><span class="cl">root
+</span></span><span class="line"><span class="cl">run
+</span></span><span class="line"><span class="cl">sbin
+</span></span><span class="line"><span class="cl">srv
+</span></span><span class="line"><span class="cl">sys
+</span></span><span class="line"><span class="cl">tmp
+</span></span><span class="line"><span class="cl">usr
+</span></span><span class="line"><span class="cl">var
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Ngoài ra cũng vẫn có thể thêm các option, ví dụ:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">❯ docker <span class="nb">exec</span> -it <span class="nb">test</span> bash
-root@ubuntu1:/# 
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">❯ docker <span class="nb">exec</span> -it <span class="nb">test</span> bash
+</span></span><span class="line"><span class="cl">root@ubuntu1:/# 
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Lệnh trên yêu cầu thực thi lệnh bash và thêm option <code>-it</code> để có thể tương tác trực tiếp với terminal, dễ dàng thấy, nó khá giống với lệnh <code>docker attach</code>, tuy nhiên, khi mở các process trong container bằng htop, chúng ta sẽ thấy như sau:<br />
 <img src="/images/posts/docker_cli/docker_exec_htop.png" alt="docker_exec_htop" /><br />
@@ -1791,38 +1789,38 @@ Rõ ràng, ở đây có ngoài process <code>/bin/bash</code> có khi tạo, co
 Trước khi lưu container trở thành image, ta kiểm tra xem trong hệ thống có những image nào:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">❯ docker images
-REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
-ubuntu              latest              7e0aa2d69a15        <span class="m">6</span> weeks ago         72.7MB
-centos              latest              300e315adb2f        <span class="m">6</span> months ago        209MB
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">❯ docker images
+</span></span><span class="line"><span class="cl">REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+</span></span><span class="line"><span class="cl">ubuntu              latest              7e0aa2d69a15        <span class="m">6</span> weeks ago         72.7MB
+</span></span><span class="line"><span class="cl">centos              latest              300e315adb2f        <span class="m">6</span> months ago        209MB
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Một điều lưu ý, muốn lưu container thành image, thì container đó phải ở trạng thái dừng (Exited).</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">❯ docker ps -a
-CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS                     PORTS               NAMES
-6d1aa3dda644        ubuntu:latest       <span class="s2">&#34;/bin/bash&#34;</span>         <span class="m">23</span> minutes ago      Exited <span class="o">(</span>0<span class="o">)</span> <span class="m">4</span> minutes ago                       <span class="nb">test</span>
-ddf68933af54        centos:latest       <span class="s2">&#34;/bin/bash&#34;</span>         <span class="m">16</span> hours ago        Exited <span class="o">(</span>0<span class="o">)</span> <span class="m">16</span> hours ago                        centos_docker
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">❯ docker ps -a
+</span></span><span class="line"><span class="cl">CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS                     PORTS               NAMES
+</span></span><span class="line"><span class="cl">6d1aa3dda644        ubuntu:latest       <span class="s2">&#34;/bin/bash&#34;</span>         <span class="m">23</span> minutes ago      Exited <span class="o">(</span>0<span class="o">)</span> <span class="m">4</span> minutes ago                       <span class="nb">test</span>
+</span></span><span class="line"><span class="cl">ddf68933af54        centos:latest       <span class="s2">&#34;/bin/bash&#34;</span>         <span class="m">16</span> hours ago        Exited <span class="o">(</span>0<span class="o">)</span> <span class="m">16</span> hours ago                        centos_docker
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Tiến hành lưu container thành images, ta dùng cú pháp: <code>docker commit CONTAINER image:tag</code>. <em>CONTAINER</em> ở đây là tên hoặc id của container.<br />
 Ví dụ, container ubuntu vừa rồi tôi đã cài thêm <code>ping</code> với <code>vim</code>, bây giờ lưu lại thành image, ta thực hiện:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -1831,21 +1829,21 @@ Ví dụ, container ubuntu vừa rồi tôi đã cài thêm <code>ping</code> v�
 </span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">❯ docker commit <span class="nb">test</span> ubuntu-pv:version1
-sha256:a8e04dcf8737519e456dcedd646983a5d69d97ea85f5e3517b537b2b1a86ef0a
-❯ docker images
-REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
-ubuntu-pv           version1            a8e04dcf8737        <span class="m">5</span> seconds ago       170MB
-ubuntu              latest              7e0aa2d69a15        <span class="m">6</span> weeks ago         72.7MB
-centos              latest              300e315adb2f        <span class="m">6</span> months ago        209MB
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">❯ docker commit <span class="nb">test</span> ubuntu-pv:version1
+</span></span><span class="line"><span class="cl">sha256:a8e04dcf8737519e456dcedd646983a5d69d97ea85f5e3517b537b2b1a86ef0a
+</span></span><span class="line"><span class="cl">❯ docker images
+</span></span><span class="line"><span class="cl">REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+</span></span><span class="line"><span class="cl">ubuntu-pv           version1            a8e04dcf8737        <span class="m">5</span> seconds ago       170MB
+</span></span><span class="line"><span class="cl">ubuntu              latest              7e0aa2d69a15        <span class="m">6</span> weeks ago         72.7MB
+</span></span><span class="line"><span class="cl">centos              latest              300e315adb2f        <span class="m">6</span> months ago        209MB
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Rõ ràng, sau khi thực hiện lệnh trên, chúng ta sẽ thấy trong danh sách các images có thểm một image có thên là ubuntu-py với TAG là version1 cùng ID và các thông tin khác.</p>
 <h3 id="docker-save">Docker save</h3>
 <p>Sau khi ta lưu container thành một image, để có thể chia sẻ image này với người khác, ta lưu image thành một file trên máy host. Việc này sẽ được thực hiện thông qua lệnh <code>docker save --output filename.tar &lt;image_id/name&gt;</code>.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1857,17 +1855,17 @@ centos              latest              300e315adb2f        <span class="m">6</s
 </span><span class="lnt">10
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">❯ ls
-<span class="s1">&#39;IDA Freeware.desktop&#39;</span>   PinImage   tmp
-❯ docker images
-REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
-ubuntu-pv           version1            a8e04dcf8737        <span class="m">6</span> minutes ago       170MB
-ubuntu              latest              7e0aa2d69a15        <span class="m">6</span> weeks ago         72.7MB
-centos              latest              300e315adb2f        <span class="m">6</span> months ago        209MB
-❯ docker save --output ubuntu-pv.tar a8
-❯ ls
-<span class="s1">&#39;IDA Freeware.desktop&#39;</span>   PinImage   tmp   ubuntu-pv.tar
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">❯ ls
+</span></span><span class="line"><span class="cl"><span class="s1">&#39;IDA Freeware.desktop&#39;</span>   PinImage   tmp
+</span></span><span class="line"><span class="cl">❯ docker images
+</span></span><span class="line"><span class="cl">REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+</span></span><span class="line"><span class="cl">ubuntu-pv           version1            a8e04dcf8737        <span class="m">6</span> minutes ago       170MB
+</span></span><span class="line"><span class="cl">ubuntu              latest              7e0aa2d69a15        <span class="m">6</span> weeks ago         72.7MB
+</span></span><span class="line"><span class="cl">centos              latest              300e315adb2f        <span class="m">6</span> months ago        209MB
+</span></span><span class="line"><span class="cl">❯ docker save --output ubuntu-pv.tar a8
+</span></span><span class="line"><span class="cl">❯ ls
+</span></span><span class="line"><span class="cl"><span class="s1">&#39;IDA Freeware.desktop&#39;</span>   PinImage   tmp   ubuntu-pv.tar
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Ví dụ trên tôi đã lưu ubuntu-pv image thành ra file ubuntu-pv.tar.</p>
 <h3 id="docker-load">Docker load</h3>
@@ -1875,7 +1873,7 @@ centos              latest              300e315adb2f        <span class="m">6</s
 Ví dụ, tôi tiến hành xóa đi ubuntu-pv image hiện có trên hệ thống. Lệnh thao tác với image bạn có thể xem ở <a href="./docker_p1.md">P1</a>.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1892,27 +1890,27 @@ Ví dụ, tôi tiến hành xóa đi ubuntu-pv image hiện có trên hệ thố
 </span><span class="lnt">15
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">❯ docker images
-REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
-ubuntu-pv           version1            a8e04dcf8737        <span class="m">11</span> minutes ago      170MB
-ubuntu              latest              7e0aa2d69a15        <span class="m">6</span> weeks ago         72.7MB
-centos              latest              300e315adb2f        <span class="m">6</span> months ago        209MB
-❯ docker image rm -f ubuntu-pv:version1
-Untagged: ubuntu-pv:version1
-Deleted: sha256:a8e04dcf8737519e456dcedd646983a5d69d97ea85f5e3517b537b2b1a86ef0a
-❯ docker image rm ubuntu:latest
-Untagged: ubuntu:latest
-Untagged: ubuntu@sha256:adf73ca014822ad8237623d388cedf4d5346aa72c270c5acc01431cc93e18e2d
-Deleted: sha256:7e0aa2d69a153215c790488ed1fcec162015e973e49962d438e18249d16fa9bd
-❯ docker images
-REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
-centos              latest              300e315adb2f        <span class="m">6</span> months ago        209MB
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">❯ docker images
+</span></span><span class="line"><span class="cl">REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+</span></span><span class="line"><span class="cl">ubuntu-pv           version1            a8e04dcf8737        <span class="m">11</span> minutes ago      170MB
+</span></span><span class="line"><span class="cl">ubuntu              latest              7e0aa2d69a15        <span class="m">6</span> weeks ago         72.7MB
+</span></span><span class="line"><span class="cl">centos              latest              300e315adb2f        <span class="m">6</span> months ago        209MB
+</span></span><span class="line"><span class="cl">❯ docker image rm -f ubuntu-pv:version1
+</span></span><span class="line"><span class="cl">Untagged: ubuntu-pv:version1
+</span></span><span class="line"><span class="cl">Deleted: sha256:a8e04dcf8737519e456dcedd646983a5d69d97ea85f5e3517b537b2b1a86ef0a
+</span></span><span class="line"><span class="cl">❯ docker image rm ubuntu:latest
+</span></span><span class="line"><span class="cl">Untagged: ubuntu:latest
+</span></span><span class="line"><span class="cl">Untagged: ubuntu@sha256:adf73ca014822ad8237623d388cedf4d5346aa72c270c5acc01431cc93e18e2d
+</span></span><span class="line"><span class="cl">Deleted: sha256:7e0aa2d69a153215c790488ed1fcec162015e973e49962d438e18249d16fa9bd
+</span></span><span class="line"><span class="cl">❯ docker images
+</span></span><span class="line"><span class="cl">REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+</span></span><span class="line"><span class="cl">centos              latest              300e315adb2f        <span class="m">6</span> months ago        209MB
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Bây giờ, ta tiến hành phục hồi ubuntu-pv image từ file <code>ubuntu-pv.tar</code> đã có ở trước đó.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -1922,19 +1920,19 @@ centos              latest              300e315adb2f        <span class="m">6</s
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">❯ ls
-<span class="s1">&#39;IDA Freeware.desktop&#39;</span>   PinImage   tmp   ubuntu-pv.tar
-❯ docker load -i ubuntu-pv.tar
-Loaded image ID: sha256:a8e04dcf8737519e456dcedd646983a5d69d97ea85f5e3517b537b2b1a86ef0a
-❯ docker images
-REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
-&lt;none&gt;              &lt;none&gt;              a8e04dcf8737        <span class="m">14</span> minutes ago      170MB
-centos              latest              300e315adb2f        <span class="m">6</span> months ago        209MB
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">❯ ls
+</span></span><span class="line"><span class="cl"><span class="s1">&#39;IDA Freeware.desktop&#39;</span>   PinImage   tmp   ubuntu-pv.tar
+</span></span><span class="line"><span class="cl">❯ docker load -i ubuntu-pv.tar
+</span></span><span class="line"><span class="cl">Loaded image ID: sha256:a8e04dcf8737519e456dcedd646983a5d69d97ea85f5e3517b537b2b1a86ef0a
+</span></span><span class="line"><span class="cl">❯ docker images
+</span></span><span class="line"><span class="cl">REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+</span></span><span class="line"><span class="cl">&lt;none&gt;              &lt;none&gt;              a8e04dcf8737        <span class="m">14</span> minutes ago      170MB
+</span></span><span class="line"><span class="cl">centos              latest              300e315adb2f        <span class="m">6</span> months ago        209MB
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Khi phục hồi, tên của image và tag của nó sẽ là <code>&lt;none&gt;</code>. Để đặt tên và tag, ta dùng lệnh:<br />
 <code>docker tag image_id name:tag</code>.</p>
-<pre><code>❯ docker tag a8 newimage:version2
+<pre tabindex="0"><code>❯ docker tag a8 newimage:version2
 ❯ docker images
 REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
 newimage            version2            a8e04dcf8737        16 minutes ago      170MB
@@ -1944,26 +1942,24 @@ centos              latest              300e315adb2f        6 months ago        
 <p>Trên máy host, tôi tổ chức cây thực mục như sau:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
-</span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">.
-├── docker
-│   └── data
-│       └── d.txt
-
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">.
+</span></span><span class="line"><span class="cl">├── docker
+</span></span><span class="line"><span class="cl">│   └── data
+</span></span><span class="line"><span class="cl">│       └── d.txt
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Mục tiêu của chúng ta là để container có thể truy cập và thao tác với dữ liệu ở trong <code>data</code>, và khi container bị xóa đi, dữ liệu không bị mất.<br />
 Chúng ta tạo mới một container và trong lúc tạo sẽ chỉ rõ thực mục ánh xạ trên host và thực mục được ánh xạ ở đâu trên container.<br />
 <code>docker run -it -v &lt;thu/muc/tren/host&gt;:&lt;thu/muc/anh/xa/tren/container&gt; &lt;image id&gt;</code></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -1971,35 +1967,35 @@ Chúng ta tạo mới một container và trong lúc tạo sẽ chỉ rõ thực
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">❯ docker images
-REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
-newimage            version2            a8e04dcf8737        <span class="m">28</span> minutes ago      170MB
-centos              latest              300e315adb2f        <span class="m">6</span> months ago        209MB
-❯ docker run -it -v /home/edisc/Desktop/docker/data:/home/shared_data a8
-root@d4d24f24bbe6:/#
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">❯ docker images
+</span></span><span class="line"><span class="cl">REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+</span></span><span class="line"><span class="cl">newimage            version2            a8e04dcf8737        <span class="m">28</span> minutes ago      170MB
+</span></span><span class="line"><span class="cl">centos              latest              300e315adb2f        <span class="m">6</span> months ago        209MB
+</span></span><span class="line"><span class="cl">❯ docker run -it -v /home/edisc/Desktop/docker/data:/home/shared_data a8
+</span></span><span class="line"><span class="cl">root@d4d24f24bbe6:/#
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Chúng ta tiến hành kiểm tra:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">root@d4d24f24bbe6:/# <span class="nb">cd</span> /home/shared_data/
-root@d4d24f24bbe6:/home/shared_data# ls
-d.txt
-root@d4d24f24bbe6:/home/shared_data# 
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">root@d4d24f24bbe6:/# <span class="nb">cd</span> /home/shared_data/
+</span></span><span class="line"><span class="cl">root@d4d24f24bbe6:/home/shared_data# ls
+</span></span><span class="line"><span class="cl">d.txt
+</span></span><span class="line"><span class="cl">root@d4d24f24bbe6:/home/shared_data# 
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Như vậy, dữ liệu đã được ánh xạ và mọi thao tác trên dữ liệu ở thư mục này sẽ được lưu vào host.</p>
 <h3 id="chia-sẻ-dữ-liệu-giữa-các-container-với-nhau">Chia sẻ dữ liệu giữa các container với nhau</h3>
 <p>Chúng ta tạo lại một container có tên là <code>container1</code> ánh xạ tới dữ liệu <code>Desktop/docker/data</code>, và tạo một container2 muốn ánh xạ tới dự liệu này, thay vì dùng lệnh tạo như container1, ta có thể dùng <code>--volumes-from &lt;container_name/id&gt;</code></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -2009,15 +2005,15 @@ root@d4d24f24bbe6:/home/shared_data#
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">❯ docker images
-REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
-newimage            version2            a8e04dcf8737        <span class="m">36</span> minutes ago      170MB
-centos              latest              300e315adb2f        <span class="m">6</span> months ago        209MB
-❯ docker run -it -v /home/edisc/Desktop/docker/data:/home/shared_data --name <span class="s2">&#34;container1&#34;</span> a8
-root@b62e5d395369:/# %                                                          
-❯ docker run -it --name container2 --volumes-from container1 centos
-<span class="o">[</span>root@e1103acb0525 /<span class="o">]</span>#
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">❯ docker images
+</span></span><span class="line"><span class="cl">REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+</span></span><span class="line"><span class="cl">newimage            version2            a8e04dcf8737        <span class="m">36</span> minutes ago      170MB
+</span></span><span class="line"><span class="cl">centos              latest              300e315adb2f        <span class="m">6</span> months ago        209MB
+</span></span><span class="line"><span class="cl">❯ docker run -it -v /home/edisc/Desktop/docker/data:/home/shared_data --name <span class="s2">&#34;container1&#34;</span> a8
+</span></span><span class="line"><span class="cl">root@b62e5d395369:/# %                                                          
+</span></span><span class="line"><span class="cl">❯ docker run -it --name container2 --volumes-from container1 centos
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@e1103acb0525 /<span class="o">]</span><span class="c1">#</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="chia-sẻ-qua-volume">Chia sẻ qua volume</h3>
 <p>Bên cạnh việc chia sẻ dữ liệu bằng cách tạo các file dữ liệu, docker còn cho phép chúng ta tạo ra những ổ đĩa, gán vào container và để chia sẻ dữ liệu giữa chúng. Cũng như file, khi container xóa thì những ổ đĩa này vẫn còn tồn tại cho đến khi chúng ta cố tình xóa nó.</p>
@@ -2025,38 +2021,38 @@ root@b62e5d395369:/# %
 <p>Để kiểm tra các ổ đĩa hiện có, ta dùng lệnh:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">❯ docker volume ls
-DRIVER              VOLUME NAME
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">❯ docker volume ls
+</span></span><span class="line"><span class="cl">DRIVER              VOLUME NAME
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Hiện tại trên hệ thống không có ổ đĩa nào.</p>
 <h4 id="tạo-ổ-đĩa">Tạo ổ đĩa</h4>
 <p>Để tạo một ổ đĩa mới, ta dùng lệnh: <code>docker volume create NAMEDISK</code>.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">❯ docker volume create D1
-D1
-❯ docker volume ls
-DRIVER              VOLUME NAME
-<span class="nb">local</span>               D1
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">❯ docker volume create D1
+</span></span><span class="line"><span class="cl">D1
+</span></span><span class="line"><span class="cl">❯ docker volume ls
+</span></span><span class="line"><span class="cl">DRIVER              VOLUME NAME
+</span></span><span class="line"><span class="cl"><span class="nb">local</span>               D1
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h4 id="kiểm-tra-thông-tin-ổ-đĩa">Kiểm tra thông tin ổ đĩa</h4>
 <p>Để kiểm tra thông tin ổ đĩa ta dùng lệnh <code>docker volume inspect NAMEDISK</code>.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -2070,25 +2066,25 @@ DRIVER              VOLUME NAME
 </span><span class="lnt">12
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">❯ docker volume inspect D1
-<span class="o">[</span>
-    <span class="o">{</span>
-        <span class="s2">&#34;CreatedAt&#34;</span>: <span class="s2">&#34;2021-06-08T10:06:13+07:00&#34;</span>,
-        <span class="s2">&#34;Driver&#34;</span>: <span class="s2">&#34;local&#34;</span>,
-        <span class="s2">&#34;Labels&#34;</span>: <span class="o">{}</span>,
-        <span class="s2">&#34;Mountpoint&#34;</span>: <span class="s2">&#34;/var/lib/docker/volumes/D1/_data&#34;</span>,
-        <span class="s2">&#34;Name&#34;</span>: <span class="s2">&#34;D1&#34;</span>,
-        <span class="s2">&#34;Options&#34;</span>: <span class="o">{}</span>,
-        <span class="s2">&#34;Scope&#34;</span>: <span class="s2">&#34;local&#34;</span>
-    <span class="o">}</span>
-<span class="o">]</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">❯ docker volume inspect D1
+</span></span><span class="line"><span class="cl"><span class="o">[</span>
+</span></span><span class="line"><span class="cl">    <span class="o">{</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;CreatedAt&#34;</span>: <span class="s2">&#34;2021-06-08T10:06:13+07:00&#34;</span>,
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;Driver&#34;</span>: <span class="s2">&#34;local&#34;</span>,
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;Labels&#34;</span>: <span class="o">{}</span>,
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;Mountpoint&#34;</span>: <span class="s2">&#34;/var/lib/docker/volumes/D1/_data&#34;</span>,
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;Name&#34;</span>: <span class="s2">&#34;D1&#34;</span>,
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;Options&#34;</span>: <span class="o">{}</span>,
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;Scope&#34;</span>: <span class="s2">&#34;local&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="o">}</span>
+</span></span><span class="line"><span class="cl"><span class="o">]</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h4 id="xóa-ổ-đĩa">Xóa ổ đĩa</h4>
 <p>Khi không có nhu cầu sử dụng, ta sử dụng lệnh <code>docker volume rm NAMEDISK</code>.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -2099,23 +2095,23 @@ DRIVER              VOLUME NAME
 </span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">❯ docker volume ls
-DRIVER              VOLUME NAME
-<span class="nb">local</span>               D1
-<span class="nb">local</span>               D2
-❯ docker volume rm D1
-D1
-❯ docker volume ls
-DRIVER              VOLUME NAME
-<span class="nb">local</span>               D2
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">❯ docker volume ls
+</span></span><span class="line"><span class="cl">DRIVER              VOLUME NAME
+</span></span><span class="line"><span class="cl"><span class="nb">local</span>               D1
+</span></span><span class="line"><span class="cl"><span class="nb">local</span>               D2
+</span></span><span class="line"><span class="cl">❯ docker volume rm D1
+</span></span><span class="line"><span class="cl">D1
+</span></span><span class="line"><span class="cl">❯ docker volume ls
+</span></span><span class="line"><span class="cl">DRIVER              VOLUME NAME
+</span></span><span class="line"><span class="cl"><span class="nb">local</span>               D2
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h4 id="gán-ổ-đĩa-volume-vào-container">Gán ổ đĩa volume vào container</h4>
 <p>Ta sử dụng cú pháp:<br />
 <code>docker run -it --mount source=DISK,target=pathContainer imageID</code></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -2125,20 +2121,20 @@ DRIVER              VOLUME NAME
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">❯ docker images
-REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
-newimage            version2            a8e04dcf8737        About an hour ago   170MB
-ubuntu              latest              7e0aa2d69a15        <span class="m">6</span> weeks ago         72.7MB
-centos              latest              300e315adb2f        <span class="m">6</span> months ago        209MB
-❯ docker run -it --mount <span class="nv">source</span><span class="o">=</span>D2,target<span class="o">=</span>/home/disk2 ubuntu:latest
-root@524a1182f690:/# <span class="nb">cd</span> /home/disk2/
-root@524a1182f690:/home/disk2#
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">❯ docker images
+</span></span><span class="line"><span class="cl">REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+</span></span><span class="line"><span class="cl">newimage            version2            a8e04dcf8737        About an hour ago   170MB
+</span></span><span class="line"><span class="cl">ubuntu              latest              7e0aa2d69a15        <span class="m">6</span> weeks ago         72.7MB
+</span></span><span class="line"><span class="cl">centos              latest              300e315adb2f        <span class="m">6</span> months ago        209MB
+</span></span><span class="line"><span class="cl">❯ docker run -it --mount <span class="nv">source</span><span class="o">=</span>D2,target<span class="o">=</span>/home/disk2 ubuntu:latest
+</span></span><span class="line"><span class="cl">root@524a1182f690:/# <span class="nb">cd</span> /home/disk2/
+</span></span><span class="line"><span class="cl">root@524a1182f690:/home/disk2#
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Ta tiến hành thêm dữ liệu trong thư mục trên, sau đó xóa container đi, và thấy, ổ đĩa vẫn còn.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -2158,42 +2154,42 @@ root@524a1182f690:/home/disk2#
 </span><span class="lnt">18
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">❯ docker images
-REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
-newimage            version2            a8e04dcf8737        About an hour ago   170MB
-ubuntu              latest              7e0aa2d69a15        <span class="m">6</span> weeks ago         72.7MB
-centos              latest              300e315adb2f        <span class="m">6</span> months ago        209MB
-❯ docker run -it --mount <span class="nv">source</span><span class="o">=</span>D2,target<span class="o">=</span>/home/disk2 ubuntu:latest
-root@524a1182f690:/# <span class="nb">cd</span> /home/disk2/
-root@524a1182f690:/home/disk2#
-❯ docker ps -a
-CONTAINER ID        IMAGE               COMMAND             CREATED              STATUS                        PORTS               NAMES
-524a1182f690        ubuntu:latest       <span class="s2">&#34;/bin/bash&#34;</span>         About a minute ago   Exited <span class="o">(</span>0<span class="o">)</span> <span class="m">23</span> seconds ago                         cocky_mclaren
-e1103acb0525        centos              <span class="s2">&#34;/bin/bash&#34;</span>         <span class="m">19</span> minutes ago       Exited <span class="o">(</span>127<span class="o">)</span> <span class="m">11</span> minutes ago                       container2
-b62e5d395369        a8                  <span class="s2">&#34;/bin/bash&#34;</span>         <span class="m">21</span> minutes ago       Exited <span class="o">(</span>0<span class="o">)</span> <span class="m">11</span> minutes ago                         container1
-❯ docker rm 52
-52
-❯ docker volume ls
-DRIVER              VOLUME NAME
-<span class="nb">local</span>               D2
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">❯ docker images
+</span></span><span class="line"><span class="cl">REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+</span></span><span class="line"><span class="cl">newimage            version2            a8e04dcf8737        About an hour ago   170MB
+</span></span><span class="line"><span class="cl">ubuntu              latest              7e0aa2d69a15        <span class="m">6</span> weeks ago         72.7MB
+</span></span><span class="line"><span class="cl">centos              latest              300e315adb2f        <span class="m">6</span> months ago        209MB
+</span></span><span class="line"><span class="cl">❯ docker run -it --mount <span class="nv">source</span><span class="o">=</span>D2,target<span class="o">=</span>/home/disk2 ubuntu:latest
+</span></span><span class="line"><span class="cl">root@524a1182f690:/# <span class="nb">cd</span> /home/disk2/
+</span></span><span class="line"><span class="cl">root@524a1182f690:/home/disk2#
+</span></span><span class="line"><span class="cl">❯ docker ps -a
+</span></span><span class="line"><span class="cl">CONTAINER ID        IMAGE               COMMAND             CREATED              STATUS                        PORTS               NAMES
+</span></span><span class="line"><span class="cl">524a1182f690        ubuntu:latest       <span class="s2">&#34;/bin/bash&#34;</span>         About a minute ago   Exited <span class="o">(</span>0<span class="o">)</span> <span class="m">23</span> seconds ago                         cocky_mclaren
+</span></span><span class="line"><span class="cl">e1103acb0525        centos              <span class="s2">&#34;/bin/bash&#34;</span>         <span class="m">19</span> minutes ago       Exited <span class="o">(</span>127<span class="o">)</span> <span class="m">11</span> minutes ago                       container2
+</span></span><span class="line"><span class="cl">b62e5d395369        a8                  <span class="s2">&#34;/bin/bash&#34;</span>         <span class="m">21</span> minutes ago       Exited <span class="o">(</span>0<span class="o">)</span> <span class="m">11</span> minutes ago                         container1
+</span></span><span class="line"><span class="cl">❯ docker rm <span class="m">52</span>
+</span></span><span class="line"><span class="cl"><span class="m">52</span>
+</span></span><span class="line"><span class="cl">❯ docker volume ls
+</span></span><span class="line"><span class="cl">DRIVER              VOLUME NAME
+</span></span><span class="line"><span class="cl"><span class="nb">local</span>               D2
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Vậy làm sao để truy xuất dữ liệu hiện có trên D2 hoặc kiểm tra xem có dữ liệu trên đó hay không? Để làm được điều đó, chúng ta tạo một container khác, mount tới D2 và kiểm tra.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">❯ docker run -it --mount <span class="nv">source</span><span class="o">=</span>D2,target<span class="o">=</span>/home/disk3 ubuntu:latest
-root@ca47e1855144:/# <span class="nb">cd</span> /home/disk3/
-root@ca47e1855144:/home/disk3# ls
-data.txt
-root@ca47e1855144:/home/disk3# 
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">❯ docker run -it --mount <span class="nv">source</span><span class="o">=</span>D2,target<span class="o">=</span>/home/disk3 ubuntu:latest
+</span></span><span class="line"><span class="cl">root@ca47e1855144:/# <span class="nb">cd</span> /home/disk3/
+</span></span><span class="line"><span class="cl">root@ca47e1855144:/home/disk3# ls
+</span></span><span class="line"><span class="cl">data.txt
+</span></span><span class="line"><span class="cl">root@ca47e1855144:/home/disk3# 
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Dữ liệu do container trước đã tạo và lưu vào, dữ liệu này vẫn còn mặc dù container đã xóa đi.</p>
 <h4 id="tạo-ổ-đĩa-ánh-xạ-tới-thư-mục-trên-máy-host">Tạo ổ đĩa ánh xạ tới thư mục trên máy host.</h4>
@@ -2201,7 +2197,7 @@ root@ca47e1855144:/home/disk3#
 <code>docker create --opt device =pathHOST --opt type=noe --opt o=bind DISKNAME</code></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -2209,18 +2205,18 @@ root@ca47e1855144:/home/disk3#
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">❯ docker volume create --opt <span class="nv">device</span><span class="o">=</span>/home/edisc/Desktop/docker/data --opt <span class="nv">type</span><span class="o">=</span>none --opt <span class="nv">o</span><span class="o">=</span><span class="nb">bind</span> DISK1
-DISK1
-❯ docker volume ls
-DRIVER              VOLUME NAME
-<span class="nb">local</span>               D2
-<span class="nb">local</span>               DISK1
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">❯ docker volume create --opt <span class="nv">device</span><span class="o">=</span>/home/edisc/Desktop/docker/data --opt <span class="nv">type</span><span class="o">=</span>none --opt <span class="nv">o</span><span class="o">=</span><span class="nb">bind</span> DISK1
+</span></span><span class="line"><span class="cl">DISK1
+</span></span><span class="line"><span class="cl">❯ docker volume ls
+</span></span><span class="line"><span class="cl">DRIVER              VOLUME NAME
+</span></span><span class="line"><span class="cl"><span class="nb">local</span>               D2
+</span></span><span class="line"><span class="cl"><span class="nb">local</span>               DISK1
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Thông tin ổ đĩa có được như sau:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -2238,28 +2234,28 @@ DRIVER              VOLUME NAME
 </span><span class="lnt">16
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">❯ docker volume inspect DISK1
-<span class="o">[</span>
-    <span class="o">{</span>
-        <span class="s2">&#34;CreatedAt&#34;</span>: <span class="s2">&#34;2021-06-08T10:27:56+07:00&#34;</span>,
-        <span class="s2">&#34;Driver&#34;</span>: <span class="s2">&#34;local&#34;</span>,
-        <span class="s2">&#34;Labels&#34;</span>: <span class="o">{}</span>,
-        <span class="s2">&#34;Mountpoint&#34;</span>: <span class="s2">&#34;/var/lib/docker/volumes/DISK1/_data&#34;</span>,
-        <span class="s2">&#34;Name&#34;</span>: <span class="s2">&#34;DISK1&#34;</span>,
-        <span class="s2">&#34;Options&#34;</span>: <span class="o">{</span>
-            <span class="s2">&#34;device&#34;</span>: <span class="s2">&#34;/home/edisc/Desktop/docker/data&#34;</span>,
-            <span class="s2">&#34;o&#34;</span>: <span class="s2">&#34;bind&#34;</span>,
-            <span class="s2">&#34;type&#34;</span>: <span class="s2">&#34;none&#34;</span>
-        <span class="o">}</span>,
-        <span class="s2">&#34;Scope&#34;</span>: <span class="s2">&#34;local&#34;</span>
-    <span class="o">}</span>
-<span class="o">]</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">❯ docker volume inspect DISK1
+</span></span><span class="line"><span class="cl"><span class="o">[</span>
+</span></span><span class="line"><span class="cl">    <span class="o">{</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;CreatedAt&#34;</span>: <span class="s2">&#34;2021-06-08T10:27:56+07:00&#34;</span>,
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;Driver&#34;</span>: <span class="s2">&#34;local&#34;</span>,
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;Labels&#34;</span>: <span class="o">{}</span>,
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;Mountpoint&#34;</span>: <span class="s2">&#34;/var/lib/docker/volumes/DISK1/_data&#34;</span>,
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;Name&#34;</span>: <span class="s2">&#34;DISK1&#34;</span>,
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;Options&#34;</span>: <span class="o">{</span>
+</span></span><span class="line"><span class="cl">            <span class="s2">&#34;device&#34;</span>: <span class="s2">&#34;/home/edisc/Desktop/docker/data&#34;</span>,
+</span></span><span class="line"><span class="cl">            <span class="s2">&#34;o&#34;</span>: <span class="s2">&#34;bind&#34;</span>,
+</span></span><span class="line"><span class="cl">            <span class="s2">&#34;type&#34;</span>: <span class="s2">&#34;none&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="o">}</span>,
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;Scope&#34;</span>: <span class="s2">&#34;local&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="o">}</span>
+</span></span><span class="line"><span class="cl"><span class="o">]</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Để chạy container với tham số này ta không sử dụng tùy chọn <code>--mount</code> mà ta sẽ sủ dụng tùy chọn <code>-v</code>.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -2271,17 +2267,17 @@ DRIVER              VOLUME NAME
 </span><span class="lnt">10
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">❯ docker images
-REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
-newimage            version2            a8e04dcf8737        About an hour ago   170MB
-ubuntu              latest              7e0aa2d69a15        <span class="m">6</span> weeks ago         72.7MB
-centos              latest              300e315adb2f        <span class="m">6</span> months ago        209MB
-❯ docker run -it -v DISK1:/home/disk4 ubuntu:latest
-root@e94027a36d5b:/# <span class="nb">cd</span> /home/disk4/
-root@e94027a36d5b:/home/disk4# ls
-c1.txt  d.txt  data_container2.txt
-root@e94027a36d5b:/home/disk4# 
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">❯ docker images
+</span></span><span class="line"><span class="cl">REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+</span></span><span class="line"><span class="cl">newimage            version2            a8e04dcf8737        About an hour ago   170MB
+</span></span><span class="line"><span class="cl">ubuntu              latest              7e0aa2d69a15        <span class="m">6</span> weeks ago         72.7MB
+</span></span><span class="line"><span class="cl">centos              latest              300e315adb2f        <span class="m">6</span> months ago        209MB
+</span></span><span class="line"><span class="cl">❯ docker run -it -v DISK1:/home/disk4 ubuntu:latest
+</span></span><span class="line"><span class="cl">root@e94027a36d5b:/# <span class="nb">cd</span> /home/disk4/
+</span></span><span class="line"><span class="cl">root@e94027a36d5b:/home/disk4# ls
+</span></span><span class="line"><span class="cl">c1.txt  d.txt  data_container2.txt
+</span></span><span class="line"><span class="cl">root@e94027a36d5b:/home/disk4# 
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Vào thư mục và kiểm tra, ta vẫn thấy nó có các dữ liệu ở trên máy host. Và khi thao tác dữ liệu trên này, dữ liệu trên máy host cũng sẽ được cập nhât.</p>
 <h2 id="kết-luận">Kết luận</h2>
@@ -2800,7 +2796,7 @@ Kết thúc bài viết này, một lần nữa em xin chân thành gửi lời 
 </div>
 
 
-<script defer src="/js/swipe.min.b4b82839155519d9ca67746615a4c86ccbc1061c196fe6d8aa26e4fe22902718.js"></script>
+<script defer src="/js/swipe.min.7be2debdadbc35f9430de39f9010d89df5aee1904747098818b5c01cd0672180.js"></script>
 
 <script defer src="/js/micromodal.min.de01b44b2f383056bbcaf6ee921fd385d79108ec1129afd0eb2f3f5a07e11f45.js"></script>
 
@@ -3459,7 +3455,7 @@ document.addEventListener('DOMContentLoaded', function () {
       e.trigger.classList.add('tooltipped');
       e.trigger.classList.add('tooltipped-s');
     });
-    // =================================================================
+    
 
 
 
