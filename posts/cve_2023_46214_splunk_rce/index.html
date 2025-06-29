@@ -10,13 +10,13 @@
 
 
   
-  <script defer src="/js/fuse.min.8dfbf8696f107ab8b55732efbb04c5c51576692a4a2cce6effef9f6e92d341a7.js"></script>
+  <script defer src="/js/fuse.min.32195737929df2c8096e855a5789cbb3f1331224d9169e8705493e7008f47df8.js"></script>
 
 
 
-<script src="/js/enquire.min.aa37bdcb743826eecdae5c5d177fc7d6552340f1b4378ffaa9c82b2c6111400b.js"></script>
+<script src="/js/enquire.min.dfb99dee1e029d51d6cfb672d847929890b1585402de17f5ed092edd72a688b4.js"></script>
 
-<script defer src="/js/lazysizes.min.498676c34eb225e85357ab0ce19c3c1244f3bd0bf595e5684d1b9d50ea4fbc42.js"></script>
+<script defer src="/js/lazysizes.min.fb649fcae62177dfe63e67081ddceb830b5ce1f05a4184e9bbb7d87ac4b8f4e5.js"></script>
 
 <script defer src="/js/helper/getParents.min.086022fb02d7a1517e33c2670bffb976b3e80bcacd9caeee0c6a586064f20e42.js"></script>
 
@@ -1380,7 +1380,7 @@ if (!doNotTrack) {
 </script>
 
   
-<script type="application/javascript">
+<script>
 var doNotTrack = false;
 if (!doNotTrack) {
 	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
@@ -1700,7 +1700,7 @@ if (!doNotTrack) {
   🏷️
   
 
-  <li><a href="https://minhlongmt183.github.io/tags/cve-python/" class="single__tag" title="cve, python">#cve, python</a></li>
+  <li><a href="https://minhlongmt183.github.io/tags/cve-python/" class="single__tag" title="Cve, Python">#Cve, Python</a></li>
 
 </ul>
 
@@ -1715,13 +1715,13 @@ if (!doNotTrack) {
 <hr />
 <p>CVE-2023-46214 là mã lỗi xuất hiện trên sản phẩm <a href="https://www.splunk.com/">Splunk Enterprise</a> cho phép attacker có thể thực thi lỗi ở server (RCE). Phiên bản bị lỗi từ <code>9.0.7--&gt;9.1.2</code>.</p>
 <p>Lỗ hổng này do lỗi trong cách xử lý các biến đổi ngôn ngữ kiểu dáng mở rộng (XSLT) của Splunk Enterprise. Kẻ tấn công có thể khai thác lỗ hổng để tải lên tệp XSLT độc hại sẽ được Splunk Enterprise thực thi. Điều này có thể cho phép kẻ tấn công kiểm soát hệ thống bị ảnh hưởng.<br />
-<img src="/images/posts/CVE_2023_46214_Splunk_RCE/Untitled00.png" alt="Untitled" /></p>
+<img alt="Untitled" src="/images/posts/CVE_2023_46214_Splunk_RCE/Untitled00.png"></p>
 <p>Như những CVE trước đó, để reproduce 1days, Ndays chúng ta cần phải tìm hiểu các kiến thức nền tảng cần thiết, cài môi trường bị lỗi, tìm sink, source rồi build payload và cuối cùng là kiếm chứng.</p>
 <h2 id="ii-kiến-thức-nền-tảng">II. Kiến thức nền tảng</h2>
 <hr />
 <p>Trước khi đi vào phân tích lỗ hổng, chúng ta cùng đi qua một số đơn vị kiến thức cơ bản và cần thiết cho lỗ hổng này:</p>
 <h4 id="21-splunk-là-gì-cài-đặt-như-thế-nào">2.1 Splunk là gì? Cài đặt như thế nào?</h4>
-<p><img src="/images/posts/CVE_2023_46214_Splunk_RCE/logo.png" alt="/images/posts/CVE_2023_46214_Splunk_RCE/logo.png" /></p>
+<p><img alt="/images/posts/CVE_2023_46214_Splunk_RCE/logo.png" src="/images/posts/CVE_2023_46214_Splunk_RCE/logo.png"></p>
 <ul>
 <li>Splunk là một phần mềm chủ yếu được sử dụng để tìm kiếm, giám sát và kiểm tra dữ liệu do máy tạo ra thông qua giao diện web từ đó phân tích để đưa ra báo cáo cũng như cảnh báo với thời gian thực. Bạn có thể xem thêm thông tin tại đường dẫn sau: <a href="https://securityzone.vn/t/tong-hop-kien-thuc-co-ban-ve-splunk-danh-cho-nguoi-moi-bat-dau.11792/">Splunk - Tổng hợp kiến thức cơ bản về Splunk dành cho người mới bắt đầu | Lab Network System Security (securityzone.vn)</a></li>
 <li>Có nhiều hướng dẫn trêm internet để cài đặt splunk, ví dụ như <a href="https://www.bitsioinc.com/install-splunk-linux/">https://www.bitsioinc.com/install-splunk-linux/</a>. Chúng ta chỉ cần làm theo là thực hiện được ngay.</li>
@@ -1733,14 +1733,14 @@ if (!doNotTrack) {
 </li>
 <li>Tôi nhanh chóng tiến hành cài đặt phiên bản bị lỗi để thử nghiệm.</li>
 </ul>
-<p><img src="/images/posts/CVE_2023_46214_Splunk_RCE/Untitled%201.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/CVE_2023_46214_Splunk_RCE/Untitled%201.png"></p>
 <h4 id="22-extensible-stylesheet-language-transformations-xslt-là-gì">2.2 Extensible stylesheet language transformations (XSLT) là gì?</h4>
 <ul>
 <li>Theo mô tả, lỗ hổng này do lỗi trong cách xử lý các biến đổi ngôn ngữ kiểu dáng mở rộng (XSLT) của Splunk Enterprise. Vậy XSLT là gì?</li>
 <li>Nói một cách đơn giản, nếu CSS là ngôn ngữ để định dạng cho HTML thì XSL (eXtensible Stylesheet Language) được dùng để định dạng cho XML</li>
 <li>XSLT viết tắt cho XSL Transformation. XSLT hỗ trợ chuyển đổi XML dưới dạng các document khác như TXT, PDF,SVG,…</li>
 </ul>
-<p><img src="/images/posts/CVE_2023_46214_Splunk_RCE/Untitled%202.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/CVE_2023_46214_Splunk_RCE/Untitled%202.png"></p>
 <ul>
 <li>Với những ai lần đầu tiếp XSLT lần đầu như tôi thì <a href="https://www.w3schools.com/xml/xsl_intro.asp">w3school</a> là nơi lý tưởng để lấy một ít kiến thức cơ bản. Bên cạnh đó, <a href="https://www.youtube.com/watch?v=8YYa1CWI1AU">video</a> và <a href="https://prezi.com/y_fuybfudgnd/offensive-xslt/">slide</a> của Nicolas Gregoire - Agarri cũng là hai tài liệu quý giá khi mới tiếp cận về XSLT.</li>
 </ul>
@@ -1752,7 +1752,7 @@ if (!doNotTrack) {
 <li>Để xác định được sink (nơi bị lỗi), chúng ta cần mã nguồn của bản bị lỗi và bản đã vá, sau đó so sánh xem những đoạn code đã được sửa (diff).</li>
 <li>Chúng ta tải 2 phiên bản lỗi và đã fix</li>
 </ul>
-<p><img src="/images/posts/CVE_2023_46214_Splunk_RCE/Untitled%203.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/CVE_2023_46214_Splunk_RCE/Untitled%203.png"></p>
 <ul>
 <li>
 <p>Extract code từ .deb file bằng lệnh:</p>
@@ -1784,7 +1784,7 @@ if (!doNotTrack) {
 </li>
 <li>
 <p>Một giải pháp thay thế đó là sử dụng <code>gitk</code>. Bạn có thể tìm hiểu thêm <a href="https://www.notion.so/Edisc-Home-eeff35e1e62a4de8a991f3cdfc2b0745?pvs=21">tại đây.</a></p>
-<p><img src="/images/posts/CVE_2023_46214_Splunk_RCE/Untitled%204.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/CVE_2023_46214_Splunk_RCE/Untitled%204.png"></p>
 </li>
 </ul>
 <p>Giao diện tiện lợi cho tôi trace.</p>
@@ -1794,10 +1794,10 @@ if (!doNotTrack) {
 <li>Bước tiếp theo là cần để xác định được sink ở đâu. Bởi vì, dữ kiện duy nhất mà tôi có được từ CVE này là liên quan tới XSLT trong khi đây cũng là lần đầu tôi biết tới sự tồn tại của nó (gà quá mà 😢 😢). Do đó, điều tôi cần làm bây giờ là tìm hiểu xem có những tài liệu, blog nào liên quan tới việc tấn công sử dụng XSLT hay không, từ đó rút ra các dấu hiệu của nó. Ngoài ra, tôi còn phải tìm hiểu xem XSLT trong splunk có vai trò như thế nào? (được sử dụng ở đâu, implement như thế nào? source code nằm ở đâu).</li>
 <li>CVE này liên quan tới việc truyền 1 dữ liệu XSLT lên server, do đó, chúng ta cần phải tìm hiểu xem những nơi nào nhận code XSLT có bị sửa đổi giữa 2 version, đặc biệt chú ý tới các tính năng upload cũng như các tham số nhận từ người dùng. Tôi dùng tính năng search của <code>gitk</code> để tìm từ khóa <strong>XSLT.</strong></li>
 </ul>
-<p><img src="/images/posts/CVE_2023_46214_Splunk_RCE/Untitled%205.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/CVE_2023_46214_Splunk_RCE/Untitled%205.png"></p>
 <p>Wow! Tôi đã thấy đoạn code sửa đáng nghi ngờ, nó nằm ở: <code>source/data_extract/opt/splunk/lib/python3.7/site-packages/splunk/appserver/mrsparkle/controllers/search.py</code></p>
 <p>Nhảy vào đọc thôi!</p>
-<p><img src="/images/posts/CVE_2023_46214_Splunk_RCE/Untitled%206.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/CVE_2023_46214_Splunk_RCE/Untitled%206.png"></p>
 <ul>
 <li>
 <p>Chúng ta thấy, những dòng code được sửa có liên quan đến tính năng parse file. Cụ thể, phiên bản bị lỗi thì file ở <code>xslFilePath</code> được đọc và parse ngay trong khi ở phiên bản fix thì đường dẫn này được đưa vào hàm <code>parse_xsl_file_and_validate</code> trước khi xử lý.</p>
@@ -1898,7 +1898,7 @@ if (!doNotTrack) {
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>Chúng ta thấy rằng, từ <strong>dòng 24-37</strong> nội dung của file tại <code>xslFilePath</code> được đọc, parse, transform mà không hề có sự kiểm tra hay lọc sạch dữ liệu nào. Như đã đề cập, trước khi tiếp xúc tới đoạn code này thì tôi đã google tìm đọc các tài liệu liên quan các lỗ hổng khai thác có sử dụng XSLT. Chỉ với key word đơn giản: <code>XSLT + exploit + RCE</code>vào google bạn đã thấy có rất nhiều tài liệu liên quan</p>
-<p><img src="/images/posts/CVE_2023_46214_Splunk_RCE/Untitled%207.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/CVE_2023_46214_Splunk_RCE/Untitled%207.png"></p>
 <p>Tôi nhanh chóng chú ý đến <a href="https://www.blackhat.com/docs/us-15/materials/us-15-Arnaboldi-Abusing-XSLT-For-Practical-Attacks-wp.pdf">Abusing XSLT for Practical Attacks White Paper</a> được đề cập trong <a href="https://book.hacktricks.xyz/pentesting-web/xslt-server-side-injection-extensible-stylesheet-language-transformations">HackTricks</a>. Và một số tài liệu rất quý báu cho tôi trong quá trình tái tạo lại lỗ hổng này:</p>
 <ul>
 <li><a href="https://owasp.org/www-pdf-archive/OWASP_Switzerland_Meeting_2015-06-17_XSLT_SSRF_ENG.pdf">https://owasp.org/www-pdf-archive/OWASP_Switzerland_Meeting_2015-06-17_XSLT_SSRF_ENG.pdf</a></li>
@@ -1992,7 +1992,7 @@ if (!doNotTrack) {
 <p>Tài liệu của <a href="https://owasp.org/www-pdf-archive/OWASP_Switzerland_Meeting_2015-06-17_XSLT_SSRF_ENG.pdf">owaps</a> tôi đã đề cập trước đó có đưa ra các payload khai thác và kết thúc mỗi payload đều có bảng tổng kết cho thấy payload này có thể khai thác thành công trên từng loại XSLT Processors nào.</p>
 </li>
 </ul>
-<p><img src="/images/posts/CVE_2023_46214_Splunk_RCE/Untitled%208.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/CVE_2023_46214_Splunk_RCE/Untitled%208.png"></p>
 <ul>
 <li>
 <p>Ở local, chúng ta cũng sẽ đi từng bước để build payload. Đầu tiên, chúng ta cần phải xác định python đang chạy sử dụng loại processor nào.</p>
@@ -2040,7 +2040,7 @@ if (!doNotTrack) {
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>kết quả chương trình</p>
-<p><img src="/images/posts/CVE_2023_46214_Splunk_RCE/Untitled%209.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/CVE_2023_46214_Splunk_RCE/Untitled%209.png"></p>
 <p>Như vậy, processor (hay vendor) hỗ trợ ở đây là <code>libxslt</code></p>
 </li>
 <li>
@@ -2078,7 +2078,7 @@ if (!doNotTrack) {
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>Test thử ở local</p>
-<p><img src="/images/posts/CVE_2023_46214_Splunk_RCE/Untitled%2010.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/CVE_2023_46214_Splunk_RCE/Untitled%2010.png"></p>
 <p>Yeah, vậy là chúng ta đã thành công tạo ở local. Đến đây chúng ta đã khẳng định được đây chính là sink mà chúng ta tìm, đồng thời chúng ta cũng xây dựng được payload tạo file. Bước tiếp theo cần phải từ sink tìm source.</p>
 </li>
 </ul>
@@ -2090,18 +2090,18 @@ if (!doNotTrack) {
 </li>
 <li>
 <p>Quay lại với đoạn code bị lỗi. Đoạn code này nằm trong hàm <code>def getJobAsset(self, sid, asset, compat_mode=True, **kwargs):</code> với route như sau:</p>
-<p><img src="/images/posts/CVE_2023_46214_Splunk_RCE/Untitled%2011.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/CVE_2023_46214_Splunk_RCE/Untitled%2011.png"></p>
 </li>
 <li>
 <p>Và hàm <code>getJobAsset</code> thuộc class <code>class JobsController(BaseController):</code> với route như sau:</p>
 </li>
 </ul>
-<p><img src="/images/posts/CVE_2023_46214_Splunk_RCE/Untitled%2012.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/CVE_2023_46214_Splunk_RCE/Untitled%2012.png"></p>
 <ul>
 <li>Như vậy, để truy cập tới <code>getJobAsset</code> thì path sẽ là <code>/search/jobs/:sid/:asset?param1=a&amp;param2=b&amp;...&amp;paramN=n</code> Các biến param sẽ lưu trong <code>**kwargs</code> của hàm <code>getJobAsset</code></li>
 <li>Ngoài ra, dòng lệnh <code>@expose_page(handle_api=ONLY_API)</code> tại định nghĩa của hàm <code>getJobAsset</code> cho thấy request chúng ta chỉ được truy cập dưới dạng <code>api/...</code></li>
 </ul>
-<p><img src="/images/posts/CVE_2023_46214_Splunk_RCE/Untitled%2013.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/CVE_2023_46214_Splunk_RCE/Untitled%2013.png"></p>
 <p>Do đó, để truy cập tới endpoint thì ta sẽ có request dạng</p>
 <p><code>/api/search/jobs/:sid/:asset?param1=a&amp;param2=b&amp;...&amp;paramN=n</code></p>
 <p>Điều cần làm đầu tiên là phải có <code>sid</code>.</p>
@@ -2110,25 +2110,25 @@ if (!doNotTrack) {
 <li>Tôi bắt đầu dạo quanh các tính năng của splunk. Đây là kĩ năng thường được sử dụng khi tôi tiến hành blackbox. Kết hợp với type bug này thuộc dạng upload file, nên trong quá trình “đi dạo” tôi cũng chú ý tới các tính năng upload file.</li>
 <li>Với tiêu chí đó, tôi tin rằng bất kì bạn nào cũng sẽ như tôi, dễ dàng chú ý với tính năng này</li>
 </ul>
-<p><img src="/images/posts/CVE_2023_46214_Splunk_RCE/Untitled%2014.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/CVE_2023_46214_Splunk_RCE/Untitled%2014.png"></p>
 <ul>
 <li>Tính năng này cho phép upload file từ máy và sẽ tạo cho chúng ta một mã sid</li>
 </ul>
-<p><img src="/images/posts/CVE_2023_46214_Splunk_RCE/Untitled%2015.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/CVE_2023_46214_Splunk_RCE/Untitled%2015.png"></p>
 <ul>
 <li>Tôi upload thử payload mà chúng ta đã build ở local</li>
 </ul>
-<p><img src="/images/posts/CVE_2023_46214_Splunk_RCE/Untitled%2016.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/CVE_2023_46214_Splunk_RCE/Untitled%2016.png"></p>
 <ul>
 <li>sid là giá trị nằm ở trường <code>text</code></li>
 </ul>
-<p><img src="/images/posts/CVE_2023_46214_Splunk_RCE/Untitled%2017.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/CVE_2023_46214_Splunk_RCE/Untitled%2017.png"></p>
 <h4 id="42-build-payload-tạo-file-bất-kì">4.2 Build payload tạo file bất kì.</h4>
 <ul>
 <li>Bây giờ đã có sid rồi, tiến hành kiểm tra xem thử suy đoán về endpoint của chúng ta có đúng không. Quay lại đọc hiểu đoạn code và thêm các điều kiện tương ứng để touch được tới hàm.Ngoài ra splunk cũng có document hỗ trợ các api của họ, đó cũng là nguồn tài liệu quý giá cho chúng ta tìm hiểu.</li>
 <li>Phương pháp tiếp cận để build payload mà tôi sử dụng là đi từ trong ra ngoài, tức là từ vị trí hàm bị lỗi trace ngược lại source để tìm các điều kiện hợp lệ. Quay lại với hàm sink:</li>
 </ul>
-<p><img src="/images/posts/CVE_2023_46214_Splunk_RCE/Untitled%2018.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/CVE_2023_46214_Splunk_RCE/Untitled%2018.png"></p>
 <ul>
 <li>
 <p>Dòng code 476-488 là đoạn code trigger lỗi, để vào được đường này thì đĩa chỉ <code>xslFilePath</code> phải bắt đầu với <code>splunkHomePath</code> tức là <code>/opt/splunk</code> trên linux. Hãy thử kiểm tra file vừa upload trên server có thỏa mãn điều kiện này không bằng lệnh</p>
@@ -2140,14 +2140,14 @@ if (!doNotTrack) {
 <pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">find / -name create-file.xsl
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><img src="/images/posts/CVE_2023_46214_Splunk_RCE/Untitled%2019.png" alt="Untitled" /></p>
+</div><p><img alt="Untitled" src="/images/posts/CVE_2023_46214_Splunk_RCE/Untitled%2019.png"></p>
 <p>Dễ thấy điều kiện này đã được thỏa mãn vì file nằm ở đường dẫn: <code>/opt/splunk/var/run/splunk/dispatch/1700794908.13/create-file.xsl</code></p>
 </li>
 <li>
 <p>Okie, tiếp tục trace ngược thôi</p>
 </li>
 </ul>
-<p><img src="/images/posts/CVE_2023_46214_Splunk_RCE/Untitled%2020.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/CVE_2023_46214_Splunk_RCE/Untitled%2020.png"></p>
 <ul>
 <li>
 <p>Tiếp tục để đi vào đoạn code bị lỗi thì điều kiện if tại dòng 454 phải trả về true, tức là phải thỏa mãn các kiều kiện sau:</p>
@@ -2160,8 +2160,8 @@ if (!doNotTrack) {
 </li>
 <li>
 <p>Trong các điều kiện trên thì tính năng <code>enableSearchJobXslt</code>  được bật trong <code>/opt/splunk/etc/system/default/web.conf</code></p>
-<p><img src="/images/posts/CVE_2023_46214_Splunk_RCE/Untitled%2021.png" alt="Untitled" /></p>
-<p><img src="/images/posts/CVE_2023_46214_Splunk_RCE/Untitled%2022.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/CVE_2023_46214_Splunk_RCE/Untitled%2021.png"></p>
+<p><img alt="Untitled" src="/images/posts/CVE_2023_46214_Splunk_RCE/Untitled%2022.png"></p>
 </li>
 <li>
 <p>Phần còn lại là  cần một param <code>xsl</code> trong request và biến  <code>moduleName</code> cùng biến <code>output</code> phải khác rỗng.</p>
@@ -2171,28 +2171,28 @@ if (!doNotTrack) {
 <ul>
 <li>
 <p>Hãy xem xét đoạn code sau đây</p>
-<p><img src="/images/posts/CVE_2023_46214_Splunk_RCE/Untitled%2023.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/CVE_2023_46214_Splunk_RCE/Untitled%2023.png"></p>
 </li>
 <li>
 <p>Chúng ta thấy <code>self.moduleRoster</code> là một danh sách chứa các module name có giá trị từ <code>getInstalledModules()</code>.</p>
 </li>
 <li>
 <p>Vào hàm  <code>getInstalledModules</code> chúng ta sẽ thấy danh sách các module được load từ địa chỉ <code>share/splunk/search_mrsparkle/modules</code></p>
-<p><img src="/images/posts/CVE_2023_46214_Splunk_RCE/Untitled%2024.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/CVE_2023_46214_Splunk_RCE/Untitled%2024.png"></p>
 </li>
 <li>
 <p>Như vậy, để có module name, bạn chỉ cần vào địa chỉ trên và lấy 1 module name hợp lệ bất kì</p>
-<p><img src="/images/posts/CVE_2023_46214_Splunk_RCE/Untitled%2025.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/CVE_2023_46214_Splunk_RCE/Untitled%2025.png"></p>
 </li>
 </ul>
 <h6 id="xác-định-giá-trị-tham-số-xsl">Xác định giá trị tham số xsl</h6>
 <hr />
-<p><img src="/images/posts/CVE_2023_46214_Splunk_RCE/Untitled%2026.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/CVE_2023_46214_Splunk_RCE/Untitled%2026.png"></p>
 <p>Dễ thấy <code>xsl</code> là địa chỉ file xsl đã được upload lên</p>
 <h6 id="xác-định-giá-trị-của-tham-số-output">Xác định giá trị của tham số output</h6>
 <hr />
 <p>Giá trị output thì sẽ phụ thuộc vào giá trị <code>:asset</code> ở endpoint.</p>
-<p><img src="/images/posts/CVE_2023_46214_Splunk_RCE/Untitled%2027.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/CVE_2023_46214_Splunk_RCE/Untitled%2027.png"></p>
 <p>Muốn hiểu rõ thì chỉ cần vào đọc hàm cụ thể thôi (Tôi sẽ không đi chi tiết ở bước này) Một gợi ý nhỏ <a href="https://community.splunk.com/t5/Other-Usage/How-can-I-create-a-search-job-using-the-REST-API/m-p/651397">ở đây nhé</a></p>
 <p>Kết hợp tất cả lại, tôi có request trigger như sau</p>
 <div class="highlight"><div class="chroma">
@@ -2224,9 +2224,9 @@ if (!doNotTrack) {
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>Request có output là loading…</p>
-<p><img src="/images/posts/CVE_2023_46214_Splunk_RCE/Untitled%2028.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/CVE_2023_46214_Splunk_RCE/Untitled%2028.png"></p>
 <p>Như vậy trigger thành công, kiểm tra xem thành quả nào</p>
-<p><img src="/images/posts/CVE_2023_46214_Splunk_RCE/Untitled%2029.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/CVE_2023_46214_Splunk_RCE/Untitled%2029.png"></p>
 <p>Yeah, trên server của chúng ta đã có file. Nhưng tại sao nó lại nằm ở root nhỉ?</p>
 <p>Sau khi thử lại trên local, tôi nhận thấy với payload tạo file</p>
 <div class="highlight"><div class="chroma">
@@ -2266,10 +2266,10 @@ if (!doNotTrack) {
 <h4 id="43-rce">4.3 RCE</h4>
 <p>Chúng ta đã có thể ghi một file bất kì vào vị trí bất kì, bước tiếp theo là cần phải tìm cách để thực thi code trên server.</p>
 <p>Hãy bắt đầu với một vài keyword trên google nào: <code>splunk + execute code</code>; <code>splunk + run code</code></p>
-<p><img src="/images/posts/CVE_2023_46214_Splunk_RCE/Untitled%2030.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/CVE_2023_46214_Splunk_RCE/Untitled%2030.png"></p>
 <h6 id="431-rce-với-scripts">4.3.1 RCE với scripts</h6>
 <p>Dễ dàng chúng ta sẽ tìm đến được keyword: <code>scripts</code>. Cơ bản là scripts là một câu lệnh cho phép người dùng thực thi các đoạn code python đã được định nghĩa trước trên server để tối ưu quá trình thực thi. Chi tiết bạn có thể xem <a href="https://docs.splunk.com/Documentation/SplunkCloud/9.1.2308/SearchReference/Script">ở đây</a></p>
-<p>Để nhanh chóng, bạn có thể xem <a href="https://www.youtube.com/watch?v=PQFjSmvLOjw&amp;t=280s">video này</a></p>
+<p>Để nhanh chóng, bạn có thể xem <a href="https://www.youtube.com/watch?v=PQFjSmvLOjw&t=280s">video này</a></p>
 <p>Đơn giản là chúng ta chỉ cần viết một file python vào đường dẫn <code>$SPLUNK_HOME\bin\scripts</code> hoặc <code>$SPLUNK_HOME\etc\apps\search\bin</code> rồi load script của chúng ta lên, thế là chạy.</p>
 <p>Cụ thể, tôi chạy tạo file .xsl với nội dung sau:</p>
 <div class="highlight"><div class="chroma">
@@ -2311,11 +2311,11 @@ if (!doNotTrack) {
 <ul>
 <li>Khi đọc tài liệu của scripts trên splunk, tôi chú ý đến một chú ý về security</li>
 </ul>
-<p><img src="/images/posts/CVE_2023_46214_Splunk_RCE/Untitled%2031.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/CVE_2023_46214_Splunk_RCE/Untitled%2031.png"></p>
 <ul>
-<li>Vào đường dẫn <a href="https://docs.splunk.com/Documentation/Splunk/latest/Security/SPLsafeguards##SPL_safeguards_for_risky_commands">SPL safeguards for risky commands</a>, chúng ta sẽ thấy một list các command được đánh giá là rủi ro nếu sử dụng không đúng</li>
+<li>Vào đường dẫn <a href="https://docs.splunk.com/Documentation/Splunk/latest/Security/SPLsafeguards#%23SPL_safeguards_for_risky_commands">SPL safeguards for risky commands</a>, chúng ta sẽ thấy một list các command được đánh giá là rủi ro nếu sử dụng không đúng</li>
 </ul>
-<p><img src="/images/posts/CVE_2023_46214_Splunk_RCE/Untitled%2032.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/CVE_2023_46214_Splunk_RCE/Untitled%2032.png"></p>
 <ul>
 <li>
 <p>Trong danh sách này có hàm <code>runshellscript</code>. Hàm này cho phép người dùng thực thi script để alert. Với command này, thao tác trigger script sẽ đơn giản hơn ở cách trước:</p>
@@ -2323,7 +2323,7 @@ if (!doNotTrack) {
 <li>Viết shell tại đường dẫn <code>/opt/splunk/bin/scripts/</code></li>
 <li>Nhập đúng format câu lệnh vào ô search là để trigger</li>
 </ol>
-<p><img src="/images/posts/CVE_2023_46214_Splunk_RCE/Untitled%2033.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/CVE_2023_46214_Splunk_RCE/Untitled%2033.png"></p>
 </li>
 <li></li>
 </ul>
@@ -2338,7 +2338,7 @@ if (!doNotTrack) {
     </article>
     
     
-<script defer src="/js/clipboard.min.c168d3a04c45a631be76437054619a4a3b30107960cb9730be96012fef5762b0.js"></script>
+<script defer src="/js/clipboard.min.1626706afc88d95ebe1173b553ec732c6dc82a576989315fdf5e7779af738a44.js"></script>
 
 <script defer src="/js/helper/prev.min.js"></script>
 
@@ -2802,7 +2802,7 @@ if (!doNotTrack) {
 </div>
 
 
-<script defer src="/js/swipe.min.7be2debdadbc35f9430de39f9010d89df5aee1904747098818b5c01cd0672180.js"></script>
+<script defer src="/js/swipe.min.feb438efb7ca009ecd7fc2ac3ad2fced4840990b2798d81f87137f2dc6281f05.js"></script>
 
 <script defer src="/js/micromodal.min.de01b44b2f383056bbcaf6ee921fd385d79108ec1129afd0eb2f3f5a07e11f45.js"></script>
 
@@ -3807,7 +3807,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 
             <p class="caption">
                 
-                    ©2023, All Rights Reserved
+                    ©2025, All Rights Reserved
                 
             </p>
         

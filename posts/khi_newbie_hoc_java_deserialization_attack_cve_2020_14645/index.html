@@ -10,13 +10,13 @@
 
 
   
-  <script defer src="/js/fuse.min.8dfbf8696f107ab8b55732efbb04c5c51576692a4a2cce6effef9f6e92d341a7.js"></script>
+  <script defer src="/js/fuse.min.32195737929df2c8096e855a5789cbb3f1331224d9169e8705493e7008f47df8.js"></script>
 
 
 
-<script src="/js/enquire.min.aa37bdcb743826eecdae5c5d177fc7d6552340f1b4378ffaa9c82b2c6111400b.js"></script>
+<script src="/js/enquire.min.dfb99dee1e029d51d6cfb672d847929890b1585402de17f5ed092edd72a688b4.js"></script>
 
-<script defer src="/js/lazysizes.min.498676c34eb225e85357ab0ce19c3c1244f3bd0bf595e5684d1b9d50ea4fbc42.js"></script>
+<script defer src="/js/lazysizes.min.fb649fcae62177dfe63e67081ddceb830b5ce1f05a4184e9bbb7d87ac4b8f4e5.js"></script>
 
 <script defer src="/js/helper/getParents.min.086022fb02d7a1517e33c2670bffb976b3e80bcacd9caeee0c6a586064f20e42.js"></script>
 
@@ -1380,7 +1380,7 @@ if (!doNotTrack) {
 </script>
 
   
-<script type="application/javascript">
+<script>
 var doNotTrack = false;
 if (!doNotTrack) {
 	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
@@ -1700,7 +1700,7 @@ if (!doNotTrack) {
   🏷️
   
 
-  <li><a href="https://minhlongmt183.github.io/tags/java/" class="single__tag" title="java">#java</a></li>
+  <li><a href="https://minhlongmt183.github.io/tags/java/" class="single__tag" title="Java">#Java</a></li>
 
 </ul>
 
@@ -1851,7 +1851,7 @@ if (!doNotTrack) {
 <li>Tiếp theo, chúng ta tiến hành serialize <strong><code>queue</code></strong> bằng <strong><code>ObjectOutputStream</code></strong> và ghi dữ liệu vào file <strong><code>&quot;poc.ser&quot;</code></strong>.</li>
 <li>Cuối cùng, chúng ta tiến hành deserialize <strong><code>queue</code></strong> từ file <strong><code>&quot;poc.ser&quot;</code></strong> bằng <strong><code>ObjectInputStream</code></strong> và kì vọng payload sẽ được execute như hình</li>
 </ul>
-<p><img src="/images/posts/Khi_newbie_hoc_Java_deserialization_attack_CVE_2020_14645/Untitled.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/Khi_newbie_hoc_Java_deserialization_attack_CVE_2020_14645/Untitled.png"></p>
 </li>
 </ul>
 <h4 id="22-debug">2.2 Debug</h4>
@@ -1859,22 +1859,22 @@ if (!doNotTrack) {
 <ul>
 <li>Bắt đầu với hàm <code>objectInputStream.readObject();</code></li>
 </ul>
-<p><img src="/images/posts/Khi_newbie_hoc_Java_deserialization_attack_CVE_2020_14645/Untitled%201.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/Khi_newbie_hoc_Java_deserialization_attack_CVE_2020_14645/Untitled%201.png"></p>
 <ul>
 <li>
 <p>Trong <a href="https://minhlongmt183.github.io/posts/khi_newbie_hoc_java_deserialization_attack_readobject/">blog trước</a>, tôi có trình bày về flow của <code>native readObject</code>, trong đó, tôi có nhấn mạnh 2 method: <code>ObjectInputStream##readOrdinaryObject</code> và <code>Method##invoke</code> có tác dụng điều hướng luồng thực thi. Ở đây, ta sẽ thấy:</p>
 <ul>
 <li>Tại <code>ObjectInputStream##readOrdinaryObject</code>: hàm <code>readClassDesc()</code> tại dòng 1781 sẽ trả về class của <code>PriorityQueue</code>, truyền vào hàm <code>readSerialData()</code> tại dòng 1808</li>
 </ul>
-<p><img src="/images/posts/Khi_newbie_hoc_Java_deserialization_attack_CVE_2020_14645/Untitled%202.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/Khi_newbie_hoc_Java_deserialization_attack_CVE_2020_14645/Untitled%202.png"></p>
 <ul>
 <li>Tại <code>Method##invoke</code>: cho thấy method <code>private void java.util.PriorityQueue.readObject(java.io.ObjectInputStream) throws java.io.IOException,java.lang.ClassNotFoundException</code> được gọi</li>
 </ul>
-<p><img src="/images/posts/Khi_newbie_hoc_Java_deserialization_attack_CVE_2020_14645/Untitled%203.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/Khi_newbie_hoc_Java_deserialization_attack_CVE_2020_14645/Untitled%203.png"></p>
 <ul>
 <li>
 <p>Sau đó, chương trình sẽ chuyển hướng về <code>PriorityQueue##readObject</code> Tới đây, chúng ta sẽ thấy flow liên quan tới blog trước như sau:</p>
-<p><img src="/images/posts/Khi_newbie_hoc_Java_deserialization_attack_CVE_2020_14645/Untitled%204.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/Khi_newbie_hoc_Java_deserialization_attack_CVE_2020_14645/Untitled%204.png"></p>
 </li>
 </ul>
 </li>
@@ -1882,11 +1882,11 @@ if (!doNotTrack) {
 <p>Mục tiêu của phần này chúng ta sẽ nghiên cứu tiếp flow từ PriorityQueue trở đi.</p>
 </li>
 </ul>
-<p><img src="/images/posts/Khi_newbie_hoc_Java_deserialization_attack_CVE_2020_14645/Untitled%205.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/Khi_newbie_hoc_Java_deserialization_attack_CVE_2020_14645/Untitled%205.png"></p>
 <ul>
 <li>Tiếp tục flow, <code>PriorityQueue##heapify</code> được gọi. Method này đảm bảo tính chất của cấu trúc dữ liệu (min heap hoặc max heap). Điều này có nghĩa method này sẽ thực hiện phép so sánh ở đâu đó.</li>
 </ul>
-<p><img src="/images/posts/Khi_newbie_hoc_Java_deserialization_attack_CVE_2020_14645/Untitled%206.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/Khi_newbie_hoc_Java_deserialization_attack_CVE_2020_14645/Untitled%206.png"></p>
 <ul>
 <li>Hãy nhìn vào vòng for: để gọi được <code>siftDown()</code> thì giá trị ban đầu của i (<code>int i = (size &gt;&gt;&gt; 1) -1</code>) ≥ 0 (i = 0 thì siftDown() được gọi 1 lần). Tương đương với size ≥ 2 (vì size = 1 → i = -1). Do đó, chúng ta cần thiết lập PriorityQueue có ít nhất 2 phần tử để touch tới hàm này. Cách implement như sau:</li>
 </ul>
@@ -1929,7 +1929,7 @@ if (!doNotTrack) {
 </div><ul>
 <li>Tiếp tục đi vào hàm <code>PriorityQueue##siftDown</code></li>
 </ul>
-<p><img src="/images/posts/Khi_newbie_hoc_Java_deserialization_attack_CVE_2020_14645/Untitled%207.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/Khi_newbie_hoc_Java_deserialization_attack_CVE_2020_14645/Untitled%207.png"></p>
 <ul>
 <li>
 <p>Có hai option ở đây khi comparator null và khác null. Theo như tôi nghiên cứu, thì đa số các exploit để dùng <code>comparator</code> khác null. Với CommonCollection2,4 thì dùng <code>TransformingComparator</code> còn trong CVE này thì dùng <code>ExtractorComparator</code>. Để set giá trị comparator thành <code>ExtractorComparator</code> như sau:</p>
@@ -1946,27 +1946,27 @@ if (!doNotTrack) {
 </div><p>Khi extractor là <code>ExtractorComparator</code>, tại hàm  <code>siftDownUsingComparator()</code> thì <code>ExtractorComparator##compare</code> được gọi</p>
 </li>
 </ul>
-<p><img src="/images/posts/Khi_newbie_hoc_Java_deserialization_attack_CVE_2020_14645/Untitled%208.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/Khi_newbie_hoc_Java_deserialization_attack_CVE_2020_14645/Untitled%208.png"></p>
 <ul>
 <li>Tới đây, hàm <code>ExtractorComparator##compare</code> được gọi</li>
 </ul>
-<p><img src="/images/posts/Khi_newbie_hoc_Java_deserialization_attack_CVE_2020_14645/Untitled%209.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/Khi_newbie_hoc_Java_deserialization_attack_CVE_2020_14645/Untitled%209.png"></p>
 <ul>
 <li>Tại đây, dòng 36 là toán tử 3 ngôi. Vì o1 có kiểu là <code>JdbcRowSetImpl</code> nên câu lệnh <code>(Comparable)this.m_extractor.extract(o1)</code> được thực thi. Mặt khác, <code>this.m_extractor</code> có kiểu là <code>UniversalExtractor</code> nên <code>UniversalExtractor.extract()</code> được gọi.</li>
 </ul>
-<p><img src="/images/posts/Khi_newbie_hoc_Java_deserialization_attack_CVE_2020_14645/Untitled%2010.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/Khi_newbie_hoc_Java_deserialization_attack_CVE_2020_14645/Untitled%2010.png"></p>
 <ul>
 <li>Tiếp tục flow, đi vào hàm <code>UniversalExtractor.extractComplex</code> tại dòng 75. Hàm <code>extractComplex</code> sẽ gọi method <code>method.invoke(oTarget, aoParam);</code> tại dòng 205 với target là <code>JdbcRowSetImpl</code> và method là <code>public java.sql.DatabaseMetaData com.sun.rowset.JdbcRowSetImpl.getDatabaseMetaData() throws java.sql.SQLException</code></li>
 </ul>
-<p><img src="/images/posts/Khi_newbie_hoc_Java_deserialization_attack_CVE_2020_14645/Untitled%2011.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/Khi_newbie_hoc_Java_deserialization_attack_CVE_2020_14645/Untitled%2011.png"></p>
 <ul>
 <li>Tiếp tục, chương trình sẽ đi vào <code>com.sun.rowset.JdbcRowSetImpl.getDatabaseMetaData()</code></li>
 </ul>
-<p><img src="/images/posts/Khi_newbie_hoc_Java_deserialization_attack_CVE_2020_14645/Untitled%2012.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/Khi_newbie_hoc_Java_deserialization_attack_CVE_2020_14645/Untitled%2012.png"></p>
 <ul>
 <li>Hàm <code>getDatabaseMetaData()</code> sẽ gọi phương thức <code>this.connect()</code></li>
 </ul>
-<p><img src="/images/posts/Khi_newbie_hoc_Java_deserialization_attack_CVE_2020_14645/Untitled%2013.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/Khi_newbie_hoc_Java_deserialization_attack_CVE_2020_14645/Untitled%2013.png"></p>
 <ul>
 <li>Trong hàm <code>connect</code> này, tại dòng 326, chương trình sẽ lấy địa chỉ server từ hàm <code>this.getDataSourceName()</code> và gửi request đến server để lấy dữ liệu về. Ta có thể set dataSource thành địa chỉ server của chúng ta như sau:</li>
 </ul>
@@ -1981,12 +1981,12 @@ if (!doNotTrack) {
 </span></span></span></code></pre></td></tr></table>
 </div>
 </div><p>Bởi vì <code>dataSource</code> này chúng ta có thể control và set thành địa chỉ server của chúng ta. Ở đây, tôi dùng bộ công cụ JNDI server để xây dựng LDAP server.</p>
-<p><img src="/images/posts/Khi_newbie_hoc_Java_deserialization_attack_CVE_2020_14645/Untitled%2014.png" alt="Untitled" /></p>
-<p><img src="/images/posts/Khi_newbie_hoc_Java_deserialization_attack_CVE_2020_14645/Untitled%2015.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/Khi_newbie_hoc_Java_deserialization_attack_CVE_2020_14645/Untitled%2014.png"></p>
+<p><img alt="Untitled" src="/images/posts/Khi_newbie_hoc_Java_deserialization_attack_CVE_2020_14645/Untitled%2015.png"></p>
 <ul>
 <li>Nên sau khi thực hiện dòng lệnh 326, payload của chúng ta sẽ được thực thi trên server</li>
 </ul>
-<p><img src="/images/posts/Khi_newbie_hoc_Java_deserialization_attack_CVE_2020_14645/Untitled%2016.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/Khi_newbie_hoc_Java_deserialization_attack_CVE_2020_14645/Untitled%2016.png"></p>
 <h2 id="iii-phân-tích-và-mổ-xẻ">III Phân tích và mổ xẻ</h2>
 <ul>
 <li>Chúng ta vừa đi qua flow của CVE-2020-14645. Khá đơn giản đúng không 😄😄😄😄😄. Tất nhiên là không rồi! Đây là giai đoạn tôi thích nhất khi phân tích CVE, đó là đặt câu hỏi. Mục tiêu chúng ta không chỉ dừng lại ở việc hiểu flow mà phải “tìm về cội nguồn”, đoán được mindset, cách làm của tác giả và áp dụng nó để giải quyết những vấn đề tương tự. Đó mới là “học”. Việc đặt câu hỏi sẽ giúp chúng ta có hứng thú và có hướng để nghiên cứu. Vì để trả lời câu hỏi A sẽ có hàng loạt câu hỏi B,C,D được đặt ra. Bằng cách làm như thế, kiến thức chúng ta đặt được sẽ hữu ích và không quá lý thuyết.</li>
@@ -2001,7 +2001,7 @@ if (!doNotTrack) {
 <ul>
 <li>Đừng quên rằng CVE-2020-14645 là bản bypass của <code>CVE-2020-2883</code>. Trong bản patch lỗi CVE-2020-2883 sink <code>MvelExtractor</code> và <code>ReflectionExtractor</code> bị blacklisted, do đó cần tìm một extract class khác có malicious operations trong method. Dễ dàng suy luận ra, <code>UniversalExtractor</code> có nguồn gốc từ <code>MvelExtractor</code> và <code>ReflectionExtractor</code>.</li>
 </ul>
-<p><img src="/images/posts/Khi_newbie_hoc_Java_deserialization_attack_CVE_2020_14645/Untitled%2017.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/Khi_newbie_hoc_Java_deserialization_attack_CVE_2020_14645/Untitled%2017.png"></p>
 <blockquote>
 <p>Nếu vậy, liệu có class nào khác với <code>UniversalExtractor</code> nữa không?</p>
 </blockquote>
@@ -2034,13 +2034,13 @@ if (!doNotTrack) {
 <hr />
 <ul>
 <li><a href="https://xz.aliyun.com/t/10222">Weblogic漏洞分析之JNDI注入-CVE-2020-14645 - 先知社区 (aliyun.com)</a></li>
-<li><a href="https://paper.seebug.org/1280/##cve-2020-2883">https://paper.seebug.org/1280/##cve-2020-2883</a></li>
+<li><a href="https://paper.seebug.org/1280/#%23cve-2020-2883">https://paper.seebug.org/1280/##cve-2020-2883</a></li>
 </ul>
 
     </article>
     
     
-<script defer src="/js/clipboard.min.c168d3a04c45a631be76437054619a4a3b30107960cb9730be96012fef5762b0.js"></script>
+<script defer src="/js/clipboard.min.1626706afc88d95ebe1173b553ec732c6dc82a576989315fdf5e7779af738a44.js"></script>
 
 <script defer src="/js/helper/prev.min.js"></script>
 
@@ -2526,7 +2526,7 @@ if (!doNotTrack) {
 </div>
 
 
-<script defer src="/js/swipe.min.7be2debdadbc35f9430de39f9010d89df5aee1904747098818b5c01cd0672180.js"></script>
+<script defer src="/js/swipe.min.feb438efb7ca009ecd7fc2ac3ad2fced4840990b2798d81f87137f2dc6281f05.js"></script>
 
 <script defer src="/js/micromodal.min.de01b44b2f383056bbcaf6ee921fd385d79108ec1129afd0eb2f3f5a07e11f45.js"></script>
 
@@ -3531,7 +3531,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 
             <p class="caption">
                 
-                    ©2023, All Rights Reserved
+                    ©2025, All Rights Reserved
                 
             </p>
         

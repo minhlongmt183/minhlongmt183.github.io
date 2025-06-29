@@ -13,7 +13,7 @@
     <language>vi</language>
     <managingEditor>edisc.ctf@gmail.com (Edisc)</managingEditor>
     <webMaster>edisc.ctf@gmail.com (Edisc)</webMaster>
-    <copyright>©2023, All Rights Reserved</copyright>
+    <copyright>©2025, All Rights Reserved</copyright>
     <lastBuildDate>Mon, 27 Nov 2023 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://minhlongmt183.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
@@ -432,7 +432,7 @@ Nội dung chính Format Paraameters 1 function sử dụng định dạng chu�
         <author>edisc.ctf@gmail.com (Edisc)</author>
         <atom:modified>Tue, 22 Sep 2020 00:00:00 +0000</atom:modified>
         <guid>https://minhlongmt183.github.io/posts/cve-2021-22555/</guid>
-        <description>Bài viết này nhằm mục đích học tập cá nhân, ghi lại những kiến thức đã học để nhớ và hiểu rõ hơn. Bài viết tham khảo chủ yếu từ CVE-2021-22555: Turning \x00\x00 into 10000$, phần lớn là dịch từ bài viết gốc cộng thêm một số lí giải của tôi.Tổng quan về lỗ hổng Lỗ hỗng cho phép viết dữ liệu bên ngoài vùng cho phép trên heap (heap out-of-bound) Những phiên bản bị ảnh hưởng: Linux kernel *v2.</description>
+        <description>Bài viết này nhằm mục đích học tập cá nhân, ghi lại những kiến thức đã học để nhớ và hiểu rõ hơn. Bài viết tham khảo chủ yếu từ CVE-2021-22555: Turning \x00\x00 into 10000$, phần lớn là dịch từ bài viết gốc cộng thêm một số lí giải của tôi. Tổng quan về lỗ hổng Lỗ hỗng cho phép viết dữ liệu bên ngoài vùng cho phép trên heap (heap out-of-bound) Những phiên bản bị ảnh hưởng: Linux kernel *v2.</description>
         
         <dc:creator>Edisc</dc:creator>
         <media:content url="https://minhlongmt183.github.io/images/posts/CVE_2021_22555/avatar.png" medium="image"><media:title type="html">featured image</media:title></media:content>
@@ -504,7 +504,7 @@ Nội dung chính Format Paraameters 1 function sử dụng định dạng chu�
         <author>edisc.ctf@gmail.com (Edisc)</author>
         <atom:modified>Sun, 16 Aug 2020 00:00:00 +0000</atom:modified>
         <guid>https://minhlongmt183.github.io/posts/cve-2021-3156/</guid>
-        <description>Bài viết này nhằm mục đích ghi lại những kiến thức đã học để nhớ và hiểu rõ hơn.Tổng quan Lỗi của CVE này thuộc loại heap-based buffer overflow trong sudo. Cụ thể:
+        <description>Bài viết này nhằm mục đích ghi lại những kiến thức đã học để nhớ và hiểu rõ hơn. Tổng quan Lỗi của CVE này thuộc loại heap-based buffer overflow trong sudo. Cụ thể:
 Nó cho phép người dùng bình thường lấy được root mà không cần biết mật khẩu của root. Những phiên bản bị ảnh hưởng: legacy có phiên bản của sudo từ 1.8.2 - 1.8.31p2 stable có phiên bản của sudo từ 1.</description>
         
         <dc:creator>Edisc</dc:creator>
@@ -541,7 +541,7 @@ Nó cho phép người dùng bình thường lấy được root mà không cầ
         <author>edisc.ctf@gmail.com (Edisc)</author>
         <atom:modified>Mon, 03 Aug 2020 00:00:00 +0000</atom:modified>
         <guid>https://minhlongmt183.github.io/posts/cve-2019-18683/</guid>
-        <description>Bài viết này nhằm mục đích ghi lại những kiến thức đã học để nhớ và hiểu rõ hơn. Bài viết tham khảo chủ yếu từ CVE-2019-18683: Exploiting a Linux kernel vulnerability in the V4L2 subsystemVulnerabilities chúng ta tải source code kernel về và xem tại: linux-x/drivers/media/platform/vivid/Lỗ hổng bắt nguồn từ sai sót trong hiện thực, sử dụng mutex lock của driver vivid trong subsystem V4L2 - (drivers/media/platform/vivid).</description>
+        <description>Bài viết này nhằm mục đích ghi lại những kiến thức đã học để nhớ và hiểu rõ hơn. Bài viết tham khảo chủ yếu từ CVE-2019-18683: Exploiting a Linux kernel vulnerability in the V4L2 subsystem Vulnerabilities chúng ta tải source code kernel về và xem tại: linux-x/drivers/media/platform/vivid/ Lỗ hổng bắt nguồn từ sai sót trong hiện thực, sử dụng mutex lock của driver vivid trong subsystem V4L2 - (drivers/media/platform/vivid).</description>
         
         <dc:creator>Edisc</dc:creator>
         <media:content url="https://minhlongmt183.github.io/images/posts/CVE-2019-18683/v4l2_objects.png" medium="image"><media:title type="html">featured image</media:title></media:content>
@@ -577,7 +577,7 @@ Nó cho phép người dùng bình thường lấy được root mà không cầ
         <author>edisc.ctf@gmail.com (Edisc)</author>
         <atom:modified>Tue, 28 Jul 2020 00:00:00 +0000</atom:modified>
         <guid>https://minhlongmt183.github.io/posts/wining_the_racing/</guid>
-        <description>Bài viết này nhằm mục đích ghi lại những kiến thức đã học để nhớ và hiểu rõ hơn. Bài viết tham khảo chủ yếu từ Winning the race: Signals, symlinks, and TOC/TOUGiới thiệu Không phải tất cả race condition đều là lỗ hổng, những phần lớn các race condition sẽ dẫn tới lỗ hổng ở một nơi nào đó. Nói cách khác, những lỗ hổng hình thành do race condition thường là những lỗ hổng cực kì nghiêm trọng.</description>
+        <description>Bài viết này nhằm mục đích ghi lại những kiến thức đã học để nhớ và hiểu rõ hơn. Bài viết tham khảo chủ yếu từ Winning the race: Signals, symlinks, and TOC/TOU Giới thiệu Không phải tất cả race condition đều là lỗ hổng, những phần lớn các race condition sẽ dẫn tới lỗ hổng ở một nơi nào đó. Nói cách khác, những lỗ hổng hình thành do race condition thường là những lỗ hổng cực kì nghiêm trọng.</description>
         
         <dc:creator>Edisc</dc:creator>
         <media:content url="https://minhlongmt183.github.io/images/posts/win_the_racing/wining_the_racing.png" medium="image"><media:title type="html">featured image</media:title></media:content>
@@ -613,7 +613,7 @@ Nó cho phép người dùng bình thường lấy được root mà không cầ
         <author>edisc.ctf@gmail.com (Edisc)</author>
         <atom:modified>Wed, 24 Jun 2020 00:00:00 +0000</atom:modified>
         <guid>https://minhlongmt183.github.io/posts/cve-2021-20226/</guid>
-        <description>Bài viết này nhằm mục đích ghi lại những kiến thức đã học để nhớ và hiểu rõ hơn. Bài viết tham khảo chủ yếu từ CVE-2021–20226 a reference counting bug which leads to local privilege escalation in io_uring.Đôi nét về io_uring io_uring Asynchronous I/O (AIO) framework là một giao diện I/O mới cho Linux, được giới thiệu trên linux kernel version 5.1 (tháng 3 - 2019).
+        <description>Bài viết này nhằm mục đích ghi lại những kiến thức đã học để nhớ và hiểu rõ hơn. Bài viết tham khảo chủ yếu từ CVE-2021–20226 a reference counting bug which leads to local privilege escalation in io_uring. Đôi nét về io_uring io_uring Asynchronous I/O (AIO) framework là một giao diện I/O mới cho Linux, được giới thiệu trên linux kernel version 5.1 (tháng 3 - 2019).
 Communication channel From: https://flattsecurity.</description>
         
         <dc:creator>Edisc</dc:creator>
@@ -688,7 +688,7 @@ Step 1 - Base Images Tất cả các Docker Images đều bắt đầu từ mộ
         <author>edisc.ctf@gmail.com (Edisc)</author>
         <atom:modified>Sun, 21 Jun 2020 00:00:00 +0000</atom:modified>
         <guid>https://minhlongmt183.github.io/posts/docker_p6/</guid>
-        <description>Kể từ chương này, mình bắt đầu chuyển qua học nội dụng docker trên katacoda.com. Và cách học mình cũng sẽ khác, tóm tắt bằng sơ đồ tư duy và trình bày lại những gì mình hiểu sau khi học được trên blog theo flow của sơ đồ tư duy. Mục đích của blog này giúp mình ôn lại, hiểu rõ hơn những kiến thức đã học.Tổng quan về khóa học Trong khóa học này, mình sẽ đi qua một số chủ đề chính như hình bên dưới.</description>
+        <description>Kể từ chương này, mình bắt đầu chuyển qua học nội dụng docker trên katacoda.com. Và cách học mình cũng sẽ khác, tóm tắt bằng sơ đồ tư duy và trình bày lại những gì mình hiểu sau khi học được trên blog theo flow của sơ đồ tư duy. Mục đích của blog này giúp mình ôn lại, hiểu rõ hơn những kiến thức đã học. Tổng quan về khóa học Trong khóa học này, mình sẽ đi qua một số chủ đề chính như hình bên dưới.</description>
         
         <dc:creator>Edisc</dc:creator>
         <media:content url="https://minhlongmt183.github.io/images/posts/docker_p6/docker_p6.png" medium="image"><media:title type="html">featured image</media:title></media:content>
@@ -724,7 +724,7 @@ Step 1 - Base Images Tất cả các Docker Images đều bắt đầu từ mộ
         <author>edisc.ctf@gmail.com (Edisc)</author>
         <atom:modified>Sun, 14 Jun 2020 00:00:00 +0000</atom:modified>
         <guid>https://minhlongmt183.github.io/posts/docker_p5/</guid>
-        <description>Toàn bộ series này được tham khảo từ hai nguồn chính: XuanThuLabChanel và DockerDoc. Em xin chân thành cảm ơn sự cống hiến của các tác giả của những kênh nói trên.❤️❤️❤️Tra cứu thông tin Image, Container và giám sát hoạt động container Docker Các thành phần tạo nên Container Chúng ta đã thảo luận về các khái niệm căn bản của docker ở bải trước, sau đây là những khái niệm trên dưới góc nhìn của tác giả.</description>
+        <description>Toàn bộ series này được tham khảo từ hai nguồn chính: XuanThuLabChanel và DockerDoc. Em xin chân thành cảm ơn sự cống hiến của các tác giả của những kênh nói trên.❤️❤️❤️ Tra cứu thông tin Image, Container và giám sát hoạt động container Docker Các thành phần tạo nên Container Chúng ta đã thảo luận về các khái niệm căn bản của docker ở bải trước, sau đây là những khái niệm trên dưới góc nhìn của tác giả.</description>
         
         <dc:creator>Edisc</dc:creator>
         <media:content url="https://minhlongmt183.github.io/images/posts/docker.png" medium="image"><media:title type="html">featured image</media:title></media:content>
@@ -760,7 +760,7 @@ Step 1 - Base Images Tất cả các Docker Images đều bắt đầu từ mộ
         <author>edisc.ctf@gmail.com (Edisc)</author>
         <atom:modified>Wed, 10 Jun 2020 00:00:00 +0000</atom:modified>
         <guid>https://minhlongmt183.github.io/posts/docker_p4/</guid>
-        <description>Toàn bộ series này được tham khảo từ hai nguồn chính: XuanThuLabChanel và DockerDoc. Em xin chân thành cảm ơn sự cống hiến của các tác giả của những kênh nói trên.❤️❤️❤️Cài đặt, tạo và chạy PHP, phiên bản có PHP-FPM bằng Docker pull phiên bản image php-fpm từ docker hub Chúng ta tải bản 7.3-fpm từ docker hub. fpm ở đây có nghĩa là trong gói này, có thêm dịch vụ php-fpm.</description>
+        <description>Toàn bộ series này được tham khảo từ hai nguồn chính: XuanThuLabChanel và DockerDoc. Em xin chân thành cảm ơn sự cống hiến của các tác giả của những kênh nói trên.❤️❤️❤️ Cài đặt, tạo và chạy PHP, phiên bản có PHP-FPM bằng Docker pull phiên bản image php-fpm từ docker hub Chúng ta tải bản 7.3-fpm từ docker hub. fpm ở đây có nghĩa là trong gói này, có thêm dịch vụ php-fpm.</description>
         
         <dc:creator>Edisc</dc:creator>
         <media:content url="https://minhlongmt183.github.io/images/posts/docker.png" medium="image"><media:title type="html">featured image</media:title></media:content>
@@ -796,7 +796,7 @@ Step 1 - Base Images Tất cả các Docker Images đều bắt đầu từ mộ
         <author>edisc.ctf@gmail.com (Edisc)</author>
         <atom:modified>Tue, 09 Jun 2020 00:00:00 +0000</atom:modified>
         <guid>https://minhlongmt183.github.io/posts/docker_p3/</guid>
-        <description>Toàn bộ series này được tham khảo từ hai nguồn chính: XuanThuLabChanel và DockerDoc. Em xin chân thành cảm ơn sự cống hiến của các tác giả của những kênh nói trên.❤️❤️❤️Giới thiệu về Image Busybox Busybox là một image rất nhỏ gọn nhưng chứa rất nhiều công cụ dựa trên nền tảng linux.
+        <description>Toàn bộ series này được tham khảo từ hai nguồn chính: XuanThuLabChanel và DockerDoc. Em xin chân thành cảm ơn sự cống hiến của các tác giả của những kênh nói trên.❤️❤️❤️ Giới thiệu về Image Busybox Busybox là một image rất nhỏ gọn nhưng chứa rất nhiều công cụ dựa trên nền tảng linux.
 Tải image busybox:
 1 2 3 4 5 6 ❯ docker pull busybox Using default tag: latest latest: Pulling from library/busybox b71f96345d44: Pull complete Digest: sha256:930490f97e5b921535c153e0e7110d251134cc4b72bbb8133c6a5065cc68580d Status: Downloaded newer image for busybox:latest Tạo một container chạy image busybox</description>
         
@@ -834,7 +834,7 @@ Tải image busybox:
         <author>edisc.ctf@gmail.com (Edisc)</author>
         <atom:modified>Mon, 08 Jun 2020 00:00:00 +0000</atom:modified>
         <guid>https://minhlongmt183.github.io/posts/docker_p2/</guid>
-        <description>Toàn bộ series này được tham khảo từ hai nguồn chính: XuanThuLabChanel và DockerDoc. Em xin chân thành cảm ơn sự cống hiến của các tác giả của những kênh nói trên.❤️❤️❤️Lệnh Docker exec, lưu container thành image với commit, xuất image ra file Docker exec Thông thường, để thực thi một lệnh trong container, ta sẽ vào container bằng lệnh docker attach &amp;lt;container name or id&amp;gt;. Tuy nhiên, nếu ta đang ở host và vẫn muốn thực thi một lệnh bên trong container đang chạy, ta sẽ dùng lệnh docker exec &amp;lt;container id / name&amp;gt; [COMMAND].</description>
+        <description>Toàn bộ series này được tham khảo từ hai nguồn chính: XuanThuLabChanel và DockerDoc. Em xin chân thành cảm ơn sự cống hiến của các tác giả của những kênh nói trên.❤️❤️❤️ Lệnh Docker exec, lưu container thành image với commit, xuất image ra file Docker exec Thông thường, để thực thi một lệnh trong container, ta sẽ vào container bằng lệnh docker attach &amp;lt;container name or id&amp;gt;. Tuy nhiên, nếu ta đang ở host và vẫn muốn thực thi một lệnh bên trong container đang chạy, ta sẽ dùng lệnh docker exec &amp;lt;container id / name&amp;gt; [COMMAND].</description>
         
         <dc:creator>Edisc</dc:creator>
         <media:content url="https://minhlongmt183.github.io/images/posts/docker.png" medium="image"><media:title type="html">featured image</media:title></media:content>
@@ -870,7 +870,7 @@ Tải image busybox:
         <author>edisc.ctf@gmail.com (Edisc)</author>
         <atom:modified>Sun, 07 Jun 2020 00:00:00 +0000</atom:modified>
         <guid>https://minhlongmt183.github.io/posts/docker_p1/</guid>
-        <description>Toàn bộ series này được tham khảo từ hai nguồn chính: XuanThuLabChanel và DockerDoc. Em xin chân thành cảm ơn sự cống hiến của các tác giả của những kênh nói trên.❤️❤️❤️Làm quen với docker command line Khi làm việc với docker, lệnh chúng ta hay dùng đó chính là docker. Sau lệnh docker sẽ có nhiều lệnh nhỏ, để xem danh sách các lệnh nhỏ này, ta gõ</description>
+        <description>Toàn bộ series này được tham khảo từ hai nguồn chính: XuanThuLabChanel và DockerDoc. Em xin chân thành cảm ơn sự cống hiến của các tác giả của những kênh nói trên.❤️❤️❤️ Làm quen với docker command line Khi làm việc với docker, lệnh chúng ta hay dùng đó chính là docker. Sau lệnh docker sẽ có nhiều lệnh nhỏ, để xem danh sách các lệnh nhỏ này, ta gõ</description>
         
         <dc:creator>Edisc</dc:creator>
         <media:content url="https://minhlongmt183.github.io/images/posts/docker.png" medium="image"><media:title type="html">featured image</media:title></media:content>
@@ -976,7 +976,7 @@ Capabilities Since kernel 2.2, Linux divides the privileges associated with supe
         <author>edisc.ctf@gmail.com (Edisc)</author>
         <atom:modified>Mon, 01 Jun 2020 00:00:00 +0000</atom:modified>
         <guid>https://minhlongmt183.github.io/posts/docker_overview/</guid>
-        <description>Toàn bộ series này được tham khảo từ hai nguồn chính: XuanThuLabChanel và DockerDoc. Em xin chân thành cảm ơn sự cống hiến của các tác giả của những kênh nói trên.❤️❤️❤️Tổng quan về Docker Docker là gì? Docker là một container platform để phát triển, triển khai và quản lí ứng dụng nhanh chóng. Docker là nền tảng mở (open platform) để phát triển (developing), vận chuyển (shipping) hoặc chạy (running) các ứng dụng.</description>
+        <description>Toàn bộ series này được tham khảo từ hai nguồn chính: XuanThuLabChanel và DockerDoc. Em xin chân thành cảm ơn sự cống hiến của các tác giả của những kênh nói trên.❤️❤️❤️ Tổng quan về Docker Docker là gì? Docker là một container platform để phát triển, triển khai và quản lí ứng dụng nhanh chóng. Docker là nền tảng mở (open platform) để phát triển (developing), vận chuyển (shipping) hoặc chạy (running) các ứng dụng.</description>
         
         <dc:creator>Edisc</dc:creator>
         <media:content url="https://minhlongmt183.github.io/images/posts/docker.png" medium="image"><media:title type="html">featured image</media:title></media:content>

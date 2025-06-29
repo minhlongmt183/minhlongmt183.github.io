@@ -10,13 +10,13 @@
 
 
   
-  <script defer src="/js/fuse.min.8dfbf8696f107ab8b55732efbb04c5c51576692a4a2cce6effef9f6e92d341a7.js"></script>
+  <script defer src="/js/fuse.min.32195737929df2c8096e855a5789cbb3f1331224d9169e8705493e7008f47df8.js"></script>
 
 
 
-<script src="/js/enquire.min.aa37bdcb743826eecdae5c5d177fc7d6552340f1b4378ffaa9c82b2c6111400b.js"></script>
+<script src="/js/enquire.min.dfb99dee1e029d51d6cfb672d847929890b1585402de17f5ed092edd72a688b4.js"></script>
 
-<script defer src="/js/lazysizes.min.498676c34eb225e85357ab0ce19c3c1244f3bd0bf595e5684d1b9d50ea4fbc42.js"></script>
+<script defer src="/js/lazysizes.min.fb649fcae62177dfe63e67081ddceb830b5ce1f05a4184e9bbb7d87ac4b8f4e5.js"></script>
 
 <script defer src="/js/helper/getParents.min.086022fb02d7a1517e33c2670bffb976b3e80bcacd9caeee0c6a586064f20e42.js"></script>
 
@@ -1380,7 +1380,7 @@ if (!doNotTrack) {
 </script>
 
   
-<script type="application/javascript">
+<script>
 var doNotTrack = false;
 if (!doNotTrack) {
 	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
@@ -1708,7 +1708,7 @@ if (!doNotTrack) {
     <article class="single__contents" data-dir="ltr" data-ani="true">
       
       <div class="notices info" data-title="Info">
-  <em>Toàn bộ series này được tham khảo từ hai nguồn chính: <a href="https://www.youtube.com/watch?v=9Gf4vRYSkK8&amp;list=PLwJr0JSP7i8At14UIC-JR4r73G4hQ1CXO&amp;index=3&amp;ab_channel=XuanThuLab">XuanThuLabChanel</a> và <a href="https://docs.docker.com/reference/">DockerDoc</a>. Em xin chân thành cảm ơn sự cống hiến của các tác giả của những kênh nói trên.❤️❤️❤️</em>
+  <em>Toàn bộ series này được tham khảo từ hai nguồn chính: <a href="https://www.youtube.com/watch?v=9Gf4vRYSkK8&list=PLwJr0JSP7i8At14UIC-JR4r73G4hQ1CXO&index=3&ab_channel=XuanThuLab">XuanThuLabChanel</a> và <a href="https://docs.docker.com/reference/">DockerDoc</a>. Em xin chân thành cảm ơn sự cống hiến của các tác giả của những kênh nói trên.❤️❤️❤️</em>
 </div>
 <h2 id="cài-đặt-tạo-và-chạy-php-phiên-bản-có-php-fpm-bằng-docker">Cài đặt, tạo và chạy PHP, phiên bản có PHP-FPM bằng Docker</h2>
 <h3 id="pull-phiên-bản-image-php-fpm-từ-docker-hub">pull phiên bản image php-fpm từ docker hub</h3>
@@ -1828,7 +1828,7 @@ if (!doNotTrack) {
 </span></span><span class="line"><span class="cl">2894c033c93f        php:7.3-fpm         <span class="s2">&#34;docker-php-entrypoi…&#34;</span>   <span class="m">2</span> minutes ago       Up <span class="m">2</span> minutes        9000/tcp            c-php
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>Ở đây, vì sau khi tạo chúng ta không muốn vào trực tiệp docker nên không dùng tùy chọn <code>-it</code>, tuy nhiên thêm lệnh <code>-d</code> để sau khi tạo docker tiếp tục chạy nền. Ỏ đây, tôi dùng linux nên quá trình diễn ra khá thuận lợi, nhưng theo tác giả thì nếu bạn dùng Windows hay MacOs thì cần phải thiết lập thư mục ở chế độ share với docker thì mới có thể tạo được. Chi tiết bạn có thể vào kênh của anh <a href="https://www.youtube.com/watch?v=qwofZjKaeMs&amp;list=PLwJr0JSP7i8At14UIC-JR4r73G4hQ1CXO&amp;index=6">XuanThuLabChanel</a> để xem rõ hơn. Bên cạnh đó, ta cũng thấy container mới được tạo này chạy đang chạy lệnh &ldquo;docker-php-entrypoi…&rdquo;, bản chất lệnh này dùng để gọi dịch vụ php-fpm để chạy và lắng nghe ở cổng 9000.</p>
+</div><p>Ở đây, vì sau khi tạo chúng ta không muốn vào trực tiệp docker nên không dùng tùy chọn <code>-it</code>, tuy nhiên thêm lệnh <code>-d</code> để sau khi tạo docker tiếp tục chạy nền. Ỏ đây, tôi dùng linux nên quá trình diễn ra khá thuận lợi, nhưng theo tác giả thì nếu bạn dùng Windows hay MacOs thì cần phải thiết lập thư mục ở chế độ share với docker thì mới có thể tạo được. Chi tiết bạn có thể vào kênh của anh <a href="https://www.youtube.com/watch?v=qwofZjKaeMs&list=PLwJr0JSP7i8At14UIC-JR4r73G4hQ1CXO&index=6">XuanThuLabChanel</a> để xem rõ hơn. Bên cạnh đó, ta cũng thấy container mới được tạo này chạy đang chạy lệnh &ldquo;docker-php-entrypoi…&rdquo;, bản chất lệnh này dùng để gọi dịch vụ php-fpm để chạy và lắng nghe ở cổng 9000.</p>
 <h3 id="kiểm-tra-php">Kiểm tra php</h3>
 <p>Chúng ta vào container vừa mới tạo, ôn lại kiến thức cũ, thay vì vào container bằng lệnh <code>docker attach</code> ta còn có một cách khác đó là thực thi câu lệnh bash trong container từ host thông qua <code>docker exec</code></p>
 <div class="highlight"><div class="chroma">
@@ -1857,9 +1857,9 @@ if (!doNotTrack) {
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>Trên máy host, ta tạo file <code>test.php</code> trong thư mục www và dễ thấy nó cũng hiện ở trong container.<br />
-<img src="/images/posts/docker_cli/test_php.png" alt="test_php" /><br />
+<img alt="test_php" src="/images/posts/docker_cli/test_php.png"><br />
 Tiến hành chạy lệnh file test.php:<br />
-<img src="/images/posts/docker_cli/run_test_php.png" alt="run_test_php" /><br />
+<img alt="run_test_php" src="/images/posts/docker_cli/run_test_php.png"><br />
 Ta đã chạy được php, php trên container là phiên bản <code>PHP 7.3.28</code></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -1944,14 +1944,14 @@ Ta đã chạy được php, php trên container là phiên bản <code>PHP 7.3.
 </div>
 </div><h3 id="cấu-hình-httpdconf">Cấu hình httpd.conf</h3>
 <p>Sau khi có được file httpd.conf, ta mở ra và tiến hành cấu hình.<br />
-<img src="/images/posts/docker_cli/httpd_config.png" alt="httpd_config" /></p>
+<img alt="httpd_config" src="/images/posts/docker_cli/httpd_config.png"></p>
 <p>Máy chủ apache được tạo ra sẽ tạo những file php thông qua proxy, tức là khi ta truy vấn đến những file có phần mở rộng là <code>.php</code> apache sẽ yêu cầu server chạy php-fpm để thi hành file php đó. Để sử dụng proxy cho apache, ta cần phải nạp các module về proxy cụ thể :</p>
 <h4 id="bật-một-số-module-sau-trong-file-httpdconf">Bật một số module sau trong file httpd.conf:</h4>
 <!-- - module `mod_proxy_html.so`
 ![httpd_config2](/images/posts/docker_cli/httpd_config2.png)   -->
 <ul>
 <li>module <code>mod_proxy.so</code> và <code>mod_proxy_fcgi.so</code><br />
-<img src="/images/posts/docker_cli/httpd_config3.png" alt="httpd_config3" /></li>
+<img alt="httpd_config3" src="/images/posts/docker_cli/httpd_config3.png"></li>
 </ul>
 <h4 id="thêm-addhandler">Thêm AddHandler</h4>
 <p>Thêm <code>AddHandler</code> để chỉ thị apache chạy php thông qua proxy. Ta thêm dòng lệnh sau vào cuối file:</p>
@@ -1964,7 +1964,7 @@ Ta đã chạy được php, php trên container là phiên bản <code>PHP 7.3.
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>trường hợp này, ta truy vấn để container <code>c-php</code> nên ở <code>ip</code> ta thay thành <code>c-php</code> và cổng vẫn là <code>9000</code><br />
-<img src="/images/posts/docker_cli/httpd_config4.png" alt="httpd_config4" /></p>
+<img alt="httpd_config4" src="/images/posts/docker_cli/httpd_config4.png"></p>
 <h4 id="thiết-lập-thư-mục-mặc-định-của-apache">Thiết lập thư mục mặc định của apache</h4>
 <p>Để thiết lập thư mục mặc định khi chúng ta share, chúng ta sẽ thay đổi ở</p>
 <div class="highlight"><div class="chroma">
@@ -1978,7 +1978,7 @@ Ta đã chạy được php, php trên container là phiên bản <code>PHP 7.3.
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>Thay đổi thành thư mục mà chúng ta muốn mount vào.<br />
-<img src="/images/posts/docker_cli/httpd_config5.png" alt="httpd_config5" /></p>
+<img alt="httpd_config5" src="/images/posts/docker_cli/httpd_config5.png"></p>
 <h3 id="chạy-máy-chủ-http-apache">Chạy máy chủ Http Apache</h3>
 <p>Ta chạy câu lệnh:</p>
 <div class="highlight"><div class="chroma">
@@ -2034,9 +2034,9 @@ Ta được kết quả.</li>
 </div>
 </div><h3 id="kiểm-tra-apache">Kiểm tra apache</h3>
 <p>Như vậy ở bước trên máy chủ apache của chúng ta đã chạy. Để kiểm tra, ta tiến hành mở trình duyệt <code>127.0.0.1:9999</code> hoặc <code>localhost:9999</code><br />
-<img src="/images/posts/docker_cli/test_apache.png" alt="test apache" /><br />
+<img alt="test apache" src="/images/posts/docker_cli/test_apache.png"><br />
 Như vậy, máy chủ apache đã hoạt động hiệu quả. Chúng ta gọi file php để xem proxy có hoạt động không<br />
-<img src="/images/posts/docker_cli/test_php_result.png" alt="test php result" /><br />
+<img alt="test php result" src="/images/posts/docker_cli/test_php_result.png"><br />
 Như vậy, proxy đã gọi được test.php.</p>
 <h2 id="cài-đặt-chạy-mysql-bằng-docker">Cài đặt, chạy MySQL bằng Docker</h2>
 <p>Trong 2 phần trước, chúng ta đã tạo được 2 container, một container chạy php và một container chạy server apache httpd. Phần này chúng ta sẽ tiến hành cài đặt và chạy MySQL bằng Docker.</p>
@@ -2166,7 +2166,7 @@ default-authentication-plugin=mysql_native_password
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>vào cuối file <code>my.cnf</code><br />
-<img src="/images/posts/docker_cli/config_sql_1.png" alt="config_sql_1" /></p>
+<img alt="config_sql_1" src="/images/posts/docker_cli/config_sql_1.png"></p>
 <ul>
 <li>Tạo thêm thư mục <code>db</code> trong folder <code>/home/edisc/Desktop/docker/data</code> để lưu trữ dữ liệu, đồng thời khi xóa container đi thì csdl của nó cũng không bị mất đi.</li>
 </ul>
@@ -2497,12 +2497,12 @@ default-authentication-plugin=mysql_native_password
 </div>
 </div><p>Như vậy ta có các user là: <code>root</code> và <code>testuser</code>. Với <code>testuser</code> có password là <code>testpass</code>.</p>
 <h2 id="kết-luận">Kết luận</h2>
-<p>Trong bài học này, chúng ta đã học được từ anh <a href="https://www.youtube.com/watch?v=9Gf4vRYSkK8&amp;list=PLwJr0JSP7i8At14UIC-JR4r73G4hQ1CXO&amp;index=3&amp;ab_channel=XuanThuLab">XuanThuLabChanel</a>  cách cấu hình ra 3 container chạy 3 dịch vụ khác nhau: mysql, php, máy chủ web apache httpd. trong đó máy chủ web truy cập được cổng 9999 trên host. Trong bài tiếp theo, chúng ta sẽ cài đặt wordpress vào hệ thống này.</p>
+<p>Trong bài học này, chúng ta đã học được từ anh <a href="https://www.youtube.com/watch?v=9Gf4vRYSkK8&list=PLwJr0JSP7i8At14UIC-JR4r73G4hQ1CXO&index=3&ab_channel=XuanThuLab">XuanThuLabChanel</a>  cách cấu hình ra 3 container chạy 3 dịch vụ khác nhau: mysql, php, máy chủ web apache httpd. trong đó máy chủ web truy cập được cổng 9999 trên host. Trong bài tiếp theo, chúng ta sẽ cài đặt wordpress vào hệ thống này.</p>
 
     </article>
     
     
-<script defer src="/js/clipboard.min.c168d3a04c45a631be76437054619a4a3b30107960cb9730be96012fef5762b0.js"></script>
+<script defer src="/js/clipboard.min.1626706afc88d95ebe1173b553ec732c6dc82a576989315fdf5e7779af738a44.js"></script>
 
 <script defer src="/js/helper/prev.min.js"></script>
 
@@ -3004,7 +3004,7 @@ default-authentication-plugin=mysql_native_password
 </div>
 
 
-<script defer src="/js/swipe.min.7be2debdadbc35f9430de39f9010d89df5aee1904747098818b5c01cd0672180.js"></script>
+<script defer src="/js/swipe.min.feb438efb7ca009ecd7fc2ac3ad2fced4840990b2798d81f87137f2dc6281f05.js"></script>
 
 <script defer src="/js/micromodal.min.de01b44b2f383056bbcaf6ee921fd385d79108ec1129afd0eb2f3f5a07e11f45.js"></script>
 
@@ -4009,7 +4009,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 
             <p class="caption">
                 
-                    ©2023, All Rights Reserved
+                    ©2025, All Rights Reserved
                 
             </p>
         

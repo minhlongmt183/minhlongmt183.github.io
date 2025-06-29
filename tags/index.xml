@@ -13,7 +13,7 @@
     <language>vi</language>
     <managingEditor>edisc.ctf@gmail.com (Edisc)</managingEditor>
     <webMaster>edisc.ctf@gmail.com (Edisc)</webMaster>
-    <copyright>©2023, All Rights Reserved</copyright>
+    <copyright>©2025, All Rights Reserved</copyright>
     <lastBuildDate>Mon, 27 Nov 2023 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://minhlongmt183.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
@@ -21,7 +21,7 @@
 
       
       <item>
-        <title>cve, python</title>
+        <title>Cve, Python</title>
         <link>https://minhlongmt183.github.io/tags/cve-python/</link>
         <pubDate>Mon, 27 Nov 2023 00:00:00 +0000</pubDate>
         <author>edisc.ctf@gmail.com (Edisc)</author>
@@ -39,7 +39,7 @@
       </item>
       
       <item>
-        <title>cve, php</title>
+        <title>Cve, Php</title>
         <link>https://minhlongmt183.github.io/tags/cve-php/</link>
         <pubDate>Sat, 30 Sep 2023 00:00:00 +0000</pubDate>
         <author>edisc.ctf@gmail.com (Edisc)</author>
@@ -57,7 +57,7 @@
       </item>
       
       <item>
-        <title>java</title>
+        <title>Java</title>
         <link>https://minhlongmt183.github.io/tags/java/</link>
         <pubDate>Mon, 28 Aug 2023 00:00:00 +0000</pubDate>
         <author>edisc.ctf@gmail.com (Edisc)</author>
@@ -76,11 +76,11 @@
       
       <item>
         <title>C#</title>
-        <link>https://minhlongmt183.github.io/tags/c#/</link>
+        <link>https://minhlongmt183.github.io/tags/c</link>
         <pubDate>Wed, 28 Jun 2023 00:00:00 +0000</pubDate>
         <author>edisc.ctf@gmail.com (Edisc)</author>
         
-        <guid>https://minhlongmt183.github.io/tags/c#/</guid>
+        <guid>https://minhlongmt183.github.io/tags/c</guid>
         <description></description>
         
         <dc:creator>Edisc</dc:creator>
@@ -93,7 +93,7 @@
       </item>
       
       <item>
-        <title>php</title>
+        <title>Php</title>
         <link>https://minhlongmt183.github.io/tags/php/</link>
         <pubDate>Mon, 22 May 2023 00:00:00 +0000</pubDate>
         <author>edisc.ctf@gmail.com (Edisc)</author>
@@ -111,7 +111,7 @@
       </item>
       
       <item>
-        <title>pwn</title>
+        <title>Pwn</title>
         <link>https://minhlongmt183.github.io/tags/pwn/</link>
         <pubDate>Fri, 04 Nov 2022 00:00:00 +0000</pubDate>
         <author>edisc.ctf@gmail.com (Edisc)</author>
@@ -129,7 +129,7 @@
       </item>
       
       <item>
-        <title>exploitation</title>
+        <title>Exploitation</title>
         <link>https://minhlongmt183.github.io/tags/exploitation/</link>
         <pubDate>Wed, 22 Dec 2021 00:00:00 +0000</pubDate>
         <author>edisc.ctf@gmail.com (Edisc)</author>
@@ -147,12 +147,12 @@
       </item>
       
       <item>
-        <title>cve,  escape_docker</title>
-        <link>https://minhlongmt183.github.io/tags/cve-escape_docker/</link>
+        <title>Cve,  Escape_docker</title>
+        <link>https://minhlongmt183.github.io/tags/cve--escape_docker/</link>
         <pubDate>Tue, 22 Sep 2020 00:00:00 +0000</pubDate>
         <author>edisc.ctf@gmail.com (Edisc)</author>
         
-        <guid>https://minhlongmt183.github.io/tags/cve-escape_docker/</guid>
+        <guid>https://minhlongmt183.github.io/tags/cve--escape_docker/</guid>
         <description></description>
         
         <dc:creator>Edisc</dc:creator>
@@ -183,7 +183,7 @@
       </item>
       
       <item>
-        <title>cve, linux kernel, V4l2</title>
+        <title>Cve, Linux Kernel, V4l2</title>
         <link>https://minhlongmt183.github.io/tags/cve-linux-kernel-v4l2/</link>
         <pubDate>Sun, 16 Aug 2020 00:00:00 +0000</pubDate>
         <author>edisc.ctf@gmail.com (Edisc)</author>
@@ -201,7 +201,7 @@
       </item>
       
       <item>
-        <title>cve, linux kernel, race condition</title>
+        <title>Cve, Linux Kernel, Race Condition</title>
         <link>https://minhlongmt183.github.io/tags/cve-linux-kernel-race-condition/</link>
         <pubDate>Tue, 28 Jul 2020 00:00:00 +0000</pubDate>
         <author>edisc.ctf@gmail.com (Edisc)</author>
@@ -219,7 +219,7 @@
       </item>
       
       <item>
-        <title>cve, io_uring</title>
+        <title>Cve, Io_uring</title>
         <link>https://minhlongmt183.github.io/tags/cve-io_uring/</link>
         <pubDate>Wed, 24 Jun 2020 00:00:00 +0000</pubDate>
         <author>edisc.ctf@gmail.com (Edisc)</author>
@@ -237,7 +237,7 @@
       </item>
       
       <item>
-        <title>Malware, flareon</title>
+        <title>Malware, Flareon</title>
         <link>https://minhlongmt183.github.io/tags/malware-flareon/</link>
         <pubDate>Sat, 06 Jun 2020 00:00:00 +0000</pubDate>
         <author>edisc.ctf@gmail.com (Edisc)</author>

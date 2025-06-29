@@ -10,13 +10,13 @@
 
 
   
-  <script defer src="/js/fuse.min.8dfbf8696f107ab8b55732efbb04c5c51576692a4a2cce6effef9f6e92d341a7.js"></script>
+  <script defer src="/js/fuse.min.32195737929df2c8096e855a5789cbb3f1331224d9169e8705493e7008f47df8.js"></script>
 
 
 
-<script src="/js/enquire.min.aa37bdcb743826eecdae5c5d177fc7d6552340f1b4378ffaa9c82b2c6111400b.js"></script>
+<script src="/js/enquire.min.dfb99dee1e029d51d6cfb672d847929890b1585402de17f5ed092edd72a688b4.js"></script>
 
-<script defer src="/js/lazysizes.min.498676c34eb225e85357ab0ce19c3c1244f3bd0bf595e5684d1b9d50ea4fbc42.js"></script>
+<script defer src="/js/lazysizes.min.fb649fcae62177dfe63e67081ddceb830b5ce1f05a4184e9bbb7d87ac4b8f4e5.js"></script>
 
 <script defer src="/js/helper/getParents.min.086022fb02d7a1517e33c2670bffb976b3e80bcacd9caeee0c6a586064f20e42.js"></script>
 
@@ -1380,7 +1380,7 @@ if (!doNotTrack) {
 </script>
 
   
-<script type="application/javascript">
+<script>
 var doNotTrack = false;
 if (!doNotTrack) {
 	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
@@ -1708,7 +1708,7 @@ if (!doNotTrack) {
     <article class="single__contents" data-dir="ltr" data-ani="true">
       
       <div class="notices info" data-title="Info">
-  <em>Toàn bộ series này được tham khảo từ hai nguồn chính: <a href="https://www.youtube.com/watch?v=9Gf4vRYSkK8&amp;list=PLwJr0JSP7i8At14UIC-JR4r73G4hQ1CXO&amp;index=3&amp;ab_channel=XuanThuLab">XuanThuLabChanel</a> và <a href="https://docs.docker.com/reference/">DockerDoc</a>. Em xin chân thành cảm ơn sự cống hiến của các tác giả của những kênh nói trên.❤️❤️❤️</em>
+  <em>Toàn bộ series này được tham khảo từ hai nguồn chính: <a href="https://www.youtube.com/watch?v=9Gf4vRYSkK8&list=PLwJr0JSP7i8At14UIC-JR4r73G4hQ1CXO&index=3&ab_channel=XuanThuLab">XuanThuLabChanel</a> và <a href="https://docs.docker.com/reference/">DockerDoc</a>. Em xin chân thành cảm ơn sự cống hiến của các tác giả của những kênh nói trên.❤️❤️❤️</em>
 </div>
 <h2 id="giới-thiệu-về-image-busybox">Giới thiệu về Image Busybox</h2>
 <p>Busybox là một image rất nhỏ gọn nhưng chứa rất nhiều công cụ dựa trên nền tảng linux.<br />
@@ -2065,7 +2065,7 @@ Trong image busybox, có sẵn một công cụ để tạo máy chủ web http.
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>Chúng ta sẽ thao tác lại một lần ở docker B2 để chạy <code>httpd</code> và tạo file <code>index.html</code> với nội dung <code>web server is running...</code> trong thư mục <code>/var/www</code>. Sau đó, chúng ta truy cập ở trình duyện chrome từ máy host đến địa chỉ <code>127.0.0.1:8888</code><br />
-<img src="/images/posts/docker_cli/docker_webserver.png" alt="docker access" /><br />
+<img alt="docker access" src="/images/posts/docker_cli/docker_webserver.png"><br />
 Như vậy, ta đã có thể truy cập đến file <code>index.html</code> trong container B2 từ mạng bên ngoài host.</p>
 <h3 id="tạo-thêm-mạng">Tạo thêm mạng</h3>
 <p>Trường hợp chúng ta không muốn tất cả các container cùng kết nối vào một mạng bridge, ta có thể tạo thêm nhiều bridge riêng để có thể tách các riêng các container thành các cụm riêng. Để tạo ra một mạng bridge, ta dùng lệnh:<br />
@@ -2233,7 +2233,7 @@ Như vậy, ta đã có thể truy cập đến file <code>index.html</code> tro
 <li>Mạng bridge có 2 container đang kết nối tới là B1 và B2, trong đó B2 đang ánh xạ cổng 80 đến cổng 8888 trên máy host.</li>
 <li>Mạng mynetwork có 2 container đang kết nối tới là B3 và B4, trong đó B4 đang ánh xạ cổng 80 đến cổng 9999 trên host.<br />
 Ta tiến hành chạy web server http trên container B4 và kết nối từ mạng bên ngoài host.<br />
-<img src="/images/posts/docker_cli/docker_webserver2.png" alt="docker access 2" /><br />
+<img alt="docker access 2" src="/images/posts/docker_cli/docker_webserver2.png"><br />
 Khi tạo ra 2 network thì những máy cùng 1 network (B1 với B2 hoặc B3 với B4) có thể thấy được nhau, tuy nhiên ở khác network (B1 với B3,B4 hoặc B2 với B3,B4) thì không thể thấy nhau. Chúng ta có thể kiểm tra điều này thông qua lênh ping, từ B1 đến B2 và B1 đến B3. Dùng lệnh <code>docker network inspect &lt;ten_network&gt;</code> ta biết được ip của B1, B2, B3 lần lượt là <code>172.17.0.3</code>, <code>172.17.0.2</code>, <code>172.20.0.2</code>. Vào B1 và tiến hành ping qua B2, B3:</li>
 </ul>
 <div class="highlight"><div class="chroma">
@@ -2640,18 +2640,18 @@ Khi tạo ra 2 network thì những máy cùng 1 network (B1 với B2 hoặc B3 
 </span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="kết-luận">Kết luận</h2>
-<p>Trong bài học này, chúng ta đã học được từ anh <a href="https://www.youtube.com/watch?v=9Gf4vRYSkK8&amp;list=PLwJr0JSP7i8At14UIC-JR4r73G4hQ1CXO&amp;index=3&amp;ab_channel=XuanThuLab">XuanThuLabChanel</a>  những kiến thức như sau:</p>
+<p>Trong bài học này, chúng ta đã học được từ anh <a href="https://www.youtube.com/watch?v=9Gf4vRYSkK8&list=PLwJr0JSP7i8At14UIC-JR4r73G4hQ1CXO&index=3&ab_channel=XuanThuLab">XuanThuLabChanel</a>  những kiến thức như sau:</p>
 <ul>
 <li>Biết về busybox</li>
 <li>Các lệnh thao tác với <code>docker network</code>: liệt kê, kiểm tra thông tin mạng</li>
 <li>Mạng bridge, tạo thêm, xóa mạng, ánh xạ cổng mạng trong docker.</li>
 </ul>
-<p>Kết thúc bài viết này, một lần nữa em xin chân thành gửi lời cảm ơn đến anh <a href="https://www.youtube.com/watch?v=9Gf4vRYSkK8&amp;list=PLwJr0JSP7i8At14UIC-JR4r73G4hQ1CXO&amp;index=3&amp;ab_channel=XuanThuLab">XuanThuLabChanel</a> đã làm những bài học quý giá và bổ ích này.</p>
+<p>Kết thúc bài viết này, một lần nữa em xin chân thành gửi lời cảm ơn đến anh <a href="https://www.youtube.com/watch?v=9Gf4vRYSkK8&list=PLwJr0JSP7i8At14UIC-JR4r73G4hQ1CXO&index=3&ab_channel=XuanThuLab">XuanThuLabChanel</a> đã làm những bài học quý giá và bổ ích này.</p>
 
     </article>
     
     
-<script defer src="/js/clipboard.min.c168d3a04c45a631be76437054619a4a3b30107960cb9730be96012fef5762b0.js"></script>
+<script defer src="/js/clipboard.min.1626706afc88d95ebe1173b553ec732c6dc82a576989315fdf5e7779af738a44.js"></script>
 
 <script defer src="/js/helper/prev.min.js"></script>
 
@@ -3149,7 +3149,7 @@ Khi tạo ra 2 network thì những máy cùng 1 network (B1 với B2 hoặc B3 
 </div>
 
 
-<script defer src="/js/swipe.min.7be2debdadbc35f9430de39f9010d89df5aee1904747098818b5c01cd0672180.js"></script>
+<script defer src="/js/swipe.min.feb438efb7ca009ecd7fc2ac3ad2fced4840990b2798d81f87137f2dc6281f05.js"></script>
 
 <script defer src="/js/micromodal.min.de01b44b2f383056bbcaf6ee921fd385d79108ec1129afd0eb2f3f5a07e11f45.js"></script>
 
@@ -4154,7 +4154,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 
             <p class="caption">
                 
-                    ©2023, All Rights Reserved
+                    ©2025, All Rights Reserved
                 
             </p>
         

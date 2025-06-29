@@ -10,13 +10,13 @@
 
 
   
-  <script defer src="/js/fuse.min.8dfbf8696f107ab8b55732efbb04c5c51576692a4a2cce6effef9f6e92d341a7.js"></script>
+  <script defer src="/js/fuse.min.32195737929df2c8096e855a5789cbb3f1331224d9169e8705493e7008f47df8.js"></script>
 
 
 
-<script src="/js/enquire.min.aa37bdcb743826eecdae5c5d177fc7d6552340f1b4378ffaa9c82b2c6111400b.js"></script>
+<script src="/js/enquire.min.dfb99dee1e029d51d6cfb672d847929890b1585402de17f5ed092edd72a688b4.js"></script>
 
-<script defer src="/js/lazysizes.min.498676c34eb225e85357ab0ce19c3c1244f3bd0bf595e5684d1b9d50ea4fbc42.js"></script>
+<script defer src="/js/lazysizes.min.fb649fcae62177dfe63e67081ddceb830b5ce1f05a4184e9bbb7d87ac4b8f4e5.js"></script>
 
 <script defer src="/js/helper/getParents.min.086022fb02d7a1517e33c2670bffb976b3e80bcacd9caeee0c6a586064f20e42.js"></script>
 
@@ -1380,7 +1380,7 @@ if (!doNotTrack) {
 </script>
 
   
-<script type="application/javascript">
+<script>
 var doNotTrack = false;
 if (!doNotTrack) {
 	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
@@ -1708,7 +1708,7 @@ if (!doNotTrack) {
     <article class="single__contents" data-dir="ltr" data-ani="true">
       
       <div class="notices info" data-title="Info">
-  <em>Toàn bộ series này được tham khảo từ hai nguồn chính: <a href="https://www.youtube.com/watch?v=9Gf4vRYSkK8&amp;list=PLwJr0JSP7i8At14UIC-JR4r73G4hQ1CXO&amp;index=3&amp;ab_channel=XuanThuLab">XuanThuLabChanel</a> và <a href="https://docs.docker.com/reference/">DockerDoc</a>. Em xin chân thành cảm ơn sự cống hiến của các tác giả của những kênh nói trên.❤️❤️❤️</em>
+  <em>Toàn bộ series này được tham khảo từ hai nguồn chính: <a href="https://www.youtube.com/watch?v=9Gf4vRYSkK8&list=PLwJr0JSP7i8At14UIC-JR4r73G4hQ1CXO&index=3&ab_channel=XuanThuLab">XuanThuLabChanel</a> và <a href="https://docs.docker.com/reference/">DockerDoc</a>. Em xin chân thành cảm ơn sự cống hiến của các tác giả của những kênh nói trên.❤️❤️❤️</em>
 </div>
 <h2 id="làm-quen-với-docker-command-line">Làm quen với docker command line</h2>
 <p>Khi làm việc với docker, lệnh chúng ta hay dùng đó chính là <strong>docker</strong>. Sau lệnh <strong>docker</strong> sẽ có nhiều lệnh nhỏ, để xem danh sách các lệnh nhỏ này, ta gõ</p>
@@ -1720,7 +1720,7 @@ if (!doNotTrack) {
 <pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ docker 
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><img src="/images/posts/docker_cli/docker_lst.png" alt="docker_list" /></p>
+</div><p><img alt="docker_list" src="/images/posts/docker_cli/docker_lst.png"></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -1762,7 +1762,7 @@ if (!doNotTrack) {
 <li><strong>IMAGE ID</strong> là một mã hash của image,</li>
 <li><strong>CREATED</strong> là thời gian được tạo của image,</li>
 <li><strong>SIZE</strong> là kích thước của image.<br />
-Các images này lấy từ <a href="https://hub.docker.com/search?q=&amp;type=image">hub.docker.com</a>. Chúng ta vào <a href="https://hub.docker.com/search?q=&amp;type=image">hub.docker.com</a> để tìm kiếm image thích hợp mà mình muốn tải. Lưu ý nếu lần đầu bạn vào trang này, bạn cần đăng kí một tài khoản. Ngoài ra, ta có thể tìm kiếm trực tiếp trên terminal với lệnh:</li>
+Các images này lấy từ <a href="https://hub.docker.com/search?q=&type=image">hub.docker.com</a>. Chúng ta vào <a href="https://hub.docker.com/search?q=&type=image">hub.docker.com</a> để tìm kiếm image thích hợp mà mình muốn tải. Lưu ý nếu lần đầu bạn vào trang này, bạn cần đăng kí một tài khoản. Ngoài ra, ta có thể tìm kiếm trực tiếp trên terminal với lệnh:</li>
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -1834,7 +1834,7 @@ Các images này lấy từ <a href="https://hub.docker.com/search?q=&amp;type=i
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>Mục <strong>OFFICIAL</strong> cho biết phiên bản này là chính chủ. Để sử dụng một image nào đó, chúng ta cần đọc thông tin của image trên hub.docker và các phiển bản của image nằm ở phần tag.<br />
-<img src="/images/posts/docker_cli/docker_images_tag.png" alt="docker_images_tag" /></p>
+<img alt="docker_images_tag" src="/images/posts/docker_cli/docker_images_tag.png"></p>
 <h3 id="tải-image">Tải image</h3>
 <p>Để tải image, ta sử dụng:</p>
 <div class="highlight"><div class="chroma">
@@ -2518,7 +2518,7 @@ trên user-defined network</p>
 </div>
 </div><h2 id="tổng-kết">Tổng kết</h2>
 <hr />
-<p>Trong bài học này, chúng ta đã học được từ anh <a href="https://www.youtube.com/watch?v=9Gf4vRYSkK8&amp;list=PLwJr0JSP7i8At14UIC-JR4r73G4hQ1CXO&amp;index=3&amp;ab_channel=XuanThuLab">XuanThuLabChanel</a> những kiến thức như sau:</p>
+<p>Trong bài học này, chúng ta đã học được từ anh <a href="https://www.youtube.com/watch?v=9Gf4vRYSkK8&list=PLwJr0JSP7i8At14UIC-JR4r73G4hQ1CXO&index=3&ab_channel=XuanThuLab">XuanThuLabChanel</a> những kiến thức như sau:</p>
 <ul>
 <li><code>docker images: </code> Liệt kê danh sách tất cả các images trên docker</li>
 <li><code>docker pull image:tag</code> tải image về máy</li>
@@ -2531,13 +2531,13 @@ trên user-defined network</p>
 <li><code>docker attach container_id/name</code>: trở lại container đang chạy.</li>
 <li><code>docker rm containerid/name</code>: xóa container đã dừng.</li>
 <li><code>docker rm -f containerid/name</code>: xóa container đang chạy.<br />
-Kết thúc bài viết này, một lần nữa em xin chân thành gửi lời cảm ơn đến anh <a href="https://www.youtube.com/watch?v=9Gf4vRYSkK8&amp;list=PLwJr0JSP7i8At14UIC-JR4r73G4hQ1CXO&amp;index=3&amp;ab_channel=XuanThuLab">XuanThuLabChanel</a> đã làm những bài học quý giá và bổ ích này.</li>
+Kết thúc bài viết này, một lần nữa em xin chân thành gửi lời cảm ơn đến anh <a href="https://www.youtube.com/watch?v=9Gf4vRYSkK8&list=PLwJr0JSP7i8At14UIC-JR4r73G4hQ1CXO&index=3&ab_channel=XuanThuLab">XuanThuLabChanel</a> đã làm những bài học quý giá và bổ ích này.</li>
 </ul>
 
     </article>
     
     
-<script defer src="/js/clipboard.min.c168d3a04c45a631be76437054619a4a3b30107960cb9730be96012fef5762b0.js"></script>
+<script defer src="/js/clipboard.min.1626706afc88d95ebe1173b553ec732c6dc82a576989315fdf5e7779af738a44.js"></script>
 
 <script defer src="/js/helper/prev.min.js"></script>
 
@@ -3027,7 +3027,7 @@ Kết thúc bài viết này, một lần nữa em xin chân thành gửi lời 
 </div>
 
 
-<script defer src="/js/swipe.min.7be2debdadbc35f9430de39f9010d89df5aee1904747098818b5c01cd0672180.js"></script>
+<script defer src="/js/swipe.min.feb438efb7ca009ecd7fc2ac3ad2fced4840990b2798d81f87137f2dc6281f05.js"></script>
 
 <script defer src="/js/micromodal.min.de01b44b2f383056bbcaf6ee921fd385d79108ec1129afd0eb2f3f5a07e11f45.js"></script>
 
@@ -4032,7 +4032,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 
             <p class="caption">
                 
-                    ©2023, All Rights Reserved
+                    ©2025, All Rights Reserved
                 
             </p>
         

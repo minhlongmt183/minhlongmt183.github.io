@@ -10,13 +10,13 @@
 
 
   
-  <script defer src="/js/fuse.min.8dfbf8696f107ab8b55732efbb04c5c51576692a4a2cce6effef9f6e92d341a7.js"></script>
+  <script defer src="/js/fuse.min.32195737929df2c8096e855a5789cbb3f1331224d9169e8705493e7008f47df8.js"></script>
 
 
 
-<script src="/js/enquire.min.aa37bdcb743826eecdae5c5d177fc7d6552340f1b4378ffaa9c82b2c6111400b.js"></script>
+<script src="/js/enquire.min.dfb99dee1e029d51d6cfb672d847929890b1585402de17f5ed092edd72a688b4.js"></script>
 
-<script defer src="/js/lazysizes.min.498676c34eb225e85357ab0ce19c3c1244f3bd0bf595e5684d1b9d50ea4fbc42.js"></script>
+<script defer src="/js/lazysizes.min.fb649fcae62177dfe63e67081ddceb830b5ce1f05a4184e9bbb7d87ac4b8f4e5.js"></script>
 
 <script defer src="/js/helper/getParents.min.086022fb02d7a1517e33c2670bffb976b3e80bcacd9caeee0c6a586064f20e42.js"></script>
 
@@ -1380,7 +1380,7 @@ if (!doNotTrack) {
 </script>
 
   
-<script type="application/javascript">
+<script>
 var doNotTrack = false;
 if (!doNotTrack) {
 	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
@@ -1711,13 +1711,13 @@ if (!doNotTrack) {
   Kể từ chương này, mình bắt đầu chuyển qua học nội dụng docker trên <a href="https://katacoda.com/courses/container-runtimes">katacoda.com</a>. Và cách học mình cũng sẽ khác, tóm tắt bằng sơ đồ tư duy và trình bày lại những gì mình hiểu sau khi học được trên blog theo flow của sơ đồ tư duy. Mục đích của blog này giúp mình ôn lại, hiểu rõ hơn những kiến thức đã học.
 </div>
 <h2 id="tổng-quan-về-khóa-học">Tổng quan về khóa học</h2>
-<p>Trong khóa học này, mình sẽ đi qua một số chủ đề chính như hình bên dưới. Trong những chủ đề này có những chủ đề mới và những chủ đề đã đề cập qua trong khóa học của anh <a href="https://www.youtube.com/watch?v=9Gf4vRYSkK8&amp;list=PLwJr0JSP7i8At14UIC-JR4r73G4hQ1CXO&amp;index=3&amp;ab_channel=XuanThuLab">XuanThuLabChanel</a>. Những phần đã nói qua thì sẽ không nói lại mà chỉ ghi chú thêm những mục mới, chưa đề cập ở những phần trước đó.<br />
-<img src="/images/posts/docker_p6/docker_p6.png" alt="what_is_container" /></p>
+<p>Trong khóa học này, mình sẽ đi qua một số chủ đề chính như hình bên dưới. Trong những chủ đề này có những chủ đề mới và những chủ đề đã đề cập qua trong khóa học của anh <a href="https://www.youtube.com/watch?v=9Gf4vRYSkK8&list=PLwJr0JSP7i8At14UIC-JR4r73G4hQ1CXO&index=3&ab_channel=XuanThuLab">XuanThuLabChanel</a>. Những phần đã nói qua thì sẽ không nói lại mà chỉ ghi chú thêm những mục mới, chưa đề cập ở những phần trước đó.<br />
+<img alt="what_is_container" src="/images/posts/docker_p6/docker_p6.png"></p>
 <h2 id="what-is-the-container">What is the container</h2>
 <p>Những khái niệm căn bản về container đã được đề cập khá nhiều ở trong bài <a href="../docker_overview">docker_overview</a> và ở <a href="../docker_p1/">p1</a> trong chuỗi bài học từ anh XuanThuLabChanel. Trong phần này chúng ta sẽ đi qua một số khái niệm cũng như một số chủ đề:<br />
-<img src="/images/posts/docker_p6/what_is_container.png" alt="what_is_container" /></p>
+<img alt="what_is_container" src="/images/posts/docker_p6/what_is_container.png"></p>
 <h3 id="namespaces">namespaces</h3>
-<p><img src="/images/posts/docker_p6/namespace.png" alt="namespaces" /></p>
+<p><img alt="namespaces" src="/images/posts/docker_p6/namespace.png"></p>
 <h4 id="khái-niệm">Khái niệm:</h4>
 <p>Namespace - không gian tên:</p>
 <ul>
@@ -1812,7 +1812,7 @@ Khi hủy một không gian tên mạng sẽ phá hủy bất kỳ giao diện �
 <h2 id="learn-docker-foundation">Learn Docker Foundation</h2>
 <h3 id="deploying-first-docker-container">Deploying First Docker Container</h3>
 <p>Phần này chúng ta cũng đã trình bày kĩ ở những phần trước, theo sơ đồ, ta có thể thấy, để build một docker container, chúng ta có 5 bước chính:<br />
-<img src="/images/posts/docker_p6/deploying_first_container.png" alt="deploying_first_container" /></p>
+<img alt="deploying_first_container" src="/images/posts/docker_p6/deploying_first_container.png"></p>
 <ul>
 <li><code>Step1:</code> Tìm kiếm image thích hợp thông qua lệnh <code>docker search</code>, tải về bằng <code>docker pull</code> và chạy bằng <code>docker run</code></li>
 <li><code>Step2:</code> Kiểm tra những container đang chạy:
@@ -1841,7 +1841,7 @@ Những phần này chúng ta đã được học ở những bài trước.</li
 </ul>
 <h3 id="deploy-static-html-website-as-container">Deploy Static HTML Website as Container</h3>
 <p>Tóm tắt cho phần này<br />
-<img src="/images/posts/docker_p6/deploying_static_HTML_Website_as_container.png" alt="deploying_static_HTML_Website_as_container" /></p>
+<img alt="deploying_static_HTML_Website_as_container" src="/images/posts/docker_p6/deploying_static_HTML_Website_as_container.png"></p>
 <h4 id="create-dockerfile">Create Dockerfile</h4>
 <h5 id="docker-file-là-gì">Docker file là gì?</h5>
 <p><code>Dockerfile</code> là một dạng file text, không có phần đuôi mở rộng, chứa tập các lệnh mô tả các bước để build một docker image.</p>
@@ -2176,7 +2176,7 @@ Ngoài ra, chúng ta đã đi qua một vài nhánh nhỏ của <code>Docker Fou
     </article>
     
     
-<script defer src="/js/clipboard.min.c168d3a04c45a631be76437054619a4a3b30107960cb9730be96012fef5762b0.js"></script>
+<script defer src="/js/clipboard.min.1626706afc88d95ebe1173b553ec732c6dc82a576989315fdf5e7779af738a44.js"></script>
 
 <script defer src="/js/helper/prev.min.js"></script>
 
@@ -2678,7 +2678,7 @@ Ngoài ra, chúng ta đã đi qua một vài nhánh nhỏ của <code>Docker Fou
 </div>
 
 
-<script defer src="/js/swipe.min.7be2debdadbc35f9430de39f9010d89df5aee1904747098818b5c01cd0672180.js"></script>
+<script defer src="/js/swipe.min.feb438efb7ca009ecd7fc2ac3ad2fced4840990b2798d81f87137f2dc6281f05.js"></script>
 
 <script defer src="/js/micromodal.min.de01b44b2f383056bbcaf6ee921fd385d79108ec1129afd0eb2f3f5a07e11f45.js"></script>
 
@@ -3683,7 +3683,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 
             <p class="caption">
                 
-                    ©2023, All Rights Reserved
+                    ©2025, All Rights Reserved
                 
             </p>
         

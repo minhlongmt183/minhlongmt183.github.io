@@ -10,13 +10,13 @@
 
 
   
-  <script defer src="/js/fuse.min.8dfbf8696f107ab8b55732efbb04c5c51576692a4a2cce6effef9f6e92d341a7.js"></script>
+  <script defer src="/js/fuse.min.32195737929df2c8096e855a5789cbb3f1331224d9169e8705493e7008f47df8.js"></script>
 
 
 
-<script src="/js/enquire.min.aa37bdcb743826eecdae5c5d177fc7d6552340f1b4378ffaa9c82b2c6111400b.js"></script>
+<script src="/js/enquire.min.dfb99dee1e029d51d6cfb672d847929890b1585402de17f5ed092edd72a688b4.js"></script>
 
-<script defer src="/js/lazysizes.min.498676c34eb225e85357ab0ce19c3c1244f3bd0bf595e5684d1b9d50ea4fbc42.js"></script>
+<script defer src="/js/lazysizes.min.fb649fcae62177dfe63e67081ddceb830b5ce1f05a4184e9bbb7d87ac4b8f4e5.js"></script>
 
 <script defer src="/js/helper/getParents.min.086022fb02d7a1517e33c2670bffb976b3e80bcacd9caeee0c6a586064f20e42.js"></script>
 
@@ -1380,7 +1380,7 @@ if (!doNotTrack) {
 </script>
 
   
-<script type="application/javascript">
+<script>
 var doNotTrack = false;
 if (!doNotTrack) {
 	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
@@ -1700,7 +1700,7 @@ if (!doNotTrack) {
   🏷️
   
 
-  <li><a href="https://minhlongmt183.github.io/tags/c#/" class="single__tag" title="C#">#C#</a></li>
+  <li><a href="https://minhlongmt183.github.io/tags/c" class="single__tag" title="C#">#C#</a></li>
 
 </ul>
 
@@ -1844,16 +1844,16 @@ if (!doNotTrack) {
 </div><ul>
 <li>Khi mới chạy khả năng sẽ bị thiếu thư viện <strong>System.Runtime.Serialization.Formatters.Soap.dll</strong> nên chương trình không thể thực thi</li>
 </ul>
-<p><img src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled.png"></p>
 <ul>
 <li>Để fix lỗi này, chúng ta cần tìm đến địa chỉ lưu trữ <strong>System.Runtime.Serialization.Formatters.Soap.dll</strong> rồi import thư viện này vào references.</li>
 </ul>
 <blockquote>
 <p>Một tip ở đây là tìm các dll bằng cách search trên ổ C, sau đó import reference tại địa chỉ đó. Còn cách import thì tôi đã nói trong bài trước.</p>
 </blockquote>
-<p><img src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%201.png" alt="Untitled" /></p>
-<p><img src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%202.png" alt="Untitled" /></p>
-<p><img src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%203.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%201.png"></p>
+<p><img alt="Untitled" src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%202.png"></p>
+<p><img alt="Untitled" src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%203.png"></p>
 <ul>
 <li>
 <p>Output như sau:</p>
@@ -1905,7 +1905,7 @@ if (!doNotTrack) {
 </li>
 <li>
 <p>Ngoài ra, SoapFormatter còn implement 2 interfaces: <strong>IRemotingFormatter, IFormatter.</strong> <strong>IFormatter</strong></p>
-<p><img src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%204.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%204.png"></p>
 </li>
 <li>
 <p><strong>IFormatter</strong> còn có một proxy selector</p>
@@ -1916,7 +1916,7 @@ if (!doNotTrack) {
 <p>Proxy selector có thể được sử dụng để tùy chỉnh quá trình deserialize bằng cách xác định bộ chọn proxy tùy chỉnh. Bộ chọn proxy tùy chỉnh này sẽ quyết định loại đối tượng cần được xây dựng và sử dụng trong quá trình deserialize dựa trên dữ liệu serialized và các quy tắc xác định sẵn.</p>
 <p>Proxy selector giúp .NET xác định loại đối tượng cụ thể để khôi phục dữ liệu serialized thành đối tượng thích hợp. Nó đóng vai trò quan trọng trong việc đảm bảo quá trình deserialize diễn ra đúng cách và dữ liệu được chuyển đổi thành đối tượng đúng.</p>
 </blockquote>
-<p><img src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%205.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%205.png"></p>
 <blockquote>
 <p>Để xem được code như trên, ta dùng <a href="https://github.com/dnSpy/dnSpy/releases">dnSpy 64bit</a></p>
 <p>TIP: Chúng ta có thể dùng extension GoToDnSpy (dùng cho VS2019 trở đi) thì quá trình trace code sẽ đơn giản hơn nhiều</p>
@@ -2085,7 +2085,7 @@ if (!doNotTrack) {
 </div><ul>
 <li>Kết quả chương trình sau khi chạy:</li>
 </ul>
-<p><img src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%206.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%206.png"></p>
 <blockquote>
 <p><em><strong>Surrogate là gì?</strong></em></p>
 <p>Trong C#, Surrogate (đại diện) là một khái niệm liên quan đến quá trình tuần tự hóa (serialization) và phục hồi (deserialization) đối tượng.</p>
@@ -2105,7 +2105,7 @@ if (!doNotTrack) {
 </li>
 <li>
 <p>Do đó, chúng ta thấy, kết quả của <code>p.Age</code> được in ra là 0 thay vì 18 như trước đó. Lý do là vì chúng ta đã control quá trình serialize và deserialize của object <code>p</code>. Trong class <code>PersonSerializeSurrogate</code>, chỉ có field <code>name</code> được serialize và deserialize nên kết quả vẫn là <code>Edisc</code>. Còn giá trị của age là 0 vì đó là giá trị mặc định khi không được deserialize.</p>
-<p><img src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%207.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%207.png"></p>
 </li>
 <li>
 <p>Một tính năng của proxy selector cần lưu ý ở đây là: <em><strong>proxy selector có thể được dùng để serialization và deserialization bất kì class nào kể cả những class không đánh dấu serialized [Serializable]</strong></em></p>
@@ -2113,7 +2113,7 @@ if (!doNotTrack) {
 </ul>
 <p>Quay lại ví dụ ban đầu, khi chúng ta sử dụng proxy selector, class Person implements the serialization interface (notation: <code>[Serializable]</code>)</p>
 <p>Nếu ta xóa đi notation: <code>[Serializable]</code>. Chương trình vẫn chạy, đây là một tính năng của việc chọn proxy.</p>
-<p><img src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%208.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%208.png"></p>
 <ul>
 <li>Trong quá trình deserialize, luôn có 1 quá trình xem xét liệu class có thể seralize hay không? Điều này dẫn tới một vấn đề: <em><strong>Một class được serialize nhưng khi deserialize nó không thể deserialize proxy selector được implement bởi chúng ta.</strong></em></li>
 </ul>
@@ -2281,7 +2281,7 @@ if (!doNotTrack) {
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>Kết quả khi chạy chương trình:</p>
-<p><img src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%209.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%209.png"></p>
 <p>Ở đoạn code cũ, chúng ta dùng câu lệnh (dòng 64)</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -2293,7 +2293,7 @@ if (!doNotTrack) {
 </div>
 </div><p>Câu lệnh này sẽ sử dụng method <code>SetObjectData()</code> được định nghĩa trong class <code>PersonSerializeSurrogate</code> của chúng ta. Còn với đoạn code mới, object <code>fmt2</code> sử dụng <code>native deserialzation</code> do đó, có lỗi xảy ra.</p>
 <p>Lý do là khi parsing object trong deserializaed soap data, nó sẽ gọi method <code>CheckSerializable</code> đầu tiên để xác định xem liệu Object muốn parse có thể serializable không.</p>
-<p><img src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%2010.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%2010.png"></p>
 <p>Class <code>Person</code> trong đoạn mã không thể serialized do <strong>không implement interface ISerializable</strong> hoặc <strong>không có các thuộc tính được đánh dấu [Serializable]</strong>. Khi một object được serialize, nó cần đáp ứng một số yêu cầu để đảm bảo quá trình serialize và deserialize object được thực hiện thành công.</p>
 <p>Trong trường hợp này, <strong>class Person không implemnet ISerializable và không có thuộc tính [Serializable]</strong> . Do đó, object Person sẽ cố gắng serialize bằng cách sử dụng SoapFormatter, quá trình này không thành công và gây ra lỗi.</p>
 <blockquote>
@@ -2310,30 +2310,30 @@ if (!doNotTrack) {
 </li>
 <li>
 <p>Với <code>ISerializationSurrogate</code>, hãy quay lại ví dụ ở phần trước:</p>
-<p><img src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%2011.png" alt="Untitled" /></p>
-<p><img src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%2012.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%2011.png"></p>
+<p><img alt="Untitled" src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%2012.png"></p>
 <ul>
 <li>Dễ thấy, class <code>PersonSerializeSurrogate</code> của chúng ta implemnet lại interface <code>ISerializationSurrogate</code>. Hãy debug với DnSpy64:
 <ul>
 <li>
 <p>Đầu tiên, chúng ta chạy code để build ra file .exe</p>
-<p><img src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%2013.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%2013.png"></p>
 </li>
 <li>
 <p>Load file .exe và các thư viện liên quan vào dnspy64</p>
-<p><img src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%2014.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%2014.png"></p>
 </li>
 <li>
 <p>Đặt breakpoint và nhấn F5, tại ô Executable, trỏ đến file .exe mà chúng ta muốn thực thi</p>
-<p><img src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%2015.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%2015.png"></p>
 </li>
 <li>
 <p>Thế là debug thôi:</p>
-<p><img src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%2016.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%2016.png"></p>
 <ul>
 <li>Èo, DnSpy bảo là nên dùng bản 32bit để chạy. Vậy thì đổi thôi</li>
 </ul>
-<p><img src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%2017.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%2017.png"></p>
 <ul>
 <li>Ngon lành!! Vậy debug thôi</li>
 </ul>
@@ -2342,88 +2342,88 @@ if (!doNotTrack) {
 </li>
 <li>Đặt breakpoint tại  <code>soapFormatter.Serialize(stream, person)</code></li>
 </ul>
-<p><img src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%2018.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%2018.png"></p>
 <ul>
 <li>Trace, ta sẽ thấy <code>System.Runtime.Serialization.Formatters.Soap.WriteObjectInfo.InitSerialize()</code> được gọi</li>
 </ul>
-<p><img src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%2019.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%2019.png"></p>
 <ul>
 <li>Đến dòng 79:</li>
 </ul>
-<p><img src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%2020.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%2020.png"></p>
 <p><em><strong>Ta thấy field <code>m_surrogates</code> của <code>SurrogateSelector</code> có một element là <code>SoapDeserialization.PersonSerializeSurrogate</code>. Đây là class mà chúng ta implement!!!</strong></em></p>
 </li>
 <li>
 <p>Với <code>SurrogateSelector</code> proxy selector,hãy chỉnh sửa ví dụ trước đó một tí:</p>
-<p><img src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%2021.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%2021.png"></p>
 <blockquote>
 <p>Trong ví dụ, dễ thấy đang có lỗi xảy ra ở dòng 59. Lý do là thiếu lib. Để fix lỗi này ta chỉ cần thêm thư viện <strong>System.Configuration</strong></p>
 </blockquote>
 <ul>
 <li>Tương tự với ở trên, ta cũng debug</li>
 </ul>
-<p><img src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%2022.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%2022.png"></p>
 <ul>
 <li>Nhìn vào đây, ta thấy <code>SurrogateSelector</code> chứa <code>ISerializationSurrogate</code> và tất cả các  object của  ISerializationSurrogate đều là member của field m_surrogates của SurrogateSelector.</li>
 </ul>
-<p><img src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%2023.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%2023.png"></p>
 <p>Vậy điều này có nghĩa gì?</p>
 <blockquote>
 <p><em><strong>Khi chúng ta sử dụng <code>surrogateSelector.GetSurrogate</code>, chúng ta implement GetSurrogate method trong SurrogateSelector object. Method GetSurrogate này có thể bị overwrite.</strong></em></p>
 </blockquote>
-<p><img src="https://media.makeameme.org/created/so-important-much.jpg" alt="https://media.makeameme.org/created/so-important-much.jpg" /></p>
+<p><img alt="https://media.makeameme.org/created/so-important-much.jpg" src="https://media.makeameme.org/created/so-important-much.jpg"></p>
 </li>
 </ul>
 <h3 id="2-activitysurrogateselector">2. <strong><strong>ActivitySurrogateSelector</strong></strong></h3>
 <ul>
 <li>
 <p>Bây giờ, hãy quay lại đoạn code ở phần SurrogateSelector</p>
-<p><img src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%2024.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%2024.png"></p>
 <p>Ta thấy <code>fmt2</code> không sử dụng proxy selector nhưng nó lại có thể deserialize mà không bị lỗi</p>
-<p><img src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%2025.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%2025.png"></p>
 <p>Tại sao vậy nhỉ???</p>
 </li>
 <li>
 <p>Cùng debug để hiểu rõ nguyên lý của <strong><strong>ActivitySurrogateSelector.</strong></strong> Tiếp tục với phần trước đó, ta có <strong>surrogateSelector chứa <code>MySurrogateSelector</code></strong></p>
 </li>
 </ul>
-<p><img src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%2026.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%2026.png"></p>
 <ul>
 <li>Đặt breakpoint tại <code>MySurrogateSelector</code> và tiếp tục, sẽ thấy <strong><code>surrogateSelector.GetSurrogate()</code></strong> ở dòng 79 sẽ gọi <code>MySurrogateSelector.GetSurrogate()</code></li>
 </ul>
-<p><img src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%2027.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%2027.png"></p>
 <ul>
 <li>Vì class Person không chỉ rõ được thuộc tính <code>[Serializable]</code> nên biến flag ở dòng 13 sẽ có giá trị <code>true</code> (vì type.IsSerializable=false). Do đó, nó sẽ vào dòng lệnh 17. Câu lệnh này sẽ trả về 1 instance của Object <code>ObjectSurrogate</code></li>
 </ul>
-<p><img src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%2028.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%2028.png"></p>
 <ul>
 <li>Quay lại dòng lệnh 79 của <code>InitSerialize()</code>. Vì <strong>surrogateSelector và this.serializationSurrogate</strong> khác null, nên chương trình sẽ vào điều kiện rẽ nhánh 1</li>
 </ul>
-<p><img src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%2029.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%2029.png"></p>
 <ul>
 <li>Tiếp tục chương trình, ta thấy dòng lệnh 84 được thực thi</li>
 </ul>
-<p><img src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%2030.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%2030.png"></p>
 <ul>
 <li>F11 để đi vào hàm bên trong, ta sẽ thấy nó đi vào hàm <code>ObjectSurrogate.GetObjectData()</code></li>
 </ul>
-<p><img src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%2031.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%2031.png"></p>
 <ul>
 <li>Tiếp tục đến dòng 155, info set type <code>ActivitySurrogateSelector.ObjectSurrogate.ObjectSerializedRef</code></li>
 </ul>
-<p><img src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%2032.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%2032.png"></p>
 <p><strong>Mặt khác, ta thấy <code>ObjectSerializedRef</code> là một class có thể serialize được.</strong></p>
-<p><img src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%2033.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%2033.png"></p>
 <p>Tiếp tục chương trình, ta thấy <code>[this.si](http://this.si)</code> sẽ có ObjectType là <code>**ObjectSerializedRef</code> - một class có thể Serialize được.**</p>
-<p><img src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%2034.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%2034.png"></p>
 <p>Dòng lệnh 86 và tiếp sau đó sẽ làm cho objectWriter trở thành 1 object có thể serialize</p>
-<p><img src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%2035.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%2035.png"></p>
 <ul>
 <li>Tiếp tục chương trình</li>
 </ul>
-<p><img src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%2036.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%2036.png"></p>
 <p>Đến đây, giá trị <code>stm</code> đã là một <strong>serialized object.</strong> Do đó, chương trình sẽ tiếp tục mà không bị lỗi</p>
-<p><img src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%2037.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%2037.png"></p>
 <blockquote>
 <p>NOTE:</p>
 <p>Trong đoạn code có sử dụng câu lệnh:</p>
@@ -2482,9 +2482,9 @@ if (!doNotTrack) {
 </div><ul>
 <li>khi chạy, output sẽ là</li>
 </ul>
-<p><img src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%2038.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%2038.png"></p>
 <p>và binary sau khi load vào dnspy sẽ được decompile như sau</p>
-<p><img src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%2039.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%2039.png"></p>
 <p>Trong đoạn code trên, câu lệnh:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -2508,7 +2508,7 @@ if (!doNotTrack) {
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>Format để gọi như trên được định nghĩa như sau:</p>
-<p><img src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%2040.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%2040.png"></p>
 <blockquote>
 <p>Để vào được định nghĩa như trên, tôi dùng extension <a href="https://marketplace.visualstudio.com/items?itemName=VladimirChirikov.GoToDnSpy">GoToDnSpy</a>. Khi ấn <code>ctrl + click</code> vào từ khóa <code>where</code> (Từ khóa <strong><code>Where</code></strong> trong C## là một phương thức được sử dụng trong thư viện LINQ), extension nafy sẽ dùng dnspy decompile code trong thư viện <code>System.Linq</code> (thư viện này hỗ trợ chạy LINQ) và show lên cho chúng ta</p>
 </blockquote>
@@ -2583,7 +2583,7 @@ if (!doNotTrack) {
 <li>Khi chúng ta thực hiện việc chọn (select) trên <strong><code>q1</code></strong>, truy vấn LINQ sẽ được thực thi và kết quả sẽ được trả về.</li>
 </ul>
 <p>Điều này có nghĩa là LINQ thực hiện trì hoãn (delayed execution), tức là việc xử lý truy vấn không xảy ra ngay lập tức khi truy vấn được khai báo, mà sẽ diễn ra chỉ khi kết quả cần được truy xuất (ví dụ: khi chúng ta thực hiện việc chọn - select). Điều này giúp tối ưu hiệu suất của ứng dụng và giảm thiểu việc thực hiện không cần thiết của các truy vấn LINQ. Nghe thì có vẻ khó hiểu, ta hãy nhìn vào bức ảnh này (tôi sưu tầm trên internet)</p>
-<p><img src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%2041.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%2041.png"></p>
 <blockquote>
 <p>Đây là tính chất quan trọng mà chúng ta sẽ dùng cho <strong>ActivitySurrogateSelector attack chain.</strong></p>
 </blockquote>
@@ -2613,7 +2613,7 @@ if (!doNotTrack) {
 </li>
 <li>
 <p>Từ ý tưởng này, Researcher James Forshaw đã thiết kế một chain deserialize như sau</p>
-<p><img src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%2042.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%2042.png"></p>
 </li>
 </ul>
 <h3 id="1-ienumerable-to-linq-exploit-chaining">1. <strong><strong>IEnumerable to LINQ exploit chaining</strong></strong></h3>
@@ -2801,11 +2801,11 @@ if (!doNotTrack) {
 </div><ul>
 <li>
 <p>Perfect, chạy thôi!!!!</p>
-<p><img src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%2043.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%2043.png"></p>
 <ul>
 <li>Ủa alo!!!! Calculator đâu??</li>
 </ul>
-<p><img src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%2044.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%2044.png"></p>
 </li>
 </ul>
 <p>Sau một hồi suy nghĩ tôi chợt nhớ!</p>
@@ -2862,19 +2862,19 @@ if (!doNotTrack) {
 <ul>
 <li>PageDataSource</li>
 </ul>
-<p><img src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%2045.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%2045.png"></p>
 <ul>
 <li>IDictionary</li>
 </ul>
-<p><img src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%2046.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%2046.png"></p>
 <ul>
 <li><strong>DesignerWeb</strong> kế thừa <strong>MenuCommand</strong></li>
 </ul>
-<p><img src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%2047.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%2047.png"></p>
 <ul>
 <li>Trong MenuCommand thì chú ý tới dòng 17</li>
 </ul>
-<p><img src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%2048.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%2048.png"></p>
 <ul>
 <li>Từ những dữ kiện trên, tôi đơn giản thành đoạn code như sau:</li>
 </ul>
@@ -2969,12 +2969,12 @@ if (!doNotTrack) {
 </li>
 <li>
 <p>Để gọi <code>ToString()</code> method thì chỉ cần dùng <code>verb.ToString()</code></p>
-<p><img src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%2049.png" alt="Untitled" /></p>
-<p><img src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%2050.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%2049.png"></p>
+<p><img alt="Untitled" src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%2050.png"></p>
 </li>
 </ul>
 <p>Oke, chạy thử thôi</p>
-<p><img src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%2051.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%2051.png"></p>
 <p>Gòi gòi đây gòi!! Ca cu lay tờ của tui đây rồi.!!</p>
 <p>Có nghĩa đến đây, <code>ToString()</code> đã trigger LINQ, ExploitClass được thực thi và calc đã được bật. Đi tiếp thôi.</p>
 </li>
@@ -2986,26 +2986,26 @@ if (!doNotTrack) {
 </ul>
 <blockquote>
 <p>FUN: Thấy HashTable làm tôi nghĩ ngay tới các commonsCollection trong Java Deserialize, HashTable cũng được dùng trong cc7</p>
-<p><img src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%2052.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%2052.png"></p>
 </blockquote>
 <ul>
 <li>
 <p>Hãy xem HashTable có gì?</p>
-<p><img src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%2053.png" alt="Untitled" /></p>
-<p><img src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%2054.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%2053.png"></p>
+<p><img alt="Untitled" src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%2054.png"></p>
 </li>
 <li>
 <p>Trong <code>HashTable</code> có một method <code>public virtual void OnDeserialization(object sender);</code>Dùng dnspy để xem</p>
 </li>
 </ul>
-<p><img src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%2055.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%2055.png"></p>
 <p>Trong quá trình Deserialize, HashTable sẽ rebuild lại tập key và insert.</p>
 <p>Trong <code>Insert()</code>, nếu như key bị duplicated, chương trình deserialize fail, quăng ra lỗi</p>
-<p><img src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%2056.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%2056.png"></p>
 <p><strong>Block_12:</strong></p>
-<p><img src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%2057.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%2057.png"></p>
 <p>Và <code>Environment.GetResourceString()</code> được gọi</p>
-<p><img src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%2058.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%2058.png"></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -3351,34 +3351,34 @@ if (!doNotTrack) {
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><img src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%2059.png" alt="Untitled" /></p>
+</div><p><img alt="Untitled" src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%2059.png"></p>
 <p>Ôi Khoan!! có lỗi ở đây.</p>
 <p>Đến thời điểm này tôi cũng không biết vì sao. Tuy nhiên, tôi thấy bộ công cụ nổi tiếng <a href="http://ysoserial.net">ysoserial.net</a> sử dụng <strong><strong>System.Windows.Forms.AxHost.State handling</strong></strong> để xử lý phần lỗi xảy ra ở chain này</p>
-<p><img src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%2060.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%2060.png"></p>
 <p>Cụ thể, khi thêm phần handling của <strong><strong>System.Windows.Forms.AxHost.State:</strong></strong></p>
-<p><img src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%2061.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%2061.png"></p>
 <ul>
 <li>Khi <code>enumerator.Name = PropertyBagBinary</code>, câu lệnh tại dòng <code>7228</code> được thực thi</li>
 </ul>
-<p><img src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%2062.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%2062.png"></p>
 <ul>
 <li>Đến đây thì stream sẽ được deserialize. Đây cũng là endpoint của 1 chain khác <strong><code>AxHostState attack chain</code></strong></li>
 </ul>
 <p>Nhưng như thế thì liên quan gì đến đoạn code ban đầu của chúng ta? Tại sao không thêm đoạn này thì lại bị lỗi? Điều chúng ta cần đâu phải hàm Deserialize này vì trong đoạn code đã deserialize rồi mà??</p>
 <p>Tôi quyết định dùng DNSpy để decode.Chương trình đã vào phần xử lý lỗi khi deserialize Hashtable vì duplicate.</p>
-<p><img src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%2063.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%2063.png"></p>
 <p>Cứ tiếp tục và thấy</p>
-<p><img src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%2064.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%2064.png"></p>
 <p>oh, Tôi đã hiểu! Các bạn còn nhớ để trigger <code>ToString()</code> ta phải làm cho quá trình deserialize của HashTable bị lỗi, nhảy vào exception để trigger ToString() chứ? Exception này là do nó trả về trước khi malicious của chúng ta execute nên đã nhận thông báo lỗi.</p>
 <p>Do đó, <a href="http://ysoserial.net">ysoserial.net</a> sử dụng <strong><strong>System.Windows.Forms.AxHost.State</strong></strong> để xử lý lỗi này, cụ thể khi bị trigger lỗi, hàm này sẽ xử lý. Trong payload, ta set</p>
-<p><img src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%2065.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%2065.png"></p>
 <p>khi đó, <code>this.proBag.Read()</code> được gọi với stream là payload của mình</p>
-<p><img src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%2066.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%2066.png"></p>
 <ul>
 <li>Đến đây thì payload sẽ được deserialize 1 lần nữa</li>
 </ul>
-<p><img src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%2067.png" alt="Untitled" /></p>
-<p><img src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%2068.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%2067.png"></p>
+<p><img alt="Untitled" src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%2068.png"></p>
 <ul>
 <li>Khúc này khá ảo. Theo như tôi hiểu, lần đầu deserialize thì sẽ bị lỗi, chúng ta thêm <strong><strong>System.Windows.Forms.AxHost.State</strong></strong> để handle error này</li>
 <li>Khi handle error này, payload của chúng ta được deserialize 1 lần nữa. Mà lần deserialize này do đã add handle exception trước đó rồi, nên error sẽ không  bị văng ra và malicious sẽ được execute.</li>
@@ -3654,7 +3654,7 @@ if (!doNotTrack) {
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><img src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%2069.png" alt="Untitled" /></p>
+</div><p><img alt="Untitled" src="/images/posts/DOT_NET_101_SoapFormatter_ActivitySurrogateSelector/Untitled%2069.png"></p>
 <h2 id="vi-tổng-kết">VI Tổng kết</h2>
 <ul>
 <li>Vậy là đi qua chain này rồi, tới đây và tại thời điểm này tôi nghĩ mình đã hiểu được 90-95% chain này.</li>
@@ -3711,7 +3711,7 @@ if (!doNotTrack) {
     </article>
     
     
-<script defer src="/js/clipboard.min.c168d3a04c45a631be76437054619a4a3b30107960cb9730be96012fef5762b0.js"></script>
+<script defer src="/js/clipboard.min.1626706afc88d95ebe1173b553ec732c6dc82a576989315fdf5e7779af738a44.js"></script>
 
 <script defer src="/js/helper/prev.min.js"></script>
 
@@ -4182,7 +4182,7 @@ if (!doNotTrack) {
 </div>
 
 
-<script defer src="/js/swipe.min.7be2debdadbc35f9430de39f9010d89df5aee1904747098818b5c01cd0672180.js"></script>
+<script defer src="/js/swipe.min.feb438efb7ca009ecd7fc2ac3ad2fced4840990b2798d81f87137f2dc6281f05.js"></script>
 
 <script defer src="/js/micromodal.min.de01b44b2f383056bbcaf6ee921fd385d79108ec1129afd0eb2f3f5a07e11f45.js"></script>
 
@@ -5187,7 +5187,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 
             <p class="caption">
                 
-                    ©2023, All Rights Reserved
+                    ©2025, All Rights Reserved
                 
             </p>
         

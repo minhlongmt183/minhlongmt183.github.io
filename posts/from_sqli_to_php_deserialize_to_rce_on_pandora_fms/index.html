@@ -10,13 +10,13 @@
 
 
   
-  <script defer src="/js/fuse.min.8dfbf8696f107ab8b55732efbb04c5c51576692a4a2cce6effef9f6e92d341a7.js"></script>
+  <script defer src="/js/fuse.min.32195737929df2c8096e855a5789cbb3f1331224d9169e8705493e7008f47df8.js"></script>
 
 
 
-<script src="/js/enquire.min.aa37bdcb743826eecdae5c5d177fc7d6552340f1b4378ffaa9c82b2c6111400b.js"></script>
+<script src="/js/enquire.min.dfb99dee1e029d51d6cfb672d847929890b1585402de17f5ed092edd72a688b4.js"></script>
 
-<script defer src="/js/lazysizes.min.498676c34eb225e85357ab0ce19c3c1244f3bd0bf595e5684d1b9d50ea4fbc42.js"></script>
+<script defer src="/js/lazysizes.min.fb649fcae62177dfe63e67081ddceb830b5ce1f05a4184e9bbb7d87ac4b8f4e5.js"></script>
 
 <script defer src="/js/helper/getParents.min.086022fb02d7a1517e33c2670bffb976b3e80bcacd9caeee0c6a586064f20e42.js"></script>
 
@@ -1380,7 +1380,7 @@ if (!doNotTrack) {
 </script>
 
   
-<script type="application/javascript">
+<script>
 var doNotTrack = false;
 if (!doNotTrack) {
 	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
@@ -1700,7 +1700,7 @@ if (!doNotTrack) {
   🏷️
   
 
-  <li><a href="https://minhlongmt183.github.io/tags/php/" class="single__tag" title="php">#php</a></li>
+  <li><a href="https://minhlongmt183.github.io/tags/php/" class="single__tag" title="Php">#Php</a></li>
 
 </ul>
 
@@ -1988,16 +1988,16 @@ if (!doNotTrack) {
 <ul>
 <li>The used payload is</li>
 </ul>
-<p><img src="/images/posts/From_SQLi_to_PHP_deserialize_to_RCE_on_Pandora_FMS/Untitled.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/From_SQLi_to_PHP_deserialize_to_RCE_on_Pandora_FMS/Untitled.png"></p>
 <ul>
 <li>The value of SQL query by debugging:</li>
 </ul>
-<p><img src="/images/posts/From_SQLi_to_PHP_deserialize_to_RCE_on_Pandora_FMS/Untitled%201.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/From_SQLi_to_PHP_deserialize_to_RCE_on_Pandora_FMS/Untitled%201.png"></p>
 <ul>
 <li>Đây là dấu hiệu của SQLi, bây giờ chúng ta thử truyền vào những kí tự break xem sao</li>
 <li>This is a signature of a SQL Injection attack. Now, we will use a payload with some ‘break characters’ and observe the results:</li>
 </ul>
-<p><img src="/images/posts/From_SQLi_to_PHP_deserialize_to_RCE_on_Pandora_FMS/Untitled%202.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/From_SQLi_to_PHP_deserialize_to_RCE_on_Pandora_FMS/Untitled%202.png"></p>
 <ul>
 <li>It doesn’t have any function to filter my payload! Nice!</li>
 <li>This following payload will make the WHERE clause always true and add a <code>#</code> to comment out any characters following it, if the program allows it.</li>
@@ -2081,7 +2081,7 @@ if (!doNotTrack) {
 <li>This function adds the string <code>' LIMIT 1'</code> to retrieve the first value. It executes the <code>db_get_all_rows_sql($sql, $search_history_db)</code> function, saves the output to the <code>$result</code> array and returns the <code>result[0]</code>.</li>
 <li>I tried sending my payload and retrieving data directly from MySQL to observe the results:</li>
 </ul>
-<p><img src="/images/posts/From_SQLi_to_PHP_deserialize_to_RCE_on_Pandora_FMS/Untitled%203.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/From_SQLi_to_PHP_deserialize_to_RCE_on_Pandora_FMS/Untitled%203.png"></p>
 <ul>
 <li>It is clear that sessions that did not successfully log in will a have null value in the ‘data’ field, while sessions with successful logins will have data stored in this field. So we can use this payload to exploit</li>
 </ul>
@@ -2250,7 +2250,7 @@ if (!doNotTrack) {
 </div>
 </div></li>
 </ul>
-<p><img src="/images/posts/From_SQLi_to_PHP_deserialize_to_RCE_on_Pandora_FMS/Untitled%204.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/From_SQLi_to_PHP_deserialize_to_RCE_on_Pandora_FMS/Untitled%204.png"></p>
 <ul>
 <li>
 <p>These values are in the form of serialized strings. So, the attack vector here would be as follows:</p>
@@ -2300,7 +2300,7 @@ if (!doNotTrack) {
 <p>By doing this, I have successfully gained control over the value passed to the <code>session_decode()</code> function. Now we can move on the next step, which is building the exploit.</p>
 </li>
 </ul>
-<p><img src="/images/posts/From_SQLi_to_PHP_deserialize_to_RCE_on_Pandora_FMS/Untitled%205.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/From_SQLi_to_PHP_deserialize_to_RCE_on_Pandora_FMS/Untitled%205.png"></p>
 <h4 id="b-building-a-pop-chain">b. Building a POP chain.</h4>
 <h5 id="a-methology"><strong>a. Methology:</strong></h5>
 <ul>
@@ -2696,11 +2696,11 @@ bytes we can use a similar technique to cause the session file to be a valid Pha
 <p>The phpgcc tool provides a chain to exploit the vendor <code>Swiftmailer</code>, which Pandora is using. We can build an exploit chain using it. However, one issue we encountered is that the <code>session_decode()</code> function does not load <code>Swiftmailer</code>, causing the classes and objects of that class to be unreadable, resulting in the payload being unable to execute.</p>
 </li>
 </ul>
-<p><img src="/images/posts/From_SQLi_to_PHP_deserialize_to_RCE_on_Pandora_FMS/Untitled%206.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/From_SQLi_to_PHP_deserialize_to_RCE_on_Pandora_FMS/Untitled%206.png"></p>
 <ul>
 <li>After a period of research, I discovered that the payload passed into the session is stored in the database. Each time the website is accessed, the session is loaded and decoded. At that point, our payload will be deserialized. With this mindset, after injecting the session into the database, we only need to access a location that loads the vendor to exploit it. In this case, it is the path <code>ws.php</code>.</li>
 </ul>
-<p><img src="/images/posts/From_SQLi_to_PHP_deserialize_to_RCE_on_Pandora_FMS/Untitled%207.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/From_SQLi_to_PHP_deserialize_to_RCE_on_Pandora_FMS/Untitled%207.png"></p>
 <p>For more details about the deserialization vulnerability in the Swiftmailer vendor, you can refer to the following link: <strong><a href="https://github.com/CFandR-github/advisory/blob/main/phpmailer_rce_poi/phpmailer_unserialize_rce_0day.md">https://github.com/CFandR-github/advisory/blob/main/phpmailer_rce_poi/phpmailer_unserialize_rce_0day.md</a></strong></p>
 <p>Sure, let’s proceed with building the payload and exploit. One thing to note here is that there is a difference between the exploitation payload for this context and the payload used in PHPGCC.</p>
 <p>Additionally, there are differences in the construction of the serialized string with various properties.</p>
@@ -3031,7 +3031,7 @@ bytes we can use a similar technique to cause the session file to be a valid Pha
     </article>
     
     
-<script defer src="/js/clipboard.min.c168d3a04c45a631be76437054619a4a3b30107960cb9730be96012fef5762b0.js"></script>
+<script defer src="/js/clipboard.min.1626706afc88d95ebe1173b553ec732c6dc82a576989315fdf5e7779af738a44.js"></script>
 
 <script defer src="/js/helper/prev.min.js"></script>
 
@@ -3517,7 +3517,7 @@ bytes we can use a similar technique to cause the session file to be a valid Pha
 </div>
 
 
-<script defer src="/js/swipe.min.7be2debdadbc35f9430de39f9010d89df5aee1904747098818b5c01cd0672180.js"></script>
+<script defer src="/js/swipe.min.feb438efb7ca009ecd7fc2ac3ad2fced4840990b2798d81f87137f2dc6281f05.js"></script>
 
 <script defer src="/js/micromodal.min.de01b44b2f383056bbcaf6ee921fd385d79108ec1129afd0eb2f3f5a07e11f45.js"></script>
 
@@ -4522,7 +4522,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 
             <p class="caption">
                 
-                    ©2023, All Rights Reserved
+                    ©2025, All Rights Reserved
                 
             </p>
         

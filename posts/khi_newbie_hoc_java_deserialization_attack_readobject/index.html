@@ -10,13 +10,13 @@
 
 
   
-  <script defer src="/js/fuse.min.8dfbf8696f107ab8b55732efbb04c5c51576692a4a2cce6effef9f6e92d341a7.js"></script>
+  <script defer src="/js/fuse.min.32195737929df2c8096e855a5789cbb3f1331224d9169e8705493e7008f47df8.js"></script>
 
 
 
-<script src="/js/enquire.min.aa37bdcb743826eecdae5c5d177fc7d6552340f1b4378ffaa9c82b2c6111400b.js"></script>
+<script src="/js/enquire.min.dfb99dee1e029d51d6cfb672d847929890b1585402de17f5ed092edd72a688b4.js"></script>
 
-<script defer src="/js/lazysizes.min.498676c34eb225e85357ab0ce19c3c1244f3bd0bf595e5684d1b9d50ea4fbc42.js"></script>
+<script defer src="/js/lazysizes.min.fb649fcae62177dfe63e67081ddceb830b5ce1f05a4184e9bbb7d87ac4b8f4e5.js"></script>
 
 <script defer src="/js/helper/getParents.min.086022fb02d7a1517e33c2670bffb976b3e80bcacd9caeee0c6a586064f20e42.js"></script>
 
@@ -1380,7 +1380,7 @@ if (!doNotTrack) {
 </script>
 
   
-<script type="application/javascript">
+<script>
 var doNotTrack = false;
 if (!doNotTrack) {
 	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
@@ -1700,7 +1700,7 @@ if (!doNotTrack) {
   🏷️
   
 
-  <li><a href="https://minhlongmt183.github.io/tags/java/" class="single__tag" title="java">#java</a></li>
+  <li><a href="https://minhlongmt183.github.io/tags/java/" class="single__tag" title="Java">#Java</a></li>
 
 </ul>
 
@@ -1719,7 +1719,7 @@ if (!doNotTrack) {
 </li>
 <li>
 <p>Tôi kết thúc học tập về chain exploit Apache Commons Collection với một mindmap như sau:</p>
-<p><img src="/images/posts/Khi_newbie_hoc_Java_deserialization_attack_readObject/Untitled.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/Khi_newbie_hoc_Java_deserialization_attack_readObject/Untitled.png"></p>
 </li>
 <li>
 <p>Vì dạo gần đây cũng có vài task liên quan về việc present và viết blog để improve kĩ năng, nên tôi cũng tận dụng để viết luôn, với hai mục tiêu chính:</p>
@@ -1739,7 +1739,7 @@ if (!doNotTrack) {
 <ul>
 <li>
 <p>Xuất phát từ việc các ứng dụng giao tiếp, truyền dữ liệu dưới dạng byte.</p>
-<p><img src="/images/posts/Khi_newbie_hoc_Java_deserialization_attack_readObject/Untitled%201.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/Khi_newbie_hoc_Java_deserialization_attack_readObject/Untitled%201.png"></p>
 </li>
 <li>
 <p>Hiện nay một ứng dụng điển hình sẽ có nhiều thành phần và sẽ được phân phối trên các hệ thống và mạng khác nhau. Trong Java, mọi thứ được biểu diễn dưới dạng các Object. Nếu hai thành phần Java muốn giao tiếp với nhau, cần phải có một cơ chế để trao đổi dữ liệu. Mỗi đối tượng trong Java sẽ có các kiểu đối tượng khác nhau gây khó khăn trong việc trao đổi dữ liệu. Do đó, cần phải có một giao thức chung chung và hiệu quả để chuyển đối tượng giữa các thành phần.</p>
@@ -1748,7 +1748,7 @@ if (!doNotTrack) {
 <blockquote>
 <p>Serialization được định nghĩa cho mục đích này, và các thành phần Java sử dụng giao thức này để chuyển các đối tượng</p>
 </blockquote>
-<p><img src="/images/posts/Khi_newbie_hoc_Java_deserialization_attack_readObject/Untitled%202.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/Khi_newbie_hoc_Java_deserialization_attack_readObject/Untitled%202.png"></p>
 <p>Thông qua hình ảnh minh họa ở trên, ta có thể hiểu</p>
 <blockquote>
 <p>Serialization là quá trình chuyển Object thành ByteStream. Deserialization là quá trình ngược với Serialization.</p>
@@ -1756,11 +1756,11 @@ if (!doNotTrack) {
 <ul>
 <li><strong>Insecure Deserialization</strong> <em>là khi dữ liệu do người dùng kiểm soát được deserialize bởi một trang web</em>. Điều này có khả năng cho phép kẻ tấn công thao túng các đối tượng được serialize để truyền dữ liệu có hại vào code ứng dụng. Thậm chí có thể thay thế một đối tượng được serialize bằng một đối tượng của một lớp hoàn toàn khác. Một điểm cần lưu ý ở đây, các đối tượng của bất kỳ lớp nào có sẵn cho trang web sẽ được deserialize và khởi tạo. Vì lý do này, insecure deserialization đôi khi được gọi là lỗ hổng &ldquo;<strong>object injection”</strong></li>
 </ul>
-<p><img src="/images/posts/Khi_newbie_hoc_Java_deserialization_attack_readObject/Untitled%203.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/Khi_newbie_hoc_Java_deserialization_attack_readObject/Untitled%203.png"></p>
 <ul>
 <li>Vì đã có kiến thức về PHP deserialization attack, nên tôi bắt đầu với một ảnh minh họa mô hình tấn công trong PHP deserialization:</li>
 </ul>
-<p><img src="/images/posts/Khi_newbie_hoc_Java_deserialization_attack_readObject/Untitled%204.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/Khi_newbie_hoc_Java_deserialization_attack_readObject/Untitled%204.png"></p>
 <p>Attacker truyền vào payload serialized Object và webserver đã deserialize payload này. Điều này cho phép kẻ tấn công có thể thực thi câu lệnh</p>
 <ul>
 <li>
@@ -1768,13 +1768,13 @@ if (!doNotTrack) {
 <ol>
 <li>
 <p>Application Vulnerability: Tại bước này, attacker phải tìm được endpoint (source) để truyền dữ liệu vào và một hàm sink thực hiện deserialize dữ liệu của attacker. Trong PHP hàm sink này là <code>unserialize()</code> còn trong Java thì nó là <code>readObject()</code>.</p>
-<p><img src="/images/posts/Khi_newbie_hoc_Java_deserialization_attack_readObject/Untitled%205.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/Khi_newbie_hoc_Java_deserialization_attack_readObject/Untitled%205.png"></p>
 </li>
 <li>
 <p>Exploit chain: Tại bước này, <code>readObject()</code> ở bước trước sẽ từ sink trở thành source và sink sẽ là mục tiêu của attacker (có thể là RCE, tạo file,…). Với newbie, chúng ta sẽ tập trung vào exploit chain để rèn luyện các kĩ năng cơ bản, cụ thể là <strong>Apache CommonsCollections</strong></p>
 </li>
 </ol>
-<p><img src="/images/posts/Khi_newbie_hoc_Java_deserialization_attack_readObject/Untitled%206.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/Khi_newbie_hoc_Java_deserialization_attack_readObject/Untitled%206.png"></p>
 </li>
 </ul>
 <h2 id="iii-readobject-native">III. readObject() native</h2>
@@ -1926,11 +1926,11 @@ if (!doNotTrack) {
 <p>Trong class <code>User.java</code>, chúng ta chú ý đoạn code từ <strong>dòng 17-20.</strong> Khi không có dòng code này, kết quả sẽ như sau:</p>
 </li>
 </ul>
-<p><img src="/images/posts/Khi_newbie_hoc_Java_deserialization_attack_readObject/Untitled%207.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/Khi_newbie_hoc_Java_deserialization_attack_readObject/Untitled%207.png"></p>
 <ul>
 <li>Còn khi có đoạn code:</li>
 </ul>
-<p><img src="/images/posts/Khi_newbie_hoc_Java_deserialization_attack_readObject/Untitled%208.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/Khi_newbie_hoc_Java_deserialization_attack_readObject/Untitled%208.png"></p>
 <ul>
 <li>Bạn thấy chứ? khi chúng ta implement readObject thì định nghĩa của hàm này sẽ bị overwrite và data trả về là <code>null, 0</code> chứ không như default. Một lưu ý ở đây là kiểu dữ liệu <code>private</code> và param là <em><code>java.io.ObjectInputStream stream</code>.</em></li>
 </ul>
@@ -1938,11 +1938,11 @@ if (!doNotTrack) {
 <ul>
 <li>Đầu tiên, chương trình sẽ gọi <code>readObject()</code> của <code>ObjectInputStream.java</code></li>
 </ul>
-<p><img src="/images/posts/Khi_newbie_hoc_Java_deserialization_attack_readObject/Untitled%209.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/Khi_newbie_hoc_Java_deserialization_attack_readObject/Untitled%209.png"></p>
 <ul>
 <li>Tại dòng 373, method <code>ObjectInputStream#readObject0()</code>sẽ được gọi</li>
 </ul>
-<p><img src="/images/posts/Khi_newbie_hoc_Java_deserialization_attack_readObject/Untitled%2010.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/Khi_newbie_hoc_Java_deserialization_attack_readObject/Untitled%2010.png"></p>
 <p>Đoạn mã trên chịu trách nhiệm đọc các object từ input. Cụ thể:</p>
 <ol>
 <li><strong><code>boolean oldMode = bin.getBlockDataMode();</code></strong>: Ở đây, biến <strong><code>oldMode</code></strong> được sử dụng để lưu trạng thái hiện tại của chế độ dữ liệu khối (block data mode) trong đối tượng <strong><code>bin</code></strong> (một đối tượng <strong><code>BlockDataInputStream</code></strong>).</li>
@@ -1959,14 +1959,14 @@ if (!doNotTrack) {
 <ul>
 <li>Tiếp tục chương trình,  dòng lệnh 1353 được thực thi:</li>
 </ul>
-<p><img src="/images/posts/Khi_newbie_hoc_Java_deserialization_attack_readObject/Untitled%2011.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/Khi_newbie_hoc_Java_deserialization_attack_readObject/Untitled%2011.png"></p>
 <ul>
 <li>Tại đây, <code>ObjectInputStream#readOrdinaryObject()</code> được gọi</li>
 </ul>
-<p><img src="/images/posts/Khi_newbie_hoc_Java_deserialization_attack_readObject/Untitled%2012.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/Khi_newbie_hoc_Java_deserialization_attack_readObject/Untitled%2012.png"></p>
 <p>Chú ý dòng 1781 và 1782. Tại dòng 1781, hàm <code>readClassDesc()</code> được gọi để trả về một descriptor, giá trị lưu vào biến <code>desc</code>. Sau đó, biến này sẽ kiểm tra xem có thể deserialize không. Tiếp sau đó, tại dòng lệnh <strong>1805-1809,</strong> hàm <code>readSerialData(obj, desc)</code> sẽ được gọi. Dễ đoán được, hàm này xử lý, chuyển đổi từ bytestream sang object.</p>
 <p>Tôi đi vào hàm <code>readClassDesc()</code> để xem thử thế nào:</p>
-<p><img src="/images/posts/Khi_newbie_hoc_Java_deserialization_attack_readObject/Untitled%2013.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/Khi_newbie_hoc_Java_deserialization_attack_readObject/Untitled%2013.png"></p>
 <p>Tới đây chúng ta sẽ xuất hiện một đơn vị kiến thúc mới là: <strong>Proxy và nonProxy</strong></p>
 <h3 id="31-proxy-vs-nonproxy">3.1 Proxy vs nonProxy</h3>
 <hr />
@@ -1981,34 +1981,34 @@ if (!doNotTrack) {
 <p>Việc sử dụng non-proxy serialization <em><strong>thích hợp trong những trường hợp đơn giản</strong></em>, khi không có yêu cầu đặc biệt về việc kiểm soát truy cập hoặc xử lý trạng thái của đối tượng.</p>
 <p>Trong cả hai trường hợp, proxy và non-proxy serialization đều cung cấp khả năng serialize và deserialization các đối tượng Java. Tuy nhiên, việc chọn giữa hai phương pháp này phụ thuộc vào yêu cầu và mục đích sử dụng của bạn trong việc lưu trữ và khôi phục dữ liệu đối tượng.</p>
 <p>Tiếp tục với chương trình,</p>
-<p><img src="/images/posts/Khi_newbie_hoc_Java_deserialization_attack_readObject/Untitled%2014.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/Khi_newbie_hoc_Java_deserialization_attack_readObject/Untitled%2014.png"></p>
 <p>Hàm <code>readNonProxyDesc()</code> sẽ được gọi,</p>
-<p><img src="/images/posts/Khi_newbie_hoc_Java_deserialization_attack_readObject/Untitled%2015.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/Khi_newbie_hoc_Java_deserialization_attack_readObject/Untitled%2015.png"></p>
 <p>Trong <code>ObjectInputStream#readNonProxyDesc()</code>, tại dòng 1609, hàm <code>readClassDescriptor()</code> trả về <code>nativeReadObject.User</code>, lưu vào biến <code>readDesc</code>.</p>
 <p>Tại dòng 1620, <code>resolveClass()</code> được gọi để phân giải <code>readDesc</code>, lưu vào biến <code>cl</code>.</p>
-<p><img src="/images/posts/Khi_newbie_hoc_Java_deserialization_attack_readObject/Untitled%2016.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/Khi_newbie_hoc_Java_deserialization_attack_readObject/Untitled%2016.png"></p>
 <p>Đến dòng 1630, chương trình sẽ initNonProxy với các tham số <code>readDesc, cl, resolveEx, readClassDesc(false)</code></p>
-<p><img src="/images/posts/Khi_newbie_hoc_Java_deserialization_attack_readObject/Untitled%2017.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/Khi_newbie_hoc_Java_deserialization_attack_readObject/Untitled%2017.png"></p>
 <p>Sau đó, <code>desc</code> sẽ được return ở dòng 1634.</p>
 <p>Tiếp tục với chương trình <code>ObjectInputStream#readOrdinaryObject</code>. Sau khi có được class descriptor trong biến <code>desc</code>, chương trình sẽ tiếp tục thực thi. Ở dây, ta chú ý biến <code>obj</code> được tạo mới thông qua <code>desc.newInstance()</code>.Sau đó truyền vào hàm <code>readSerialData(obj, desc)</code></p>
-<p><img src="/images/posts/Khi_newbie_hoc_Java_deserialization_attack_readObject/Untitled%2018.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/Khi_newbie_hoc_Java_deserialization_attack_readObject/Untitled%2018.png"></p>
 <p>Hàm <code>readSerialData</code></p>
-<p><img src="/images/posts/Khi_newbie_hoc_Java_deserialization_attack_readObject/Untitled%2019.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/Khi_newbie_hoc_Java_deserialization_attack_readObject/Untitled%2019.png"></p>
 <p>Dòng 1899 kiểm tra xem <code>readObject()</code> có bị overwrite hay không. Nếu có khối lệnh 1900-1940 được gọi. Nếu không, hàm <code>defaultReadFields()</code> được gọi.</p>
 <blockquote>
 <p>Điều này giải thích tại sao khi chúng ta thêm hàm <code>private readObject()</code> ở ví dụ đầu thì output trả về lại khác.</p>
 </blockquote>
 <p>Vì chúng ta đang debug với ngữ cảnh có overwrite, nên</p>
-<p><img src="/images/posts/Khi_newbie_hoc_Java_deserialization_attack_readObject/Untitled%2020.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/Khi_newbie_hoc_Java_deserialization_attack_readObject/Untitled%2020.png"></p>
 <p>hàm <code>slotDesc.invokeReadObject</code> được gọi, với object có <code>name=null và age = 0</code></p>
 <ul>
 <li>Hàm <code>invokeReadObject()</code> sẽ gọi <code>readObjectMethod.invoke()</code></li>
 </ul>
-<p><img src="/images/posts/Khi_newbie_hoc_Java_deserialization_attack_readObject/Untitled%2021.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/Khi_newbie_hoc_Java_deserialization_attack_readObject/Untitled%2021.png"></p>
 <ul>
 <li>Tới đây chương trình sẽ gọi tới <code>Method#invoke()</code></li>
 </ul>
-<p><img src="/images/posts/Khi_newbie_hoc_Java_deserialization_attack_readObject/Untitled%2022.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/Khi_newbie_hoc_Java_deserialization_attack_readObject/Untitled%2022.png"></p>
 <blockquote>
 <p><strong>Method#invoke()</strong></p>
 <ul>
@@ -2024,16 +2024,16 @@ if (!doNotTrack) {
 </ul>
 <p>Và method reflection sinh ra để giải quyết vấn đề này,</p>
 </blockquote>
-<p><img src="/images/posts/Khi_newbie_hoc_Java_deserialization_attack_readObject/Untitled%2023.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/Khi_newbie_hoc_Java_deserialization_attack_readObject/Untitled%2023.png"></p>
 <p>Theo flow của method, <code>ma.invoke()</code> được gọi với <code>ma</code> là <code>DelegatingMethodAccessorImpl</code>. Nên <code>DelegatingMethodAccessorImpl#invoke()</code> được gọi</p>
 <p>Hàm invoke này sẽ gọi qua <code>NativeMethodAccessorImpl#invoke()</code></p>
-<p><img src="/images/posts/Khi_newbie_hoc_Java_deserialization_attack_readObject/Untitled%2024.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/Khi_newbie_hoc_Java_deserialization_attack_readObject/Untitled%2024.png"></p>
 <p>Và tới hàm <code>NativeMethodAccessorImpl#invoke()</code>, hàm <code>invoke0()</code> được gọi với 2 biến var1 là Object User và var2 là <code>readObject</code> method của chúng ta.</p>
-<p><img src="/images/posts/Khi_newbie_hoc_Java_deserialization_attack_readObject/Untitled%2025.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/Khi_newbie_hoc_Java_deserialization_attack_readObject/Untitled%2025.png"></p>
 <p>Và tới đây nó flow sẽ nhảy về method readObject của chúng ta và popup lên 1 calc</p>
-<p><img src="/images/posts/Khi_newbie_hoc_Java_deserialization_attack_readObject/Untitled%2026.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/Khi_newbie_hoc_Java_deserialization_attack_readObject/Untitled%2026.png"></p>
 <p>yeah, tới đây chúng ta đã đi hết flow của <code>native readObject()</code>. Tôi tổng hợp flow nằm ở sơ đồ sau:</p>
-<p><img src="/images/posts/Khi_newbie_hoc_Java_deserialization_attack_readObject/Untitled%2027.png" alt="Untitled" /></p>
+<p><img alt="Untitled" src="/images/posts/Khi_newbie_hoc_Java_deserialization_attack_readObject/Untitled%2027.png"></p>
 <p>Trong sơ đồ trên, tôi thấy chúng ta cần hiểu rõ hàm <code>ObjectInputStream#readOrdinaryObject</code> và <code>Method#invoke</code> vì 2 method này sẽ điều hướng luồng thực thi (khi chúng ta build payload chain)</p>
 <h2 id="iv-tổng-kết">IV. Tổng kết</h2>
 <ul>
@@ -2062,7 +2062,7 @@ if (!doNotTrack) {
     </article>
     
     
-<script defer src="/js/clipboard.min.c168d3a04c45a631be76437054619a4a3b30107960cb9730be96012fef5762b0.js"></script>
+<script defer src="/js/clipboard.min.1626706afc88d95ebe1173b553ec732c6dc82a576989315fdf5e7779af738a44.js"></script>
 
 <script defer src="/js/helper/prev.min.js"></script>
 
@@ -2533,7 +2533,7 @@ if (!doNotTrack) {
 </div>
 
 
-<script defer src="/js/swipe.min.7be2debdadbc35f9430de39f9010d89df5aee1904747098818b5c01cd0672180.js"></script>
+<script defer src="/js/swipe.min.feb438efb7ca009ecd7fc2ac3ad2fced4840990b2798d81f87137f2dc6281f05.js"></script>
 
 <script defer src="/js/micromodal.min.de01b44b2f383056bbcaf6ee921fd385d79108ec1129afd0eb2f3f5a07e11f45.js"></script>
 
@@ -3538,7 +3538,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 
             <p class="caption">
                 
-                    ©2023, All Rights Reserved
+                    ©2025, All Rights Reserved
                 
             </p>
         

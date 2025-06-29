@@ -13,7 +13,7 @@
     <language>vi</language>
     <managingEditor>edisc.ctf@gmail.com (Edisc)</managingEditor>
     <webMaster>edisc.ctf@gmail.com (Edisc)</webMaster>
-    <copyright>©2023, All Rights Reserved</copyright>
+    <copyright>©2025, All Rights Reserved</copyright>
     <lastBuildDate>Mon, 27 Nov 2023 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://minhlongmt183.github.io/series/index.xml" rel="self" type="application/rss+xml" />
@@ -21,7 +21,7 @@
 
       
       <item>
-        <title>cve</title>
+        <title>Cve</title>
         <link>https://minhlongmt183.github.io/series/cve/</link>
         <pubDate>Mon, 27 Nov 2023 00:00:00 +0000</pubDate>
         <author>edisc.ctf@gmail.com (Edisc)</author>
@@ -39,7 +39,7 @@
       </item>
       
       <item>
-        <title>websecurity</title>
+        <title>Websecurity</title>
         <link>https://minhlongmt183.github.io/series/websecurity/</link>
         <pubDate>Mon, 28 Aug 2023 00:00:00 +0000</pubDate>
         <author>edisc.ctf@gmail.com (Edisc)</author>
@@ -57,7 +57,7 @@
       </item>
       
       <item>
-        <title>basic-knowledge</title>
+        <title>Basic-Knowledge</title>
         <link>https://minhlongmt183.github.io/series/basic-knowledge/</link>
         <pubDate>Wed, 22 Dec 2021 00:00:00 +0000</pubDate>
         <author>edisc.ctf@gmail.com (Edisc)</author>
@@ -75,7 +75,7 @@
       </item>
       
       <item>
-        <title>docker</title>
+        <title>Docker</title>
         <link>https://minhlongmt183.github.io/series/docker/</link>
         <pubDate>Tue, 15 Sep 2020 00:00:00 +0000</pubDate>
         <author>edisc.ctf@gmail.com (Edisc)</author>
@@ -93,7 +93,7 @@
       </item>
       
       <item>
-        <title>skill</title>
+        <title>Skill</title>
         <link>https://minhlongmt183.github.io/series/skill/</link>
         <pubDate>Tue, 28 Jul 2020 00:00:00 +0000</pubDate>
         <author>edisc.ctf@gmail.com (Edisc)</author>
