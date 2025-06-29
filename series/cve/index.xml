@@ -14,11 +14,50 @@
     <managingEditor>edisc.ctf@gmail.com (Edisc)</managingEditor>
     <webMaster>edisc.ctf@gmail.com (Edisc)</webMaster>
     <copyright>©2025, All Rights Reserved</copyright>
-    <lastBuildDate>Mon, 27 Nov 2023 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 27 Jan 2025 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://minhlongmt183.github.io/series/cve/index.xml" rel="self" type="application/rss+xml" />
     
 
+      
+      <item>
+        <title>How I found 0day: CVE-2025-22777 - PHP Object Injection in GiveWp</title>
+        <link>https://minhlongmt183.github.io/posts/cve-2025-22777/</link>
+        <pubDate>Mon, 27 Jan 2025 00:00:00 +0000</pubDate>
+        <author>edisc.ctf@gmail.com (Edisc)</author>
+        <atom:modified>Mon, 27 Jan 2025 00:00:00 +0000</atom:modified>
+        <guid>https://minhlongmt183.github.io/posts/cve-2025-22777/</guid>
+        <description>Long time no see!
+Đã lâu rồi tôi không đăng gì hết, một phần vì công việc đang có nhiều biến động và phần khác thì những blog tôi muốn viết đa phần đang ở trạng thái draft.
+Hôm nay, tôi sẽ viết về 0day mà bản thân đã tìm thấy trên wordpress plugin, liên quan đến lỗi PHP Object Injection.
+I. Tổng quan Nếu là anh em đã chơi reproduce 1 days, Ndays thì chắc hẳn sẽ thấy đa số các 0days ngày nay tìm thấy đều từ reproduce 1days, Ndays đi lên.</description>
+        
+        <dc:creator>Edisc</dc:creator>
+        <media:content url="https://minhlongmt183.github.io//images/posts/CVE-2025-22777/logo.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>cve, python</category>
+            
+          
+        
+        
+          
+            
+              <category>web</category>
+            
+          
+        
+        
+          
+            
+              <category>cve</category>
+            
+          
+        
+      </item>
       
       <item>
         <title>Reproducing CVE-2023-46214: Splunk RCE</title>
